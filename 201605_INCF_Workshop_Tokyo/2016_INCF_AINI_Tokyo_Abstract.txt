@@ -1,0 +1,18 @@
+Versatile format and tools for comprehensive data organization in neuroscience
+
+Christian J Kellner(1), Adrian Stoewer(1), Michael Sonntag(1), Achilleas Koutsou(1), Andrey Sobolev(1), Jan Benda(2), Thomas Wachtler(1), Jan Grewe(2)
+
+(1) German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Großhaderner Straße 2, Planegg-Martinsried, 82152, Germany
+(2) Institut für Neurobiologie, Universität Tübingen, Tübingen, Germany
+
+Managing neuroscience data requires the integration of information from multiple sources. Background information, or metadata, about the experiment is necessary to interpret the resulting data correctly. Storing such information consistently is an essential part of experimental research and depends crucially on available file formats. Many existing formats provide only limited support for storing metadata along with the data. Here we present the NIX project[1], consisting of an open format and software tools to store and organize data and metadata. The format can store recorded or derived data together with the meta-information, including relationships between data items. Units and dimension information is stored alongside the data, to make quick interpretation possible. The format further allows specifying regions of interest, such as areas in an image or events in a recorded signal. Efficient use of NIX features is facilitated by software libraries for different languages, including C++, Python, Matlab , and Java. Installable packages exist for different platforms, together with documentation, examples, and tutorials. Additionally the NixView program[2] can be used to explore, plot and export the stored data in a user friendly and convenient way. An I/O backend for NEO[3,4] has been implemented, creating a route for raw data in various proprietary formats to be converted to the open NIX format via the NEO data structures. Moreover the results of data analysis done with NEO, e.g. using the Elephant[5] toolkit, can be saved in the same format. The NIX project thus supports comprehensive annotation and efficient organisation of neuroscience data, and the variety of libraries makes it easy to integrate access to data and metadata in the lab data collection and analysis workflow.
+
+Acknowledgements
+Supported by the Federal Ministry of Education and Research (BMBF Grant 01GQ1302)
+
+[1] https://github.com/G-Node/nix
+[2] http://bendalab.github.io/NixView/
+[3] http://neuralensemble.org/neo/
+[4] https://github.com/G-Node/python-neo-nixio
+[5] http://neuralensemble.org/elephant/
+

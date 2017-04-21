@@ -1,0 +1,28 @@
+Keeping track of your data with NIX: tools for comprehensive data organization
+
+    Christian J Kellner1 Adrian Stoewer1 Michael Sonntag1 Achilleas Koutsou1 Andrey Sobolev1 Jan Benda2 Thomas Wachtler1 Jan Grewe2 
+
+    Department Biologie II, Ludwig-Maximilians-Universität München, 82152 Planegg-Martinsried, Germany
+    Institut für Neurobiologie, Eberhard-Karls-Universität Tübingen, 72076 Tübingen, Germany
+
+Managing neuroscience data requires the integration of information from multiple sources. Information about stimuli, animals, protocols, and other background information about the experiment, together often called "metadata", are necessary to interpret the resulting data correctly. Storing such information consistently alongside the recoded data is therefore an essential part of experimental research and depends crucially on available file formats. Many existing formats provide only limited support for storing metadata along with the data. Here we present the NIX project, consisting of an open format and software tools to store, organize, and link data and metadata. The format[1] can represent various kinds of recorded and derived data in conjunction with all the metadata and links between data entities to facilitate data organization and data retrieval, as well as data sharing. Units and dimension information is stored directly with the data, for immediate correct interpretation. The NIX software libraries support direct, fine-grained access to the data and the linked metadata. This enables selecting specific subsets of the data, such as signals recorded from a certain electrode channel, or spike trains from a certain single unit in trials with a given stimulus. Efficient use of NIX format features is facilitated by software libraries for different languages, including C++, Python [2], Matlab [3], and Java [4]. Installable packages exist for different platforms, together with documentation, examples, and tutorials [5]. The NixView program [6] can be used to explore, plot and export the stored data in a user-friendly and convenient way. The NIX project includes tools that link to other open data format projects like Neo [7,8] and Neuroshare [9]. This enables seamless integration of data access with data analysis, and creates a route for the conversion of raw data from various proprietary formats to the open NIX format. Moreover, results of data analysis done with Neo, e.g. using the Elephant [10] toolkit, can be saved in the very same format. The NIX project thus supports comprehensive annotation and efficient organization of neuroscience data, and the variety of libraries makes it easy to integrate access to data and metadata in the lab data collection and analysis workflow.
+Acknowledgements
+
+Supported by the German Federal Ministry of Education and Research (BMBF Grant 01GQ1302)
+References
+
+http://www.g-node.org/projects/nix
+https://github.com/G-Node/nixpy
+https://github.com/G-Node/nix-mx
+https://github.com/G-Node/nix-java
+http://g-node.github.io/nixpy
+http://bendalab.github.io/NixView/
+http://neuralensemble.org/neo/
+https://github.com/G-Node/python-neo-nixio
+http://www.g-node.org/projects/neuroshare-tools/
+http://neuralensemble.org/elephant/
+
+Citation: Kellner CJ, Stoewer A, Sonntag M, Koutsou A, Sobolev A, Benda J, Wachtler T, Grewe J (2016) Keeping track of your data with NIX: tools for comprehensive data organization. Bernstein Conference 2016.
+Copyright: © (2016) Kellner CJ, Stoewer A, Sonntag M, Koutsou A, Sobolev A, Benda J, Wachtler T, Grewe J
+doi: 10.12751/nncn.bc2016.0121
+

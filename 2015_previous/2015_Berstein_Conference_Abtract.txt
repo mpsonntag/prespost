@@ -1,0 +1,18 @@
+Consistent data organization made easy: Versatile file format for neuroscience
+
+Adrian Stoewer1, Christian J. Kellner1, Andrey Sobolev1, Michael Sonntag1, Jan Benda2, Thomas Wachtler1, Jan Grewe2
+1German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
+2Institut für Neurobiologie, Universität Tübingen, Germany
+
+Managing neuroscience data requires the integration of information from multiple sources. Background information, or metadata, about the experiment is necessary to interpret the resulting data correctly. Storing such information consistently is an essential part of experimental research and depends crucially on available file formats. Many existing formats provide only limited support for storing metadata along with the data. Here we present the NIX format [1], an open file format that can represent various kinds of data in conjunction with metadata to facilitate data organization and data retrieval, as well as data sharing. The format enables storing recorded or derived data as well as all the meta-information about the experimental context, accounting for the relationships between data items. Data arrays are defined with units and dimension descriptors, so that the stored data can be readily interpreted as recorded quantities. The format further allows specifying regions of interest, such as areas in an image or events in a recorded signal. The NIX software libraries support direct access to these ROIs and the linked metadata. This enables selecting specific subsets of the data, such as signals recorded from a certain electrode channel, or spike trains from a certain single unit in trials with a given stimulus. NIX stores data using the HDF5 format [2]. While it is possible to read and write NIX files using the standard HDF5 libraries, efficient use of NIX format features is facilitated by specific libraries provided for different languages, including C++, Python [3], Matlab [4], and Java. Packages and installers for different platforms are provided, as well as detailed documentation, examples, and tutorials [5]. The NIX file format supports comprehensive annotation and efficient organization of neuroscience data, and the variety of libraries makes it easy to integrate access to data and metadata in the lab data collection and analysis workflow.
+
+Support
+German Federal Ministry of Education and Research (Grant 01GQ1302)
+
+References
+[1] https://github.com/G-Node/nix
+[2] http://hdfgroup.org/HDF5/
+[3] https://github.com/G-Node/nixpy
+[4] https://github.com/G-Node/nix-mx
+[5] http://g-node.github.io/nixpy
+

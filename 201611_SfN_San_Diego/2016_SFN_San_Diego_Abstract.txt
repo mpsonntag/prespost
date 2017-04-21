@@ -1,0 +1,15 @@
+Keeping track of your data with tools for comprehensive data organization
+
+Christian J Kellner(1), Adrian Stoewer(1), Michael Sonntag(1), Achilleas Koutsou(1), Andrey Sobolev(1), Jan Benda(2), Thomas Wachtler(1), Jan Grewe(2)
+(1) German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Großhaderner Straße 2, Planegg-Martinsried, 82152, Germany
+(2) Institut für Neurobiologie, Universität Tübingen, Tübingen, Germany
+
+Making sense of complex neuroscience data requires integration of information from multiple sources. Recorded data needs to be joined with metadata describing experimental conditions and analyses. A tight link between data and metadata helps during offline analysis by easing data identification and data retrieval. We previously developed a format for storing of metadata, the odML[1], and here present a data format and tools to link data and metadata meaningfully for easy data exploration, selection, retrieval, and sharing. The NIX[2] format can store various kinds of scientific data, like electrophysiological, imaging, or other recorded or derived data, together with the metadata and including relationships between data items. Data are stored with units and dimension information, for direct interpretation. The format allows specifying regions of interest, such as areas in an image or events in a recorded signal, and references between data items. Integration into the recording or ana
+lysis software is made possible through libraries for different languages, including C++, Python, Matlab, and Java. Installable packages exist for the major platforms, together with documentation, examples, and tutorials. The NixView program[3] can be used to explore, plot and export the stored data in a user friendly and convenient way. An I/O backend for the Neo Python objects for electrophysiology [4,5] enables conversion of data from various proprietary formats to the open NIX format. Moreover, results of data analysis done with Neo, for example using the Elephant[6] toolkit, can be saved in the very same format. The NIX project thus facilitates data integrity and reproducibility through comprehensive annotation and efficient organization of neuroscience data, during everyday lab work.
+
+[1] http://dx.doi.org/10.3389/fninf.2011.00016
+[2] https://github.com/G-Node/nix
+[3] http://bendalab.github.io/NixView
+[4] http://neuralensemble.org/neo
+[5] https://github.com/G-Node/python-neo-nixio
+[6] http://neuralensemble.org/elephant
