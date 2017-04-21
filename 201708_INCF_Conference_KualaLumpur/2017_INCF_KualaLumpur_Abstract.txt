@@ -1,0 +1,16 @@
+The G-Node Infrastructure Services: Safe and efficient data management for neuroscience
+
+Achilleas Koutsou1, Christian Garbers1, Michael Sonntag1, Christian J. Kellner1, Adrian Stoewer1 , Jan Grewe2, Thomas Wachtler1
+1German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
+2Institut für Neurobiologie, Universität Tübingen, Germany
+
+Management of scientific data, including consistent organization, annotation and storage of data, is a challenging task. Accessing and managing data from multiple workplaces while keeping it in sync, backed up, and easily accessible from within or outside the lab is even more demanding. To minimize the time and effort scientists have to spend on these tasks, we here present the GIN[1] (G-Node Infrastructure) services, a free data management system designed for comprehensive and reproducible management of scientific data. It keeps track of changes to the contents and organization of the files and provides secure remote access, making it easy to work from multiple workplaces while keeping all data at hand and in sync. Data can be managed from web and file browsers or through a command line interface, enabling automation of data acquisition and analysis procedures. The system handles any kinds of directory structures and file types, and tracks all changes, using Git[2] tracking mechanisms to keep previous versions accessible when datasets are updated. The service furthermore makes it straightforward to share any data within a lab or with off-site collaborators and to work on it in parallel.
+Comprehensive organization and reproducible management of scientific data is challenging, in particular with complex experiments and heterogeneous data. The GIN services enable to streamline data workflows and reduce the efforts involved in sharing data with collaborators or the community.
+
+Support
+Supported by BMBF (Grant 01GQ1302)
+
+References
+[1] https://gin.g-node.org/
+[2] https://git-scm.com/
+
