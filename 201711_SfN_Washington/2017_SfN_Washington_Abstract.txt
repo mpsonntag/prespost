@@ -5,13 +5,19 @@ Achilleas Koutsou1, Christian Garbers1, Michael Sonntag1, Christian J. Kellner1,
 1German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
 2Institut für Neurobiologie, Universität Tübingen, Germany
 
-Data is the central core of science. During the last decades dedication to science and technological advances have dramatically increased the amount of scientific data, experimental procedures and data analysis have become more and more elaborate and multi-tiered. The increase in complexity more often than not require multiple specialists to collaborate from data aquisition to analysis and presentation of the scientific results. This leads to challenges on multiple levels:
-The original scientific data has to be properly annotated with information about the scientific setup of the experiement (metadata) for collaborators to make sense of it.
-The Information about all analysis steps have to be properly documented and be made available together with the original data to ensure reproducability of final results.
-And as the amount of data increases, the management, storage, exchange with Collaborators and finally persistent availability for publication becomes increasingly challenging as well.
+Data is at the core of science. During the last decades the amount of scientific data has dramatically increased, experimental procedures and data analysis have become elaborate and multi-tiered. This increase in complexity often require different specialists to collaborate from data acquisition over analysis to result presentation, leading to challenges on multiple levels. Scientific data has to be annotated with information about the experimental setup (metadata), analysis steps have to be documented and be made available side by side with the original data to ensure ease of collaboration and reproducibility of final results. As the amount of data increases, organization and storage, exchange with off-site collaborators and persistent availability for publication becomes increasingly challenging as well.
 
-At the German Neuroinformatics Node, an infrastructure for cellular and systems neurophysiology is being developed to improve data analysis and annotation with metadata as well as data access, data storage and exchange.
-Nix for storage of raw and subsequent analysed data within the same file. Support of odML, a markup language enables to conveniently add any metadata about experimental setup, analysis scripts, etc in the same file, linked to the corresponding raw and analysed data. NIX furthermore was specifically designed as a data format for scientific data, a plugin to NEO adds out of the box support for elecrophysiological data.
-To enable data management of scientific data at the level above experiment, the G-Node Infrastructure (GIN) service provides out of the box versioning of individual files, a data hosting solution for distributed access to data from various location and ease of data sharing with collaborators and persistant access for published data.
+At the German Neuroinformatics Node, a data management infrastructure for cellular and systems neurophysiology is being developed to improve data analysis and annotation with metadata as well as data access, data storage and exchange. The NIX[1] format was specifically designed as a format for scientific data and enables storage of raw and data resulting from various steps of analysis within the same file. NIX support of odML[2], the open metadata markup language, provides convenient annotation with metadata about experimental setup and analysis parameters, linked to the corresponding raw and analysed data in the same file. A plugin to NEO[3] adds out of the box support for convenient access and analysis of electrophysiological data.
+Lab wide data management is enabled by the GIN[4] (G-Node Infrastructure) service, a free service designed for comprehensive and reproducible management of scientific data. It provides built in versioning, sync and backup of files under its control as well as secure remote access to the data. A command line client interface enables automation of data acquisition and analysis into every day data management workflow. GIN furthermore makes it straightforward to share any data within a lab or with off-site collaborators and to work on it in parallel. Any data hosted with the service can easily be made persistently available for publication.
 
+The GIN services in combination with the NIX format enable to streamline the lab data workflows and reduce the efforts involved in sharing data with collaborators or the community.
+
+Support
+Supported by BMBF (Grant 01GQ1302)
+
+References
+[1] https://github.com/G-Node/nix/
+[2] https://doi.org/10.3389/fninf.2011.00016/
+[3] http://neuralensemble.org/neo/
+[4] https://gin.g-node.org/
 
