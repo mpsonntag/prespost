@@ -1,0 +1,17 @@
+From Experiment to Publication: Efficient data management in Neuroscience
+
+Achilleas Koutsou1, Christian Garbers1, Michael Sonntag1, Christian J. Kellner1, Adrian Stoewer1, Jan Grewe2, Thomas Wachtler1
+
+1German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
+2Institut für Neurobiologie, Universität Tübingen, Germany
+
+Data is the central core of science. During the last decades dedication to science and technological advances have dramatically increased the amount of scientific data, experimental procedures and data analysis have become more and more elaborate and multi-tiered. The increase in complexity more often than not require multiple specialists to collaborate from data aquisition to analysis and presentation of the scientific results. This leads to challenges on multiple levels:
+The original scientific data has to be properly annotated with information about the scientific setup of the experiement (metadata) for collaborators to make sense of it.
+The Information about all analysis steps have to be properly documented and be made available together with the original data to ensure reproducability of final results.
+And as the amount of data increases, the management, storage, exchange with Collaborators and finally persistent availability for publication becomes increasingly challenging as well.
+
+At the German Neuroinformatics Node, an infrastructure for cellular and systems neurophysiology is being developed to improve data analysis and annotation with metadata as well as data access, data storage and exchange.
+Nix for storage of raw and subsequent analysed data within the same file. Support of odML, a markup language enables to conveniently add any metadata about experimental setup, analysis scripts, etc in the same file, linked to the corresponding raw and analysed data. NIX furthermore was specifically designed as a data format for scientific data, a plugin to NEO adds out of the box support for elecrophysiological data.
+To enable data management of scientific data at the level above experiment, the G-Node Infrastructure (GIN) service provides out of the box versioning of individual files, a data hosting solution for distributed access to data from various location and ease of data sharing with collaborators and persistant access for published data.
+
+
