@@ -1,23 +1,49 @@
-From Experiment to Publication: Efficient data management in Neuroscience
+Tools, Formats and services for efficient data management, collaboration and reproducibility in neuroscience
 
-Achilleas Koutsou1, Christian Garbers1, Michael Sonntag1, Christian J. Kellner1, Adrian Stoewer1, Jan Grewe2, Thomas Wachtler1
+Michael Sonntag1, Achilleas Koutsou1, Christian Garbers1, Christian Johannes Kellner1, Jan Grewe2, Thomas Wachtler1
 
-1German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
-2Institut für Neurobiologie, Universität Tübingen, Germany
+1. German Neuroinformatics Node, German Neuroinformatics Node, München, Germany
+2. Institut für Neurobiologie, Universität Tübingen, Tübingen, Germany
 
-Data is at the core of science. During the last decades the amount of scientific data has dramatically increased, experimental procedures and data analysis have become elaborate and multi-tiered. This increase in complexity often require different specialists to collaborate from data acquisition over analysis to result presentation, leading to challenges on multiple levels. Scientific data has to be annotated with information about the experimental setup (metadata), analysis steps have to be documented and be made available side by side with the original data to ensure ease of collaboration and reproducibility of final results. As the amount of data increases, organization and storage, exchange with off-site collaborators and persistent availability for publication becomes increasingly challenging as well.
+Management of scientific data, including consistent organization and storage of data, is
+a challenging task. Data needs to be annotated with metadata to provide information
+about the underlying experiment to ensure reproducibility. Accessing and managing data
+from multiple workplaces while keeping it in sync, backed up, and easily accessible from
+within or outside the lab, is even more demanding. To minimize the time and effort
+scientists have to spend on these tasks, we here present formats and tools designed for
+comprehensive and reproducible management of scientific data. To easily store, select,
+retrieve and share data using an open format we provide the NIX[1] format, which offers
+convenient organization of data and metadata, supporting various data types including
+electrophysiology and imaging, and enables to effectively link data and corresponding
+analysis results as well as the associated metadata. NIX builds on the odML[2] metadata
+format and is supported by the Neo[3] Python package for electrophysiology, enabling
+Neo users to store their data in a common open format. Keeping data organized in the
+lab is made easy via the GIN[4] services. GIN keeps track of changes to the contents
+and organization of the files and provides secure remote access, making it convenient to
+work from multiple workplaces while keeping all data available and in sync. Data can
+be managed from web and file browsers or through a command line interface, enabling
+even integration into data acquisition and analysis procedures. The system works with
+any kind of directory structure and file types, using established technologies to keep
+previous versions accessible when datasets are updated. The service furthermore makes
+it straightforward to share data within a lab or with off-site collaborators and to work on
+it together. Any data hosted with the service can easily be made persistently available
+for publication using digital identifiers. Combining GIN and NIX allows streamlining
+data workflows and eases the sharing of well-annotated datasets within the lab, among
+collaborators between labs, or with the public.
 
-At the German Neuroinformatics Node, a data management infrastructure for cellular and systems neurophysiology is being developed to improve data analysis and annotation with metadata as well as data access, data storage and exchange. The NIX[1] format was specifically designed as a format for scientific data and enables storage of raw and data resulting from various steps of analysis within the same file. NIX support of odML[2], the open metadata markup language, provides convenient annotation with metadata about experimental setup and analysis parameters, linked to the corresponding raw and analysed data in the same file. A plugin to NEO[3] adds out of the box support for convenient access and analysis of electrophysiological data.
-Lab wide data management is enabled by the GIN[4] (G-Node Infrastructure) service, a free service designed for comprehensive and reproducible management of scientific data. It provides built in versioning, sync and backup of files under its control as well as secure remote access to the data. A command line client interface enables automation of data acquisition and analysis into every day data management workflow. GIN furthermore makes it straightforward to share any data within a lab or with off-site collaborators and to work on it in parallel. Any data hosted with the service can easily be made persistently available for publication.
-
-The GIN services in combination with the NIX format enable to streamline the lab data workflows and reduce the efforts involved in sharing data with collaborators or the community.
-
-Support
+Acknowledgements
 Supported by BMBF (Grant 01GQ1302)
 
 References
-[1] https://github.com/G-Node/nix/
-[2] https://doi.org/10.3389/fninf.2011.00016/
-[3] http://neuralensemble.org/neo/
-[4] https://gin.g-node.org/
+1 http://www.g-node.org/nix/
+2 http://www.g-node.org/odml/
+3 http://neuralensemble.org/
+4 https://web.gin.g-node.org/
+
+©(2017) Sonntag M, Koutsou A, Garbers C, Kellner CJ, Grewe J, Wachtler T
+Cite as:
+Sonntag M, Koutsou A, Garbers C, Kellner CJ, Grewe J, Wachtler T (2017) Tools, Formats and
+services for efficient data management, collaboration and reproducibility in neuroscience.
+Bernstein Conference 2017
+Abstract. doi: 10.12751/nncn.bc2017.0137
 
