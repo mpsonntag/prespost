@@ -2,6 +2,11 @@ Pushing the FAIR principles for metadata through odML and RDF
     Or more generic:
 Pushing the FAIR principles for metadata with open source software
 
+Michael Sonntag1, Yaroslav Shalivskyy1, Christian Garbers1, Achilleas Koutsou1, Jan Grewe2, Thomas Wachtler1
+
+1 German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Martinsried, Germany
+2 Institute for Neurobiology, Eberhard-Karls-Universität Tübingen, Tübingen, Germany
+
 According to the FAIR principles[1], (meta)data is supposed to be [F]indable, [A]ccessible,
 [I]nteroperable, [R]eusable. Metadata, data about experimental data, have a special role in
 this context. Not only do they accurately describe the experimental setup but ideally also
