@@ -8,21 +8,21 @@ Michael Sonntag1, Yaroslav Shalivskyy1, Christian Garbers1, Achilleas Koutsou1, 
 2 Institute for Neurobiology, Eberhard-Karls-Universität Tübingen, Tübingen, Germany
 
 According to the FAIR principles[1], (meta)data is supposed to be [F]indable, [A]ccessible,
-[I]nteroperable, [R]eusable. Metadata, data about experimental data, have a special role in
+[I]nteroperable, [R]eusable. Metadata, data about experimental data, play a special role in
 this context. Not only do they accurately describe the experimental setup but ideally also
 the dataset involved. If handled properly, a collection of metadata is the first step to
 solving the FAIR principles for a dataset. As previously shown[2] by the example of the NWB[3]
-and odML[4] data formats, [I]nteroperability between even diverse metadata can be achieved by
+and odML[4] data formats, [I]nteroperability even between diverse metadata can be achieved by
 using the common and flexible semantic web RDF technology.
-Expanding on this idea, here we want to show how [F]indability and [A]ccessibility of large
+Expanding on this idea, we show how [F]indability and [A]ccessibility of large
 collections of metadata can be achieved by the use of open source software. [I]nteroperability
 between different types of metadata is achieved by a minimal set of common RDF terms.
-This way diverse metadatasets can be easily converted and imported into a common searchable
+This way diverse sets of metadata can be easily converted and imported into a common searchable
 data graph. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata
 can be subclassed to the benefit of maintaining the original structure without losing the common
 generic structure keeping [I]nteroperability without sacrificing [F]indability.
 To make large collections of merged metadata in RDF format easily [A]ccessible, we introduce an
-augmented version of the open source RDF server Apache Fuseki[5]. This server provides access
+augmented version of the open source SPARQL server Apache Fuseki[5]. This software provides access
 to the metadata by both custom, easy to use search terms as well as the powerful SPARQL query language.
 
 1 The FAIR Guiding Principles for scientific data management and stewardship. 10.1038/sdata.2016.18
