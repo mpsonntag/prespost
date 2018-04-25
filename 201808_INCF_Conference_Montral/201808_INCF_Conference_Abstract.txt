@@ -19,3 +19,9 @@ generic structure keeping [I]nteroperability without sacrificing [F]indability.
 To make large collections of merged metadata in RDF format easily [A]ccessible, we introduce an
 augmented version of the open source RDF server Apache Fuseki[5]. This server provides access
 to the metadata by both custom, easy to use search terms as well as the powerful SPARQL query language.
+
+1 The FAIR Guiding Principles for scientific data management and stewardship. 10.1038/sdata.2016.18
+2 Towards interoperability of neurophysiology data repositories. 10.12751/incf.ni2017.0017
+3 Neurodata Without Borders: Creating a Common Data Format for Neurophysiology 10.1016/j.neuron.2015.10.025
+4 A bottom-up approach to data annotation in neurophysiology. 10.3389/fninf.2011.00016
+5 Jena 2006, A semantic web framework for Java, http://jena.apache.org/
