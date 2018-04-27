@@ -19,3 +19,6 @@ from different sources can be fed to a single, searchable RDF graph, effectively
 and datasets findable. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata
 can be subclassed to the benefit of maintaining the original structure without losing the common generic
 structure keeping interoperability without sacrificing findability.
+To provide easy access to large collections of metadata, we introduce an augmented version of the
+open source SPARQL server Apache Fuseki[3]. This software provides access to the metadata by both custom,
+easy to use search terms as well as the powerful SPARQL query language.
