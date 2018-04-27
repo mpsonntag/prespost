@@ -1,13 +1,30 @@
 Formats, tools and services for efficient data management, reproducibility and collaboration in neuroscience
 
 Achilleas Koutsou1, Christian Garbers1, Michael Sonntag1, Christian J. Kellner1, Jan Grewe2, Thomas Wachtler1
-1German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
-2Institut für Neurobiologie, Universität Tübingen, Germany
 
-Management of scientific data, including consistent organization and storage of data, is a challenging task. Data needs to be annotated with metadata to provide information about the underlying experiment to ensure reproducibility. Accessing and managing data from multiple workplaces while keeping it in sync, backed up, and easily accessible from within or outside the lab, is even more demanding. To minimize the time and effort scientists have to spend on these tasks, we here present formats and tools designed for comprehensive and reproducible management of scientific data.
-To easily store, select, retrieve and share data using an open format we provide the NIX[1] format, which offers convenient organization of data and metadata, supporting various data types including electrophysiology and imaging, and enables to effectively link data and corresponding analysis results as well as the associated metadata. NIX builds on the odML[2] metadata format and is supported by the Neo[3] Python package for electrophysiology, enabling Neo users to store their data in a common open format.
-Keeping data organized in the lab is made easy via the GIN[4] services. GIN keeps track of changes to the contents and organization of the files and provides secure remote access, making it convenient to work from multiple workplaces while keeping all data available and in sync. Data can be managed from web and file browsers or through a command line interface, enabling even integration into data acquisition and analysis procedures. The system works with any kind of directory structure and file types, using established technologies to keep previous versions accessible when datasets are updated. The service furthermore makes it straightforward to share data within a lab or with off-site collaborators and to work on it together. Any data hosted with the service can easily be made persistently available for publication using digital identifiers.
-Combining GIN and NIX allows streamlining data workflows and eases the sharing of well-annotated datasets within the lab, among collaborators between labs, or with the public.
+1 German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
+2 Institut für Neurobiologie, Universität Tübingen, Germany
+
+Management of scientific data, including consistent organization and storage of data, is a challenging task. Data
+needs to be annotated with metadata to provide information about the underlying experiment to ensure reproducibility.
+Accessing and managing data from multiple workplaces while keeping it in sync, backed up, and easily accessible from
+within or outside the lab, is even more demanding. To minimize the time and effort scientists have to spend on these
+tasks, we here present formats and tools designed for comprehensive and reproducible management of scientific data.
+To easily store, select, retrieve and share data using an open format we provide the NIX[1] format, which offers
+convenient organization of data and metadata, supporting various data types including electrophysiology and imaging,
+and enables to effectively link data and corresponding analysis results as well as the associated metadata. NIX builds
+on the odML[2] metadata format and is supported by the Neo[3] Python package for electrophysiology, enabling Neo users
+to store their data in a common open format.
+Keeping data organized in the lab is made easy via the GIN[4] services. GIN keeps track of changes to the contents and
+organization of the files and provides secure remote access, making it convenient to work from multiple workplaces
+while keeping all data available and in sync. Data can be managed from web and file browsers or through a command line
+interface, enabling even integration into data acquisition and analysis procedures. The system works with any kind of
+directory structure and file types, using established technologies to keep previous versions accessible when datasets
+are updated. The service furthermore makes it straightforward to share data within a lab or with off-site collaborators
+and to work on it together. Any data hosted with the service can easily be made persistently available for publication
+using digital identifiers.
+Combining GIN and NIX allows streamlining data workflows and eases the sharing of well-annotated datasets within the
+lab, among collaborators between labs, or with the public.
 
 Support
 Supported by BMBF (Grant 01GQ1302)
