@@ -11,3 +11,11 @@ with collaborators or meta-studies. We previously presented odML[1] as an approa
 collecting metadata in an organized, easy to use, easy to read fashion providing an intuitive format for
 archiving and collaboration. Recent initiatives like the FAIR principles[2] showed the need for publication
 of properly annotated data on an even larger scale.
+Inspired by the odML format we present an investigative approach utilizing the common and flexible
+semantic web RDF technology to effortlessly make even diverse metadata interoperable, findable and
+accessible according to the FAIR principles.
+Introducing a small set of general terms derived from the odML format, virtually any metadata
+from different sources can be fed to a single, searchable RDF graph, effectively making diverse projects
+and datasets findable. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata
+can be subclassed to the benefit of maintaining the original structure without losing the common generic
+structure keeping interoperability without sacrificing findability.
