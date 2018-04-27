@@ -22,3 +22,7 @@ structure keeping interoperability without sacrificing findability.
 To provide easy access to large collections of metadata, we introduce an augmented version of the
 open source SPARQL server Apache Fuseki[3]. This software provides access to the metadata by both custom,
 easy to use search terms as well as the powerful SPARQL query language.
+
+1 A bottom-up approach to data annotation in neurophysiology. 10.3389/fninf.2011.00016
+2 The FAIR Guiding Principles for scientific data management and stewardship. 10.1038/sdata.2016.18
+3 Jena 2006, A semantic web framework for Java, http://jena.apache.org/
