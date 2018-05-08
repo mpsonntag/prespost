@@ -1,15 +1,20 @@
 
 - History
 
+- core areas (where does it come from)
+-- google
+-- server
+- area extensions (where does it go)
+-- IoT
+-- science
+
 - current usage
 -- + where we use it
 
 - comparison with other languages
 
-- core areas (where does it come from)
-- area extensions (where does it go)
-
 - language concepts
+-- typed language
 -- tabs
 -- autoformat
 -- small functions
@@ -25,5 +30,6 @@
 --- fmt
 -- 3rd party
 --- cobra
+--- linters
 
-- Tools
+- Tools, links and tutorials
