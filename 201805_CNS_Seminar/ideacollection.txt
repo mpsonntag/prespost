@@ -2,15 +2,28 @@
 - History
 
 - current usage
+-- + where we use it
 
 - comparison with other languages
 
-- core areas
+- core areas (where does it come from)
+- area extensions (where does it go)
 
-- code examples
+- language concepts
+-- tabs
+-- autoformat
+-- small functions
+-- error handling vs exception handling
+
+- code examples / core concepts - language crash course
+-- private / public
+-- structs
 -- Channels + usage
 
 - libraries
--- fmt
+-- core
+--- fmt
+-- 3rd party
+--- cobra
 
 - Tools
