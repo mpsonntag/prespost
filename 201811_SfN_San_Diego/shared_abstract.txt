@@ -1,0 +1,16 @@
+Using the open metadata Markup Language (odML) and Semantic Web methods to facilitate interoperability of diverse neurophysiology data
+
+Authors:
+Jeffrey L. Teeters, Petr Ježek, Michael Sonntag, Yaroslav Shalivskyy, Achilleas Koutsou, Jan Grewe, Friedrich T. Sommer, Thomas Wachtler  [Jan's affiliation is Institute for Neurobiology, Eberhard-Karls-Universität Tübingen]
+
+
+In order to efficiently find and use shared scientific data, the metadata describing the data must be detailed and standardized to be machine readable.  Currently, for neurophysiology data, this is often not the case.  Many labs still use custom formats to store data.  Multiple standardized formats (such as Kwik [1], NEO [2], NIX [3] and NWB [4]) have been recently developed which store metadata in a consistent manner.  However, the diversity of the experiments often requires metadata elements that are not included in any existing standard.  Moreover, neurophysiology metadata are still stored in a multitude of incompatible formats, and thus cannot be processed consistently by software tools.
+
+As a step towards solving the problem of diversity in metadata representation, we present an approach which combines the use of the open metadata Markup Language (odML) [5] with Semantic Web methods.   The approach was developed using datasets stored in CRCNS.org and the G-Nodes’s GIN [6] data repositories and can be used by labs and data repositories to make their shared data easier to find and interoperable between datasets and repositories. The odML format is highly suitable for representing metadata from heterogeneous datasets, because it provides a standardized, machine-readable representation of metadata without constraining  the content.  While converting metadata to odML puts the metadata in a common format, there can still be differences between datasets in the organization of the same type of metadata within the odML structure. To reduce these differences we proposed and provided odML Terminologies [7] as optional templates for common metadata use cases. The Semantic Web methods are harnessed through software we have developed which converts odML-formatted metadata to the Semantic Web Resource Description Framework (RDF) data model.  The RDF representation allows metadata from multiple sources to be combined into a common graph and searched using the SPARQL query language, and thus facilitates interoperability of diverse neurophysiology data across repositories.
+[1] http://klusta.readthedocs.io/en/latest/kwik/
+[2] http:neuralensemble.org/neo/
+[3] http://www.g-node.org/nix
+[4] nwb.org
+[5] http://www.g-node.org/odml
+[6] https://web.gin.g-node.org
+[7] https://github.com/G-Node/odml-terminologies
