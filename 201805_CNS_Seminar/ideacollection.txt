@@ -1,0 +1,16 @@
+
+- History
+
+- current usage
+
+- comparison with other languages
+
+- core areas
+
+- code examples
+-- Channels + usage
+
+- libraries
+-- fmt
+
+- Tools
