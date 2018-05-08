@@ -1,26 +1,13 @@
-Comprehensive data annotation and findable data: Going from odML to RDF
+Comprehensive data annotation and findable data: Looking at odML from RDF
 
 Michael Sonntag1, Yaroslav Shalivskyy1, Achilleas Koutsou1, Christian Garbers1, Jan Grewe2, Thomas Wachtler1
 
 1 German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Martinsried, Germany
 2 Institute for Neurobiology, Eberhard-Karls-Universität Tübingen, Tübingen, Germany
 
-Annotation of research data with metadata is vital to provide context for analysis and data re-use. 
-The odML[1] format enables collecting metadata from different sources in an organized, flexible, human 
-and machine-readable fashion[2] and is easy to use for the scientist. odML specifies the format, not 
-the content, so any metadata necessary to describe a given dataset can be stored.
-Starting from the odML format we present an approach that utilizes Semantic Web technologies to 
-effortlessly make even diverse metadata interoperable, findable and accessible according to the FAIR 
-principles[3]. Introducing a small set of general terms derived from the odML format, we defined a 
-mapping from the odML data model to RDF[4] and created a corresponding conversion tool. Thus, metadata 
-collected via the convenient odML format can be fed to a single, searchable RDF graph. Taking advantage 
-of the powerful OWL language, each distinct set of metadata can be subclassed to the benefit of 
-maintaining the original relations without losing the common structure, thus achieving interoperability 
-without sacrificing findability.
-To provide easy access to large collections of metadata, we introduce an augmented SPARQL server that 
-offers a convenient search interface for the scientist, including a “fuzzy search” feature, and thus 
-provides access to the metadata both by easy to use search terms as well as by using the powerful SPARQL 
-query language.
+Annotation of research data with metadata is vital to provide context for analysis and data re-use. The odML[1] format enables collecting metadata from different sources in an organized, flexible, human and machine-readable fashion[2] and is easy to use for the scientist. odML specifies the format, not the content, so any metadata necessary to describe a given dataset can be stored.
+Starting from the odML format we present an approach that utilizes Semantic Web technologies to effortlessly make even diverse metadata interoperable, findable and accessible according to the FAIR principles[3]. Introducing a small set of general terms derived from the odML format, we defined a mapping from the odML data model to RDF[4] and created a corresponding conversion tool. Thus, metadata collected via the convenient odML format can be fed to a single, searchable RDF graph. Taking advantage of the powerful OWL language, each distinct set of metadata can be subclassed to the benefit of maintaining the original relations without losing the common structure, thus achieving interoperability without sacrificing findability.
+To provide easy access to large collections of metadata, we introduce an augmented SPARQL server that offers a convenient search interface for the scientist, including a "fuzzy search" feature, and thus provides access to the metadata both by easy to use search terms as well as by using the powerful SPARQL query language.
 
 1 A bottom-up approach to data annotation in neurophysiology. 10.3389/fninf.2011.00016
 2 Zehl et al (2016) https://doi.org/10.3389/fninf.2016.00026
