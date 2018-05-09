@@ -33,3 +33,4 @@
 --- linters
 
 - Tools, links and tutorials
+-- awesome go as reference for further repositories
