@@ -11,6 +11,8 @@ Starting from the odML format we present an approach that utilizes Semantic Web 
 
 To provide easy access to large collections of metadata, we introduce an augmented SPARQL server that offers a convenient search interface for the scientist, including a "fuzzy search" feature, and thus provides access to the metadata both by easy to use search terms as well as by using the powerful SPARQL query language.
 
+Figure 1: Schema for mapping odML to RDF.
+
 *Acknowledgments
 
 Supported by BMBF grants 01GQ1302 and 01GQ1509
