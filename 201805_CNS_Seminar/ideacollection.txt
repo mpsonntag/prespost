@@ -34,3 +34,6 @@
 
 - Tools, links and tutorials
 -- awesome go as reference for further repositories
+
+Languages comparison
+https://dzone.com/articles/most-popular-programming-languages-of-2017
