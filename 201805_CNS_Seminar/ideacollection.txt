@@ -45,11 +45,19 @@ There are a few more Go novelties that the Python developer will have to learn,s
 -- autoformat
 -- small functions
 -- error handling vs exception handling
+-- tooling around it
+    - [online tutorial with hands on examples](https://tour.golang.org/welcome/1)
+    - local and [online playground](https://play.golang.org)
 
 - code examples / core concepts - language crash course
 -- private / public
 -- structs
 -- Channels + usage
+-- concurrency [talk](https://talks.godoc.org/github.com/gonum/talks/2015/intro_concurrency.slide#1)
+
+- easy cross compilation
+
+- automatic online documentation - [godoc](https://godoc.org/)
 
 - libraries
 -- core
@@ -57,6 +65,9 @@ There are a few more Go novelties that the Python developer will have to learn,s
 -- 3rd party
 --- cobra
 --- linters
+
+-- machine learning
+
 
 - Tools, links and tutorials
 -- awesome go as reference for further repositories
