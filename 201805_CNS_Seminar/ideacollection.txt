@@ -1,6 +1,10 @@
 
 - History
 
+https://en.wikipedia.org/wiki/Go_(programming_language)
+https://texlution.com/post/why-go-is-doomed-to-succeed/
+https://www.quora.com/Whats-the-history-of-golangs-syntax
+
 - core areas (where does it come from)
 -- google
 -- server
@@ -37,3 +41,5 @@
 
 Languages comparison
 https://dzone.com/articles/most-popular-programming-languages-of-2017
+
+Resources
