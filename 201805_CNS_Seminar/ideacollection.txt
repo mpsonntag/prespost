@@ -11,11 +11,33 @@ https://www.quora.com/Whats-the-history-of-golangs-syntax
 - area extensions (where does it go)
 -- IoT
 -- science
+--- [gonum project](http://www.gonum.org/)
+    - gonum
+        - equivalent to numpy
+        - statistics
+    - hdf5
+    - plot
+    - bindings for the linear algebra netlib.org package (BLAS and LAPACK)
+    - [gonum github page](https://github.com/gonum)
+    - [gonum tutorial]()
+    - [gonum talks](https://github.com/gonum/talks)
+
 
 - current usage
 -- + where we use it
 
 - comparison with other languages
+-- https://www.quora.com/Is-Golang-going-to-overpower-Python
+-- https://stxnext.com/blog/2017/09/27/go-go-python-rangers-comparing-python-and-golang/
+
+There are a few more Go novelties that the Python developer will have to learn,such as:
+    pointers
+    structs (compound types)
+    goroutines (comfy concurrency)
+    channels (send messages between goroutines)
+    methods (Go does not have classes, but you can define methods on types)
+    closure
+    defer (replacement for try-finally)
 
 - language concepts
 -- typed language
