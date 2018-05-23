@@ -59,6 +59,9 @@ There are a few more Go novelties that the Python developer will have to learn,s
 
 - automatic online documentation - [godoc](https://godoc.org/)
 
+- Hardware platform support
+-- [gobot](https://gobot.io/) supports building on and for 35 different platforms including Arduino and Raspberry Pi.
+
 - libraries
 -- core
 --- fmt
@@ -70,7 +73,8 @@ There are a few more Go novelties that the Python developer will have to learn,s
 
 
 - Tools, links and tutorials
--- awesome go as reference for further repositories
+-- [awesome go](https://github.com/avelino/awesome-go)
+-- [effective go](https://golang.org/doc/effective_go.html)
 
 Languages comparison
 https://dzone.com/articles/most-popular-programming-languages-of-2017
