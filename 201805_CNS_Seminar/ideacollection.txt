@@ -43,3 +43,8 @@ Languages comparison
 https://dzone.com/articles/most-popular-programming-languages-of-2017
 
 Resources
+[The state of go and other talks](https://talks.golang.org/)
+
+Go present:
+https://godoc.org/golang.org/x/tools/present
+http://halyph.com/blog/2015/05/18/golang-presentation-tool.html
