@@ -29,6 +29,14 @@ https://www.quora.com/Whats-the-history-of-golangs-syntax
 - comparison with other languages
 -- https://www.quora.com/Is-Golang-going-to-overpower-Python
 -- https://stxnext.com/blog/2017/09/27/go-go-python-rangers-comparing-python-and-golang/
+-- [stackoverflow language comparison 2017](https://insights.stackoverflow.com/survey/2017#technology)
+-- [stackoverflow most loved languages](https://insights.stackoverflow.com/survey/2017#most-loved-dreaded-and-wanted)
+
+- benchmarks
+-- https://benchmarksgame-team.pages.debian.net/benchmarksgame/faster/go.html
+
+-- go pros and cons
+https://www.slant.co/versus/126/127/~golang_vs_c
 
 There are a few more Go novelties that the Python developer will have to learn,such as:
     pointers
