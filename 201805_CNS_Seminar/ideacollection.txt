@@ -65,6 +65,8 @@ There are a few more Go novelties that the Python developer will have to learn,s
 
 - easy cross compilation
 
+- [cgo](https://golang.org/cmd/cgo/)
+
 - automatic online documentation - [godoc](https://godoc.org/)
 
 - Hardware platform support
