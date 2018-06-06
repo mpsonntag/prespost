@@ -14,8 +14,9 @@ improvements compared to the API described by \citet{Grewe_2011}.
 [...]
 
 Since the release of the original version odML has been used in various software projects as plugin to provide
-a predefined and available metadata format e.g. in the NIX project or as an integral part as in the odMLtables project
-as well as a standalone metadata data pipeline as described by Zehl et al.
+a predefined and available metadata format e.g. in the NIX project (https://github.com/G-Node/nix) or 
+as an integral part as in the odMLtables project as well as a standalone metadata data pipeline 
+as described by Zehl et al.
 
 The usage in everyday metadata pipelining as well as the integration of the core library in odMLtables lead to the 
 discovery of various shortcomings and lead to the demand of new features with respect to the original version
@@ -31,7 +32,11 @@ and searched using the established SPARQL query language.
 To address the need to easily visualize and manipulate odML files Jülich and G-Node started to work more closely 
 together to integrate the odMLtables into the previously described odML graphical user interface.
 
-As a first step, the odML graphical user interface was removed from the core library and 
+To enable better integration of the core odML library into odML tables, the odML graphical user interface was removed 
+from the core library and moved to its own project odml-ui (https://github.com/G-Node/odml-ui). odml-ui itself
+was updated to the new core odML version and now contains direct access points to the main odMLtables functionality
+making odml-ui and odMLtables even easier to use back to back leaving odml-ui as the file browsing and odMLtables as
+the file editing part. 
 
 
 2.1.2 Hierarchical Metadata in the odML format
