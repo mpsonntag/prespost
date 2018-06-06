@@ -1,5 +1,5 @@
 
-2.1.1 [choose chapter title or devise a different one]
+2.1.1 [xxx choose chapter title or devise a different one]
 - Regarding the current state of the odML format
 - A short description of the odML format 
 - ...
@@ -14,22 +14,23 @@ improvements compared to the API described by \citet{Grewe_2011}.
 [...]
 
 Since the release of the original version odML has been used in various software projects as plugin to provide
-a predefined and available metadata format e.g. in the NIX project (https://github.com/G-Node/nix) or 
-as an integral part as in the odMLtables project as well as a standalone metadata data pipeline 
-as described by Zehl et al.
+a predefined and available metadata format e.g. in the NIX (https://github.com/G-Node/nix) and RELACS 
+(https://github.com/relacs/relacs) projects or as an integral part as in the odMLtables project as well as a 
+standalone metadata data pipeline as described by Zehl et al.
 
 The usage in everyday metadata pipelining as well as the integration of the core library in odMLtables lead to the 
 discovery of various shortcomings and lead to the demand of new features with respect to the original version
 of odML. In addition the re-implementation of odML in other languages than the original implementation e.g. in C++
 or Matlab in the NIX project lead to a diversification of the core odML data format.
 
-To rid the project of smaller shortcomings and as a step to unify the odML variants, the core odML library was
-made fully python 2 and python 3 compatible. Furthermore, the `mapping` functionality was removed. [xxx why did we do this exactly?]
+To rid the project of smaller shortcomings and as a step to unify the odML variants, the latest release, 
+version 1.4 of odML, introduced heavy changes to the data model as well as to the functionality.
 The data model was significantly simplified by merging the Property and Value entities. This not only effectively 
 reduced redundancy and in turn file size, but also reduced the chance that core attributes "unit", "uncertainty", 
-"data type" and "reference" of values can be ambiguously defined or interpreted. Support for the "binary" data type
-has been dropped. For compatibility with the odML implementation in the NIX project, odML entities now
-contain a UUID effectively uniquely identifying every single odML entity even across unrelated odML files.
+"data type" and "reference" of values can be ambiguously defined or interpreted. The mapping synonym functionality was 
+removed [xxx maybe expand here on the reasons]. Support for the "binary" data type has been dropped. For 
+compatibility with the odML implementation in the NIX project, odML entities now contain a UUID effectively uniquely 
+identifying every single odML entity even across unrelated odML files.
 
 As the two main shortcomings of the odML core library we identified the need to search across multiple odML files and 
 the need to easily visualize and manipulate the content of specific odML files.
@@ -51,5 +52,3 @@ the file editing part.
 
 [... original text continued]
 The hierarchical odML structure is flexible and consists of three types of objects (Fig.~\ref{odMLstructure}):
-
-
