@@ -69,6 +69,15 @@ There are a few more Go novelties that the Python developer will have to learn,s
 
 - automatic online documentation - [godoc](https://godoc.org/)
 
+-- comparison python - golang
+https://groups.google.com/forum/#!topic/golang-nuts/MNxj22knZGw
+https://www.slant.co/versus/110/126/~python_vs_golang
+https://blog.filippo.io/building-python-modules-with-go-1-5/
+https://stxnext.com/blog/2017/09/27/go-go-python-rangers-comparing-python-and-golang/
+https://stackoverflow.com/questions/1743526/differences-between-go-and-cython
+https://stackoverflow.com/questions/12443203/writing-a-python-extension-in-go-golang
+
+
 - Hardware platform support
 -- [gobot](https://gobot.io/) supports building on and for 35 different platforms including Arduino and Raspberry Pi.
 
