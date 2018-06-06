@@ -23,6 +23,14 @@ discovery of various shortcomings and lead to the demand of new features with re
 of odML. In addition the re-implementation of odML in other languages than the original implementation e.g. in C++
 or Matlab in the NIX project lead to a diversification of the core odML data format.
 
+To rid the project of smaller shortcomings and as a step to unify the odML variants, the core odML library was
+made fully python 2 and python 3 compatible. Furthermore, the `mapping` functionality was removed. [xxx why did we do this exactly?]
+The data model was significantly simplified by merging the Property and Value entities. This not only effectively 
+reduced redundancy and in turn file size, but also reduced the chance that core attributes "unit", "uncertainty", 
+"data type" and "reference" of values can be ambiguously defined or interpreted. Support for the "binary" data type
+has been dropped. For compatibility with the odML implementation in the NIX project, odML entities now
+contain a UUID effectively uniquely identifying every single odML entity even across unrelated odML files.
+
 As the two main shortcomings of the odML core library we identified the need to search across multiple odML files and 
 the need to easily visualize and manipulate the content of specific odML files.
 To address the first shortcoming we integrated an export to the RDF (Resource Description Framework)
