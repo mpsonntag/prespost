@@ -5,6 +5,14 @@ https://en.wikipedia.org/wiki/Go_(programming_language)
 https://texlution.com/post/why-go-is-doomed-to-succeed/
 https://www.quora.com/Whats-the-history-of-golangs-syntax
 
+
+There are different levels why a programming language can be interesting
+
+- tooling and ecosystem
+- execution speed, hardware requirements
+- learning curve and usability
+
+
 - core areas (where does it come from)
 -- google
 -- server
@@ -53,6 +61,9 @@ There are a few more Go novelties that the Python developer will have to learn,s
 -- autoformat
 -- small functions
 -- error handling vs exception handling
+
+    error style: return when an error occurs and deal with it appropriately at every level
+
 -- tooling around it
     - [online tutorial with hands on examples](https://tour.golang.org/welcome/1)
     - local and [online playground](https://play.golang.org)
@@ -60,8 +71,18 @@ There are a few more Go novelties that the Python developer will have to learn,s
 - code examples / core concepts - language crash course
 -- private / public
 -- structs
+
+    main data structure - using structs for everything internally
+
 -- Channels + usage
 -- concurrency [talk](https://talks.godoc.org/github.com/gonum/talks/2015/intro_concurrency.slide#1)
+
+- mainly nice to use language idioms - lots of small things that make it convenient to work with
+
+   e.g.
+   for bla := range currList {}
+
+    if _, ok := currList[currKey]; !ok { return error("not found") }
 
 - easy cross compilation
 
