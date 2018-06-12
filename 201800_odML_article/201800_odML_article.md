@@ -2,12 +2,27 @@
 
 
 [... original text]
-odML\footnote{see: \texttt{https://github.com/G-Node/python-odml}} (Open metadata mark up language, RRID:SCR\_001376) is a versatile \xml -based hierarchical format for metadata \citep{Grewe_2011} developed by the German Neuroinformatics Node (G-Node). While odML was originally designed for electrophysiological metadata, its generic structure makes it also applicable to other scientific contexts. In the following, we describe odML in its version v1.4\footnote{\texttt{https://github.com/G-Node/python-odml/releases/tag/v1.4.0}}, which includes multiple improvements compared to the API described by \citet{Grewe_2011}.
+odML\footnote{see: \texttt{https://github.com/G-Node/python-odml}} (Open metadata mark up language, RRID:SCR\_001376) 
+is a versatile \xml -based hierarchical format for metadata \citep{Grewe_2011} developed by the German Neuroinformatics 
+Node (G-Node). While odML was originally designed for electrophysiological metadata, its generic structure makes it also 
+applicable to other scientific contexts. In the following, we describe odML in its version 
+v1.4\footnote{\texttt{https://github.com/G-Node/python-odml/releases/tag/v1.4.0}}, which includes multiple improvements 
+compared to the API described by \citet{Grewe_2011}.
 [...]
 
-Since the release of the original version, odML has been used in various software projects for storing metadata as they become available during data acquisition or analysis [e.g. in the NIX (https://github.com/G-Node/nix) and RELACS (http://www.relacs.sourceforge.net) projects], as an integral part in the odMLtables project, or as a part of the metadata data pipeline as described by \cite{Zehl_2016}.
+Since the release of the original version, odML has been used in various software projects for storing metadata as they 
+become available during data acquisition or analysis [e.g. in the NIX (https://github.com/G-Node/nix) and 
+RELACS (http://www.relacs.sourceforge.net) projects], as a part of a metadata data pipeline as described by 
+\cite{Zehl_2016}, or as an integral part in the odMLtables project.
 
-Its usage has led to the identification of shortcomings or unused features of the original data model. Due to various constraints, re-implementations of the odML data model in other programming languages e.g. C++ for the use in the NIX project or in the context storage backends other than text-based markup languages, led to diversification. In order to remedy this situation with the latest release of odML version 1.4 (i) unused features were removed and (ii) the data model was simplified and adapted . We will briefly review the changes. 
+This usage of odML in different environments with varying requirements has led to the identification of unused features 
+and the need for improvement of the original data model. As examples odML needed to be re-implemented in C++ in the case 
+of the NIX and RELACS projects to accommodate a different storage backend than the text-based XML format, in case of the 
+odMLtables project, the original internal data representation required only a subset of the complete odML data model. 
+These re-implementations did not always stick to the original odML specifications and lead to a diversification of the 
+available odML data models. In order to remedy this situation with the latest release of odML version 1.4 (i) unused 
+features were removed and (ii) the data model was simplified and adapted to ensure odML compatibility between the 
+various project implementations. We will briefly review the changes. 
 
 2.1.2 Removal of unused features:
 We dropped support of storing binary data within the values. This feature has, to our knowledge, never been used. Approaches combining data and metadata storage (e.g. the NIX project) actually left this feature needless. Dropping it allowed us to also remove additional fields in the Value entity that were devoted solely to this purpose. Further, the mapping functionality was dropped. The idea behind this feature was to allow to map metadata used according to one definition to a different definition. As before, to our knowledge, this functionality has not been used and becomes actually obsolete when metadata are converted to formats using semantic web technologies. Again, this allowed us to remove now unnecessary fields from the model.
