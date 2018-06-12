@@ -54,11 +54,12 @@ With the new version, XML is still the default storage format, but to support ea
 metadata can now be stored in JSON and Yaml as well and be converted from one to the other formats. 
 
 For easy visualization and manipulation of specific odML files, the groups from Jülich and the G-Node worked more 
-closely together to integrate the odMLtables into the previously described odML graphical user interface. To facilitate 
-the integration of the core odML library into odMLtables, the odML graphical user interface was removed from the core 
-library and moved to its own project odml-ui (https://github.com/G-Node/odml-ui). odml-ui itself was updated to the new 
-core odML version and now provides direct access points to the main odMLtables use case features making odml-ui and 
-odMLtables even easier to use back to back leaving odml-ui as the file browsing and odMLtables as the file editing part.
+closely together to integrate the odMLtables into the previously described odML graphical user interface. To simplify 
+the integration of the core odML library into projects like odMLtables, the odML graphical user interface was removed 
+from the core library and moved to its own project odml-ui (https://github.com/G-Node/odml-ui). odml-ui itself was 
+updated to the new core odML version and now provides direct access points to the main odMLtables use case features 
+making odml-ui and odMLtables even easier to use back to back leaving odml-ui as the file browsing and odMLtables as 
+the file editing part.
 
 2.1.5 Hierarchical Metadata in the odML format
 
