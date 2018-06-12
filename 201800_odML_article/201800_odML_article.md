@@ -1,54 +1,31 @@
+2.1.1 User driven odML adaptations and updates
 
-2.1.1 [xxx choose chapter title or devise a different one]
-- Regarding the current state of the odML format
-- A short description of the odML format 
-- ...
 
 [... original text]
-odML\footnote{see: \texttt{https://github.com/G-Node/python-odml}} (Open metadata mark up language, RRID:SCR\_001376) 
-is a versatile \xml -based hierarchical format for metadata \citep{Grewe_2011} developed by 
-the German Neuroinformatics Node (G-Node). While odML was originally designed for electrophysiological metadata, 
-its generic structure makes it also applicable to other scientific contexts. In the following, we describe odML in 
-its version v1.4\footnote{\texttt{https://github.com/G-Node/python-odml/releases/tag/v1.4.0}}, which includes multiple 
-improvements compared to the API described by \citet{Grewe_2011}.
+odML\footnote{see: \texttt{https://github.com/G-Node/python-odml}} (Open metadata mark up language, RRID:SCR\_001376) is a versatile \xml -based hierarchical format for metadata \citep{Grewe_2011} developed by the German Neuroinformatics Node (G-Node). While odML was originally designed for electrophysiological metadata, its generic structure makes it also applicable to other scientific contexts. In the following, we describe odML in its version v1.4\footnote{\texttt{https://github.com/G-Node/python-odml/releases/tag/v1.4.0}}, which includes multiple improvements compared to the API described by \citet{Grewe_2011}.
 [...]
 
-Since the release of the original version odML has been used in various software projects as plugin to provide
-a predefined and available metadata format e.g. in the NIX (https://github.com/G-Node/nix) and RELACS 
-(https://github.com/relacs/relacs) projects or as an integral part as in the odMLtables project as well as a 
-standalone metadata data pipeline as described by Zehl et al.
+Since the release of the original version, odML has been used in various software projects for storing metadata as they become available during data acquisition or analysis [e.g. in the NIX (https://github.com/G-Node/nix) and RELACS (http://www.relacs.sourceforge.net) projects], as an integral part in the odMLtables project, or as a part of the metadata data pipeline as described by \cite{Zehl_2016}.
 
-The usage in everyday metadata pipelining as well as the integration of the core library in odMLtables lead to the 
-discovery of various shortcomings and lead to the demand of new features with respect to the original version
-of odML. In addition the re-implementation of odML in other languages than the original implementation e.g. in C++
-or Matlab in the NIX project lead to a diversification of the core odML data format.
+Its usage has led to the identification of shortcomings or unused features of the original data model. Due to various constraints, re-implementations of the odML data model in other programming languages e.g. C++ for the use in the NIX project or in the context storage backends other than text-based markup languages, led to diversification. In order to remedy this situation with the latest release of odML version 1.4 (i) unused features were removed and (ii) the data model was simplified and adapted . We will briefly review the changes. 
 
-To rid the project of smaller shortcomings and as a step to unify the odML variants, the latest release, 
-version 1.4 of odML, introduced heavy changes to the data model as well as to the functionality.
-The data model was significantly simplified by merging the Property and Value entities. This not only effectively 
-reduced redundancy and in turn file size, but also reduced the chance that core attributes "unit", "uncertainty", 
-"data type" and "reference" of values can be ambiguously defined or interpreted. The mapping synonym functionality was 
-removed [xxx maybe expand here on the reasons]. Support for the "binary" data type has been dropped. For 
-compatibility with the odML implementation in the NIX project, odML entities now contain a UUID effectively uniquely 
-identifying every single odML entity even across unrelated odML files.
+2.1.2 Removal of unused features:
+We dropped support of storing binary data within the values. This feature has, to our knowledge, never been used. Approaches combining data and metadata storage (e.g. the NIX project) actually left this feature needless. Dropping it allowed us to also remove additional fields in the Value entity that were devoted solely to this purpose. Further, the mapping functionality was dropped. The idea behind this feature was to allow to map metadata used according to one definition to a different definition. As before, to our knowledge, this functionality has not been used and becomes actually obsolete when metadata are converted to formats using semantic web technologies. Again, this allowed us to remove now unnecessary fields from the model.
 
-As the two main shortcomings of the odML core library we identified the need to search across multiple odML files and 
-the need to easily visualize and manipulate the content of specific odML files.
-To address the first shortcoming we integrated an export to the RDF (Resource Description Framework)
-format opening odML to the semantic web. Graphs containing the content of multiple odML files can easily be constructed
-and searched using the established SPARQL query language.
-
-To address the need to easily visualize and manipulate odML files Jülich and G-Node started to work more closely 
-together to integrate the odMLtables into the previously described odML graphical user interface.
-
-To enable better integration of the core odML library into odML tables, the odML graphical user interface was removed 
-from the core library and moved to its own project odml-ui (https://github.com/G-Node/odml-ui). odml-ui itself
-was updated to the new core odML version and now contains direct access points to the main odMLtables functionality
-making odml-ui and odMLtables even easier to use back to back leaving odml-ui as the file browsing and odMLtables as
-the file editing part. 
+2.1.3 Model simplification:
+Several fields were removed due to the dropping of the mapping feature and by removing the support for binary content. Another major change was the merge of Value and Property entities of the original data model (compare figure X a and b). In principle, it has been possible to store values of completely different types within the same property. For example, storing a numeric value (e.g. the temperature) together with a textual value would have been possible. From the point of a handling software tool this is very tricky and makes the stored metadata susceptible to verboseness and “uncleanliness”. In the current version, all values stored within a Property must have the same data-type (integer, double, boolean, string…) and must have the same physical unit.  This change did not only reduce redundancy and in turn file size, but also reduced the chance that core attributes "unit", "uncertainty", "data type" and "reference" of values can be ambiguously defined or interpreted. For compatibility with the odML implementation in the NIX project, odML entities now contain a UUID (auto-generated unique identifier with extremely low collision probability) that uniquely identifies every single odML entity even across unrelated odML files.
 
 
-2.1.2 Hierarchical Metadata in the odML format
+2.1.4 Additional features:
+On the side of the odML python library, we integrated an export to the RDF (Resource Description Framework) format opening odML to the semantic web. With this, the content of multiple odML files exported into the same graph can be can be easily searched using the established SPARQL query language. So far, the odML library used xml as a storage format. With the new version, xml is still the default storage format, but to support easy consumption through web-based services, metadata can be stored also in JSON and Yaml and be converted from one to the other formats. 
+For easy visualization and manipulation of specific odML files, the groups from Jülich and the G-Node worked more closely together to integrate the odMLtables into the previously described odML graphical user interface. To facilitate the integration of the core odML library into odML tables, the odML graphical user interface was removed from the core library and moved to its own project odml-ui (https://github.com/G-Node/odml-ui). odml-ui itself was updated to the new core odML version and now contains direct access points to the main odMLtables functionality making odml-ui and odMLtables even easier to use back to back leaving odml-ui as the file browsing and odMLtables as the file editing part.
+
+
+2.1.5 Hierarchical Metadata in the odML format
+
 
 [... original text continued]
 The hierarchical odML structure is flexible and consists of three types of objects (Fig.~\ref{odMLstructure}):
+
+Add data model comparison to paper figure 3?
+
