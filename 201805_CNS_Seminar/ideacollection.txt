@@ -67,6 +67,8 @@ There are a few more Go novelties that the Python developer will have to learn,s
 -- tooling around it
     - [online tutorial with hands on examples](https://tour.golang.org/welcome/1)
     - local and [online playground](https://play.golang.org)
+    - mature IDE: Visual Studio Code (https://code.visualstudio.com/)
+    - free for students: https://www.jetbrains.com/go/
 
 - code examples / core concepts - language crash course
 -- private / public
