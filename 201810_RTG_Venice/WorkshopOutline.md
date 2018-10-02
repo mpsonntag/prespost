@@ -1,4 +1,13 @@
 
+- If there is already a well defined data format that can be easily accessed and manipulated by a programming language - great. use it. don't add work unless you have too.
+    e.g. Judi dataset nifti files -> can be opened, processed and analysed using e.g. the NiBabel python library.
+- If there are any files that cannot be accessed by an existing library and are normal timeseries or other data, put them in nix and annotate them accordingly e.g. Judi dataset files Sub_xxx/*.txt -> they are not self explanatory since there is no format documentation. When putting it into a nix file, you can add metadata via section/properties and link them to the actual data. when doing analysis e.g. together with the nifit files, just access both if required and you can add the results to the same nix file as well.
+
+- nix sections can be copied to another nix file to serve as templates 
+
+- workshop: make a single piece of current data structure easier to understand for other people / future self
+
+
 
 Workshop provide:
 gin-cli for gin@home for RTGVenice
