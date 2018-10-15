@@ -77,6 +77,9 @@ There are a few more Go novelties that the Python developer will have to learn,s
     main data structure - using structs for everything internally
 
 -- Channels + usage
+
+-- Awesome general [introduction to concurrency in go](https://talks.golang.org/2012/waza.slide#1)
+
 -- concurrency I [talk](https://talks.golang.org/2012/concurrency.slide#1)
 -- concurrency II [talk](https://talks.godoc.org/github.com/gonum/talks/2015/intro_concurrency.slide#1)
 -- [concurrency vs parallelism](https://blog.golang.org/concurrency-is-not-parallelism)
