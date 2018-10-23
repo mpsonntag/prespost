@@ -24,17 +24,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.90509668"
-     inkscape:cx="2777.0727"
-     inkscape:cy="2348.2799"
+     inkscape:zoom="0.35"
+     inkscape:cx="3095.5051"
+     inkscape:cy="1681.8898"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="true"
      showguides="true"
      inkscape:window-width="2560"
-     inkscape:window-height="1412"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-height="1320"
+     inkscape:window-x="2560"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      borderlayer="false"
      inkscape:guide-bbox="true"
@@ -8518,7 +8518,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -8911,7 +8911,7 @@
        ry="10" />
     <g
        id="g3853-4"
-       transform="matrix(1.2682585,0,0,1.2682585,4964.3478,902.9486)"
+       transform="matrix(1.2682585,0,0,1.2682585,4960.3478,902.9486)"
        style="stroke-width:0.78848279">
       <rect
          id="rect3842-5"
@@ -14401,7 +14401,7 @@
          id="flowPara8281"> • Download and upload large </flowPara><flowPara
          id="flowPara31811">    files via command line</flowPara><flowPara
          id="flowPara8289" /><flowPara
-         id="flowPara8283"> • Automate workflows using </flowPara><flowPara
+         id="flowPara8283"> • Automate workflows via </flowPara><flowPara
          id="flowPara8291">    command line client</flowPara><flowPara
          id="flowPara8412" /><flowPara
          id="flowPara8416"> • All changes are versioned</flowPara><flowPara
