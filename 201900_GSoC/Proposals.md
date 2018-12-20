@@ -1,9 +1,18 @@
-# Science continuous integration microservice using Snakemake
+# GIN Continuous integration microservice for scientific data
 
 The G-Node Data Infrastructure (GIN) services[1] provide a platform for
-management and sharing of data in neuroscience. Inspired by existing 
-continuous integration services like Travis[2] or CircleCI[3] and
-recent developed build pipelines for the scientific field like SnakeMake[4] 
+management and sharing of data in neuroscience. Inspired by
+GitHub, the platform uses a git/git-annex backend for versioning and
+sharing of scientific data, offering the power of a web based repository
+management service combined with a distributed file storage. It addresses the range of
+research data workflows starting from data analysis on the local workstation
+to remote collaboration and data publication. GIN also provides indexing
+services for convenient searching of data and metadata, including information in
+well-defined formats like the odML[2] metadata format and the NIX[3] format for
+scientific data.
+
+Inspired by existing continuous integration services like Travis[4] or CircleCI[5] and
+recent developed build pipelines for the scientific field like SnakeMake[6] 
 this project will aspire to prototype a continuous integration microservice
 for scientific data within the scope of the G-Node Data Infrastructure services. 
 
@@ -15,10 +24,11 @@ Go programming language and ideally is already familiar with either git,
 any continuous integration service or SnakeMake
 
 [1] https://gin.g-node.org
-[2] https://travis-ci.org/
-[3] https://circleci.com/
-[4] https://snakemake.readthedocs.io/en/stable/
-
+[2] https://github.com/G-Node/python-odml
+[3] https://github.com/G-Node/nix
+[4] https://travis-ci.org/
+[5] https://circleci.com/
+[6] https://snakemake.readthedocs.io/en/stable/
 
 
 ## whats our goal with this
@@ -44,36 +54,38 @@ any continuous integration service or SnakeMake
 - provide example workflow
 
 
-
-
 # Enhance the scientific data files validation service in GIN
 
 The G-Node Data Infrastructure (GIN) services[1] provide a platform for
-management and sharing of data in neuroscience. To push the quality 
-of published and shared scientific data, this project is extended by a 
-scientific data files validation microservice. The existing prototype gin-valid[2]
-enables validation of BIDS[3] files within a GIN repository.
+management and sharing of data in neuroscience. Inspired by
+GitHub, the platform uses a git/git-annex backend for versioning and
+sharing of scientific data, offering the power of a web based repository
+management service combined with a distributed file storage. It addresses the range of
+research data workflows starting from data analysis on the local workstation
+to remote collaboration and data publication. GIN also provides indexing
+services for convenient searching of data and metadata, including information in
+well-defined formats like the odML[2] metadata format and the NIX[3] format for
+scientific data.
+ 
+To push the quality of published and shared scientific data, this project is extended by a 
+scientific data files validation microservice. The existing prototype gin-valid[4]
+enables validation of BIDS[5] files within a GIN repository.
 
 Goal of the project is to extend this service to support the validation 
-of further scientific data formats, NIX[4] and odML[5] in particular, as well 
+of further scientific data formats, e.g. NIX, odML, PyNN[6] or NeuroML[7], as well 
 as to enhance the usability of the existing prototype. 
 
 A successful application will have some experience with the Go programming
 language and is familiar with git and github related topics.
 
 [1] https://gin.g-node.org
-[2] https://github.com/G-Node/gin-valid
-[3] https://bids.neuroimaging.io/
-[4] https://github.com/G-Node/nix
-[5] https://github.com/G-Node/python-odml
+[2] https://github.com/G-Node/python-odml
+[3] https://github.com/G-Node/nix
+[4] https://github.com/G-Node/gin-valid
+[5] https://bids.neuroimaging.io/
+[6] https://neuralensemble.org/PyNN/
+[7] https://www.neuroml.org/
 
------
-- Enhance the current validation server found at https://github.com/G-Node/gin-valid
-- Fix open issues
-- add nix validation
-- add odML validation
-- add ??? validation
------
 
 # Extended support for NIX file format in GIN
 
