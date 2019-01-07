@@ -13,10 +13,9 @@ scientific data.
 
 Considering existing continuous integration services like Travis[4] or CircleCI[5] 
 and build pipelines for the scientific field like SnakeMake[6] this project aims 
-to prototype a continuous integration microservice for research data within 
-the scope of the G-Node Data Infrastructure services. 
+to prototype a continuous integration microservice for research data. 
 
-Scope of the project is to set up a microservice for automated organization and 
+Scope of the project is to set up a GIN microservice for automated organization and 
 processing of data and metadata using established CI technology. The development will
 be performed based on a use case of electrophysiological data.
 
@@ -105,7 +104,7 @@ In this project we want to enhance the GIN data management services
 by making use of specific features of the NIX format, such as the comprehensive
 organization of metadata and the representation of relationships
 between the data. This would materialize as a set of features on the GIN web
-frontend for extended search, visualization and exploration of data stored on GIN.
+front-end for extended search, visualization and exploration of data stored on GIN.
 
 Outcomes of this project would be the ability to extract structural properties and
 metadata from files and to present and visualize the results as statistical summaries.
