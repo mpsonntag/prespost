@@ -1,4 +1,4 @@
-# GIN Continuous integration microservice for scientific data
+# Continuous integration for research data
 
 The G-Node Data Infrastructure (GIN) services[1] provide a platform for
 management and sharing of data in neuroscience. Inspired by
@@ -11,17 +11,18 @@ services for convenient searching of data and metadata, including information in
 well-defined formats like the odML[2] metadata format and the NIX[3] format for
 scientific data.
 
-Inspired by existing continuous integration services like Travis[4] or CircleCI[5] and
-recent developed build pipelines for the scientific field like SnakeMake[6] 
-this project will aspire to prototype a continuous integration microservice
-for scientific data within the scope of the G-Node Data Infrastructure services. 
+Considering existing continuous integration services like Travis[4] or CircleCI[5] 
+and build pipelines for the scientific field like SnakeMake[6] this project aims 
+to prototype a continuous integration microservice for research data within 
+the scope of the G-Node Data Infrastructure services. 
 
-Scope of the project is
-[ToBeDefined]
+Scope of the project is to set up a microservice for automated organization and 
+processing of data and metadata using established CI technology. The development will
+be performed based on a use case of electrophysiological data.
 
-A successful application will have some experience with either the Python or the 
-Go programming language and ideally is already familiar with either git, 
-any continuous integration service or SnakeMake
+A successful application will have some experience with the Python or the 
+Go programming languages and ideally is familiar with git, continuous integration 
+services and/or SnakeMake
 
 [1] https://gin.g-node.org
 [2] https://github.com/G-Node/python-odml
@@ -54,7 +55,7 @@ any continuous integration service or SnakeMake
 - provide example workflow
 
 
-# Enhance the scientific data files validation service in GIN
+# Enhancing the scientific data format validation service in GIN
 
 The G-Node Data Infrastructure (GIN) services[1] provide a platform for
 management and sharing of data in neuroscience. Inspired by
@@ -67,15 +68,15 @@ services for convenient searching of data and metadata, including information in
 well-defined formats like the odML[2] metadata format and the NIX[3] format for
 scientific data.
  
-To push the quality of published and shared scientific data, this project is extended by a 
-scientific data files validation microservice. The existing prototype gin-valid[4]
-enables validation of BIDS[5] files within a GIN repository.
+To push the quality of published and shared scientific data, a microservice for 
+validation of scientific data formats is being established. The gin-valid[4] service 
+currently enables validation of BIDS[5] files within a GIN repository.
 
 Goal of the project is to extend this service to support the validation 
 of further scientific data formats, e.g. NIX, odML, PyNN[6] or NeuroML[7], as well 
 as to enhance the usability of the existing prototype. 
 
-A successful application will have some experience with the Go programming
+A successful candidate will have experience with the Go programming
 language and is familiar with git and github related topics.
 
 [1] https://gin.g-node.org
@@ -87,7 +88,7 @@ language and is familiar with git and github related topics.
 [7] https://www.neuroml.org/
 
 
-# Extended support for NIX file format in GIN
+# Extended support for the NIX file format in GIN
 
 The G-Node Data Infrastructure (GIN) services[1] provide a platform for
 management and sharing of data in neuroscience. Inspired by
@@ -110,7 +111,7 @@ Outcomes of this project would be the ability to extract structural properties a
 metadata from files and to present and visualize the results as statistical summaries.
 
 A successful applicant will have some experience with Python and Go as well as git and
-is interested in working with ElasticSearch and JavaScript based data visualization.
+is interested in working with ElasticSearch and JavaScript-based data visualization.
 
 [1] https://gin.g-node.org
 [2] https://github.com/G-Node/python-odml
