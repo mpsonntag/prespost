@@ -1,0 +1,7 @@
+odML tables paper color scheme
+
+            R   G   B   Alpha   Hex
+Section:    131 174 221 255     83aedd
+Property:   122 185 209 255     7ab9d1
+value:      221 237 247 255     d4edf7
+
