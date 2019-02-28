@@ -1,5 +1,5 @@
 # exclude resources folder
-resources/
+resources_not/
 
 # exclude IDEA specifics
 .idea/
