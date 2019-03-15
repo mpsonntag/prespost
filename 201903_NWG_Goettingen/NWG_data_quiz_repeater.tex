@@ -1,0 +1,56 @@
+\documentclass[a5paper,8pt]{article}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{multido}
+
+\usepackage[export]{adjustbox}
+\def\startnumber{1}
+\setlength{\footskip}{-1.5cm}
+
+% How many exams do we need?
+\def\numberofq{10}
+
+% Which is the input PDF file?
+\def\qfile{GNode_quest.pdf}
+
+% This is to control the placement of the number.
+% I am using A4 format, so feel free to adapt to your page size.
+
+
+% We use headers to output the serial number
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} % No header line
+\renewcommand{\footrulewidth}{0pt} % No footer line
+\cfoot{}
+
+% Actual command to include the serial number
+\rfoot{
+%\includesvg[width=50pt, valign=c]{G-Node_Logo.svg} text
+\includegraphics[width=50pt, valign=c]{gnode_logo.png}
+\textsf{%
+% Some number padding - for up to 999 questionnaires
+\ifnum\numberq<100 0\fi%
+\ifnum\numberq<10 0\fi%
+\numberq}
+}
+
+\lfoot{Questionnaire \textsf{%
+% Some number padding - for up to 999 questionnaires
+\ifnum\numberq<100 0\fi%
+\ifnum\numberq<10 0\fi%
+\numberq}
+}
+
+% And here comes the single loop across all documents
+% pagecommand by itself adds nothing,
+% but causes our new headers and footers to be printed
+\begin{document}
+
+\multido{ \numberq=\startnumber+1}{\numberofq}{
+    \includepdf[pages=-,pagecommand=\strut]{\qfile}
+}
+\end{document}
