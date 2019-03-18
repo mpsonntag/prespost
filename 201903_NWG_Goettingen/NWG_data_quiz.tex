@@ -12,7 +12,7 @@
 \usepackage{forloop}% used for \Qrating and \Qlines
 \usepackage{ifthen}% used for \Qitem and \QItem
 \usepackage{typearea}
-\setlength{\topmargin}{-1.5cm}
+\setlength{\topmargin}{-2.2cm}
 \setlength\headheight{45pt}
 \usepackage{scrpage2}
 \usepackage{fancyhdr}
@@ -111,8 +111,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% End of questionnaire command definitions %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\lhead{\includesvg[width=150pt]{G-Node_LogoLong.svg}}
-\rhead{\includesvg[width=50pt]{GinLogo_text.svg}}
+\lhead{\includesvg[width=120pt]{G-Node_LogoLong.svg}}
+\rhead{\includesvg[width=40pt]{GinLogo_text.svg}}
 %%\fancyfoot[L]{\fontsize{14}{16} \fontfamily{pzc} \selectfont Questionnaire \thepage}
 %%\fancyfoot[R]{\fontsize{14}{16} \fontfamily{pzc} \selectfont Questionnaire \thepage}
 
@@ -120,33 +120,24 @@
 
 \begin{document}
 
+\mbox{}\vspace{1em}
 \begin{center}
-
-
 \textbf{\huge The G-Node Data Quiz}
 \end{center}\vskip1em
 
 \noindent How much do you now about data storage, versioning, management and publication? The German Neuroinformatics Node challenges your knowledge! The correct answers and some goodies for correct answers will be revealed on Friday!
 
+\noindent \textbf{For some questions, there may be multiple correct answers.}
+
 \section*{Questions:}
 
-\Qitem{\Qq{In a CERN study, 97 petabytes of data were checked. How many bytes were found silently corrupted after six months:}}
+\Qitem{\Qq{In a CERN study, 97 petabytes of data were checked. How many bytes were found silently corrupted after six months:}} 
 {\Qtab{1.2cm}{
 \QO{ 0 bytes} \hskip0.2cm
 \QO{ 500 bytes} \hskip0.2cm
 \QO{ 128 megabytes} \hskip0.2cm
 \QO{ 7 gigabytes}  \hskip0.2cm
 \QO{ 1 petabyte}
- }}
-
-
-\Qitem{ \Qq{Which technologies are supported by the GIN data hosting platform for downloading data:} }
-{\Qtab{1.2cm}{
-\QO{ https} \hskip0.5cm
-\QO{ ftp} \hskip0.5cm
-\QO{ git} \hskip0.5cm
-\QO{ WebDAV}  \hskip0.5cm
-\QO{ telnet}
  }}
 
 \Qitem{\Qq{Which of the following software tools help you version your code:} }
@@ -158,11 +149,12 @@
 \QO{ perl} \hskip0.5cm
 \QO{ sting}  }}
 
-\Qitem{\Qq{What does abbreviation DOI stands for:} }
+\Qitem{\Qq{What does the abbreviation DOI stand for:} }
 {\Qtab{1.2cm}{
-\QO{Digital Object Identifier} \hskip0.4cm
-\QO{Digital Object Index} \hskip0.4cm
-\QO{Digital Open Index} }}
+\QO{ Digital Open Index} \hskip0.4cm
+\QO{ Digital Object Index} \hskip0.4cm \\
+\QO{ Digital Object Identifier} \hskip0.4cm
+\QO{ Domain Object Interface } }}
 
 
 \Qitem{ \Qq{Which of the following free services help programmers and scientists with code quality:}}
@@ -174,27 +166,42 @@
 \QO{ devcircle} }}
 
 
-\Qitem{ \Qq{How much does it cost to register a DOI:}}
+\Qitem{ \Qq{Which aspects are not included in the FAIR principles:}}
 {\Qtab{1.2cm}{
-\QO{ 1.00\$}\hskip0.5cm
-\QO{ depends on where you request it}\hskip0.5cm
-\QO{ 250\$}\hskip0.5cm
-\QO{ 15\$} }}
+\QO{ Free }\hskip0.5cm
+\QO{ Accurate } \hskip0.5cm
+\QO{ Interoperable } \hskip0.5cm
+\QO{ Reliable }\hskip0.5cm \\
+\QO{ Findable }\hskip0.5cm
+\QO{ Accessible }\hskip0.5cm
+\QO{ Identifiable}\hskip0.5cm
+\QO{ Reusable }\hskip0.5cm
+}}
 
 \Qitem{\Qq{What does metadata mean:} }
 {\Qtab{1.2cm}{
-\QO{data about data} \hskip1.1cm
-\QO{Understanding how an experiment was conducted}
-\QO{Beyond an item given} \hskip0.37cm
-\QO{Additional work}
+\QO{ Data about data } \hskip0.5cm
+\QO{ Beyond an item given } \hskip0.5cm
+\QO{ Additional work }
+\\
+\QO{ Understanding how an experiment was conducted }
 }}
 
+\Qitem{ \Qq{Which technologies are supported by the GIN data hosting platform for downloading data:} }
+{\Qtab{1.2cm}{
+\QO{ https} \hskip0.5cm
+\QO{ ftp} \hskip0.5cm
+\QO{ git} \hskip0.5cm
+\QO{ WebDAV}  \hskip0.5cm
+\QO{ telnet}
+ }}
+
+
 ~\\
 
-\noindent Are you interested in any aspect of this data quiz? Do you want to know the correct answers or do you want to know more about Data management, programming in science, versioning or metadata? The G-Node team will be happy to discuss it in detail and some open source tools that they can offer at the BCOS booth at any time of your convenience during this conference.
-
+\noindent \text{Do you want to know the correct answers or do you want to know more about data management, programming in science, versioning or metadata? The G-Node team will be happy to discuss it in detail and some open source tools that they can offer at the BCOS booth at any time of your convenience during this conference.}
 ~\\
 
-\noindent \textit{Quiz technicalities: Please tear off and keep the number in the lower right corner. Every correctly answered quiz form will be eligible for a drawing of all handed in forms. The first ten drawn lots will win valuable prizes. The drawing will take place at the BCOS booth on Friday, 22.03.2019, at 10:30. Winners can claim their prizes by presenting their questionnaire number until Saturday 12:00 at the BCOS booth. You can hand in a filled in quiz form to the G-Node team at the booth.}
+\noindent \textsl{ Quiz technicalities: Please tear off and keep the number in the lower right corner. Every correctly answered quiz form will be eligible for a drawing of all handed in forms. The first ten drawn lots will win valuable prizes. The drawing will take place at the BCOS booth on Friday, 22.03.2019, at 10:30. Winners can claim their prizes by presenting their questionnaire number until Saturday 12:00 at the BCOS booth. You can hand in a filled in quiz form to the G-Node team at the booth.}
 
 \end{document}
