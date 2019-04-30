@@ -2,7 +2,7 @@ Microservice infrastructure for continuous validation, processing and indexing o
 
 Michael Sonntag1, Achilleas Koutsou1, Christian Garbers1, Jiří Vaněk1, Thomas Wachtler1
 
-1Ludwig-Maximilian-Universität München, Biologie II, Großhaderner Straße 2, 82152 Planegg-Martinsried, Germany 
+1Ludwig-Maximilian-Universität München, German Neuroinformatics Node, Martinsried, Germany 
 
 Research requires data to continuously be processed, analyzed and visualized; data needs to be quality checked, verified and backed up. Data and metadata need to be made publicly available in an easy to find and use manner. Many of these tasks can be automated, which usually leads to fewer errors and a higher results quality. To facilitate these tasks, we introduce a suite of microservices for the G-Node data infrastructure (GIN)[1], an open platform for collaboration and sharing of research data and code.
 
