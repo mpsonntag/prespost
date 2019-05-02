@@ -65,27 +65,32 @@ Disclosures
      M. Sonntag: None. A. Koutsou: None. C. Garbers: None. C.J. Kellner: None. J. Grewe: None. T. Wachtler: None.
 
 Abstract
-    Maintaining reproducible data workflows while keeping data in sync, backed up, and easily accessible from within
-    and outside the lab is a key challenge in research. To minimize time and effort scientists have to spend on these
-    tasks, we provide a suite of tools designed for comprehensive, reproducible and versioned management of scientific
-    data including storage of raw data and metadata annotation.
-    Reproducibility and data re-usability require the presence of metadata also providing information about experimental
-    conditions. The odML[1] metadata format is a flexible format to collect and organize any kind of metadata. It enables
-    comprehensive collection and automated processing of metadata[2].
-    With the NIX[3] format data can be directly linked to corresponding analysis results and associated metadata using
-    odML. It supports a wide range of data types, including electrophysiology and imaging data. NIX is integrated with
-    the Neo[4] Python package for electrophysiology, enabling Neo users to store their data in a common open format.
-    The GIN[5] services provide versioned data management and collaborative data sharing. Using established versioning
-    technology[6,7], GIN tracks changes and provides secure access, making it convenient to work from multiple
-    workplaces while keeping all data available and in sync. Data can be managed from web and file browsers or a standalone,
-    platform independent command line client, enabling integration into scripted data acquisition, analysis or backup
-    procedures. It makes it straightforward to share data within a lab or with off-site collaborators and to work on it
-    together. Plugins for the web service enable server-side workflow automization, which comes with the benefit of
+    Scientists spend more and more time with data management tasks necessary for keeping
+    consistent data workflows in the lab, for collaboration and for publication. To reduce
+    the workload associated with these tasks, we provide a suite of easy to use tools supporting
+    efficient research data management, reproducibility and collaboration.
+    Reproducibility and data re-usability require the presence of metadata describing data and
+    experimental conditions. The odML[1] metadata format is a simple and convenient format for
+    comprehensive collection and automated processing of metadata[2], including conversion to
+    other formats such as RDF to utilize semantic web technologies.
+    To keep data and metadata organized, the NIX[3] data format enables to effectively link data
+    and corresponding analysis results as well as the associated metadata. It supports a wide
+    range of data types, including electrophysiology and imaging data. NIX uses the odML metadata
+    format and is integrated with the Neo[4] Python package for electrophysiology, enabling Neo
+    users to store their data in a common open format.
+    The GIN[5] services provide versioned data management and collaborative data sharing. Using
+    established versioning technology[6,7], GIN keeps track of changes and provides secure access,
+    making it convenient to work from multiple workplaces while keeping all data available and
+    in sync. It offers seamless version control while working with the data files and enables
+    automating data access and management in analysis workflows. The service works with any kind
+    of directory structure and file types, supporting the scientist's data organization and
+    keeping previous versions accessible when datasets are updated. It makes it straightforward
+    to share data within a lab or with off-site collaborators and to work on it together. Plugins
+    for the web service enable server-side workflow automization, which comes with the benefit of
     out-of-the-box reproducibility, and data quality control[8] with every recorded data change.
-    The tools presented are easy to use, platform independent, can be combined with other approaches supporting
-    reproducibility and data sharing[9,10,11], and enable efficient data management that supports the FAIR principles[12].
-    Combining them for data annotation, organization, and storage allows streamlining data workflows and efficiently
-    sharing well-annotated datasets within the lab, among collaborators, or with the larger scientific community.
+    The tools presented are easy to use, can be combined with other approaches supporting
+    reproducibility and data sharing[9,10,11], and enable efficient data management that supports
+    the FAIR principles[12].
 
     [1] http://www.g-node.org/odml
     [2] https://doi.org/10.3389/fninf.2016.00026
