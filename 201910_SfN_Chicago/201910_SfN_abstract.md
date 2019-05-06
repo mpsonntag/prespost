@@ -1,3 +1,60 @@
+Spend your time on science, not on data management: Open tools for efficient data organization, reproducible workflows, and collaboration
+
+Authors
+    A. KOUTSOU1, M. SONNTAG1, C. GARBERS1, C. J. KELLNER1, J. GREWE2, *T. WACHTLER1;
+    1G-Node, Dept. of Biol. II, Ludwig-Maximilians-Universität München, Planegg, Germany; 2Eberhardt-Karls-Universität Tübingen, Tübingen, Germany
+
+Disclosures
+     M. Sonntag: None. A. Koutsou: None. C. Garbers: None. C.J. Kellner: None. J. Grewe: None. T. Wachtler: None.
+
+Abstract
+    Scientists experience increasing demands on research data management, such as 
+    organizing data workflows in the lab, data exchange for collaboration, or preparing 
+    data for publication. To reduce the workload associated with data management, we 
+    provide a suite of tools for key tasks including metadata collection, data organization, 
+    and data sharing.
+    With the odML[1] format, metadata can be collected from various sources in an experiment 
+    into a unified representation, which helps keeping information about experimental 
+    conditions available and enables automated project management tasks such as analyzing 
+    and selection of recording sessions[2], as well as conversion of metadata to other 
+    formats such as RDF to utilize semantic web technologies.
+    To keep data and metadata organized, the NIX[3] data format enables effectively linking 
+    data and analysis results as well as the associated metadata. The format supports a wide 
+    range of data types, including electrophysiology and imaging data. NIX uses the odML 
+    metadata format and is integrated with the Neo[4] Python package for electrophysiology, 
+    enabling Neo users to store their data in a common open format.
+    The GIN[5] services help keeping track of data workflows and support collaborative data 
+    sharing. Using established versioning technology[6,7], GIN tracks changes and keeps 
+    previous versions accessible when datasets are updated. It makes it convenient to work 
+    from multiple workplaces while keeping data available and in sync. The service works 
+    with any kind of directory structure and file types, supporting the scientist's data 
+    organization while making it straightforward to share data within a lab or with off-site 
+    collaborators and to work on it together. Plugins offer extended features including 
+    configurable workflow automation or automated format validation with every recorded 
+    data change.
+    The tools presented are easy to use, can be combined with other approaches supporting 
+    reproducibility and data sharing[9,10,11], and enable efficient data management that 
+    supports the FAIR principles[12].
+    
+    [1] http://www.g-node.org/odml
+    [2] https://doi.org/10.3389/fninf.2016.00026
+    [3] http://www.g-node.org/nix
+    [4] http://neuralensemble.org/neo
+    [5] https://gin.g-node.org
+    [6] https://git-scm.com
+    [7] https://git-annex.branchable.com
+    [8] https://github.com/G-Node/gin-valid
+    [9] http://neuralensemble.org/sumatra
+    [10] http://bids.neuroimaging.io
+    [11] http://datalad.org
+    [12] https://doi.org/10.1038/sdata.2016.18
+
+Grant Support
+    BMBF Grant 01GQ1302
+    BMBF Grant 01GQ1509
+
+-------------------- optional ---------------------------------------------------
+
 Safe and user friendly data management tools for science 
 
 Authors
@@ -50,64 +107,3 @@ within the lab, among collaborators or with the public.
 Grant Support
     BMBF Grant 01GQ1302
     BMBF Grant 01GQ1509
-
-
--------------------- optional ---------------------------------------------------
-
-
-Achieving reproducible data workflows: Lightweight tools for safe and efficient data management
-
-Authors
-    A. KOUTSOU1, M. SONNTAG1, C. GARBERS1, C. J. KELLNER1, J. GREWE2, *T. WACHTLER1;
-    1G-Node, Dept. of Biol. II, Ludwig-Maximilians-Universität München, Planegg, Germany; 2Eberhardt-Karls-Universität Tübingen, Tübingen, Germany
-
-Disclosures
-     M. Sonntag: None. A. Koutsou: None. C. Garbers: None. C.J. Kellner: None. J. Grewe: None. T. Wachtler: None.
-
-Abstract
-    Scientists spend more and more time with data management tasks necessary for keeping
-    consistent data workflows in the lab, for collaboration and for publication. To reduce
-    the workload associated with these tasks, we provide a suite of easy to use tools supporting
-    efficient research data management, reproducibility and collaboration.
-    Reproducibility and data re-usability require the presence of metadata describing data and
-    experimental conditions. The odML[1] metadata format is a simple and convenient format for
-    comprehensive collection and automated processing of metadata[2], including conversion to
-    other formats such as RDF to utilize semantic web technologies.
-    To keep data and metadata organized, the NIX[3] data format enables to effectively link data
-    and corresponding analysis results as well as the associated metadata. It supports a wide
-    range of data types, including electrophysiology and imaging data. NIX uses the odML metadata
-    format and is integrated with the Neo[4] Python package for electrophysiology, enabling Neo
-    users to store their data in a common open format.
-    The GIN[5] services provide versioned data management and collaborative data sharing. Using
-    established versioning technology[6,7], GIN keeps track of changes and provides secure access,
-    making it convenient to work from multiple workplaces while keeping all data available and
-    in sync. It offers seamless version control while working with the data files and enables
-    automating data access and management in analysis workflows. The service works with any kind
-    of directory structure and file types, supporting the scientist's data organization and
-    keeping previous versions accessible when datasets are updated. It makes it straightforward
-    to share data within a lab or with off-site collaborators and to work on it together. Plugins
-    for the web service enable server-side workflow automization, which comes with the benefit of
-    out-of-the-box reproducibility, and data quality control[8] with every recorded data change.
-    The tools presented are easy to use, can be combined with other approaches supporting
-    reproducibility and data sharing[9,10,11], and enable efficient data management that supports
-    the FAIR principles[12].
-
-    [1] http://www.g-node.org/odml
-    [2] https://doi.org/10.3389/fninf.2016.00026
-    [3] http://www.g-node.org/nix
-    [4] http://neuralensemble.org/neo
-    [5] https://gin.g-node.org
-    [6] https://git-scm.com
-    [7] https://git-annex.branchable.com
-    [8] https://github.com/G-Node/gin-valid
-    [9] http://neuralensemble.org/sumatra
-    [10] http://bids.neuroimaging.io
-    [11] http://datalad.org
-    [12] https://doi.org/10.1038/sdata.2016.18 
-
-Grant Support
-    BMBF Grant 01GQ1302
-    BMBF Grant 01GQ1509
-
-
-
