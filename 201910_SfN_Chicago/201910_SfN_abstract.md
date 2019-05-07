@@ -1,11 +1,11 @@
 Spend your time on science, not on data management: Open tools for efficient data organization, reproducible workflows, and collaboration
 
 Authors
-    A. KOUTSOU1, M. SONNTAG1, C. GARBERS1, C. J. KELLNER1, J. GREWE2, *T. WACHTLER1;
-    1G-Node, Dept. of Biol. II, Ludwig-Maximilians-Universität München, Planegg, Germany; 2Eberhardt-Karls-Universität Tübingen, Tübingen, Germany
+    A. KOUTSOU1, J. VANĚK1, M. SONNTAG1, C. GARBERS1, C. J. KELLNER1, J. GREWE2, *T. WACHTLER1;
+    1G-Node, Dept. of Biol. II, Ludwig-Maximilians-Universität München, Martinsried, Germany; 2Eberhardt-Karls-Universität Tübingen, Tübingen, Germany
 
 Disclosures
-     M. Sonntag: None. A. Koutsou: None. C. Garbers: None. C.J. Kellner: None. J. Grewe: None. T. Wachtler: None.
+    A. Koutsou: None. J. Vaněk: None. M. Sonntag: None. A. Garbers: None. C.J. Kellner: None. J. Grewe: None. T. Wachtler: None.
 
 Abstract
     Scientists experience increasing demands on research data management, such as 
