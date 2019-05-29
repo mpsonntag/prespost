@@ -14,20 +14,22 @@ accessible. To this end, the G-Node developed tools to export any metadata to od
 termed RDF[4] which opens metadata up to any service that supports semantic web 
 technologies. Further the G-Node hosts its own semantic web server[5] aimed at providing 
 searchable whole metadata sets for meta analyses and also providing a link to the actual 
-published scientific data set. Any interested party can upload[6] their own metadata to 
+published scientific data set. Any interested party can upload their own metadata to 
 the service to make their data findable and accessible even if it was a data publication 
 or if it is an unpublished data set. To make the process more convenient the G-Nodes' 
-own scientific data hosting service GIN[7] provides an opt-in feature to automatically 
+own scientific data hosting service GIN[6] provides an opt-in feature to automatically 
 update the metadata service with any change in a public dataset to ensure any data is 
 always easily findable.
-Finally with a metadata resource service[8] the G-Node hosts a platform providing
+Finally with a metadata resource service the G-Node hosts a platform providing
 terminologies for metadata annotation and features a forum for general feed back, 
 usage debate and exchange of custom re-usable metadata templates with the 
 scientific community.
 
+
 *Acknowledgments
 
 Supported by BMBF (Grants 01GQ1302 and 01GQ1509)
+
 
 *References
 
@@ -36,6 +38,12 @@ Supported by BMBF (Grants 01GQ1302 and 01GQ1509)
 3. Wilkinson et al (2016) The FAIR guiding principles for scientific data management and stewardship. Scientific Data 3:160018. doi:10.1038/sdata.2016.18
 4. https://www.w3.org/RDF/
 5. https://meta.g-node.org
-6. https://metup.g-node.org
-7. https://gin.g-node.org
-8. https://resources.g-node.org
+6. https://gin.g-node.org
+
+
+* eMail used:
+
+- sonntag@bio.lmu.de
+- koutsou@bio.lmu.de 
+- jan.grewe@uni-tuebingen.de
+- wachtler@biologie.uni-muenchen.de
