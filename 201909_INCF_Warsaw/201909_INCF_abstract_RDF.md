@@ -1,29 +1,28 @@
-### Towards a FAIR semantic web: services for data annotation and findable data
+### From metadata to the semantic web: services for data annotation and findable data
 
 Michael Sonntag1, Achilleas Koutsou1, Jan Grewe2, Thomas Wachtler1
 
 1. German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Martinsried, Germany
 2. Institute for Neurobiology, Eberhard-Karls-Universität Tübingen, Tübingen, Germany
 
-A crucial aspect in current science is the annotation of research data with metadata 
-to provide context for analysis and re-use. The odML[1] format provides a flexible and 
-comprehensive solution to annotate scientific data in a structured form that is both 
-human readable and machine consumable[2] for documentation and automated analysis.
-To fully comply with the FAIR principles[3], published data needs to be findable and 
-accessible. To this end, the G-Node developed tools to export any metadata to odML 
-termed RDF[4] which opens metadata up to any service that supports semantic web 
-technologies. Further the G-Node hosts its own semantic web server[5] aimed at providing 
-searchable whole metadata sets for meta analyses and also providing a link to the actual 
-published scientific data set. Any interested party can upload their own metadata to 
-the service to make their data findable and accessible even if it was a data publication 
-or if it is an unpublished data set. To make the process more convenient the G-Nodes' 
-own scientific data hosting service GIN[6] provides an opt-in feature to automatically 
-update the metadata service with any change in a public dataset to ensure any data is 
-always easily findable.
-Finally with a metadata resource service the G-Node hosts a platform providing
-terminologies for metadata annotation and features a forum for general feed back, 
-usage debate and exchange of custom re-usable metadata templates with the 
-scientific community.
+
+Annotation of research data with metadata is crucial to provide context for analysis 
+and re-use. The odML[1] format (RRID:SCR_001376) offers a flexible and comprehensive 
+solution for the scientist to collect and organize metadata in a structured form that 
+is both human readable and machine actionable[2] for documentation and automated 
+analysis. To further support the FAIR principles[3], we present tools to export 
+metadata from odML to RDF[4], which opens metadata up to semantic web services. 
+The G-Node SPARQL server[5] is aimed at providing searchable whole metadata sets 
+for meta analyses and also providing links to the actual published scientific 
+data set. Scientists can upload their metadata to make their data findable and 
+accessible even if it was a data publication or if it is an unpublished data set. 
+Furthermore, the GIN[6] data hosting service (RRID:SCR_015864) provides an opt-in 
+feature to automatically update the metadata service when changes to a dataset occur, 
+to ensure the metadata is always up-to-date.
+
+Finally with a metadata resource service the G-Node hosts a platform providing 
+terminologies for metadata annotation and features a forum for general feedback, 
+usage discussions and exchange of metadata templates with the scientific community.
 
 
 *Acknowledgments
@@ -41,7 +40,7 @@ Supported by BMBF (Grants 01GQ1302 and 01GQ1509)
 6. https://gin.g-node.org
 
 
-* eMail used:
+* Author eMails used
 
 - sonntag@bio.lmu.de
 - koutsou@bio.lmu.de 
