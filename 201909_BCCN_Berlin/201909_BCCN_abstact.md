@@ -1,7 +1,7 @@
 ## Open lightweight tools for safe and efficient data management, processing and validation
 
 
-Michael Sonntag1, Achilleas Koutsou1, Jiří Vaněk1, Christian Garbers1, Jan Grewe2, Thomas Wachtler1
+Michael Sonntag1, Achilleas Koutsou1, Jiří Vaněk1, Christian Kellner1, Christian Garbers1, Jan Grewe2, Thomas Wachtler1
 
 1. German Neuroinformatics Node, Ludwig-Maximilian-Universität München, Martinsried, Germany
 2. Institute for Neurobiology, Eberhard-Karls-Universität Tübingen, Tübingen, Germany
@@ -48,6 +48,7 @@ Supported by BMBF (Grants 01GQ1302 and 01GQ1509)
 - sonntag@bio.lmu.de
 - koutsou@biologie.uni-muenchen.de
 - vanek@biologie.uni-muenchen.de
+- christian@kellner.me
 - garbers@biologie.uni-muenchen.de
 - jan.grewe@uni-tuebingen.de
 - wachtler@biologie.uni-muenchen.de
