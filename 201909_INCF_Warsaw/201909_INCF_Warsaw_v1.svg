@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.63960088"
-     inkscape:cx="453.27312"
-     inkscape:cy="1199.1906"
+     inkscape:zoom="0.45226612"
+     inkscape:cx="1595.3698"
+     inkscape:cy="896.28858"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2089,7 +2089,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2161,17 +2161,17 @@
          x="1492.6243"
          y="-2865.9055"
          id="tspan4292-9"
-         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';text-align:center;text-anchor:middle;stroke-width:1">Achilleas Koutsou<tspan
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';text-align:center;text-anchor:middle;stroke-width:1">Michael Sonntag<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan2406">1</tspan>, Achilleas Koutsou<tspan
    style="font-size:21.125px;baseline-shift:super;stroke-width:1"
-   id="tspan4634">1</tspan>, Michael Sonntag<tspan
-   style="font-size:21.125px;baseline-shift:super;stroke-width:1"
-   id="tspan4636">1</tspan>, Christian Garbers<tspan
+   id="tspan4634">1</tspan>, Christian Garbers<tspan
    style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
-   id="tspan12440">1</tspan>, Christian Johannes Kellner<tspan
+   id="tspan12440">1</tspan>, Jiří Vaněk<tspan
    style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
-   id="tspan7701">1</tspan>, Jan Grewe<tspan
-   style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
-   id="tspan7703">2</tspan>, Thomas Wachtler<tspan
+   id="tspan7701">1</tspan>, Mrinal Wahal<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan2408">1</tspan>, Thomas Wachtler<tspan
    style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
    id="tspan7705">1</tspan></tspan></text>
     <text
@@ -2193,11 +2193,9 @@
    id="tspan4129-2">Germany;</tspan></tspan><tspan
          sodipodi:role="line"
          x="1481.5002"
-         y="-2765.3052"
+         y="-2789.5396"
          id="tspan4298-5"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Italic';text-align:center;text-anchor:middle;stroke-width:1"><tspan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:23.40032959px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Italic';baseline-shift:super;stroke-width:1"
-   id="tspan4170-0">2</tspan>Institut für Neurobiologie, Universität Tübingen, Germany</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Italic';text-align:center;text-anchor:middle;stroke-width:1" /></text>
     <text
        transform="scale(0.97707708,1.0234607)"
        id="text23949"
@@ -2214,19 +2212,17 @@
        xml:space="preserve"
        id="flowRoot5266"
        style="font-style:normal;font-weight:normal;font-size:57.5px;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(18.583117,-3133.0129)"><flowRegion
+       transform="translate(-127.66688,-3133.0129)"><flowRegion
          id="flowRegion5268"
          style="font-size:57.5px"><rect
            id="rect5270"
-           width="1882.5597"
-           height="217.84244"
+           width="2220.4414"
+           height="224.06113"
            x="611.73596"
            y="68.099976"
            style="font-size:57.5px" /></flowRegion><flowPara
-         id="flowPara5274"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:57.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:center;text-anchor:middle">Achieving reproducible data workflows:</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:57.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:center;text-anchor:middle"
-         id="flowPara8788">Lightweight tools for safe and efficient data management</flowPara></flowRoot>    <rect
+         id="flowPara8788">Microservice infrastructure for continuous validation, processing and indexing of research data on an open platform</flowPara></flowRoot>    <rect
        style="fill:#fff2cc;fill-opacity:1;stroke:none;stroke-width:14.01252174;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-9-7-6-8-8"
        width="2923.2283"
@@ -3673,19 +3669,7 @@
            y="953.60535"
            style="font-size:49.13757706px;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:1.03447533" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:49.13757706px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:end;letter-spacing:-0.19px;text-anchor:end;stroke-width:1.03447533"
-         id="flowPara13117">odML: Manage all information about an experiment</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot16257"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.93749998,0,0,0.93749998,-487.48008,-3152.2398)"><flowRegion
-         id="flowRegion16259"><rect
-           id="rect16261"
-           width="679.16669"
-           height="233.33333"
-           x="862.5"
-           y="4168.8584" /></flowRegion><flowPara
-         id="flowPara16263">Poster presented at the NWG Conference 2019 (Goettingen)</flowPara><flowPara
-         id="flowPara16267" /></flowRoot>    <g
+         id="flowPara13117">odML: Manage all information about an experiment</flowPara></flowRoot>    <g
        id="g5792"
        transform="matrix(1.1225826,0,0,1.1132676,292.63301,-521.31701)"
        style="stroke-width:0.89452207">
@@ -7967,5 +7951,31 @@
            y="989.02472"
            style="font-size:23.99999619px" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66665649px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara15990-1-1-8-3">Live example: Relacs</flowPara></flowRoot>  </g>
+         id="flowPara15990-1-1-8-3">Live example: Relacs</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:50px;line-height:0.75;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+       x="328.54138"
+       y="778.67035"
+       id="text2807"><tspan
+         sodipodi:role="line"
+         id="tspan2805"
+         x="328.54138"
+         y="778.67035"
+         style="font-size:31.25000191px;line-height:0.25;stroke-width:0.9375">Poster presented at</tspan><tspan
+         sodipodi:role="line"
+         x="328.54138"
+         y="816.17035"
+         style="font-size:31.25000191px;line-height:0.25;stroke-width:0.9375"
+         id="tspan2809">  INCF Neuroinformatics 2019</tspan><tspan
+         sodipodi:role="line"
+         x="328.54138"
+         y="853.67035"
+         style="font-size:31.25000191px;line-height:0.25;stroke-width:0.9375"
+         id="tspan2811">  Warsaw, Poland</tspan><tspan
+         sodipodi:role="line"
+         x="328.54138"
+         y="891.17035"
+         style="font-size:31.25000191px;line-height:0.25;stroke-width:0.9375"
+         id="tspan2185" /></text>
+  </g>
 </svg>
