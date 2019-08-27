@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.31980044"
-     inkscape:cx="1770.4402"
-     inkscape:cy="3479.6838"
+     inkscape:zoom="1.2792018"
+     inkscape:cx="2180.0244"
+     inkscape:cy="3452.2316"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -436,7 +436,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -905,12 +905,12 @@
          style="font-size:24.99999809px;stroke-width:0.9375"
          y="260.65115"
          x="70.803398"
-         sodipodi:role="line">• written directly to flatfiles using the</tspan><tspan
+         sodipodi:role="line">• written directly to text files (XML, JSON or YAML) </tspan><tspan
          id="tspan20384"
          style="font-size:24.99999809px;stroke-width:0.9375"
          y="291.90115"
          x="70.803398"
-         sodipodi:role="line">   python-odml implementation, or</tspan><tspan
+         sodipodi:role="line">   using the python-odml implementation, or</tspan><tspan
          id="tspan1487"
          style="font-size:24.99999809px;stroke-width:0.9375"
          y="323.15115"
@@ -3043,7 +3043,7 @@
          id="flowPara3750"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start">Scientists can upload their metadata to make their data findable and accessible even if it was a data publication or if it is an unpublished data set. Furthermore, the GIN[6] data hosting service (RRID:SCR_015864) provides an opt-in feature to automatically update the metadata service when changes to a dataset occur, to ensure the metadata is always up-to-date.</flowPara><flowPara
          id="flowPara3752"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start">Finally with a metadata resource service the G-Node hosts a platform providing terminologies for metadata annotation and features a forum for general feedback, usage discussions and exchange of metadata templates with the scientific community.</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start">Finally with a metadata resource service the G-Node hosts a platform providing terminologies and templates for metadata annotation. It presents a forum for general feedback, usage discussions and exchange of metadata templates with the scientific community.</flowPara><flowPara
          id="flowPara3754"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start" /><flowPara
          id="flowPara3756"
@@ -3087,41 +3087,44 @@
     <g
        id="g7914"
        transform="translate(-1033.7204,-919.4874)">
-      <rect
-         ry="17.716536"
-         rx="17.716536"
-         y="-674.67688"
-         x="1297.2236"
-         height="143.66537"
-         width="320.04254"
-         id="rect3966-3-8-73-2-7-6-0-4"
-         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:5.31496048;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:24.99999809px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
-         x="1309.3168"
-         y="-640.47742"
-         id="text18279-7-9-0"><tspan
-           sodipodi:role="line"
-           x="1309.3168"
+      <g
+         id="g1785">
+        <rect
+           style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:5.31496048;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect3966-3-8-73-2-7-6-0-4"
+           width="320.04254"
+           height="143.66537"
+           x="1357.2236"
+           y="-674.67688"
+           rx="17.716536"
+           ry="17.716536" />
+        <text
+           id="text18279-7-9-0"
            y="-640.47742"
-           style="font-size:24.99999809px;stroke-width:0.9375"
-           id="tspan20017-4">The odML flavored RDF </tspan><tspan
-           sodipodi:role="line"
-           x="1309.3168"
-           y="-609.22742"
-           style="font-size:24.99999809px;stroke-width:0.9375"
-           id="tspan20077">is extremely flexible,</tspan><tspan
-           sodipodi:role="line"
-           x="1309.3168"
-           y="-577.97742"
-           style="font-size:24.99999809px;stroke-width:0.9375"
-           id="tspan20079">and equipped to handle</tspan><tspan
-           sodipodi:role="line"
-           x="1309.3168"
-           y="-546.72742"
-           style="font-size:24.99999809px;stroke-width:0.9375"
-           id="tspan20083">any metadata format.</tspan></text>
+           x="1369.3168"
+           style="font-style:normal;font-weight:normal;font-size:24.99999809px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9375"
+           xml:space="preserve"><tspan
+             id="tspan20017-4"
+             style="font-size:24.99999809px;stroke-width:0.9375"
+             y="-640.47742"
+             x="1369.3168"
+             sodipodi:role="line">The odML flavored RDF </tspan><tspan
+             id="tspan20077"
+             style="font-size:24.99999809px;stroke-width:0.9375"
+             y="-609.22742"
+             x="1369.3168"
+             sodipodi:role="line">is extremely flexible,</tspan><tspan
+             id="tspan20079"
+             style="font-size:24.99999809px;stroke-width:0.9375"
+             y="-577.97742"
+             x="1369.3168"
+             sodipodi:role="line">and ready to handle</tspan><tspan
+             id="tspan20083"
+             style="font-size:24.99999809px;stroke-width:0.9375"
+             y="-546.72742"
+             x="1369.3168"
+             sodipodi:role="line">any metadata format.</tspan></text>
+      </g>
     </g>
     <g
        transform="matrix(2.7173729,0,0,-2.7173729,1899.0727,-2662.8745)"

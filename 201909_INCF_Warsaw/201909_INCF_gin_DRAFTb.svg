@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.45226613"
-     inkscape:cx="1608.7356"
-     inkscape:cy="4100.7443"
+     inkscape:zoom="0.22613307"
+     inkscape:cx="2089.6438"
+     inkscape:cy="2041.4452"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3709"
      showgrid="false"
      units="mm"
      inkscape:window-width="2560"
@@ -2300,60 +2300,50 @@
          y="703.33087"
          id="tspan4062"
          style="font-size:40px;line-height:1.25;font-family:sans-serif;stroke-width:1"> </tspan></text>
-    <rect
-       style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect40585"
-       width="540.48444"
-       height="241.77162"
-       x="855.39624"
-       y="-1502.4423"
-       rx="9.375"
-       ry="9.375" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="874.0835"
-       y="-1455.4655"
-       id="text7355-6"><tspan
-         sodipodi:role="line"
-         id="tspan7357-6"
-         x="874.0835"
-         y="-1455.4655"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1px">Workflow</tspan><tspan
-         sodipodi:role="line"
-         x="874.0835"
-         y="-1411.4655"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-         id="tspan7548"> • Manual access via</tspan><tspan
-         sodipodi:role="line"
-         x="874.0835"
-         y="-1367.4655"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-         id="tspan4742">    web and command</tspan><tspan
-         sodipodi:role="line"
-         x="874.0835"
-         y="-1323.4655"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-         id="tspan4738">    line</tspan><tspan
-         sodipodi:role="line"
-         x="874.0835"
-         y="-1279.4655"
-         id="tspan7367-0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"> • Script automation</tspan><tspan
-         sodipodi:role="line"
-         x="874.0835"
-         y="-1235.4655"
-         id="tspan7369-4"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"> </tspan></text>
-    <rect
-       style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68779516;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect40625"
-       width="699.53461"
-       height="372.61401"
-       x="122.08383"
-       y="-2054.1052"
-       rx="9.375"
-       ry="9.375" />
+    <g
+       id="g1934"
+       transform="translate(0,18.75)">
+      <rect
+         ry="9.375"
+         rx="9.375001"
+         y="-1487.4423"
+         x="821.6463"
+         height="210.67821"
+         width="577.79657"
+         id="rect40585"
+         style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68750048;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text7355-6"
+         y="-1436.7155"
+         x="836.5835"
+         style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1px"
+           y="-1436.7155"
+           x="836.5835"
+           id="tspan7357-6"
+           sodipodi:role="line">Workflow</tspan><tspan
+           id="tspan4738"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="-1392.7155"
+           x="836.5835"
+           sodipodi:role="line"> • Access via web interface </tspan><tspan
+           id="tspan1921"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="-1348.7155"
+           x="836.5835"
+           sodipodi:role="line">    or command line client</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           id="tspan7367-0"
+           y="-1304.7155"
+           x="836.5835"
+           sodipodi:role="line"> • Script automation</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           id="tspan7369-4"
+           y="-1260.7155"
+           x="836.5835"
+           sodipodi:role="line"> </tspan></text>
+    </g>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.6875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -2482,12 +2472,12 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.07631302px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:4.6875;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan2435" /></text>
     <g
-       id="g4009">
+       id="g2021">
       <rect
          style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68749905;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect40625-0-3"
          width="778.31787"
-         height="415.1456"
+         height="399.02228"
          x="786.36224"
          y="145.52551"
          rx="9.374999"
@@ -3049,27 +3039,31 @@
          x="78.148354"
          id="tspan4022-3-3-4-68-2-0"
          sodipodi:role="line">Automation and Validation Tools</tspan></text>
-    <rect
-       style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3966-3-8-73-26-6-4-1-5"
-       width="924.40051"
-       height="79.6894"
-       x="1997.5343"
-       y="-1639.6373"
-       rx="9.375"
-       ry="9.375" />
-    <text
-       id="text4020-2-5-9-8-59-1-9"
-       y="-1584.9449"
-       x="2035.4907"
-       style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00057781"
-       xml:space="preserve"
-       transform="scale(1.0006286,0.99937179)"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:1.00057781"
-         y="-1584.9449"
+    <g
+       id="g1990"
+       transform="translate(42.210973)">
+      <rect
+         ry="9.375"
+         rx="9.375"
+         y="-1639.6373"
+         x="1997.5343"
+         height="79.6894"
+         width="898.85577"
+         id="rect3966-3-8-73-26-6-4-1-5"
+         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="scale(1.0006286,0.99937179)"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00057781"
          x="2035.4907"
-         id="tspan4022-3-3-4-68-2-0-1"
-         sodipodi:role="line">Coordination and Collaboration</tspan></text>
+         y="-1584.9449"
+         id="text4020-2-5-9-8-59-1-9"><tspan
+           sodipodi:role="line"
+           id="tspan4022-3-3-4-68-2-0-1"
+           x="2035.4907"
+           y="-1584.9449"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:1.00057781">Coordination and Collaboration</tspan></text>
+    </g>
     <rect
        style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.68750048;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-6-4-1-7"
@@ -3139,53 +3133,58 @@
          id="flowPara4800-7">GIN Microservices for Data Storage, Processing, Validation and Data Publication</flowPara></flowRoot>    <rect
        style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68750048;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect40652"
-       width="727.54498"
-       height="295.31729"
+       width="785.58606"
+       height="347.13965"
        x="2091.9124"
        y="-1254.4788"
-       rx="9.375001"
+       rx="9.3750019"
        ry="9.375" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="2108.467"
-       y="-1239.2148"
+       y="-1235.4648"
        id="text7492-2"><tspan
          sodipodi:role="line"
          id="tspan7494-4"
          x="2108.467"
-         y="-1236.0977"
+         y="-1232.3477"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1px" /><tspan
          sodipodi:role="line"
          x="2108.467"
-         y="-1206.8242"
+         y="-1203.0742"
          style="font-size:40px;line-height:110.00000238%;stroke-width:1px"
          id="tspan7550"> • User management</tspan><tspan
          sodipodi:role="line"
          x="2108.467"
-         y="-1162.8242"
+         y="-1159.0742"
          style="font-size:40px;line-height:110.00000238%;stroke-width:1px"
          id="tspan7552"> • User access levels</tspan><tspan
          sodipodi:role="line"
          x="2108.467"
-         y="-1118.8242"
-         id="tspan7502-5"
-         style="font-size:40px;line-height:110.00000238%;stroke-width:1px"> • On and offsite collaboration</tspan><tspan
+         y="-1115.0742"
+         style="font-size:40px;line-height:110.00000238%;stroke-width:1px"
+         id="tspan3898"> • Features for collaborative research</tspan><tspan
          sodipodi:role="line"
          x="2108.467"
-         y="-1074.8242"
+         y="-1071.0742"
          style="font-size:40px;line-height:110.00000238%;stroke-width:1px"
-         id="tspan3900"> • Online issues help coordination</tspan><tspan
+         id="tspan1945">  - Remote access</tspan><tspan
          sodipodi:role="line"
          x="2108.467"
-         y="-1030.8242"
+         y="-1027.0742"
          style="font-size:40px;line-height:110.00000238%;stroke-width:1px"
-         id="tspan3902"> • Ensure repository integrity with</tspan><tspan
+         id="tspan1947">  - Version control</tspan><tspan
          sodipodi:role="line"
          x="2108.467"
-         y="-986.82422"
+         y="-983.07422"
          style="font-size:40px;line-height:110.00000238%;stroke-width:1px"
-         id="tspan3898">    versioning and &quot;Pull requests&quot;.</tspan></text>
+         id="tspan1949">  - Issues</tspan><tspan
+         sodipodi:role="line"
+         x="2108.467"
+         y="-939.07422"
+         style="font-size:40px;line-height:110.00000238%;stroke-width:1px"
+         id="tspan1951">  - Pull requests</tspan></text>
     <rect
        style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68749952;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect40585-2"
@@ -3227,81 +3226,77 @@
          id="tspan7369-4-3"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"> </tspan></text>
     <g
-       id="g6491"
-       transform="translate(3.7499999,-9.375)">
-      <g
-         id="g4042">
-        <rect
-           style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68749952;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           id="rect40585-2-2"
-           width="637.71271"
-           height="420.39621"
-           x="1631.8612"
-           y="179.70093"
-           rx="9.375001"
-           ry="9.375001" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           x="1650.5485"
-           y="226.67776"
-           id="text7355-6-6-3"><tspan
-             sodipodi:role="line"
-             id="tspan7357-6-6-5"
-             x="1650.5485"
-             y="226.67776"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1px">Findable Data via GIN</tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="270.67776"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan4738-7-1"> • GIN provides automatic </tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="314.67776"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan4011">    indexing of all text based</tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="358.67776"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan4015">    files</tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="402.67776"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan3995"> • Online search for repository </tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="446.67776"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan4017">    content</tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="490.67776"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan3953-8"> • Interactive rendering of</tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="505.40433"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan3991" /><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="534.6778"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan3993">   • Markdown  • YAML</tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="578.6778"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
-             id="tspan4001">   • JSON           • XML</tspan><tspan
-             sodipodi:role="line"
-             x="1650.5485"
-             y="593.40436"
-             id="tspan7369-4-3-9"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px" /></text>
-      </g>
+       id="g2063">
+      <rect
+         ry="9.375001"
+         rx="9.375001"
+         y="170.32593"
+         x="1635.6112"
+         height="430.76065"
+         width="637.71271"
+         id="rect40585-2-2"
+         style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68749952;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text7355-6-6-3"
+         y="221.05276"
+         x="1652.4235"
+         style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1px"
+           y="221.05276"
+           x="1652.4235"
+           id="tspan7357-6-6-5"
+           sodipodi:role="line">Findable Data via GIN</tspan><tspan
+           id="tspan4738-7-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="265.05276"
+           x="1652.4235"
+           sodipodi:role="line"> • GIN provides automatic </tspan><tspan
+           id="tspan4011"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="309.05276"
+           x="1652.4235"
+           sodipodi:role="line">    indexing of all text based</tspan><tspan
+           id="tspan4015"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="353.05276"
+           x="1652.4235"
+           sodipodi:role="line">    files</tspan><tspan
+           id="tspan3995"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="397.05276"
+           x="1652.4235"
+           sodipodi:role="line"> • Online search for repository </tspan><tspan
+           id="tspan4017"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="441.05276"
+           x="1652.4235"
+           sodipodi:role="line">    content</tspan><tspan
+           id="tspan3953-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="485.05276"
+           x="1652.4235"
+           sodipodi:role="line"> • Interactive rendering of</tspan><tspan
+           id="tspan3991"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="499.77933"
+           x="1652.4235"
+           sodipodi:role="line" /><tspan
+           id="tspan3993"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="529.0528"
+           x="1652.4235"
+           sodipodi:role="line">   • Markdown  • YAML</tspan><tspan
+           id="tspan4001"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           y="573.0528"
+           x="1652.4235"
+           sodipodi:role="line">   • JSON           • XML</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:1px"
+           id="tspan7369-4-3-9"
+           y="587.77936"
+           x="1652.4235"
+           sodipodi:role="line" /></text>
     </g>
     <g
        id="g3455">
@@ -3783,44 +3778,48 @@
            x="2007.6675"
            y="1106.472" /></flowRegion><flowPara
          id="flowPara1976" /></flowRoot>    <g
-       id="g3700"
-       transform="translate(-18.75,-37.5)">
+       id="g2083">
       <rect
-         ry="9.375"
+         ry="9.374999"
          rx="9.374999"
-         y="-2203.9246"
-         x="2016.1005"
-         height="327.78116"
-         width="924.20477"
+         y="-2235.7996"
+         x="2039.7452"
+         height="320.45236"
+         width="898.85577"
          id="rect40625-4"
-         style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68749952;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <flowRoot
-         transform="matrix(0.93749998,0,0,0.93749998,169.65986,-3254.7355)"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.91840725,0,0,0.93749998,224.5624,-3281.3947)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.41363907px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.01034105"
          id="flowRoot2068"
          xml:space="preserve"><flowRegion
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.41363907px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.01034105"
            id="flowRegion2070"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.41363907px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.01034105"
              y="1135.2162"
              x="2015.4064"
-             height="324.25766"
-             width="937.82898"
+             height="327.7641"
+             width="911.36401"
              id="rect2072" /></flowRegion><flowPara
-           id="flowPara3664">Microservices are small, self contained services that are easy to deploy and easy </flowPara><flowPara
-           id="flowPara2098">to maintain. Services can be added,  maintained or moved without disrupting core functionality and other loosely coupled services.</flowPara></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot3815"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         transform="matrix(0.93749998,0,0,0.93749998,18.75,-3123.1299)"><flowRegion
-           id="flowRegion3817"><rect
-             id="rect3819"
-             width="543.92755"
-             height="302.91898"
-             x="1755.6035"
-             y="1488.9904" /></flowRegion><flowPara
-           id="flowPara3823" /></flowRoot>    </g>
-    <g
+           id="flowPara1983"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.41363907px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.01034105">GIN features a lightweight service framework that is easily extensible and maintainable.</flowPara><flowPara
+           id="flowPara1971"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.41363907px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.01034105">Services can be added, modified or removed without interfering with core functionality or other loosely coupled services.</flowPara></flowRoot>    </g>
+    <flowRoot
+       transform="matrix(0.91840725,0,0,0.93749998,58.804404,-3160.6299)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.01034105"
+       id="flowRoot3815"
+       xml:space="preserve"><flowRegion
+         style="stroke-width:1.01034105"
+         id="flowRegion3817"><rect
+           style="stroke-width:1.01034105"
+           y="1488.9904"
+           x="1755.6035"
+           height="302.91898"
+           width="543.92755"
+           id="rect3819" /></flowRegion><flowPara
+         style="stroke-width:1.01034105"
+         id="flowPara3823" /></flowRoot>    <g
        id="g3620">
       <text
          style="font-size:34.74737167px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.9375"
@@ -3930,20 +3929,21 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.99999987px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr;text-anchor:start;" /></flowRegion><flowPara
          id="flowPara2242">Research requires data to continuously be processed, analyzed and visualized; data needs to be quality checked, verified and  backed up. Data and metadata need to be made publicly available in a manner that is easy to find and use. Many of these tasks can be automated, which usually leads to fewer errors and a higher results quality. To facilitate these tasks, we introduce a suite of microservices for the G-Node data infrastructure (GIN), an open platform for collaboration and sharing of research data and code.</flowPara></flowRoot>    <g
        id="g3709"
-       transform="translate(0,-22.5)">
+       transform="matrix(0.97182479,0,0,1,99.497994,-22.5)"
+       style="stroke-width:1.0143925">
       <rect
          ry="9.375"
-         rx="9.375"
+         rx="9.6468"
          y="-2314.4783"
          x="1996.4648"
          height="79.6894"
          width="924.91876"
          id="rect3966-3-8-73-26-6-4-1-5-78"
-         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.75496483;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <text
          transform="scale(1.0006286,0.99937179)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00057781"
+         style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.01497853"
          x="2110.4128"
          y="-2258.5315"
          id="text4020-2-5-9-8-59-1-9-0"><tspan
@@ -3951,32 +3951,42 @@
            id="tspan4022-3-3-4-68-2-0-1-1"
            x="2110.4128"
            y="-2258.5315"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:1.00057781">Microservice Architecture</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:1.01497853">Microservice Architecture</tspan></text>
     </g>
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot2349"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.93749998,0,0,0.93749998,-9.375,-3201.4941)"><flowRegion
-         id="flowRegion2351"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
-           id="rect2353"
-           width="709.75909"
-           height="371.46271"
-           x="150.35396"
-           y="1236.9263"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
-         id="flowPara2361"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"> GIN Core Features</flowPara><flowPara
-         id="flowPara2363"> • Access data from any location</flowPara><flowPara
-         id="flowPara2365"> • Backup</flowPara><flowPara
-         id="flowPara2367"> • Built-in versioning</flowPara><flowPara
-         id="flowPara2383"> • Platform independent</flowPara><flowPara
-         id="flowPara2385"> • Secure access</flowPara><flowPara
-         id="flowPara2387"> • Public and private repositories</flowPara><flowPara
-         id="flowPara2369" /><flowPara
-         id="flowPara2371" /><flowPara
-         id="flowPara2373" /></flowRoot>    <g
+    <g
+       id="g1967">
+      <rect
+         ry="9.375"
+         rx="9.375"
+         y="-2070.5745"
+         x="207.07251"
+         height="428.58218"
+         width="544.0675"
+         id="rect40625"
+         style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68779564;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <flowRoot
+         transform="matrix(0.93749998,0,0,0.93749998,75.613675,-3217.9633)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot2349"
+         xml:space="preserve"><flowRegion
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="flowRegion2351"><rect
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             y="1236.9263"
+             x="150.35396"
+             height="497.49463"
+             width="700.91467"
+             id="rect2353" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="flowPara2361"> GIN Core Features</flowPara><flowPara
+           id="flowPara2363"> • Secure remote access</flowPara><flowPara
+           id="flowPara1876"> • Versioning of datasets</flowPara><flowPara
+           id="flowPara1895"> • Access control</flowPara><flowPara
+           id="flowPara1903">    - private</flowPara><flowPara
+           id="flowPara1905">    - shared</flowPara><flowPara
+           id="flowPara1907">    - public</flowPara><flowPara
+           id="flowPara2373"> • Data publication</flowPara></flowRoot>    </g>
+    <g
        id="g6324">
       <path
          id="path2810"
@@ -4864,28 +4874,31 @@
          id="tspan3660"
          x="2375.9932"
          y="-2023.3313"
-         style="stroke-width:0.9375"></tspan></text>
-    <rect
-       ry="9.375"
-       rx="9.374999"
-       y="-1898.5352"
-       x="1998.4233"
-       height="209.62617"
-       width="924.20483"
-       id="rect40625-4-1"
-       style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68750048;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3915"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.93749998,0,0,0.93749998,-1398.751,-2819.6388)"><flowRegion
-         id="flowRegion3917"><rect
-           id="rect3919"
-           width="912.07324"
-           height="208.94781"
-           x="3672.6165"
-           y="995.91785" /></flowRegion><flowPara
-         id="flowPara3921">With the GIN microservices we aim to help improve data quality in the Neuroscientific community while keeping the main data hosting service pure and simple.</flowPara></flowRoot>    <g
+         style="stroke-width:0.9375" /></text>
+    <g
+       id="g2075">
+      <rect
+         style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68750048;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect40625-4-1"
+         width="898.85577"
+         height="222.81799"
+         x="2039.7452"
+         y="-1904.2269"
+         rx="9.374999"
+         ry="9.374999" />
+      <flowRoot
+         transform="matrix(0.93749998,0,0,0.93749998,-1367.9458,-2819.6388)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot3915"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3917"><rect
+             y="995.91785"
+             x="3672.6165"
+             height="208.94781"
+             width="912.07324"
+             id="rect3919" /></flowRegion><flowPara
+           id="flowPara3921">With the GIN microservices we aim to help improve data quality in the Neuroscientific community while keeping the main data hosting service pure and simple.</flowPara></flowRoot>    </g>
+    <g
        id="g3996">
       <g
          id="g3966">
@@ -4962,64 +4975,7 @@
            y="-388.07825"
            x="2653.7151"
            id="image3976"
-           xlink:href="data:image/jpeg;base64,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
-"
+           xlink:href="data:image/jpeg;base64,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 "
            preserveAspectRatio="none"
            height="106.29921"
            width="212.59842"
