@@ -18,7 +18,7 @@
    id="svg3724"
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="201909_INCF_RDF_DRAFTc.svg">
+   sodipodi:docname="201909_INCF_RDF.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.45226612"
-     inkscape:cx="1400.907"
-     inkscape:cy="3174.2802"
+     inkscape:cx="959.79503"
+     inkscape:cy="2112.9582"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -436,7 +436,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4011,7 +4011,7 @@
        xml:space="preserve"
        id="flowRoot5454"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.93749998,0,0,0.93749998,-115.84076,-3012.3503)"><flowRegion
+       transform="matrix(0.93749998,0,0,0.93749998,-115.84076,-3025.4753)"><flowRegion
          id="flowRegion5456"><rect
            id="rect5458"
            width="1072.5438"
@@ -4030,15 +4030,15 @@
    style="fill:#6c8ebf;fill-opacity:1"
    id="flowSpan5686">https://terminologies.g-node.org</flowSpan></flowPara><flowPara
          id="flowPara5680" /><flowPara
-         id="flowPara5482">odML facilitates and encourages standardization by providing and linking to terminologies. Entities in an odml-file can be to such a terminology. Terms can be imported from Interlex[7] or from G-Node hosted terminologies.</flowPara><flowPara
+         id="flowPara5482">odML facilitates and encourages standardization by providing and linking to terminologies. Entities in an odML file can be linked to such a terminology. Terms can be imported from Interlex[7] or from G-Node hosted terminologies.</flowPara><flowPara
          id="flowPara5476" /><flowPara
          id="flowPara5486" /></flowRoot>    <rect
        ry="10.629921"
-       rx="10.62992"
+       rx="10.629919"
        y="-1054.731"
        x="50.725342"
        height="73.151405"
-       width="717.53345"
+       width="731.6687"
        id="rect3900-2-35-3-3-9-5-0"
        style="fill:#568ebe;fill-opacity:1;stroke:#365d7d;stroke-width:5.33911943;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
@@ -4056,7 +4056,7 @@
     <rect
        style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:5.37165356;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-2-7-6-0-40-7"
-       width="721.89746"
+       width="731.63623"
        height="604.40002"
        x="50.094604"
        y="-964.90881"
