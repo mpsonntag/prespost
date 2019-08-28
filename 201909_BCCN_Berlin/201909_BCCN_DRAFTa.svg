@@ -26,17 +26,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.63960088"
-     inkscape:cx="2135.5634"
-     inkscape:cy="831.70882"
+     inkscape:zoom="0.31980044"
+     inkscape:cx="1255.8192"
+     inkscape:cy="674.19478"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="mm"
-     inkscape:window-width="2513"
-     inkscape:window-height="1385"
-     inkscape:window-x="2607"
-     inkscape:window-y="27"
+     inkscape:window-width="2560"
+     inkscape:window-height="1412"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -59,7 +59,7 @@
        inkscape:color="rgb(0,0,255)"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="2952.0362,3860.806"
+       position="2955.4294,2415.9586"
        orientation="1,0"
        id="guide3710"
        inkscape:label=""
@@ -72,91 +72,9 @@
        inkscape:label=""
        inkscape:color="rgb(0,0,255)"
        inkscape:locked="false" />
-    <sodipodi:guide
-       position="0,3968.5039"
-       orientation="0,1"
-       id="guide3762"
-       inkscape:label=""
-       inkscape:color="rgb(0,0,255)"
-       inkscape:locked="false" />
     <inkscape:grid
        type="xygrid"
        id="grid4744" />
-    <sodipodi:guide
-       position="1382.1024,3069.9568"
-       orientation="1,0"
-       id="guide2801"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="1237.8325,3202.3144"
-       orientation="1,0"
-       id="guide2197"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="577.50858,3428.4074"
-       orientation="0,1"
-       id="guide2179"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="1422.5179,2610.5146"
-       orientation="0,1"
-       id="guide2183"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="2213.8514,3253.408"
-       orientation="1,0"
-       id="guide6006"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="3992.7242,1694.416"
-       orientation="0,1"
-       id="guide6022"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="1730.867,1554.6709"
-       orientation="0,1"
-       id="guide2427"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="1633.4409,1473.828"
-       orientation="0,1"
-       id="guide2429"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="2105.0244,2551.7332"
-       orientation="0,1"
-       id="guide2431"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="1324.5796,2697.8722"
-       orientation="0,1"
-       id="guide2448"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="2602.5191,2996.369"
-       orientation="0,1"
-       id="guide3430"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="2905.132,2880.2141"
-       orientation="1,0"
-       id="guide3437"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="1429.1139,3404.9553"
-       orientation="1,0"
-       id="guide3439"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="2065.6394,3060.6288"
-       orientation="0,1"
-       id="guide3828"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="1728.7941,430.12562"
-       orientation="0,1"
-       id="guide3862"
-       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs3726">
@@ -2156,6 +2074,21 @@
          id="path124-2-9"
          d="m 25,64 h 116 v 77 H 25 Z" />
     </clipPath>
+    <linearGradient
+       id="mx-gradient-ffffff-1-ffffff-1-s-0-5"
+       y2="100%"
+       x2="0%"
+       y1="0%"
+       x1="0%">
+      <stop
+         id="stop2156"
+         style="stop-color:#ffffff"
+         offset="0%" />
+      <stop
+         id="stop2158"
+         style="stop-color:#ffffff"
+         offset="100%" />
+    </linearGradient>
   </defs>
   <metadata
      id="metadata3729">
@@ -2178,14 +2111,14 @@
        style="fill:#d5e8d4;fill-opacity:1;stroke:#d5e8d4;stroke-width:16.19427681;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-9-7-6-8-2-0"
        width="1453.3817"
-       height="1043.2037"
+       height="1050.5326"
        x="41.536758"
        y="-2420.3508" />
     <rect
        style="fill:#f8cecc;fill-opacity:1;stroke:#f8cecc;stroke-width:9.55464172;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-9-7-6-8-2-0-9-8"
        width="1482.2858"
-       height="1054.2405"
+       height="1057.172"
        x="1465.7036"
        y="-2423.6707" />
     <image
@@ -2273,28 +2206,28 @@
          id="flowPara8788">Open lightweight tools for safe and efficient data management, processing and validation</flowPara></flowRoot>    <rect
        style="fill:#b0e3e6;fill-opacity:1;stroke:#c6e5ff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-9-7-6-7-8"
-       width="1574.3712"
+       width="1617.3838"
        height="1223.9812"
        x="32.905937"
        y="-587.12476"
-       rx="9.375"
+       rx="9.375001"
        ry="9.3749981" />
     <rect
        style="fill:#c6e5ff;fill-opacity:1;stroke:#c6e5ff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-9-7-6-7"
        width="2921.4026"
-       height="719.76056"
+       height="736.34369"
        x="32.283531"
-       y="-1237.1827"
+       y="-1253.7659"
        rx="9.375"
        ry="9.3749981" />
     <rect
        style="fill:#fff2cc;fill-opacity:1;stroke:none;stroke-width:14.01252174;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-9-7-6-8-8"
-       width="1340.2098"
-       height="1226.2993"
-       x="1610.5239"
-       y="-591.43256"
+       width="1327.803"
+       height="1203.4974"
+       x="1622.9309"
+       y="-568.63074"
        rx="9.375"
        ry="9.375" />
     <text
@@ -2433,15 +2366,6 @@
          y="540.08563"
          id="tspan4062"
          style="font-size:40px;line-height:1.25;font-family:sans-serif;stroke-width:1"> </tspan></text>
-    <rect
-       style="fill:#568ebe;fill-opacity:1;stroke:#365d7d;stroke-width:4.68750048;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3900-2-0"
-       width="2919.7986"
-       height="119.06251"
-       x="31.558271"
-       y="-1357.3887"
-       rx="9.375"
-       ry="9.375" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4768"
@@ -3136,7 +3060,7 @@
          sodipodi:role="line"
          x="1817.4814"
          y="802.48309"
-         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.8125px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Oblique';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1;stroke-width:1"></tspan><tspan
+         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.8125px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Oblique';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1;stroke-width:1" /><tspan
          sodipodi:role="line"
          x="1817.4814"
          y="824.29572"
@@ -3205,41 +3129,40 @@
            id="flowPara12334"> • searchable by SPARQL </flowPara><flowPara
            id="flowPara12018">    via API and web</flowPara><flowPara
            id="flowPara7537" /></flowRoot>    </g>
-    <g
-       id="g3818"
-       transform="translate(391.38122,175.53531)">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot31852-1-5-4"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-615.81028,-2521.8333)"><flowRegion
+         id="flowRegion31854-4-1-8"
+         style="font-size:23.99999619px"><rect
+           id="rect31856-9-6-5"
+           width="345.00204"
+           height="210.71614"
+           x="1551.8528"
+           y="989.02472"
+           style="font-size:23.99999619px" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="flowPara15990-1-8">Simplified</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="flowPara8621">data model of</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="flowPara8625" /><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="flowPara8627">odML and NIX</flowPara></flowRoot>    <g
+       id="g2532">
       <rect
-         ry="9.375"
+         ry="9.375001"
          rx="9.374999"
-         y="-2035.95"
-         x="409.98401"
-         height="445.07068"
+         y="-1872.8738"
+         x="801.36523"
+         height="472.9201"
          width="614.47516"
          id="rect3966-3-8-73-26-61-5"
-         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <flowRoot
-         transform="translate(-1007.1915,-2697.3686)"
-         style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         id="flowRoot31852-1-5-4"
-         xml:space="preserve"><flowRegion
-           style="font-size:23.99999619px"
-           id="flowRegion31854-4-1-8"><rect
-             style="font-size:23.99999619px"
-             y="989.02472"
-             x="1551.8528"
-             height="210.71614"
-             width="345.00204"
-             id="rect31856-9-6-5" /></flowRegion><flowPara
-           id="flowPara15990-1-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle">Simplified</flowPara><flowPara
-           id="flowPara8621"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle">data model of</flowPara><flowPara
-           id="flowPara8625"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /><flowPara
-           id="flowPara8627"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle">odML and NIX</flowPara></flowRoot>      <g
+         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.68779516;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
          style="stroke-width:0.92679387"
-         transform="matrix(1.0961662,0,0,0.93346875,435.91532,-2023.1836)"
+         transform="matrix(1.0961662,0,0,0.93346875,827.29654,-1847.6483)"
          id="g11089">
         <path
            style="fill:none;stroke:#6c8ebf;stroke-width:0.92679387;stroke-miterlimit:10"
@@ -4250,46 +4173,49 @@
            id="path11087" />
       </g>
     </g>
-    <rect
-       style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3966-3-8-73-26-9-7-7-6"
-       width="531.09204"
-       height="374.86765"
-       x="61.57621"
-       y="-2296.436"
-       rx="9.375"
-       ry="9.375" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot8949-0"
-       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(1482.3821,-3255.679)"><flowRegion
-         style="font-family:sans-serif"
-         id="flowRegion8951-8"><rect
-           style="font-family:sans-serif"
-           id="rect8953-3"
-           width="529.56622"
-           height="499.61469"
-           x="-1399.5078"
-           y="975.5415" /></flowRegion><flowPara
-         id="flowPara8955-0"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold'">The odML format</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara8957-7">• Open metadata format</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara4887-2">• Flexible hierarchical</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara9081" /><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara9083">   key-value storage</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara8963-8">• Template system for</flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara9090" /><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara9092">   reusable metadata </flowPara><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
-         id="flowPara9094">   structures</flowPara></flowRoot>    <g
+    <g
+       id="g2547">
+      <rect
+         ry="9.374999"
+         rx="9.375"
+         y="-2298.2681"
+         x="61.57621"
+         height="390.62451"
+         width="535.48932"
+         id="rect3966-3-8-73-26-9-7-7-6"
+         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.68749952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <flowRoot
+         transform="translate(1482.3821,-3255.679)"
+         style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot8949-0"
+         xml:space="preserve"><flowRegion
+           id="flowRegion8951-8"
+           style="font-family:sans-serif"><rect
+             y="975.5415"
+             x="-1399.5078"
+             height="499.61469"
+             width="529.56622"
+             id="rect8953-3"
+             style="font-family:sans-serif" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold'"
+           id="flowPara8955-0">The odML format</flowPara><flowPara
+           id="flowPara8957-7"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">• Open metadata format</flowPara><flowPara
+           id="flowPara4887-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">• Flexible hierarchical</flowPara><flowPara
+           id="flowPara9081"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'" /><flowPara
+           id="flowPara9083"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">   key-value storage</flowPara><flowPara
+           id="flowPara8963-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">• Template system for</flowPara><flowPara
+           id="flowPara9090"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'" /><flowPara
+           id="flowPara9092"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">   reusable metadata </flowPara><flowPara
+           id="flowPara9094"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">   structures</flowPara></flowRoot>    </g>
+    <g
        transform="matrix(2.847209,0,0,-2.847209,1878.3588,-2659.2711)"
        inkscape:label="lmu_cd_manual_1"
        id="g5183"
@@ -4576,22 +4502,21 @@
          id="tspan4062-6"
          style="font-size:40px;line-height:1.25;font-family:sans-serif;stroke-width:1"> </tspan></text>
     <g
-       transform="translate(28.10963,59.665269)"
-       id="g4009">
+       id="g2154">
       <rect
          style="opacity:1;fill:#f3f4f6;fill-opacity:1;fill-rule:evenodd;stroke:#568ebe;stroke-width:4.68749905;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect40625-0-3"
          width="778.31787"
          height="415.1456"
-         x="786.36224"
-         y="145.52551"
+         x="814.47186"
+         y="205.19078"
          rx="9.374999"
          ry="9.3749981" />
       <flowRoot
          xml:space="preserve"
          id="flowRoot11981-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.36043346"
-         transform="matrix(0.93749998,0,0,0.93749995,-3018.1755,-1704.7657)"><flowRegion
+         transform="matrix(0.93749998,0,0,0.93749995,-2988.1909,-1639.4754)"><flowRegion
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
            id="flowRegion11983-3"><rect
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -4610,7 +4535,7 @@
            id="flowPara3866">• Based on SnakeMake and DroneCI</flowPara></flowRoot>    </g>
     <g
        id="g4364"
-       transform="translate(-734.52377,745.84224)">
+       transform="translate(-732.94764,749.74481)">
       <g
          id="g3779"
          transform="translate(18.656051,-26.947629)">
@@ -4650,7 +4575,7 @@
     </g>
     <g
        id="g4357"
-       transform="translate(-999.48309,581.73304)">
+       transform="translate(-999.50961,577.5216)">
       <rect
          id="rect2862"
          pointer-events="none"
@@ -4981,20 +4906,21 @@
     </g>
     <g
        id="g3733"
-       transform="translate(-0.51822364,38.348549)">
+       transform="matrix(0.99383334,0,0,1,0.76231505,38.348549)"
+       style="stroke-width:1.00309765">
       <rect
          ry="9.375"
-         rx="9.375"
+         rx="9.4331713"
          y="-1252.6322"
          x="2031.9828"
          height="79.6894"
          width="924.40051"
          id="rect3966-3-8-73-26-6-4-1-5"
-         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.70202017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <text
          transform="scale(1.0006286,0.99937179)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00057781"
+         style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00367725"
          x="2069.918"
          y="-1197.6964"
          id="text4020-2-5-9-8-59-1-9"><tspan
@@ -5002,24 +4928,25 @@
            id="tspan4022-3-3-4-68-2-0-1"
            x="2069.918"
            y="-1197.6964"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:1.00057781">Coordination and Collaboration</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:1.00367725">Coordination and Collaboration</tspan></text>
     </g>
     <g
        id="g3867"
-       transform="translate(0,-20.625)">
+       transform="matrix(1.0013516,0,0,1,-17.693256,5.625)"
+       style="stroke-width:0.99932492">
       <rect
          ry="9.375"
-         rx="9.375"
+         rx="9.3623457"
          y="-552.32172"
          x="1992.6766"
          height="79.6894"
          width="958.55743"
          id="rect3966-3-8-73-26-6-4-1-7-1"
-         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.68433523;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <text
          transform="scale(1.0006286,0.99937179)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00057781"
+         style="font-style:normal;font-weight:bold;font-size:55px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.99990231"
          x="2010.974"
          y="-496.94693"
          id="text4020-2-5-9-8-59-1-7-1"><tspan
@@ -5027,11 +4954,11 @@
            id="tspan4022-3-3-4-68-2-0-4-9"
            x="2010.974"
            y="-496.94693"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:1.00057781">Data Publication and Searchability</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.5px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#000000;stroke-width:0.99990231">Data Publication and Searchability</tspan></text>
     </g>
     <g
        id="g3704"
-       transform="translate(2.5314452,-244.64254)">
+       transform="translate(-8.7185547,-244.64254)">
       <rect
          ry="9.375"
          rx="9.375001"
@@ -5564,6 +5491,24 @@
          inkscape:connector-curvature="0"
          style="fill:#666666;stroke:#666666;stroke-width:1.875;stroke-miterlimit:10" />
     </g>
+    <rect
+       ry="9.375001"
+       y="-1351.3997"
+       x="33.134621"
+       height="1987.4009"
+       width="2919.7983"
+       id="rect7558-5"
+       style="fill:none;fill-opacity:1;stroke:#568ebe;stroke-width:4.68750048;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       rx="9.374999" />
+    <rect
+       style="fill:#568ebe;fill-opacity:1;stroke:#365d7d;stroke-width:4.68750048;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3900-2-0"
+       width="2919.7043"
+       height="119.06251"
+       x="33.207253"
+       y="-1357.3887"
+       rx="9.375001"
+       ry="9.375" />
     <g
        transform="matrix(1,0,0,1.228379,16.85963,176.27924)"
        id="g6421"
@@ -5739,8 +5684,8 @@
     </g>
     <g
        id="g4498"
-       transform="translate(-303.68147,809.91591)"
-       style="opacity:0.9">
+       transform="translate(-288.44717,887.47053)"
+       style="opacity:1">
       <rect
          id="rect2822"
          pointer-events="none"
@@ -5839,7 +5784,7 @@
     </g>
     <g
        style="opacity:1"
-       transform="matrix(1.1517934,0,0,-1.1517935,1374.9298,-725.15497)"
+       transform="matrix(1.1517934,0,0,-1.1517935,1354.4092,-801.37438)"
        id="g3363-6-4">
       <g
          id="g3365-0-9"
@@ -5933,19 +5878,18 @@
       </g>
     </g>
     <g
-       id="g4170"
-       transform="translate(1173.2583,-522.36943)">
+       id="g2387">
       <rect
          ry="17.716536"
          rx="17.716534"
-         y="-1351.1011"
-         x="-1109.4812"
+         y="-1873.4705"
+         x="63.7771"
          height="473.94757"
          width="706.50696"
          id="rect3966-3-8-73-2-7-6-0-40"
-         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:5.37165356;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:#f3f4f6;fill-opacity:1;stroke:#568ebe;stroke-width:4.6062991;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <flowRoot
-         transform="matrix(0.93749998,0,0,0.93749998,-3113.5456,-3110.6607)"
+         transform="matrix(0.93749998,0,0,0.93749998,-1940.2873,-3633.0301)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          id="flowRoot5454"
          xml:space="preserve"><flowRegion
@@ -6141,7 +6085,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">   results, and metadata</flowPara></flowRoot>    </g>
     <g
        id="g108-3"
-       transform="matrix(1.4865788,0,0,-1.4865788,2549.4517,-1309.4049)"
+       transform="matrix(1.4865788,0,0,-1.4865788,2555.3148,-1313.8022)"
        style="stroke-width:0.78830332">
       <g
          id="g110-9"
@@ -6408,5 +6352,104 @@
              width="336.14713"
              id="rect2455-2" /></flowRegion><flowPara
            id="flowPara2457-1">Integrates with:</flowPara></flowRoot>    </g>
+    <g
+       id="g2190">
+      <rect
+         ry="9.375"
+         rx="9.375"
+         y="-745.31421"
+         x="2340.814"
+         height="103.91756"
+         width="565.78461"
+         id="rect40652-3-5"
+         style="opacity:1;fill:#f3d42a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.68779516;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text7492-2-3"
+         y="-704.72308"
+         x="2624.2881"
+         style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:1px"
+           id="tspan7502-5-4"
+           y="-704.72308"
+           x="2624.2881"
+           sodipodi:role="line">Find us at the BCOS booth</tspan><tspan
+           id="tspan11841"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:1px"
+           y="-689.99652"
+           x="2624.2881"
+           sodipodi:role="line" /><tspan
+           id="tspan2392"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:1px"
+           y="-660.72308"
+           x="2624.2881"
+           sodipodi:role="line">for demonstrations.</tspan></text>
+    </g>
+    <g
+       id="g3265"
+       transform="matrix(3.088663,0,0,3.1168443,2565.4552,-2004.1869)"
+       style="stroke-width:0.32229769">
+      <rect
+         id="rect2647"
+         pointer-events="none"
+         ry="1.8498278"
+         rx="1.8667058"
+         height="38.4375"
+         width="87.1875"
+         y="385.02213"
+         x="-553.97809"
+         style="fill:#ffffff;stroke:#d4d4d4;stroke-width:0.30215406" />
+      <g
+         transform="translate(5.625)"
+         id="g3255"
+         style="stroke-width:0.32229769">
+        <path
+           style="fill:#568ebe;stroke:none;stroke-width:0.30215406"
+           inkscape:connector-curvature="0"
+           d="m -549.29058,413.37214 v -9.66563 h 11.5875 v 11.3625 z m 0,-10.65938 v -9.66562 l 11.5594,-1.64063 v 11.30625 z m 12.5437,0 v -11.53125 l 14.4563,-2.00625 v 13.5375 z m 0,12.44063 v -11.44688 h 14.4563 v 13.59375 z"
+           pointer-events="none"
+           id="path2649" />
+        <g
+           transform="matrix(0.93749998,0,0,0.93749998,-520.69688,397.61276)"
+           id="g2655"
+           style="stroke-width:0.32229769">
+          <switch
+             id="switch2653"
+             style="stroke-width:0.32229769">
+            <foreignObject
+               style="overflow:visible;"
+               pointer-events="all"
+               width="42"
+               height="12"
+               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: left;">
+                <xhtml:div
+                   style="display:inline-block;text-align:inherit;text-decoration:inherit;">WinGIN</xhtml:div>
+              </xhtml:div>
+            </foreignObject>
+            <text
+               style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.32229769"
+               x="21"
+               y="12"
+               font-size="12px"
+               id="text2651">WinGIN</text>
+          </switch>
+        </g>
+        <path
+           style="fill:#ffffff;stroke:#ffffff;stroke-width:0.30215406;stroke-miterlimit:10"
+           inkscape:connector-curvature="0"
+           d="m -529.60308,399.48776 9.8437,9.84375 -9.8437,9.84375 -9.8438,-9.84375 z"
+           stroke-miterlimit="10"
+           pointer-events="none"
+           id="path2657" />
+        <path
+           style="fill:#568ebe;stroke:none;stroke-width:0.30215406"
+           inkscape:connector-curvature="0"
+           d="m -530.27808,400.10651 c 0.4031,-0.3 0.9469,-0.3 1.35,0 l 8.4187,8.44688 c 0.2813,0.39375 0.2813,0.92812 0,1.32187 l -8.25,8.33438 c -0.2156,0.225 -0.5062,0.34687 -0.8156,0.34687 -0.3094,0 -0.6,-0.12187 -0.8156,-0.34687 l -8.3063,-8.33438 c -0.2812,-0.39375 -0.2812,-0.92812 0,-1.32187 l 5.7375,-5.74688 2.0625,2.05313 c -0.2625,0.75937 0.1125,1.58437 0.8438,1.88437 v 5.12813 c -0.6094,0.27187 -0.9375,0.9375 -0.8063,1.58437 0.1407,0.65625 0.7125,1.125 1.3782,1.125 0.6656,0 1.2375,-0.46875 1.3781,-1.125 0.1312,-0.64687 -0.1969,-1.3125 -0.8063,-1.58437 v -5.01563 l 1.9313,1.95938 c -0.2438,0.62812 -0.019,1.33125 0.5344,1.69687 0.5531,0.375 1.2843,0.3 1.7531,-0.16875 0.4781,-0.45937 0.5625,-1.2 0.2062,-1.7625 -0.3468,-0.5625 -1.05,-0.80625 -1.6687,-0.57187 l -2.0625,-2.07188 c 0.1969,-0.525 0.075,-1.11562 -0.3188,-1.50937 -0.3937,-0.39375 -0.9843,-0.525 -1.5,-0.31875 l -2.1187,-2.09063 z"
+           pointer-events="none"
+           id="path2659" />
+      </g>
+    </g>
   </g>
 </svg>
