@@ -26,17 +26,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.31980044"
-     inkscape:cx="1255.8192"
-     inkscape:cy="674.19478"
+     inkscape:zoom="0.90453224"
+     inkscape:cx="1322.2898"
+     inkscape:cy="1165.6178"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="mm"
-     inkscape:window-width="2560"
-     inkscape:window-height="1412"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -2108,6 +2108,24 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <rect
+       style="fill:#c6e5ff;fill-opacity:1;stroke:#c6e5ff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3966-3-8-73-26-9-7-6-7"
+       width="2921.4026"
+       height="736.34369"
+       x="32.283531"
+       y="-1253.7659"
+       rx="9.375"
+       ry="9.3749981" />
+    <rect
+       style="fill:#568ebe;fill-opacity:1;stroke:#365d7d;stroke-width:4.68750048;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3900-2-0"
+       width="2919.7043"
+       height="119.06251"
+       x="33.207253"
+       y="-1357.3887"
+       rx="9.375001"
+       ry="9.375" />
+    <rect
        style="fill:#d5e8d4;fill-opacity:1;stroke:#d5e8d4;stroke-width:16.19427681;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
        id="rect3966-3-8-73-26-9-7-6-8-2-0"
        width="1453.3817"
@@ -2211,15 +2229,6 @@
        x="32.905937"
        y="-587.12476"
        rx="9.375001"
-       ry="9.3749981" />
-    <rect
-       style="fill:#c6e5ff;fill-opacity:1;stroke:#c6e5ff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3966-3-8-73-26-9-7-6-7"
-       width="2921.4026"
-       height="736.34369"
-       x="32.283531"
-       y="-1253.7659"
-       rx="9.375"
        ry="9.3749981" />
     <rect
        style="fill:#fff2cc;fill-opacity:1;stroke:none;stroke-width:14.01252174;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.13333321;stroke-dasharray:none;stroke-opacity:1"
@@ -5500,15 +5509,6 @@
        id="rect7558-5"
        style="fill:none;fill-opacity:1;stroke:#568ebe;stroke-width:4.68750048;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        rx="9.374999" />
-    <rect
-       style="fill:#568ebe;fill-opacity:1;stroke:#365d7d;stroke-width:4.68750048;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3900-2-0"
-       width="2919.7043"
-       height="119.06251"
-       x="33.207253"
-       y="-1357.3887"
-       rx="9.375001"
-       ry="9.375" />
     <g
        transform="matrix(1,0,0,1.228379,16.85963,176.27924)"
        id="g6421"
@@ -6451,5 +6451,40 @@
            id="path2659" />
       </g>
     </g>
-  </g>
+    <g
+       id="g5018"
+       transform="matrix(0.45378526,0,0,0.45378526,1285.5741,-274.15117)">
+	<path
+   id="path5014"
+   d="M 158.1,33.7 H 121.7 L 96,8 70.3,33.7 H 33.9 V 70.1 L 8.2,95.9 33.9,121.6 V 158 H 70.3 L 96,183.7 121.7,158 h 36.4 V 121.6 L 183.8,95.9 158.1,70.2 Z m 0.6,62.2 c 0,34.6 -28.1,62.7 -62.7,62.7 -34.6,0 -62.7,-28.1 -62.7,-62.7 0,-34.6 28.1,-62.7 62.7,-62.7 34.6,0 62.7,28.1 62.7,62.7 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#fbbc05" />
+
+	<path
+   id="path5016"
+   d="m 96,41.2 c -30.2,0 -54.7,24.5 -54.7,54.7 0,30.2 24.5,54.7 54.7,54.7 30.2,0 54.7,-24.5 54.7,-54.7 C 150.7,65.7 126.2,41.2 96,41.2 Z M 79.9,75.6 v 9 l -14.5,11.3 14.5,11.3 v 9 l -1,-0.7 L 57.4,98.7 56,97.6 v -3.4 l 1.4,-1.1 21.5,-16.7 z m 25.8,-5.2 -11.9,52.6 -0.1,0.4 h -7.4 l 0.4,-2 11.9,-52.5 0.1,-0.4 h 7.4 z m 30.3,27.2 -1.4,1.1 -21.6,16.7 -1,0.7 v -9 L 126.5,95.8 112,84.5 v -9 0 l 1,0.7 21.5,16.8 1.4,1.1 v 3.5 z"
+   class="st0"
+   inkscape:connector-curvature="0"
+   style="fill:#fbbc05" />
+
+</g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5130"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.93749998,0,0,0.93749998,-147.22249,-3160.8278)"><flowRegion
+         id="flowRegion5132"><rect
+           id="rect5134"
+           width="124.92632"
+           height="54.171688"
+           x="1516.806"
+           y="3156.1504" /></flowRegion><flowPara
+         id="flowPara5138"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">GSoC 2019</flowPara></flowRoot>  </g>
+  <style
+     id="style5012"
+     type="text/css">
+	.st0{fill:#FBBC05;}
+</style>
 </svg>
