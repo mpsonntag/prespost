@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.90453224"
-     inkscape:cx="1322.2898"
-     inkscape:cy="1165.6178"
+     inkscape:zoom="0.22613306"
+     inkscape:cx="1520.6368"
+     inkscape:cy="2525.2229"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2098,7 +2098,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2166,7 +2166,9 @@
    style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
    id="tspan12440">1</tspan>, Christian Kellner<tspan
    style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
-   id="tspan7701">1</tspan>, Jan Grewe<tspan
+   id="tspan7701">1</tspan>, Mrinal Wahal<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan5161">1</tspan>, Jan Grewe<tspan
    style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
    id="tspan7703">2</tspan>, Thomas Wachtler<tspan
    style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.125px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Italic';baseline-shift:super;stroke-width:1"
@@ -2390,7 +2392,7 @@
            style="font-size:63.99998856px;stroke-width:1.04776382px"
            ry="0" /></flowRegion><flowPara
          id="flowPara4774"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:62.86582947px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#ffffff;stroke-width:1.04776382px">Store data securely; publish and collaborate with ease</flowPara></flowRoot>    <rect
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:62.86582947px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';fill:#ffffff;stroke-width:1.04776382px">Store Data Securely; Publish and Collaborate with Ease</flowPara></flowRoot>    <rect
        ry="9.375001"
        y="-2426.6143"
        x="33.631149"
@@ -2517,7 +2519,7 @@
            y="953.60535"
            style="font-size:49.13757706px;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:1.03447533" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:49.13757706px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:end;letter-spacing:-0.19px;text-anchor:end;stroke-width:1.03447533"
-         id="flowPara13117">odML: Manage all information about an experiment</flowPara></flowRoot>    <g
+         id="flowPara13117">odML: Manage all Information about an Experiment</flowPara></flowRoot>    <g
        id="g5792"
        transform="matrix(1.3013129,0,0,1.2905149,1523.0948,-919.65361)"
        style="stroke-width:0.77166295">
@@ -3054,7 +3056,7 @@
            y="953.60535"
            style="font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:3.63903022;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara6013"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:36.87550735px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:end;letter-spacing:-0.19px;text-anchor:end;stroke-width:3.63903022;stroke-miterlimit:4;stroke-dasharray:none">NIX: Manage data and metadata in one versatile format</flowPara></flowRoot>    <text
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:36.87550735px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:end;letter-spacing:-0.19px;text-anchor:end;stroke-width:3.63903022;stroke-miterlimit:4;stroke-dasharray:none">NIX: Manage Data and Metadata in one Versatile Format</flowPara></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
        x="1817.4814"
@@ -4207,7 +4209,7 @@
              id="rect8953-3"
              style="font-family:sans-serif" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold'"
-           id="flowPara8955-0">The odML format</flowPara><flowPara
+           id="flowPara8955-0">The odML Format</flowPara><flowPara
            id="flowPara8957-7"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">• Open metadata format</flowPara><flowPara
            id="flowPara4887-2"
@@ -5900,7 +5902,7 @@
              width="694.44781"
              id="rect5458" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-           id="flowPara5460">Re-usable metadata concepts:</flowPara><flowPara
+           id="flowPara5460">Re-usable Metadata Concepts:</flowPara><flowPara
            id="flowPara4143" /><flowPara
            style="fill:#6c8ebf;fill-opacity:1"
            id="flowPara5464">https://templates.g-node.org</flowPara><flowPara
@@ -6068,7 +6070,7 @@
              id="rect8953-6"
              style="font-family:sans-serif" /></flowRegion><flowPara
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold'"
-           id="flowPara8955-4">The NIX format</flowPara><flowPara
+           id="flowPara8955-4">The NIX Format</flowPara><flowPara
            id="flowPara8957-6"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'">• Open data format</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans'"
