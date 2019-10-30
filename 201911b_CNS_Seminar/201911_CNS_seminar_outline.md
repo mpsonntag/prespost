@@ -1,0 +1,8 @@
+  - nix updates
+  - odml updates
+  - gin updates
+    - doi statistics
+    - gin features?
+    - gin valid; presentation, offer introduction of validators
+  - NFDI initiative
+  - FOSDEM open science software speaker
