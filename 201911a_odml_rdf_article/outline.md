@@ -34,27 +34,26 @@ JSON[formatExamplesB] and YAML[formatExamplesC] storage formats.
 
 ### Further development to open odml to interconnected searches
 
-While odML has shown to document experiments even 
-through diverse fields due to its flexibility, there is a growing need to search
-across multiple experiments and even across multiple fields. As recently 
-published (Sprenger et al., 2019)[odMLtables], the odML data format has been 
-developed further to also address this growing demand.
+While odML has shown to document experiments even through diverse fields due to its 
+flexibility, there is a growing need to search metadata across multiple experiments 
+and even across multiple fields. As recently published (Sprenger et al., 2019)[odMLtables], 
+the odML data format has been developed further to also address this growing demand.
 
-Due to this growing demand the odML implementation has been
-furthered to include a conversion of odML to an odML flavored
-version of the RDF (Resource Description Framework)[3] format.
-Data in RDF can easily loaded into graph databases and queried
-using the RDF specific SPARQL ([xxx])[] query language.
-Using the odML format in RDF enable to search across multiple
-documents and even unrelated fields of science.
+Even though searches within even extensive odML documents were always part of the
+implementation and even imports from linked, external sources into individual documents
+are possible, the option to easily search across multiple documents was still lacking.
+To this end we chose to open the odML data format to the Semantic Web[SemWeb] via conversion to 
+the RDF (Resource Description Framework)[RDF] format.
 
-- brief description of features + data model, mentioning of update compared to 
-  first paper and mention of odmltables
-
-[Grewe] Grewe J., Wachtler T., and Benda J. (2011). A bottom-up approach to data annotation in neurophysiology. Front. Neuroinform. 5:16, doi:10.3389/fninf.2011.00016
-[odML] https://github.com/G-Node/python-odml, RRID:SCR_001376
-[odMLtables] Sprenger J, Zehl L, Pick J, Sonntag M, Grewe J, Wachtler T, Grün S and Denker M (2019). odMLtables: A User-Friendly Approach for Managing Metadata of Neurophysiological Experiments. Front. Neuroinform. 13:62. doi: 10.3389/fninf.2019.00062
-
+The Semantic Web offers a large technology stack fit to meet the requirements:
+A suite of various graph database tools to merge individual documents in the RDF format 
+into a single graph even if the content of the documents are not uniform. 
+SPARQL (SPARQL Protocol and RDF Query Language), a full fledged query language that can 
+be used to extract information from such a graph.
+Another feature is OWL (Web Ontology Language)[OWL] which enables the definition of a 
+vocabulary extension of the basic RDF terminology to enable more elaborate and domain 
+specific SPARQL searches. The broad range of freely available open source tools can be 
+adapted to fit more specific use cases. 
 
 ## Introduction to RDF to deal with querying diverse datasets
 
@@ -88,3 +87,14 @@ documents and even unrelated fields of science.
 ## odML for backlink
 - datacite port to odML template
 - other odML templates for making datasets findable via the server
+
+
+# References
+
+[Grewe] Grewe J., Wachtler T., and Benda J. (2011). A bottom-up approach to data annotation in neurophysiology. Front. Neuroinform. 5:16, doi:10.3389/fninf.2011.00016
+[odML] https://github.com/G-Node/python-odml, RRID:SCR_001376
+[odMLtables] Sprenger J, Zehl L, Pick J, Sonntag M, Grewe J, Wachtler T, Grün S and Denker M (2019). odMLtables: A User-Friendly Approach for Managing Metadata of Neurophysiological Experiments. Front. Neuroinform. 13:62. doi: 10.3389/fninf.2019.00062
+[SemWeb] https://www.w3.org/standards/semanticweb/
+[RDF] https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/
+[SPARQL] https://www.w3.org/TR/sparql11-query/
+[OWL] https://www.w3.org/TR/owl-ref/
