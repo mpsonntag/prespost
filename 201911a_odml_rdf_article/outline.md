@@ -7,7 +7,8 @@
 ## A brief introduction to the odML data format
 
 As previously reported (Grewe et al., 2011)[Grewe] odML[odML] is a data format 
-designed to thoroughly document diverse metadata. Developed by the
+designed to thoroughly document diverse metadata that comes with a freely available
+reference implementation in Python. Developed by the
 German Neuroinformatics Node, its design was oriented along the needs
 of Neuroscientific metadata, but its generic approach makes it applicable
 to any scientific field.
@@ -55,15 +56,17 @@ vocabulary extension of the basic RDF terminology to enable more elaborate and d
 specific SPARQL searches. The broad range of freely available open source tools can be 
 adapted to fit more specific use cases. 
 
-## Introduction to RDF to deal with querying diverse datasets
-
-## Project outlines
-- mapping of odml -> RDF to make diverse datasets queryable via the same graph
-- providing a common server for searchable metadata
-- figure: proposed workflow; adopted from 1st publication @ INCF conf -> get doi?
-- how to make the data useful and findable? -> datacite!
-
 # Implementation
+
+In the following we will describe how we mapped the versatile odML data format to
+its RDF equivalent and document the specific OWL ontology we devised. We will also 
+show how metadata can be exported from odml to its rdf equivalent, how different 
+documents can be loaded into a single graph and how it can be searched via SPARQL.
+We will show how the basic structure can be furthered with indidual subclasses to
+make searches more specific.
+Finally we will present an open web service that enables metadata searches across multiple
+documents and present a suggestion based on the widely accepted DataCite[DataCite] 
+publication standard to enable backlinks from metadata sets to the original, published data. 
 
 ## Implementation of odML to RDF mapping
 
@@ -98,3 +101,4 @@ adapted to fit more specific use cases.
 [RDF] https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/
 [SPARQL] https://www.w3.org/TR/sparql11-query/
 [OWL] https://www.w3.org/TR/owl-ref/
+[DataCite] https://datacite.org/
