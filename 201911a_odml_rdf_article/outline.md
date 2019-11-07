@@ -85,7 +85,18 @@ publication standard to enable backlinks from metadata sets to the original, pub
 - adoption
 - availability of data
 
-- availablility for in house serving
+Fuseki is an open source SPARQL query servery that we adopted to support
+odml style RDF.
+We provide an instance that is publicliy available under https://meta.g-node.org.
+Here we provide a metadata database of all Datasets that have been published by 
+CRCNS[CRCNS] and G-Node[GIN].
+The server provides example queries how the contained database can be queried.
+The service is free to use and free to contribute, any additions to the database
+are welcome.
+
+- availability for in house serving
+
+
 
 ## odML for backlink
 - datacite port to odML template
@@ -102,3 +113,5 @@ publication standard to enable backlinks from metadata sets to the original, pub
 [SPARQL] https://www.w3.org/TR/sparql11-query/
 [OWL] https://www.w3.org/TR/owl-ref/
 [DataCite] https://datacite.org/
+[CRCNS] https://crcns.org/
+[GIN] https://doid.gin.g-node.org
