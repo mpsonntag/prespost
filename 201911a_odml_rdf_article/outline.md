@@ -1,8 +1,18 @@
-## Problemset introduction
-- diverse metadata
-- how to generalize for search
-- how to make available for linkback
+# From metadata to the semantic web: services for data annotation and findable data
 
+## Abstract
+
+Annotation of research data with metadata is crucial to provide context for analysis and 
+re-use. The odML format offers a flexible and comprehensive solution for the scientist 
+to collect and organize metadata in a structured form that is both human readable and 
+machine actionable for documentation and automated analysis. To further support the FAIR 
+principles, we present tools to export metadata from odML to RDF, which opens any metadata 
+to Semantic Web services. The G-Node SPARQL server is aimed at providing searchable whole 
+metadata sets for meta analyses and also providing links to the actual published 
+scientific data set. Scientists can upload their metadata to make their data findable and 
+accessible even if it was a data publication or if it is an unpublished data set. 
+
+[Title and abstract are revamps of the INCF 2019 poster]
 
 ## A brief introduction to the odML data format
 
@@ -33,7 +43,7 @@ provides an option for both human readability and machine consumption.
 Fig[formatExamples]. Metadata organized in odML and stored using the XML[formatExamplesA],
 JSON[formatExamplesB] and YAML[formatExamplesC] storage formats.
 
-### Further development to open odml to interconnected searches
+### Further development to open odML to interconnected searches
 
 While odML has shown to document experiments even through diverse fields due to its 
 flexibility, there is a growing need to search metadata across multiple experiments 
