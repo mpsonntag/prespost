@@ -1,4 +1,4 @@
-# From metadata to the semantic web: services for data annotation and findable data
+# From metadata to the Semantic Web: services for data annotation and findable data
 
 ## Abstract
 
