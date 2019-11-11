@@ -106,6 +106,15 @@ publication standard to enable backlinks from metadata sets to the original, pub
 
 ## Implementation of odML to RDF mapping
 
+First step was mapping the odML entities `Document`, `Section` and `Property` to RDF 
+classes and provide the respective RDF predicates and xsd types.
+
+### Namespace
+
+We chose the RDF namespace `https://g-node.org/projects/odml-rdf` to identify all RDF 
+odML entities. [xxx should we change this namespace? if yes to what should we change it
+and we need to provide the odML OWL ontology at this namespace in any case, cf. related section below] 
+
 - Schema and description of odml and the RDF mapping
 - ontology
 - description of usage -> rdf example with 
