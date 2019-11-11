@@ -224,6 +224,29 @@ Conversely the odml:Section in an odml:Document references the Terminology via t
     -               odml:Terminology                -
     Sections        odml:hasSection                 -
 
+### Subclassing of Sections
+
+ALL of the properties can be fine grained into subproperties to give more semantic 
+meaning to the connection between nodes.
+
+e.g.
+    section hasSection section
+ could become
+    section hasExperimenter section
+    
+ here hasExperimenter is a subclass of `hasSection` ... a search for `hasExperimenter` 
+ would return only sections connected via this specific property, a search for hasSection 
+ would return all sections connected by `hasSection` and `hasExperimenter`.
+
+### odML RDF ontology
+
+To make use of the RDF feature of validating individual RDF files, we created an odML
+RDF ontology which includes the basic set of odml RDF terms and included all currently
+supported Section subclasses. This list of subclasses should not be seen as permanent and
+will probably increase in the future.
+
+[odmlOntology][odml-ontology.ttl] cf file. [xxx how to best include this file in the article]
+
 
 - description of usage -> rdf example with 
 - description of subclassing, idea behind it, how to use it
