@@ -115,6 +115,92 @@ We chose the RDF namespace `https://g-node.org/projects/odml-rdf` to identify al
 odML entities. [xxx should we change this namespace? if yes to what should we change it
 and we need to provide the odML OWL ontology at this namespace in any case, cf. related section below] 
 
+### Mapping of odML entities to RDF classes
+
+[TableDocument]: mapping of odML `Document` to RDF. (a) The document root is mapped to an 
+RDFS class of type `odml:Document`. (b) The uuid of the odML `Document` is used as
+Name of the created `odml:Document` RDF node to uniquely identify the document if it is 
+merged with a graph database. (c) RDF export of repositories: linked terminologies are
+downloaded on conversion and exported additional RDF document connected via the `odml:Hub` 
+RDF node. This additional document is linked via `odml:hasTerminology` to the original
+document. If the terminology cannot be imported, its URL will be kept as is and its
+value is provided as an RDF leaf via the predicate `odml:hasExternalTerminology` in
+the original document. See [TableHub] and [TableTerminology] for more detailed descriptions 
+[xxx check if this actually works as described] (d) As provenance from where the RDF 
+odml:Document was created from, the filename of the original odML file is documented via 
+the non-odML predicate `odml:hasFilename` 
+
+    odml                    RDF                                 xsd type
+    ------------------------------------------------------------------------------
+    odml (a)                odml:Document                       -
+
+    id (b)                  RDF node instance name              -
+    author                  odml:hasAuthor                      xsd:string
+    date                    odml:hasDate                        xsd:date
+    version (odml)          odml:hasVersion                     xsd:float
+    version (document)      odml:hasDocVersion                  xsd:string
+    repository (c)          odml:hasTerminology                 -
+                            odml:hasExternalTerminology         xsd:string
+    Sections                odml:hasSection                     -
+    - (d)                   odml:hasFilename                    xsd:string
+
+
+[TableSection]: mapping of odML `Section` to RDF. (a) Any odML `Section` entity is mapped 
+to an RDFS class of type `odml:Section`. (b) The uuid of an odML `Section` entity is used 
+as Name of the created `odml:Section` RDF node to uniquely identify the section if it is 
+merged with a graph database. If this node already exists in the graph, it will not 
+add a duplicate entry, but will add only any predicates that the graph with respect to
+this Section node does not already contain. [xxx Move to another part or remove?] 
+(c) cf. `repository` description in [TableDocument]. (d) A `reference` can either be be a 
+URL to an external reference or a string pointing to an id in a Database. (e) Unspecific
+Sections are exported using the `odml:Section` class and the `odml:hasSection` predicate.
+We also provide a set of 'specialized' RDF classes that are subclasses of Section. cf. 
+[subclassing] for details.
+
+    odml            RDF                             xsd type
+    ------------------------------------------------------------------------------
+    Section (a)     odml:Section                    -
+
+    id (b)          RDF node instance name          -
+    name            odml:hasName                    xsd:string
+    type            odml:hasType                    xsd:string
+    definition      odml:hasDescription             xsd:string
+    repository (c)  odml:hasTerminology             -
+                    odml:hasExternalTerminology     xsd:string
+    reference (d)   odml:hasReference               xsd:string
+    Sections (e)    odml:hasSection                 -
+    Properties      odml:hasProperty                -
+
+
+[TableProperty]: mapping of odML `Property` to RDF. (a) Any odML `Property` entity is mapped 
+to an RDFS class of type `odml:Property`. (b) The uuid of an odML `Property` entity is used 
+as Name of the created `odml:Property` RDF node to uniquely identify the section if it is 
+merged with a graph database. (c) cf. `reference` description in [TableSection]. (d) odML
+supports multiple values. On the export to RDF the order of these values need to be 
+respected as well. Values are connected to the RDF document via the `odml:hasValue` 
+predicate to an `rdf:Seq` node. This `rdf:Seq` node in turn contains numbered rdf:li 
+items which in turn contain the individual odml.Value entries. This construct enables 
+RDF searches for individual values rather then searching for lists of values.
+ 
+    odml            RDF                             xsd type
+    ------------------------------------------------------------------------------
+    Property (a)    odml:Property                   -
+    
+    id (b)          RDF node instance name          -
+    name            odml:hasName                    xsd:string
+    definition      odml:hasDefinition              xsd:string
+    reference (c)   odml:hasReference               xsd:string
+
+    unit            odml:hasUnit                    xsd:string
+    dtype           odml:hasDtype                   xsd:string
+    uncertainty     odml:hasUncertainty             xsd:float
+    values (d)      odml:hasValue                   -
+                    rdf:Seq                         -
+                    rdf:_#                          xsd:string
+    value_origin    odml:hasValueOrigin             xsd:string
+
+
+
 - Schema and description of odml and the RDF mapping
 - ontology
 - description of usage -> rdf example with 
