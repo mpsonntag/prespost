@@ -200,9 +200,31 @@ RDF searches for individual values rather then searching for lists of values.
     value_origin    odml:hasValueOrigin             xsd:string
 
 
+[TableHub]: The custom RDF type of class `odml:Hub` has no odML entity equivalent. It is 
+introduced to merge Documents and Terminologies into a single RDF graph: the `Hub` is 
+used to root a graph that might contain multiple documents to enable searches across 
+unrelated and inhomogenious metadata content.
 
-- Schema and description of odml and the RDF mapping
-- ontology
+    odml            RDF                             xsd type
+    ------------------------------------------------------------------------------
+    -               odml:Hub                        -
+    -               odml:hasDocument                -
+    -               odml:hasTerminology             -
+
+
+[TableTerminology]: odML documents can link to external Terminology documents. To make 
+these available for searches within a connected RDF graph besides the odML documents they 
+are referenced by, linked terminologies are imported and converted into RDF documents.
+They are connected via the `odml:hasSection` predicate to their referencing documents.
+Conversely the odml:Section in an odml:Document references the Terminology via the 
+`odml:hasTerminology` predicate.
+
+    odml            RDF                             xsd type
+    -------------------------------------------------------------------------------------------
+    -               odml:Terminology                -
+    Sections        odml:hasSection                 -
+
+
 - description of usage -> rdf example with 
 - description of subclassing, idea behind it, how to use it
 - description convenience conversion scripts
