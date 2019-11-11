@@ -63,7 +63,13 @@ provides an option for both human readability and machine consumption.
 Fig[formatExamples]. Metadata organized in odML and stored using the XML[formatExamplesA],
 JSON[formatExamplesB] and YAML[formatExamplesC] storage formats.
 
-### Further development to open odML to interconnected searches
+[V#] we used parts of the datacite schema as an example since it will serve later on as 
+one of the main search criteria to find and link back to published or otherwise
+available datasets. We provide a full DataCite odML terminology [DataCiteTerminology], 
+two specific odML templates [DataCiteTemplates] as reference usage implementation and
+a Python conversion script from XML Datacite files to odML [DataCiteToODML].  
+
+### Further development to open odML to graph database searches
 
 While odML has shown to document experiments even through diverse fields due to its 
 flexibility, there is a growing need to search metadata across multiple experiments 
@@ -109,7 +115,7 @@ publication standard to enable backlinks from metadata sets to the original, pub
 
 - fuzzy queries?
 
-## Implementation of sparql server
+## Implementation of SPARQL server: meta.g-node.org
 
 - why fuseki
 - adoption
@@ -117,7 +123,7 @@ publication standard to enable backlinks from metadata sets to the original, pub
 
 Fuseki is an open source SPARQL query server from the Apache Jena[ApacheJena] 
 Semantic Web tools suite that we adopted to support odml style RDF.
-We provide an instance that is publicliy available under https://meta.g-node.org.
+We provide an instance that is publicly available under https://meta.g-node.org.
 Here we provide a metadata database of all Datasets that have been published by 
 CRCNS[CRCNS] and G-Node[GIN].
 The server provides example queries how the contained database can be queried.
@@ -153,3 +159,7 @@ are welcome.
 [DataCite] https://datacite.org/
 [CRCNS] https://crcns.org/
 [GIN] https://doid.gin.g-node.org
+
+[DataCiteTerminology] V#
+[DataCiteTemplates] V#
+[DataCiteToODML] V#
