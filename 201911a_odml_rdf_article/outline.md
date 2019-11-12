@@ -224,6 +224,8 @@ Conversely the odml:Section in an odml:Document references the Terminology via t
     -               odml:Terminology                -
     Sections        odml:hasSection                 -
 
+Fig [odmlRDFDataModel]
+
 ### Subclassing of Sections
 
 ALL of the properties can be fine grained into subproperties to give more semantic 
