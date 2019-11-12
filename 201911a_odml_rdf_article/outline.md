@@ -264,15 +264,16 @@ will probably increase in the future.
 - availability of data
 
 Fuseki is an open source SPARQL query server from the Apache Jena[ApacheJena] 
-Semantic Web tools suite that we adopted to support odml style RDF.
-We provide an instance that is publicly available under https://meta.g-node.org.
-Here we provide a metadata database of all Datasets that have been published by 
-CRCNS[CRCNS] and G-Node[GIN].
-The server provides example queries how the contained database can be queried.
+Semantic Web tools suite that was adopted to support odML specific RDF.
+An publicly accessible instance is available at https://meta.g-node.org.
+The service provides a metadata graph searchable by SPARQL containing all scientific 
+Datasets that have been published by CRCNS[CRCNS] and G-Node[GIN].
+The server provides example SPARQL queries how the available database can be used.
 The service is free to use and free to contribute, any additions to the database
-are welcome.
+are welcome and encouraged.
 
-- availability for in house serving
+The SPARQL server including all example queries has been Dockerized. Both source 
+code[ODMLQuery] and docker container[ODMLQueryDocker] are freely available and free to use.
 
 ## Suggested workflow
 
@@ -286,6 +287,10 @@ Fig [workFlowSchema]
 - datacite port to odML template
 - other odML templates for making datasets findable via the server
 
+# Outlook
+
+Custom subclassing
+Integration into GIN for automatic upload
 
 # References
 
@@ -303,6 +308,8 @@ Fig [workFlowSchema]
 [DataCite] https://datacite.org/
 [CRCNS] https://crcns.org/
 [GIN] https://doid.gin.g-node.org
+[ODMLQuery] https://github.com/G-node/odml-query
+[ODMLQueryDocker] https://hub.docker.com/r/gnode/meta
 
 [DataCiteTerminology] V#
 [DataCiteTemplates] V#
