@@ -277,6 +277,8 @@ are welcome.
 -- should we add a suggested workflow? Could be an adopted figure from 
    INCF 2018/2019 from recording to graph server. 
 
+Fig [workFlowSchema]
+
 
 ## odML for backlink
 - datacite port to odML template
