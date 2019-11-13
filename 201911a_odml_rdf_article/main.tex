@@ -2,6 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs,caption}
 \usepackage[flushleft]{threeparttable}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{graphicx}
 
 \title{FAIR from metadata to the Semantic Web: open source services for data annotation and findable data}
 \author{TBD}
@@ -11,9 +14,9 @@
 
 \maketitle
 
-\begin{Abstract}
+\begin{abstract}
 Annotation of research data with metadata is crucial to provide context for analysis and  re-use. The odML format offers a flexible and comprehensive solution for the scientist to collect and organize metadata in a structured form that is both human readable and machine actionable for documentation and automated analysis. To further support the FAIR principles, we present tools to export metadata from odML to \textit{RDF}\footnote{\url{https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225}}, which opens any metadata to \textit{Semantic Web}\footnote{\url{https://www.w3.org/standards/semanticweb}} services. The open source G-Node SPARQL server is aimed at providing searchable whole metadata sets for meta analyses and also providing links to the actual published scientific data set. Scientists can upload their metadata to make their data findable and accessible even if it was a data publication or if it is an unpublished data set.
-\end{Abstract}
+\end{abstract}
 
 \section{Introduction}
 According to the FAIR principles \cite{Wilkinson_2016}, (meta)data is supposed to be Findable, Accessible, Interoperable, Reusable. Metadata, data about experimental data, play a special role in this context. Not only do they accurately describe the experimental setup but ideally also the dataset involved. If handled properly, a collection of metadata is the first step to solving the FAIR principles for a dataset. As previously shown \cite{Teeters_2017} Interoperability  between even diverse metadata can be achieved by using the common and flexible Semantic Web RDF technology.
@@ -22,15 +25,20 @@ To make large collections of merged metadata in RDF format easily Accessible, we
 
 \subsection{The odML data format}
 As previously reported \cite{Grewe_2011}, \textit{odML}\footnote{\url{https://github.com/G-Node/python-odml}, RRID:SCR\_001376} is a data format designed to thoroughly document diverse metadata that comes with a freely available reference implementation in Python. Developed by the German Neuroinformatics Node, its design was oriented along the needs of Neuroscientific metadata, but its generic approach makes it applicable to any scientific field and is able to store heterogenic metadata to fully document even complex experimental setups and conditions \cite{Zehl_2016}.
+As a brief introduction to the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odml data model with all its available attributes while Fig[odmlModelB] shows an abstraction of how the model can be used to store metadata.
 
-As a brief introduction to the odML concept is to store metadata in a generic but hierarchical structure. Fig[odmlModelA] provides an overview of the general odml data model with all its available attributes while Fig[odmlModelB] shows an abstraction of how the model can be used to store metadata.
-
-Fig[odmlModel]. Fig[odmlModelA] The odML data model. Fig[odmlModelB] The two main concept entities are nested *Sections* that provide a single *Document* with its general structure an make such a document navigate- and searchable. *Sections* can contain *Properties* that in turn contain metadata values.
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.70\columnwidth]{figures/figOdmlModelA.pdf}
+\caption{
+A) The odML data model. B) [xxx todo] The two main concept entities are nested *Sections* that provide a single *Document* with its general structure an make such a document navigate- and searchable. *Sections* can contain *Properties* that in turn contain metadata values.
+}
+\label{fig:odmlModel}
+\end{center}
+\end{figure}
 
 Metadata organized using the odML data model can be stored in multiple different file formats: XML, JSON and YAML. See Fig[formatExamples] for examples. While both XML and JSON are well used in data processing and automation, YAML provides an option for both human readability and machine consumption.
-
 Fig[formatExamples]. Metadata organized in odML and stored using the XML[formatExamplesA], JSON[formatExamplesB] and YAML[formatExamplesC] storage formats.
-
 We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}, \url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{[xxx] TBD}.
 
 \subsection{Further development to open odML to graph database searches}
@@ -56,6 +64,8 @@ First step was mapping the odML entities `Document`, `Section` and `Property` to
 We chose the RDF namespace `https://g-node.org/projects/odml-rdf` to identify all RDF odML entities. [xxx should we change this namespace? if yes to what should we change it and we need to provide the odML OWL ontology at this namespace in any case, cf. related section below]
 
 \subsubsection{Mapping of odML entities to RDF classes}
+
+In the following we descript how odML entities were mapped to RDF.
 
 \begin{table}
 \begin{threeparttable}
@@ -166,8 +176,13 @@ merged with a graph database. (c) cf. `reference` description in [TableSection].
 \end{threeparttable}
 \end{table}
 
-
-Fig [odmlRDFDataModel]
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.90\columnwidth]{figures/odmlRDFDataModel.pdf}
+\caption{The odML RDF data model.}
+\label{fig:rdfModel}
+\end{center}
+\end{figure}
 
 \subsubsection{Subclassing of Sections}
 
@@ -194,9 +209,13 @@ The SPARQL server including all example queries has been Dockerized. Both source
 
 \subsection{Suggested workflow}
 
--- should we add a suggested workflow? Could be an adopted figure from INCF 2018/2019 from recording to graph server.
-
-Fig [workFlowSchema]
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.90\columnwidth]{figures/workflowSchema.pdf}
+\caption{Should we add a suggested workflow? Could be an adopted figure from INCF 2018/2019 from recording to graph server.}
+\label{fig:workflowSchema}
+\end{center}
+\end{figure}
 
 \subsection{odML for backlink}
 - datacite port to odML template
