@@ -190,7 +190,6 @@ RDF searches for individual values rather then searching for lists of values.
     name            odml:hasName                    xsd:string
     definition      odml:hasDefinition              xsd:string
     reference (c)   odml:hasReference               xsd:string
-
     unit            odml:hasUnit                    xsd:string
     dtype           odml:hasDtype                   xsd:string
     uncertainty     odml:hasUncertainty             xsd:float
