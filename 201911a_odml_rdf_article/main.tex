@@ -5,10 +5,9 @@
 \usepackage{natbib}
 \usepackage{url}
 \usepackage{graphicx}
+\usepackage{listings}
 
 \title{FAIR from metadata to the Semantic Web: open source services for data annotation and findable data}
-\author{TBD}
-\date{November 2019}
 
 \begin{document}
 
@@ -207,9 +206,7 @@ e.g.
 Here \texttt{hasExperimenter} is a subclass of \texttt{hasSection}. A search for \texttt{hasExperimenter} would return only sections connected via this specific property, a search for \texttt{hasSection} would return all sections connected by \texttt{hasSection} and \texttt{hasExperimenter}.
 
 \subsubsection{odML RDF ontology}
-To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDF terms and included all currently supported Section sub-classes. This list of sub-classes should not be seen as permanent and will probably increase in the future.
-
-[odmlOntology][odml-ontology.ttl] cf file. [xxx how to best include this file in the article]
+To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDF terms and included all currently supported Section sub-classes. The complete file can be found in the Appendix under Listing ~\ref{lst:ontology} This list of sub-classes should not be seen as permanent and will probably increase in the future.
 
 \subsection{Implementation of SPARQL server: meta.g-node.org}
 
@@ -218,6 +215,8 @@ Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footn
 The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
 
 \subsection{Suggested workflow}
+
+The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 
 \begin{figure}
 \begin{center}
@@ -247,5 +246,9 @@ Sprenger J, Zehl L, Pick J, Sonntag M, Grewe J, Wachtler T, Grün S and Denker M
 \bibitem{Teeters_2017}
 Teeters J.L., Ježek P., Garbers C., Kellner C.J., Sonntag M., Koutsou A., Grewe J., Sommer F.T., Wachtler T., Towards interoperability of neurophysiology data repositories, doi: 10.12751/incf.ni2017.0017
 \end{thebibliography}
+
+\section{Appendix}
+
+\lstinputlisting[caption=The odML OWL ontology in Turtle notation, label=lst:ontology]{resources/odml-ontology.ttl}
 
 \end{document}
