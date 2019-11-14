@@ -17,14 +17,14 @@
 Annotation of research data with metadata is crucial to provide context for analysis and  re-use. The odML format offers a flexible and comprehensive solution for the scientist to collect and organize metadata in a structured form that is both human readable and machine actionable for documentation and automated analysis. To further support the FAIR principles, we present tools to export metadata from odML to \textit{RDF}\footnote{\url{https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225}}, which opens any metadata to \textit{Semantic Web}\footnote{\url{https://www.w3.org/standards/semanticweb}} services. The open source G-Node SPARQL server is aimed at providing search-able whole metadata sets for meta analyses and also providing links to the actual published scientific data set. Scientists can upload their metadata to make their data find-able and accessible even if it was a data publication or if it is an unpublished data set.
 \end{abstract}
 
-\section{Introduction}
-According to the FAIR principles \cite{Wilkinson_2016}, (meta)data is supposed to be Findable, Accessible, Interoperable, Reusable. Metadata, data about experimental data, play a special role in this context. Not only do they accurately describe the experimental setup but ideally also the data set involved. If handled properly, a collection of metadata is the first step to solving the FAIR principles for a data set. As previously shown \cite{Teeters_2017} Interoperability  between even diverse metadata can be achieved by using the common and flexible Semantic Web RDF technology.
+\section{Introduction} \label{sec:introduction}
+According to the FAIR principles \cite{Wilkinson_2016}, (meta)data is supposed to be Findable, Accessible, Interoperable, Reusable. Metadata, data about experimental data, play a special role in this context. Not only do they accurately describe the experimental setup but ideally also the data set involved. If handled properly, a collection of metadata is the first step to solving the FAIR principles for a published data set. As previously shown \cite{Teeters_2017} Interoperability between even diverse metadata can be achieved by using the common and flexible Semantic Web RDF technology.
 
 Expanding on this idea, we show how Findability and Accessibility of large collections of metadata can be achieved by the use of open source software. Interoperability between different types of metadata is achieved by a minimal set of common RDF terms. This way diverse sets of metadata can be easily converted and imported into a common search-able data graph. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata can be sub-classed to the benefit of maintaining the original structure without losing the common generic structure keeping Interoperability without sacrificing Findability.
 
 To make large collections of merged metadata in RDF format easily Accessible, we introduce an augmented version of the open source SPARQL server \textit{Apache Fuseki}\footnote{Jena 2006, A semantic web framework for Java, \url{http://jena.apache.org}}. This software provides access to the metadata by both custom, easy to use search terms as well as the powerful \textit{SPARQL}\footnote{\url{https://www.w3.org/TR/sparql11-query}} query language.
 
-\subsection{The odML data format}
+\subsection{The odML data format} \label{sec:odml_intro}
 As previously reported \cite{Grewe_2011}, \textit{odML}\footnote{\url{https://github.com/G-Node/python-odml}, RRID:SCR\_001376} is a data format designed to thoroughly document diverse metadata that comes with a freely available reference implementation in Python. Developed by the German Neuroinformatics Node, its design was oriented along the needs of neuroscientific metadata, but its generic approach makes it applicable to any scientific field and is able to store heterogeneous metadata to fully document even complex experimental setups and conditions \cite{Zehl_2016}.
 
 As a brief introduction to the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odML data model with all its available attributes while Fig[odmlModelB] shows an abstraction of how the model can be used to store metadata.
@@ -43,7 +43,7 @@ Metadata organized using the odML data model can be stored in multiple different
 Fig[formatExamples]. Metadata organized in odML and stored using the XML[formatExamplesA], JSON[formatExamplesB] and YAML[formatExamplesC] storage formats.
 We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}, \url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{[xxx] TBD}.
 
-\subsection{Further development to open odML to graph database searches}
+\subsection{Further development to open odML to graph database searches} \label{sec::why_rdf}
 
 While odML has shown to document experiments even through diverse fields due to its flexibility, there is a growing need to search metadata across multiple experiments and even across multiple fields. As recently published \cite{Sprenger_2019}, the odML data format has been developed further to also address this growing demand.
 
@@ -51,21 +51,20 @@ Even though searches within even extensive odML documents were always part of th
 
 The Semantic Web offers a large technology stack fit to meet the requirements: A suite of various graph database tools to merge individual documents in the RDF format into a single graph even if the content of the documents are not uniform. SPARQL (SPARQL Protocol and RDF Query Language), a full fledged query language that can be used to extract information from such a graph. Another feature is \textit{OWL (Web Ontology Language)}\footnote{\url{https://www.w3.org/TR/owl-ref}} which enables the definition of a vocabulary extension of the basic RDF terminology to enable more elaborate and domain specific SPARQL searches. The broad range of freely available open source tools can be adapted to fit more specific use cases.
 
-\section{Implementation}
+\section{Implementation} \label{sec:implementation}
 
 In the following we will describe how we mapped the versatile odML data format to its RDF equivalent and document the specific OWL ontology we devised. We will also show how metadata can be exported from odML to its RDF equivalent, how different documents can be loaded into a single graph and how it can be searched via SPARQL. We will show how the basic structure can be furthered with individual sub-classes to make searches more specific. Finally we will present an open web service that enables metadata searches across multiple documents and present a suggestion based on the widely accepted \textit{DataCite}\footnote{\url{https://datacite.org}} publication standard to enable back-links from metadata sets to the original, published data.
 
-\subsection{Implementation of odML to RDF mapping}
+\subsection{Implementation of odML to RDF mapping} \label{sec::odml_rdf}
 
 First step was mapping the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} to RDF classes and provide the respective RDF predicates and xsd types.
 
-\subsubsection{Namespace}
+\subsubsection{Mapping of odML entities to RDF classes} \label{sec:odml_rdf_mapping}
 
-We chose the RDF namespace \url{https://g-node.org/projects/odml-rdf} to identify all RDF odML entities. [xxx should we change this namespace? if yes to what should we change it and we need to provide the odML OWL ontology at this namespace in any case, cf. related section below]
+We chose the RDF namespace \url{https://g-node.org/odml-rdf} to identify all RDF odML entities. [xxx] provide a better introduction of namespace.
+In the following, all mentions of \texttt{odml:} are an abbreviation for the full RDF namespace \texttt{https://g-node.org/odml-rdf#}.
 
-\subsubsection{Mapping of odML entities to RDF classes}
-
-In the following we descript how odML entities were mapped to RDF.
+In the following we describe how odML entities were mapped to RDF .
 
 \begin{table}
 \begin{threeparttable}
@@ -196,8 +195,7 @@ In the following we descript how odML entities were mapped to RDF.
 \end{center}
 \end{figure}
 
-\subsubsection{Subclassing of Sections}
-
+\subsubsection{Subclassing of Sections} \label{sec:rdf_subclassing}
 ALL of the properties can be fine grained into sub-properties to give more semantic meaning to the connection between nodes.
 e.g.
     \texttt{section hasSection section}
@@ -205,16 +203,16 @@ e.g.
     \texttt{section hasExperimenter section}
 Here \texttt{hasExperimenter} is a subclass of \texttt{hasSection}. A search for \texttt{hasExperimenter} would return only sections connected via this specific property, a search for \texttt{hasSection} would return all sections connected by \texttt{hasSection} and \texttt{hasExperimenter}.
 
-\subsubsection{odML RDF ontology}
+\subsubsection{odML RDF ontology} \label{sec:odml_ontology}
 To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDF terms and included all currently supported Section sub-classes. The complete file can be found in the Appendix under Listing ~\ref{lst:ontology} This list of sub-classes should not be seen as permanent and will probably increase in the future.
 
-\subsection{Implementation of SPARQL server: meta.g-node.org}
+\subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
 
 Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footnote{Jena 2006, A semantic web framework for Java, \url{http://jena.apache.org}} Semantic Web tools suite that was adopted to support odML specific RDF. A publicly accessible instance is available at https://meta.g-node.org. The service provides a metadata graph search-able by SPARQL containing all scientific Datasets that have been published by \textit{CRCNS (Collaborative Research in Computational Neuroscience)}\footnote{\url{https://crcns.org}} and \textit{G-Node}\footnote{\url{https://doid.gin.g-node.org}}. The server provides example SPARQL queries how the available database can be used. The service is free to use and free to contribute, any additions to the database are welcome and encouraged.
 
 The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
 
-\subsection{Suggested workflow}
+\subsection{Suggested workflow} \label{sec:odml_rdf_workflow}
 
 The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 
@@ -226,11 +224,11 @@ The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 \end{center}
 \end{figure}
 
-\subsection{odML for back-link}
+\subsection{odML for search an data back-link} \label{sec:data_back_link}
 - datacite port to odML template
 - other odML templates for making datasets findable via the server
 
-\section{Outlook}
+\section{Outlook} \label{sec:outlook}
 Custom subclassing
 Integration into GIN for automatic upload
 
@@ -247,7 +245,7 @@ Sprenger J, Zehl L, Pick J, Sonntag M, Grewe J, Wachtler T, Grün S and Denker M
 Teeters J.L., Ježek P., Garbers C., Kellner C.J., Sonntag M., Koutsou A., Grewe J., Sommer F.T., Wachtler T., Towards interoperability of neurophysiology data repositories, doi: 10.12751/incf.ni2017.0017
 \end{thebibliography}
 
-\section{Appendix}
+\section{Appendix} \label{sec:appendix}
 
 \lstinputlisting[caption=The odML OWL ontology in Turtle notation, label=lst:ontology]{resources/odml-ontology.ttl}
 
