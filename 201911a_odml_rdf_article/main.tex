@@ -206,11 +206,36 @@ Here \texttt{hasExperimenter} is a subclass of \texttt{hasSection}. A search for
 \subsubsection{odML RDF ontology} \label{sec:odml_ontology}
 To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDF terms and included all currently supported Section sub-classes. The complete file can be found in the Appendix under Listing ~\ref{lst:ontology} This list of sub-classes should not be seen as permanent and will probably increase in the future.
 
+\subsubsection{Usage Example} \label{sec:local_usage}
+
+- example script howto export from odml to rdf
+- example script howto create a datacite odml\footnote{\url{https://github.com/G-Node/odmltools}}
+- example script howto add metadata to an existing odml -> add information to
+
+- example script howto load documents into local graph
+- example queries with basic structure
+- example queries with subclass structure
+
 \subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
 
 Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footnote{Jena 2006, A semantic web framework for Java, \url{http://jena.apache.org}} Semantic Web tools suite that was adopted to support odML specific RDF. A publicly accessible instance is available at https://meta.g-node.org. The service provides a metadata graph search-able by SPARQL containing all scientific Datasets that have been published by \textit{CRCNS (Collaborative Research in Computational Neuroscience)}\footnote{\url{https://crcns.org}} and \textit{G-Node}\footnote{\url{https://doid.gin.g-node.org}}. The server provides example SPARQL queries how the available database can be used. The service is free to use and free to contribute, any additions to the database are welcome and encouraged.
 
 The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
+
+ToDo:
+- background
+- extension explanation
+- dockerization
+- security
+- in house setup
+- upload to graph -> multiple graph explanation
+
+- meta.g-node.org
+  - where hosted
+  - graph-name, dataset explanation
+  - free to use, free to add own datasets.
+  - example queries
+  - screenshots?
 
 \subsection{Suggested workflow} \label{sec:odml_rdf_workflow}
 
@@ -229,8 +254,9 @@ The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 - other odML templates for making datasets findable via the server
 
 \section{Outlook} \label{sec:outlook}
-Custom subclassing
-Integration into GIN for automatic upload
+- Integration into GIN for automatic upload
+- Custom subclassing
+- fuzzy queries for easy access + link to what is already available in the python package
 
 \begin{thebibliography}{}
 \bibitem{Grewe_2011}
