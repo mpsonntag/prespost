@@ -206,7 +206,41 @@ Here \texttt{hasExperimenter} is a subclass of \texttt{hasSection}. A search for
 \subsubsection{odML RDF ontology} \label{sec:odml_ontology}
 To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDF terms and included all currently supported Section sub-classes. The complete file can be found in the Appendix under Listing ~\ref{lst:ontology} This list of sub-classes should not be seen as permanent and will probably increase in the future.
 
-\subsubsection{Usage Example} \label{sec:local_usage}
+\subsubsection{Creating odML and converting to RDF} \label{sec:odml_to_rdf}
+
+\textbf{Converting odML to RDF}
+The default odML Python library\footnote{\url{https://github.com/G-Node/python-odml}} installation automatically provides a convenience command line script that converts odML files to their RDF pendant.
+
+\begin{lstlisting}
+$ odmltordf [-r] [-o OUT] SEARCHDIR
+\end{lstlisting}
+
+\texttt{SEARCHDIR} All odML files in the specified directory will be converted to RDF.
+\texttt{-r} An optional argument to include directories recursively.
+\texttt{-o OUT} An optional argument to specify an output directory.
+
+\textbf{Using the DataCite schema to annotate published datasets}
+As stated above, we encourage using the DataCite schema\footnote{\url{https://datacite.org}} to provide the basic description of a published dataset since it is an adopted and widely accepted standard in the annotation of datasets. We provide a dedicated, fully compatible terminology for the DataCite standard in odML\footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}. We also provide a convenience script to convert an existing DataCite XML file into an odML file\footnote{\url{https://github.com/G-Node/odmltools}}. Once installed it provides a command line script that can be used to convert DataCite XML files to odML:
+
+\begin{lstlisting}
+$ odmlimportdatacite [-f FORMAT] [-o OUT] [-r] [-p] INPUT
+\end{lstlisting}
+
+\texttt{INPUT} Path and filename of the DataCite XML file to be parsed. If used with the [-r] flag, INPUT should be a directory; all DataCite XML files within this directory and any sub directories will be parsed to odML.
+\texttt{-F FORMAT} odML output file format. Available formats are 'XML', 'JSON', 'YAML', 'RDF'. Default format is 'XML'.
+\texttt{-o OUT} Output directory. Must exist if specified. If not specified, output files will be written to the current directory.
+\texttt{-r} An optional argument to walk recursively through a repository and convert all DataCite files found.
+\texttt{-p} An optional argument to print the parsed document tree(s) to the command line.
+
+The script can be used to directly convert a DataCite XML file to RDF
+
+An existing odML file which was used to document a published set of experiments can easily be combined with an odML file created from a DataCite XML file and saved to RDF.
+
+\subsubsection{Working with an odML RDF graph} \label{sec:rdf_usage}
+
+\textbf{Creating an odML RDF graph}
+[xxx]
+
 
 - example script howto export from odml to rdf
 - example script howto create a datacite odml\footnote{\url{https://github.com/G-Node/odmltools}}
