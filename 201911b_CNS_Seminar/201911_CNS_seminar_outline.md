@@ -1,21 +1,27 @@
-# G-Node updates
-- Overview
+# G-Node highlights 2019
+... and what they might do for you!
 
+- what does the G-Node actually do? Ideally for me?
 - this is what we do
   - merchandise! stickers, cup collection, flyers
+    - the hated mug!
 - no, this is what we actually do
   - projects overview
   - things that did not know we also do!
+- Overview
 - posters:
-  - no this is what we actually do - 4 conferences + posters -> and now the 
-- GCA-Web:
+  - no this is what we actually do - 4 conferences + posters -> and now the
+  - workshops we held
+    -> ANDA 2020?
+    -> Data management workshop summer semester 2020? 
+- GCA-Web
   - BCCN / INCF / Ethology! \o/ -> have a conference? use GCA-Web!
-- nix updates
+- NIX
   - general introduction:
     - description
     - data model
   - introduction of table to the 
-- odML updates
+- odML
     - general introduction
       - description
       - data model
@@ -23,7 +29,7 @@
     - odmltables
       - paper
       - feature description
-- gin updates
+- gin
     - general introduction
       - feature description
       - usage figure?
@@ -38,3 +44,7 @@
         - current state
 - NFDI initiative
 - FOSDEM open science software speaker
+- G-Node page
+  T, A, M
+  Jan, Ch, J, M, J
+
