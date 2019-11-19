@@ -1,8 +1,40 @@
-  - nix updates
-  - odml updates
-  - gin updates
-    - doi statistics
-    - gin features?
-    - gin valid; presentation, offer introduction of validators
-  - NFDI initiative
-  - FOSDEM open science software speaker
+# G-Node updates
+- Overview
+
+- this is what we do
+  - merchandise! stickers, cup collection, flyers
+- no, this is what we actually do
+  - projects overview
+  - things that did not know we also do!
+- posters:
+  - no this is what we actually do - 4 conferences + posters -> and now the 
+- GCA-Web:
+  - BCCN / INCF / Ethology! \o/ -> have a conference? use GCA-Web!
+- nix updates
+  - general introduction:
+    - description
+    - data model
+  - introduction of table to the 
+- odML updates
+    - general introduction
+      - description
+      - data model
+    - terminologies / templates
+    - odmltables
+      - paper
+      - feature description
+- gin updates
+    - general introduction
+      - feature description
+      - usage figure?
+      - current statistics
+    - gin microservices
+      - gin doi + statistics
+      - gin valid
+        - presentation
+        - validators on request?
+      - GSoC / gin-proc?
+        - project overview
+        - current state
+- NFDI initiative
+- FOSDEM open science software speaker
