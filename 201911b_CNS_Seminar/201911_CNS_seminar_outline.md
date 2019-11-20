@@ -41,7 +41,7 @@
     - description & data model
   - behind the scenes
     - RRID, working on getting it as an endorsed research tool
-  - furthered integration of NIX with existing proprietory data formats and 
+  - furthered integration of NIX with existing proprietary data formats and 
     ephys data via neo
   - during the workshop with pilsen we added support for reading and writing 
     of  
