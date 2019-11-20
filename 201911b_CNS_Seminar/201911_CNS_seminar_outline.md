@@ -13,7 +13,27 @@
   - no this is what we actually do - 4 conferences + posters -> and now the
   - workshops we held
     -> ANDA 2020?
-    -> Data management workshop summer semester 2020? 
+       https://projects.g-node.org/advanced-course-2020/
+        Deadline for application is November 30, 2019.
+        Topics covered
+        Single neuron properties and statistics · 
+        Stochastic processes · Surrogate methods ·
+         Detection of spatio-temporal patterns · 
+         Unitary Events ·
+          Statistical analysis of massively parallel spike data · 
+          Higher-order correlation analyses · 
+          Elephant toolbox · Spike-LFP relationship · 
+          Population coding · State space analysis · 
+          Machine learning · 
+          Data mining · 
+          Research data management, reproducibility, data sharing
+        Organizers
+        Sonja Grün, Jülich Research Center and RWTH Aachen Univ, Germany
+        Martin Nawrot, University of Cologne, Germany
+        Thomas Wachtler, G-Node, Ludwig-Maximillians-Universität München, Germany
+    -> Data management workshop summer semester 2020?
+        Organizers
+        Thomas Wachtler, G-Node, Ludwig-Maximillians-Universität München, Germany
 - GCA-Web
   - BCCN / INCF / Ethology! \o/ -> have a conference? use GCA-Web!
 - NIX
@@ -42,7 +62,24 @@
       - GSoC / gin-proc?
         - project overview
         - current state
-- NFDI initiative
+- NFDI Neuroscience initiative
+  - NFDI background
+    - A DFG call to 
+    "The aim of the national research data infrastructure (NFDI) is to 
+       systematically manage scientific and research data, 
+       provide long-term data storage, backup and accessibility, and 
+       network the data both nationally and internationally.
+     The NFDI will bring multiple stakeholders together in a coordinated network of 
+     consortia tasked with providing science-driven data services to research communities."
+    https://www.dfg.de/en/research_funding/programmes/nfdi/index.html
+  - NFDI neuroscience
+    - how did it come to life
+    - goal, link, people involved
+      - collaboration, data sharing within the neurscientific community
+    - NWG & Bernstein involved
+  - teaching / activities
+
+  
 - FOSDEM open science software speaker
 - G-Node page
   T, A, M
