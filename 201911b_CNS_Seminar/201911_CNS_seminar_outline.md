@@ -38,22 +38,42 @@
   - BCCN / INCF / Ethology! \o/ -> have a conference? use GCA-Web!
 - NIX
   - general introduction:
-    - description
-    - data model
-  - introduction of table to the 
+    - description & data model
+  - behind the scenes
+    - RRID, working on getting it as an endorsed research tool
+  - furthered integration of NIX with existing proprietory data formats and 
+    ephys data via neo
+  - during the workshop with pilsen we added support for reading and writing 
+    of  
+  - started working on a convenience tools and plottings library
+  - nearly done with finishing support for a table like data structure to make storing 
+    with heterogeneous data more convenient.
 - odML
     - general introduction
       - description
       - data model
+    - behind the scenes - RRID, endorsed research tool
+    - working on a way to use RDF (semantic web, graph databases) to search across 
+      multiple documents and also to search across and link back to published datasets.
     - terminologies / templates
+      - relaunched already existing terminologies page and added usage functions,
+      - created a similar templates portal to DL existing and share custom templates
+        that were created partially using terminology terms
+    - created tools for convenience browsing of existing documents
     - odmltables
+      - collaborators created a tool based on the odml core library to make
+        the day to day work with odml more convenient 
       - paper
       - feature description
+        - create new documents
+        - filter large documents -> create easy to view and easy to share 
+        - convert to table for editing and converting back to odml.
 - gin
     - general introduction
       - feature description
       - usage figure?
       - current statistics
+      - behind the scenes: it is a neuroscience data repository endorsed by DataCite and PLOS
     - gin microservices
       - gin doi + statistics
       - gin valid
