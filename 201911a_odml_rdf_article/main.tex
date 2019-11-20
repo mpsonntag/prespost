@@ -31,9 +31,10 @@ As a brief introduction to the odML concept is to store metadata in a generic bu
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.70\columnwidth]{figures/figOdmlModelA.pdf}
+\includegraphics[width=0.60\columnwidth]{figures/figOdmlModelA.pdf}
+\includegraphics[width=0.40\columnwidth]{figures/figOdmlModelB.png}
 \caption{
-A) The odML data model. B) [xxx todo] The two main concept entities are nested *Sections* that provide a single *Document* with its general structure an make such a document navigate- and search-able. *Sections* can contain *Properties* that in turn contain metadata values.
+A) The odML data model. B) The two main concept entities are nested \textbf{Sections} that provide a single \textbf{Document} with its general structure and make such a document navigate- and search-able. \textbf{Sections} can contain \textbf{Properties} that in turn contain metadata values.
 }
 \label{fig:odmlModel}
 \end{center}
@@ -61,8 +62,8 @@ First step was mapping the odML entities \texttt{Document}, \texttt{Section} and
 
 \subsubsection{Mapping of odML entities to RDF classes} \label{sec:odml_rdf_mapping}
 
-We chose the RDF namespace \url{https://g-node.org/odml-rdf} to identify all RDF odML entities. [xxx] provide a better introduction of namespace.
-In the following, all mentions of \texttt{odml:} are an abbreviation for the full RDF namespace \texttt{https://g-node.org/odml-rdf#}.
+We chose the RDF namespace \url{https://g-node.org/odml-rdf} to identify all RDF odML entities. [xxx - better namespace introduction]
+Below, all mentions of \texttt{odml:} are an abbreviation for the full RDF namespace \texttt{https://g-node.org/odml-rdf#}.
 
 In the following we describe how odML entities were mapped to RDF .
 
@@ -206,9 +207,9 @@ Here \texttt{hasExperimenter} is a subclass of \texttt{hasSection}. A search for
 \subsubsection{odML RDF ontology} \label{sec:odml_ontology}
 To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDF terms and included all currently supported Section sub-classes. The complete file can be found in the Appendix under Listing ~\ref{lst:ontology} This list of sub-classes should not be seen as permanent and will probably increase in the future.
 
-\subsubsection{Creating odML and converting to RDF} \label{sec:odml_to_rdf}
+\subsection{Creating odML and converting to RDF} \label{sec:odml_to_rdf}
 
-\textbf{Converting odML to RDF}
+\subsubsection{Converting odML to RDF} \label{sec:odml_conversion}
 The default odML Python library\footnote{\url{https://github.com/G-Node/python-odml}} installation automatically provides a convenience command line script that converts odML files to their RDF pendant.
 
 \begin{lstlisting}
@@ -219,7 +220,7 @@ $ odmltordf [-r] [-o OUT] SEARCHDIR
 \texttt{-r} An optional argument to include directories recursively.
 \texttt{-o OUT} An optional argument to specify an output directory.
 
-\textbf{Using the DataCite schema to annotate published datasets}
+\subsubsection{Using the DataCite schema to annotate published datasets} \label{sec:datacite}
 As stated above, we encourage using the DataCite schema\footnote{\url{https://datacite.org}} to provide the basic description of a published dataset since it is an adopted and widely accepted standard in the annotation of datasets. We provide a dedicated, fully compatible terminology for the DataCite standard in odML\footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}. We also provide a convenience script to convert an existing DataCite XML file into an odML file\footnote{\url{https://github.com/G-Node/odmltools}}. Once installed it provides a command line script that can be used to convert DataCite XML files to odML:
 
 \begin{lstlisting}
@@ -236,12 +237,12 @@ The script can be used to directly convert a DataCite XML file to RDF
 
 An existing odML file which was used to document a published set of experiments can easily be combined with an odML file created from a DataCite XML file and saved to RDF.
 
-\subsubsection{Working with an odML RDF graph} \label{sec:rdf_usage}
+\subsection{Working with an odML RDF graph} \label{sec:rdf_usage}
 
-\textbf{Creating an odML RDF graph}
+\subsubsection{Creating an odML RDF graph} \label{sec:rdf_graph_create}
 [xxx]
 
-\textbf{How to query an odML RDF graph}
+\subsubsection{How to query an odML RDF graph} \label{sec:rdf_graph_query}
 The following SPARQL query example shows how a graph containing multiple DataCite odML documents can be queried for DataCite "Subjects" (Keywords) and retrieve the DOI identifier linking back to these corresponding data sets:
 
 \begin{lstlisting}
@@ -278,9 +279,9 @@ ORDER BY ?file
 LIMIT 50
 \end{lstlisting}
 
-This query will return DOI links to the datasets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadatafile, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a dataset.
+This query will return DOI links to the datasets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadata file, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a dataset.
 
-\textbf{How to use subclassing to reduce query overhead}
+\subsubsection{How to use subclassing to reduce query overhead} \label{sec:rdf_subclass_usage}
 
 As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries less complex from the start. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without using the detour via a 'Section+Section-name'.
 
@@ -293,16 +294,14 @@ Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footn
 The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
 
 ToDo:
-- background
 - extension description
-- dockerization
 - security
 - in house setup
-- upload to graph -> multiple graph explanation
+- upload to graph
 
 - meta.g-node.org
   - where hosted
-  - graph-name, dataset explanation
+  - graph-name ??, dataset explanation
   - free to use, free to add own datasets.
   - example queries
   - screenshots?
@@ -319,10 +318,6 @@ The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 \end{center}
 \end{figure}
 
-\subsection{odML for search an data back-link} \label{sec:data_back_link}
-- datacite port to odML template
-- other odML templates for making datasets findable via the server
-
 \section{(Sort of) Discussion}
 
 \subsection{The flexibility of an odML RDF graph and complexity of queries}
@@ -330,13 +325,13 @@ The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 One might argue, that a database would be better suited to host a database for metadata. This argument has something to it, since a dedicated database with fixed tables and named columns can provide more specific queries.
 A main problem that arises at this point is the diversity of metadata that is used to describe scientific experiments. Especially if various experiment are described in detail, the resulting metadata will most likely be heterogeneous. odML aims at providing a general, common data structure while providing the required flexibility to accommodate all of these heterogeneous metadata. The conversion to RDF is a logical extension of this approach: with converting odML data to RDF and merging the resulting documents into a single graph, heterogeneous metadata are combined into a single database. This database can be queried due to the underlying hierarchical odML structure when a comparable relational database could not accommodate the necessary different tables for every individual way experiments were described. [xxx] probably need to compare this to e.g. datajoint\footnote{\url{https://datajoint.io}}
 The necessary complex SPARQL queries are both an up and a downside: The search of such a complex graph necessarily will often require multiple steps to arrive at the required result. One first has to search for specifics e.g. Data sets that contain keywords, authors, specific hardware or is describing stimuli or was using specific scientific models. All of this can be documented and queried via odML RDF but will require a couple of query steps to arrive from the first search results with the links back to the original data sets.
-We are aware of this problem. A first step to simplify searches has already been done and described by providing a subclassing system reduce the complexity while keeping the underlying basic data model intact. Another step would be the introduction of an abstraction layer, that converts a simple keyword based search under the hood into useful SPARQL queries. The current python odml library contains a prototype of such an abstraction and is briefly described in the outlook section.
+We are aware of this problem. A first step to simplify searches has already been done and described by providing a subclassing system reduce the complexity while keeping the underlying basic data model intact. Another step would be the introduction of an abstraction layer, that converts a simple keyword based search under the hood into useful SPARQL queries. The current python odML library contains a prototype of such an abstraction and is briefly described in the outlook section.
 
 \section{Outlook} \label{sec:outlook}
 \subsection{Multiple Endpoint queries} \label{sec:outlook_endpoints}
-SPARQL has the potential to query multiple graphs that do not have to be part of the same resource. In theory every lab could have their own odml SPARQL server running and only provide the URL where the graph is available. A SPARQL query can then be devised, that is run over multiple known metadata graphs end return a single result set from various sources.
+SPARQL has the potential to query multiple graphs that do not have to be part of the same resource. In theory every lab could have their own odML SPARQL server running. All that is required to use such a resource is the URL where the graph is available as a SPARQL endpoint. A SPARQL query can then be devised which can run over multiple known metadata graphs end return a single result set from various sources.
 
-As a non-functional example a query across two graphs would look like this:
+As a non-functional example, a query across two graphs would look like this:
 
 \begin{lstlisting}
 SELECT ?sec_name WHERE {{ GRAPH <https://CUSTOM_ODML_RDF_SOURCE_IRI> {
@@ -351,11 +346,11 @@ UNION
 \subsection{Custom subclassing}\label{sec:outlook_subclassing}
 As discussed above and can be found in the odML OWL ontology\footnote{\url{https://g.node.org/odml-rdf}}, odML RDF features a set of specific Subclasses to reduce the complexity of SPARQL queries. The current implementation of odML RDF does not provide an out of the box mechanism to expand both list of RDF Subclasses nor the underlying Ontology for the use of validation. A future expansion of the odML RDF library will contain the option to provide a custom list of Subclasses when converting odML to RDF and a modular System of the odML OWL ontology to import custom ontologies into the basic odML ontology.
 
-\subsection{}\label{sec:outlook_fuzzy_queries}
+\subsection{User friendly query interface}\label{sec:outlook_fuzzy_queries}
 As discussed, querying an odML RDF graph can become quite complex. To reduce the complexity, the current version of the python odML library\footnote{\url{https://github.com/G-Node/python-odml}} contains a prototype to execute "fuzzy queries". These fuzzy queries require provided keywords and map these keywords to SPARQL queries aimed at the main odML entities 'Document', 'Section' and 'Property'. The results of these subqueries are collected and presented to the user. This way, users do not have to know the specific structure of each dataset and will also not require any knowledge in writing their own SPARQL queries. Based on this prototype the fuzzy queries should be expanded to always include back links to the original data sets if these links are available as well as the option to expand on useful further queries based on the current resultset.
 
-\subsection{}\label{sec:outlook_gin_integration}
-As mentioned, the G-Node provides a public resource\footnote{\url{https://meta.g-node.org}} where published data sets from CRCNS and G-Node can be queried. This resource is open for use and also open to contribute. Currently any new addition has to be sent to the G-Node and will be manually added to the graph. A plan to for automation is a dedicated microservice that is able to upload valid odML RDF files to the meta data query server. This microservice can be hooked up to G-Nodes' data hosting server, GIN\footnote{\url{https://gin.g-node.org}}. Any odML files uploaded to this service can then be automatically converted to RDF on demand and uploaded to the common public graph. This would greatly increase the workload and time required when users are publishing and want to make their data sets findable and accessible.
+\subsection{Automated graph updates}\label{sec:outlook_gin_integration}
+As mentioned, the G-Node provides a public resource\footnote{\url{https://meta.g-node.org}} where published data sets from CRCNS and G-Node can be queried. This resource is open for use and also open to contribute. Currently any new addition has to be sent to the G-Node and will be manually added to the graph. A plan for automation is a dedicated microservice that is able to upload valid odML RDF files to the metadata query server. This microservice can be hooked up to G-Nodes' data hosting server, GIN\footnote{\url{https://gin.g-node.org}}. Any odML files uploaded to this service can then be automatically converted to RDF on demand and uploaded to the common public graph. This would greatly increase the workload and time required when users are publishing and want to make their data sets findable and accessible.
 
 - fuzzy queries for easy access + link to what is already available in the python package
 
