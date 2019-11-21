@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{listings}
 
-\title{FAIR from metadata to the Semantic Web: open source services for data annotation and findable data}
+\title{FAIR from metadata to the Semantic Web: open source tools and services for data annotation and findable data}
 
 \begin{document}
 
@@ -27,7 +27,7 @@ To make large collections of merged metadata in RDF format easily Accessible, we
 \subsection{The odML data format} \label{sec:odml_intro}
 As previously reported \cite{Grewe_2011}, \textit{odML}\footnote{\url{https://github.com/G-Node/python-odml}, RRID:SCR\_001376} is a data format designed to thoroughly document diverse metadata that comes with a freely available reference implementation in Python. Developed by the German Neuroinformatics Node, its design was oriented along the needs of neuroscientific metadata, but its generic approach makes it applicable to any scientific field and is able to store heterogeneous metadata to fully document even complex experimental setups and conditions \cite{Zehl_2016}.
 
-As a brief introduction to the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odML data model with all its available attributes while Fig[odmlModelB] shows an abstraction of how the model can be used to store metadata.
+As a brief introduction to the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odML data model with all its available attributes while Fig ~\ref{fig:odmlModel}B shows an abstraction of how the model can be used to store metadata.
 
 \begin{figure}
 \begin{center}
@@ -50,6 +50,8 @@ While odML has shown to document experiments even through diverse fields due to 
 
 Even though searches within even extensive odML documents were always part of the implementation and even imports from linked, external sources into individual documents are possible, the option to easily search across multiple documents was still lacking. To this end we chose to open the odML data format to the \textit{Semantic Web}\footnote{\url{https://www.w3.org/standards/semanticweb}} via conversion to the \textit{RDF (Resource Description Framework)}\footnote{\url{https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225}} format.
 
+%[TW] add a bit more background/intro on RDF
+
 The Semantic Web offers a large technology stack fit to meet the requirements: A suite of various graph database tools to merge individual documents in the RDF format into a single graph even if the content of the documents are not uniform. SPARQL (SPARQL Protocol and RDF Query Language), a full fledged query language that can be used to extract information from such a graph. Another feature is \textit{OWL (Web Ontology Language)}\footnote{\url{https://www.w3.org/TR/owl-ref}} which enables the definition of a vocabulary extension of the basic RDF terminology to enable more elaborate and domain specific SPARQL searches. The broad range of freely available open source tools can be adapted to fit more specific use cases.
 
 \section{Implementation} \label{sec:implementation}
@@ -59,6 +61,8 @@ In the following we will describe how we mapped the versatile odML data format t
 \subsection{Implementation of odML to RDF mapping} \label{sec::odml_rdf}
 
 First step was mapping the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} to RDF classes and provide the respective RDF predicates and xsd types.
+
+%[TW] address the implications of the odML hierarchical structure for the mapping between odml and rdf
 
 \subsubsection{Mapping of odML entities to RDF classes} \label{sec:odml_rdf_mapping}
 
@@ -279,7 +283,7 @@ ORDER BY ?file
 LIMIT 50
 \end{lstlisting}
 
-This query will return DOI links to the datasets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadata file, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a dataset.
+This query will return DOI links to the data sets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadata file, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a data set.
 
 \subsubsection{How to use subclassing to reduce query overhead} \label{sec:rdf_subclass_usage}
 
@@ -347,12 +351,10 @@ UNION
 As discussed above and can be found in the odML OWL ontology\footnote{\url{https://g.node.org/odml-rdf}}, odML RDF features a set of specific Subclasses to reduce the complexity of SPARQL queries. The current implementation of odML RDF does not provide an out of the box mechanism to expand both list of RDF Subclasses nor the underlying Ontology for the use of validation. A future expansion of the odML RDF library will contain the option to provide a custom list of Subclasses when converting odML to RDF and a modular System of the odML OWL ontology to import custom ontologies into the basic odML ontology.
 
 \subsection{User friendly query interface}\label{sec:outlook_fuzzy_queries}
-As discussed, querying an odML RDF graph can become quite complex. To reduce the complexity, the current version of the python odML library\footnote{\url{https://github.com/G-Node/python-odml}} contains a prototype to execute "fuzzy queries". These fuzzy queries require provided keywords and map these keywords to SPARQL queries aimed at the main odML entities 'Document', 'Section' and 'Property'. The results of these subqueries are collected and presented to the user. This way, users do not have to know the specific structure of each dataset and will also not require any knowledge in writing their own SPARQL queries. Based on this prototype the fuzzy queries should be expanded to always include back links to the original data sets if these links are available as well as the option to expand on useful further queries based on the current resultset.
+As discussed, querying an odML RDF graph can become quite complex. To reduce the complexity, the current version of the python odML library\footnote{\url{https://github.com/G-Node/python-odml}} contains a prototype to execute "fuzzy queries". These fuzzy queries require provided keywords and map these keywords to SPARQL queries aimed at the main odML entities 'Document', 'Section' and 'Property'. The results of these subqueries are collected and presented to the user. This way, users do not have to know the specific structure of each data set and will also not require any knowledge in writing their own SPARQL queries. Based on this prototype the fuzzy queries should be expanded to always include back links to the original data sets if these links are available as well as the option to expand on useful further queries based on the current result set.
 
 \subsection{Automated graph updates}\label{sec:outlook_gin_integration}
 As mentioned, the G-Node provides a public resource\footnote{\url{https://meta.g-node.org}} where published data sets from CRCNS and G-Node can be queried. This resource is open for use and also open to contribute. Currently any new addition has to be sent to the G-Node and will be manually added to the graph. A plan for automation is a dedicated microservice that is able to upload valid odML RDF files to the metadata query server. This microservice can be hooked up to G-Nodes' data hosting server, GIN\footnote{\url{https://gin.g-node.org}}. Any odML files uploaded to this service can then be automatically converted to RDF on demand and uploaded to the common public graph. This would greatly increase the workload and time required when users are publishing and want to make their data sets findable and accessible.
-
-- fuzzy queries for easy access + link to what is already available in the python package
 
 \begin{thebibliography}{}
 \bibitem{Grewe_2011}
