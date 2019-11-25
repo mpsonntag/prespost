@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{listings}
+\usepackage[export]{adjustbox}
+\usepackage{subfig}
 
 \title{FAIR from metadata to the Semantic Web: open source tools and services for data annotation and findable data}
 
@@ -31,37 +33,42 @@ As previously reported \cite{Grewe_2011}, \textit{odML}\footnote{\url{https://gi
 As a brief introduction to the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odML data model with all its available attributes while Fig ~\ref{fig:odmlModel}B shows an abstraction of how the model can be used to store metadata.
 
 \begin{figure}
-\begin{center}
-\includegraphics[width=0.60\columnwidth]{figures/figOdmlModelA.pdf}
-\includegraphics[width=0.40\columnwidth]{figures/figOdmlModelB.png}
-\caption{
-A) The odML data model. B) The two main concept entities are nested \textbf{Sections} that provide a single \textbf{Document} with its general structure and make such a document navigate- and search-able. \textbf{Sections} can contain \textbf{Properties} that in turn contain metadata values.
-}
-\label{fig:odmlModel}
-\end{center}
+  \centering
+  \subfloat[odML data model]{
+    \includegraphics[width=.6\linewidth, height=4cm, keepaspectratio, valign=T]{figures/figOdmlModelA.pdf}
+    \label{fig:odmlModelData}
+  }
+  \subfloat[odML structure]{
+    \includegraphics[width=.35\linewidth, height=4cm, keepaspectratio, valign=T]{figures/figOdmlModelB.pdf}
+    \vphantom{\includegraphics[width=0.35\textwidth, height=4cm, valign=T]{figures/figOdmlModelA.pdf}}
+    \label{fig:odmlModelStructure}
+  }
+  \caption{
+(~\ref{fig:odmlModelData}) The odML data model. (~\ref{fig:odmlModelStructure}) The two main concept entities are nested \textbf{Sections} that provide a single \textbf{Document} with its general structure and make such a document navigate- and search-able. \textbf{Sections} can contain \textbf{Properties} that in turn contain metadata values.
+  }
+  \label{fig:odmlModel}
 \end{figure}
 
 \begin{figure}
 \begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=.99\linewidth, height=6cm]{figures/figFormatExampleA.pdf}
+  \includegraphics[width=.99\linewidth]{figures/figFormatExampleA.pdf}
   \caption{XML}
   \label{fig:odmlFormatExampleXML}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=.99\linewidth, height=6cm]{figures/figFormatExampleB.pdf}
+  \includegraphics[width=.99\linewidth]{figures/figFormatExampleB.pdf}
   \caption{JSON}
   \label{fig:odmlFormatExampleJSON}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
   \centering
-  \includegraphics[width=.99\linewidth, height=6cm]{figures/figFormatExampleC.pdf}
+  \includegraphics[width=.99\linewidth]{figures/figFormatExampleC.pdf}
   \caption{YAML}
   \label{fig:odmlFormatExampleYAML}
 \end{subfigure}
-\caption{
-Metadata organized in odML and stored using the (~\ref{fig:odmlFormatExampleXML}) XML, (~\ref{fig:odmlFormatExampleJSON}) JSON and (~\ref{fig:odmlFormatExampleYAML}) YAML storage formats. We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}, \url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
+\caption{Metadata organized in odML and stored using the (~\ref{fig:odmlFormatExampleXML}) XML, (~\ref{fig:odmlFormatExampleJSON}) JSON and (~\ref{fig:odmlFormatExampleYAML}) YAML storage formats. We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}, \url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
 }
 \label{fig:odmlFormatExample}
 \end{figure}
