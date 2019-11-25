@@ -88,20 +88,24 @@ The Semantic Web offers a large technology stack fit to meet the requirements: A
 
 \section{Implementation} \label{sec:implementation}
 
-In the following we will describe how we mapped the versatile odML data format to its RDF equivalent and document the specific OWL ontology we devised. We will also show how metadata can be exported from odML to its RDF equivalent, how different documents can be loaded into a single graph and how it can be searched via SPARQL. We will show how the basic structure can be furthered with individual sub-classes to make searches more specific. Finally we will present an open web service that enables metadata searches across multiple documents and present a suggestion based on the widely accepted \textit{DataCite}\footnote{\url{https://datacite.org}} publication standard to enable back-links from metadata sets to the original, published data.
+The following describes how the versatile odML data format was mapped to its RDF equivalent and documents the specific OWL ontology that was devised for the underlying data model. It will also show how metadata can be exported from odML to its RDF equivalent, how different documents can be loaded into a single graph and how the graph can be searched via SPARQL. It will be shown how the basic structure can be furthered with individual sub-classes to make searches more specific. Finally it will present an open web service that enables metadata searches across multiple documents and present a suggestion based on the widely accepted \textit{DataCite}\footnote{\url{https://datacite.org}} publication standard to enable back-links from metadata sets to the original, published data.
 
 \subsection{Implementation of odML to RDF mapping} \label{sec::odml_rdf}
 
-First step was mapping the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} to RDF classes and provide the respective RDF predicates and XSD types.
-
 %[TW] address the implications of the odML hierarchical structure for the mapping between odml and rdf
+%[MS] not sure if I fully got the comment, but I went a bit more into detail with respect to the mapping in the following paragraph
+
+odML is by design a hierarchical data format meant to accommodate heterogeneous data. This provides a common, underlying structure which enables people that are might not be familiar with the details of a documented experiment to navigate such a document. The same is true when odML is mapped to RDF. Since RDF is meant to enable searches over graph databases with heterogeneous data, a graph containing odML specific data already shows a common, underlying structure that should make useful searches easier even across unfamiliar sets of data.
+
+The initial step in the odML to RDF export was mapping the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} to RDF classes and provide the respective RDF predicates and XSD\footnote{\url{https://www.w3.org/TR/xmlschema11-2}} types.
 
 \subsubsection{Mapping of odML entities to RDF classes} \label{sec:odml_rdf_mapping}
 
-We chose the RDF namespace \url{https://g-node.org/odml-rdf} to identify all RDF odML entities. [xxx - better namespace introduction]
-Below, all mentions of \texttt{odml:} are an abbreviation for the full RDF namespace \texttt{https://g-node.org/odml-rdf#}.
+A common concept in computing is the Namespace, which is used to uniquely identify an entity that might occur in a different context within the same dataset. In this context the namespace usually consists of a global identifier and a local name that might otherwise be ambiguous e.g. in the Python import statement \texttt{http.server}, \texttt{http} is the global identifier while \texttt{server} is the local name.
+In the Semantic Web the global identifier is called \texttt{namespace IRI}\footnote{\url{https://www.w3.org/TR/rdf-syntax-grammar/#section-Namespace}} and is used to distinguish entities from different Datasets. The IRI of RDF for example is \texttt{http://www.w3.org/1999/02/22-rdf-syntax-ns#}.
+For odML RDF, the namespace \url{https://g-node.org/odml-rdf} was chosen to identify all RDF odML entities.
 
-The following describes how odML entities were mapped to RDF.
+For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} where mapped to RDF Classes, while all attributes of the individual odML entities, e.g. \texttt{id} or \texttt{reference} where mapped to RDF Literals. An exception is the \texttt{Property.values} that requires a container element, the \texttt{RDF.Seq}. This was necessary since an RDF graph does not retain any order between its contained triples. \texttt{RDF.Seq} is a class that allows to specify an order of the contained elements. Only this allows an exact export of odML values to RDF, where the order of values often is actually import e.g. in case of documenting a set of stimuli. The following tables describe the mapping in detail.
 
 \begin{table}
 \begin{threeparttable}
