@@ -5,6 +5,7 @@
 \usepackage{natbib}
 \usepackage{url}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{listings}
 
 \title{FAIR from metadata to the Semantic Web: open source tools and services for data annotation and findable data}
@@ -40,9 +41,33 @@ A) The odML data model. B) The two main concept entities are nested \textbf{Sect
 \end{center}
 \end{figure}
 
-Metadata organized using the odML data model can be stored in multiple different file formats: XML, JSON and YAML. See Fig[formatExamples] for examples. While both XML and JSON are well used in data processing and automation, YAML provides an option for both human readability and machine consumption.
-Fig[formatExamples]. Metadata organized in odML and stored using the XML[formatExamplesA], JSON[formatExamplesB] and YAML[formatExamplesC] storage formats.
-We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}, \url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{[xxx] TBD}.
+\begin{figure}
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.99\linewidth, height=6cm]{figures/figFormatExampleA.pdf}
+  \caption{XML}
+  \label{fig:odmlFormatExampleXML}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.99\linewidth, height=6cm]{figures/figFormatExampleB.pdf}
+  \caption{JSON}
+  \label{fig:odmlFormatExampleJSON}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.99\linewidth, height=6cm]{figures/figFormatExampleC.pdf}
+  \caption{YAML}
+  \label{fig:odmlFormatExampleYAML}
+\end{subfigure}
+\caption{
+Metadata organized in odML and stored using the (~\ref{fig:odmlFormatExampleXML}) XML, (~\ref{fig:odmlFormatExampleJSON}) JSON and (~\ref{fig:odmlFormatExampleYAML}) YAML storage formats. We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}, \url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
+}
+\label{fig:odmlFormatExample}
+\end{figure}
+
+Metadata organized using the odML data model can be stored in multiple different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples. While both XML and JSON are well used in data processing and automation, YAML provides an option for both human readability and machine consumption.
+
 
 \subsection{Further development to open odML to graph database searches} \label{sec::why_rdf}
 
@@ -93,7 +118,7 @@ In the following we describe how odML entities were mapped to RDF .
 \caption{odML Document}
 \begin{tablenotes}
 \small
-\item Mapping of odML \texttt{Document} to RDF. (a) The document root is mapped to an RDFS class of type \texttt{odml:Document}. (b) The UUID of the odML \texttt{Document} is used as Name of the created \texttt{odml:Document} RDF node to uniquely identify the document if it is merged with a graph database. (c) RDF export of repositories: linked terminologies are downloaded on conversion and exported additional RDF document connected via the \texttt{odml:Hub} RDF node. This additional document is linked via \texttt{odml:hasTerminology} to the original document. If the terminology cannot be imported, its URL will be kept as is and its value is provided as an RDF leaf via the predicate \texttt{odml:hasExternalTerminology} in the original document. See [TableHub] and [TableTerminology] for more detailed descriptions [xxx check if this actually works as described] (d) As provenance from where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML predicate \texttt{odml:hasFilename}.
+\item Mapping of odML \texttt{Document} to RDF. (a) The document root is mapped to an RDFS class of type \texttt{odml:Document}. (b) The UUID of the odML \texttt{Document} is used as Name of the created \texttt{odml:Document} RDF node to uniquely identify the document if it is merged with a graph database. (c) RDF export of repositories: linked terminologies are downloaded on conversion and exported additional RDF document connected via the \texttt{odml:Hub} RDF node. This additional document is linked via \texttt{odml:hasTerminology} to the original document. If the terminology cannot be imported, its URL will be kept as is and its value is provided as an RDF leaf via the predicate \texttt{odml:hasExternalTerminology} in the original document. See ~\ref{table:Hub} and ~\ref{table:Terminology} for more detailed descriptions [xxx check if this actually works as described] (d) As provenance from where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML predicate \texttt{odml:hasFilename}.
 \end{tablenotes}
 \label{table:Document}
 \end{threeparttable}
@@ -120,7 +145,7 @@ In the following we describe how odML entities were mapped to RDF .
 \end{tabular}
 \caption{odML Section}
 \begin{tablenotes}
-\item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section if it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain. [xxx Move to another part or remove?] (c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. [subclassing] for details.
+\item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section if it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain. [xxx Move to another part or remove?] (c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. ~\ref{sec:rdf_subclassing} for details.
 \end{tablenotes}
 \label{table:Section}
 \end{threeparttable}
