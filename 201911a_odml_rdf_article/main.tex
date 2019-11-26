@@ -287,29 +287,103 @@ There are various different libraries that allow creating local graph databases 
 %[MS] Not sure if we need to show how to load RDF files into a local graph for completeness sake.
 %[MS] If required support minimal example files as well.
 
-Code listing ~\ref{lst:create_graph} shows how to create an in-memory RDF graph from two example odML RDF files. The example files are saved in the RDF 'Turtle' notation\footnote{\url{https://www.w3.org/TR/turtle}}.
+Code listing ~\ref{lst:create_graph} shows how to create an in-memory RDF graph from two example odML RDF files.
 
 \begin{lstlisting}[label=lst:create_graph, caption=Create RDF graph]
 from rdflib import Graph
 
 # Path to two example odML RDF files that will be loaded
-# and merged into a single graph. Both files are saved in
-# the RDF 'turtle' file format.
-odml_file_A = './odml_example_file_A.rdf'
-odml_file_B = './odml_example_file_B.rdf'
+# and merged into a single graph.
+odml_file_A = './example_A_odml.rdf'
+odml_file_B = './example_B_odml.rdf'
 
 # Create a new empty graph
 local_graph = Graph()
 
 # Load the contents of both files into a single graph
-local_graph.parse(odml_file_A, format='turtle')
-local_graph.parse(odml_file_B, format='turtle')
+local_graph.parse(odml_file_A)
+local_graph.parse(odml_file_B)
 \end{lstlisting}
 
 \subsubsection{How to query an odML RDF graph} \label{sec:rdf_graph_query}
-The following SPARQL query example shows how a graph containing multiple DataCite odML documents can be queried for DataCite "Subjects" (Keywords) and retrieve the DOI identifier linking back to these corresponding data sets:
+The following SPARQL query example shows how a graph containing multiple DataCite odML documents can be queried for DataCite "Subjects" (Keywords) and retrieve the DOI identifier linking back to these corresponding data sets.
+
+The following query uses the graph created in the above example.
 
 \begin{lstlisting}[label=lst:query_graph, caption=Example query]
+from rdflib import RDF, RDFS, Namespace
+from rdflib.plugins.sparql import prepareQuery
+
+# Providing the namespaces that will be used in the query
+ns_dict = {"odml": Namespace("https://g-node.org/odml-rdf#"), "rdf":RDF, "rdfs":RDFS}
+
+# Preparing the query string
+query = """SELECT DISTINCT *
+WHERE {
+  ?doc rdf:type odml:Document .
+  ?doc odml:hasFileName ?file .
+  ?doc odml:hasSection ?s .
+  ?s odml:hasSection ?ids .
+  ?ids odml:hasProperty ?idp .
+  ?ids odml:hasName ?secidname .
+  ?idp odml:hasName "identifier" .
+  ?idp odml:hasValue ?doival .
+  ?ids odml:hasProperty ?pt .
+  ?pt odml:hasName "identifierType" .
+  ?pt odml:hasValue ?idtype .
+  ?idtype ?predA ?id_type_value .
+  ?doival ?predB ?doi_val .
+  ?s odml:hasSection ?subcont .
+  ?s odml:hasName ?sec_name .
+  ?subcont odml:hasSection ?subj .
+  ?subj odml:hasProperty ?p .
+  ?p odml:hasName ?prop_name .
+  ?p odml:hasValue ?v .
+  {?v ?predC "Neuroscience"} UNION {?v ?predC "Electrophysiology"} .
+  ?v ?predC ?keyword .
+  FILTER regex(str(?predA), '_')
+  FILTER regex(str(?predB), '_')
+}"""
+prep_query = prepareQuery(query, initNs=ns_dict)
+
+# Printing the results
+for row in local_graph.query(prep_query):
+    print("%s %s %s %s" % (row.file, row.keyword, row.id_type_value, row.doi_val))
+
+\end{lstlisting}
+
+This query will return DOI links to the data sets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadata file, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a data set.
+
+\subsubsection{How to use subclassing to reduce query overhead} \label{sec:rdf_subclass_usage}
+
+As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries less complex from the start. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without using the detour via a 'Section+Section-name'.
+
+% [MS] todo: example query for subclasses
+
+\subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
+
+Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footnote{Jena 2006, A semantic web framework for Java, \url{http://jena.apache.org}} Semantic Web tools suite that was adopted to support odML specific RDF. A publicly accessible instance is available at https://meta.g-node.org. The service provides a metadata graph searchable by SPARQL containing all scientific Datasets that have been published by \textit{CRCNS (Collaborative Research in Computational Neuroscience)}\footnote{\url{https://crcns.org}} and \textit{G-Node}\footnote{\url{https://doid.gin.g-node.org}}. The server provides example SPARQL queries how the available database can be used. The service is free to use and free to contribute, any additions to the database are welcome and encouraged.
+
+The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
+
+% [MS] todo
+\begin{comment}
+- extension description
+- security
+- in house setup
+- upload to graph
+
+- meta.g-node.org
+  - where hosted
+  - graph-name ??, dataset explanation
+  - free to use, free to add own datasets.
+  - example queries
+  - screenshots?
+\end{comment}
+
+The following is the same query as shown above in the local query. The SPARQL queries work slightly different in the Java Apache Jena and the Python rdflib implementation.
+
+\begin{lstlisting}[label=lst:query_server, caption=Example query server]
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix odml: <https://g-node.org/projects/odml-rdf#>
@@ -343,34 +417,6 @@ ORDER BY ?file
 LIMIT 50
 \end{lstlisting}
 
-This query will return DOI links to the data sets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadata file, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a data set.
-
-\subsubsection{How to use subclassing to reduce query overhead} \label{sec:rdf_subclass_usage}
-
-As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries less complex from the start. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without using the detour via a 'Section+Section-name'.
-
-% [MS] todo: example query for subclasses
-
-\subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
-
-Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footnote{Jena 2006, A semantic web framework for Java, \url{http://jena.apache.org}} Semantic Web tools suite that was adopted to support odML specific RDF. A publicly accessible instance is available at https://meta.g-node.org. The service provides a metadata graph searchable by SPARQL containing all scientific Datasets that have been published by \textit{CRCNS (Collaborative Research in Computational Neuroscience)}\footnote{\url{https://crcns.org}} and \textit{G-Node}\footnote{\url{https://doid.gin.g-node.org}}. The server provides example SPARQL queries how the available database can be used. The service is free to use and free to contribute, any additions to the database are welcome and encouraged.
-
-The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
-
-% [MS] todo
-\begin{comment}
-- extension description
-- security
-- in house setup
-- upload to graph
-
-- meta.g-node.org
-  - where hosted
-  - graph-name ??, dataset explanation
-  - free to use, free to add own datasets.
-  - example queries
-  - screenshots?
-\end{comment}
 
 \subsection{Suggested workflow} \label{sec:odml_rdf_workflow}
 
