@@ -253,7 +253,7 @@ To make use of the RDF feature of validating individual RDF files, we created an
 \subsubsection{Converting odML to RDF} \label{sec:odml_conversion}
 The default odML Python library\footnote{\url{https://github.com/G-Node/python-odml}} installation automatically provides a convenience command line script that converts odML files to their RDF pendant.
 
-\begin{lstlisting}
+\begin{lstlisting}[label=lst:conversion_script, caption=odML to RDF conversion Python script]
 $ odmltordf [-r] [-o OUT] SEARCHDIR
 \end{lstlisting}
 
@@ -264,7 +264,7 @@ $ odmltordf [-r] [-o OUT] SEARCHDIR
 \subsubsection{Using the DataCite schema to annotate published datasets} \label{sec:datacite}
 As stated above, we encourage using the DataCite schema\footnote{\url{https://datacite.org}} to provide the basic description of a published dataset since it is an adopted and widely accepted standard in the annotation of datasets. We provide a dedicated, fully compatible terminology for the DataCite standard in odML\footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}. We also provide a convenience script to convert an existing DataCite XML file into an odML file\footnote{\url{https://github.com/G-Node/odmltools}}. Once installed it provides a command line script that can be used to convert DataCite XML files to odML:
 
-\begin{lstlisting}
+\begin{lstlisting}[label=lst:datacite_script, caption=Datacite import Python script]
 $ odmlimportdatacite [-f FORMAT] [-o OUT] [-r] [-p] INPUT
 \end{lstlisting}
 
@@ -284,14 +284,32 @@ There are various different libraries that allow creating local graph databases 
 
 \subsubsection{Creating an odML RDF graph} \label{sec:rdf_graph_create}
 
-\begin{lstlisting}[label=lst:rdf_create]
-\end{lstlisting}
+%[MS] Not sure if we need to show how to load RDF files into a local graph for completeness sake.
+%[MS] If required support minimal example files as well.
 
+Code listing ~\ref{lst:create_graph} shows how to create an in-memory RDF graph from two example odML RDF files. The example files are saved in the RDF 'Turtle' notation\footnote{\url{https://www.w3.org/TR/turtle}}.
+
+\begin{lstlisting}[label=lst:create_graph, caption=Create RDF graph]
+from rdflib import Graph
+
+# Path to two example odML RDF files that will be loaded
+# and merged into a single graph. Both files are saved in
+# the RDF 'turtle' file format.
+odml_file_A = './odml_example_file_A.rdf'
+odml_file_B = './odml_example_file_B.rdf'
+
+# Create a new empty graph
+local_graph = Graph()
+
+# Load the contents of both files into a single graph
+local_graph.parse(odml_file_A, format='turtle')
+local_graph.parse(odml_file_B, format='turtle')
+\end{lstlisting}
 
 \subsubsection{How to query an odML RDF graph} \label{sec:rdf_graph_query}
 The following SPARQL query example shows how a graph containing multiple DataCite odML documents can be queried for DataCite "Subjects" (Keywords) and retrieve the DOI identifier linking back to these corresponding data sets:
 
-\begin{lstlisting}
+\begin{lstlisting}[label=lst:query_graph, caption=Example query]
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix odml: <https://g-node.org/projects/odml-rdf#>
@@ -383,7 +401,7 @@ SPARQL has the potential to query multiple graphs that do not have to be part of
 
 As a non-functional example, a query across two graphs would look like this:
 
-\begin{lstlisting}
+\begin{lstlisting}[label=lst:multi_graph, caption=Abstract multiple graph query]
 SELECT ?sec_name WHERE {{ GRAPH <https://CUSTOM_ODML_RDF_SOURCE_IRI> {
 ?section ?odml:hasType "Datacite" .
 ?section ?odml:hasName ?sec_name}}
