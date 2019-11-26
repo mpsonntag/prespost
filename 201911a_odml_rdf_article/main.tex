@@ -10,6 +10,8 @@
 \usepackage[export]{adjustbox}
 \usepackage{subfig}
 
+\usepackage{comment}
+
 \title{FAIR from metadata to the Semantic Web: open source tools and services for data annotation and findable data}
 
 \begin{document}
@@ -129,7 +131,9 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \caption{odML Document}
 \begin{tablenotes}
 \small
-\item Mapping of odML \texttt{Document} to RDF. (a) The document root is mapped to an RDFS class of type \texttt{odml:Document}. (b) The UUID of the odML \texttt{Document} is used as Name of the created \texttt{odml:Document} RDF node to uniquely identify the document if it is merged with a graph database. (c) RDF export of repositories: linked terminologies are downloaded on conversion and exported additional RDF document connected via the \texttt{odml:Hub} RDF node. This additional document is linked via \texttt{odml:hasTerminology} to the original document. If the terminology cannot be imported, its URL will be kept as is and its value is provided as an RDF leaf via the predicate \texttt{odml:hasExternalTerminology} in the original document. See ~\ref{table:Hub} and ~\ref{table:Terminology} for more detailed descriptions [xxx check if this actually works as described] (d) As provenance from where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML predicate \texttt{odml:hasFilename}.
+\item Mapping of odML \texttt{Document} to RDF. (a) The document root is mapped to an RDFS class of type \texttt{odml:Document}. (b) The UUID of the odML \texttt{Document} is used as Name of the created \texttt{odml:Document} RDF node to uniquely identify the document if it is merged with a graph database. (c) RDF export of repositories: linked terminologies are downloaded on conversion and exported additional RDF document connected via the \texttt{odml:Hub} RDF node. This additional document is linked via \texttt{odml:hasTerminology} to the original document. If the terminology cannot be imported, its URL will be kept as is and its value is provided as an RDF leaf via the predicate \texttt{odml:hasExternalTerminology} in the original document. See ~\ref{table:Hub} and ~\ref{table:Terminology} for more detailed descriptions.
+%[MS] check if this actually works as described
+(d) As provenance from where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML predicate \texttt{odml:hasFilename}.
 \end{tablenotes}
 \label{table:Document}
 \end{threeparttable}
@@ -156,7 +160,9 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \end{tabular}
 \caption{odML Section}
 \begin{tablenotes}
-\item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section if it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain. [xxx Move to another part or remove?] (c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. ~\ref{sec:rdf_subclassing} for details.
+\item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section if it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain.
+%[MS] Move to another part or remove?
+(c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. ~\ref{sec:rdf_subclassing} for details.
 \end{tablenotes}
 \label{table:Section}
 \end{threeparttable}
@@ -325,7 +331,7 @@ This query will return DOI links to the data sets with Keywords "Neuroscience" a
 
 As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries less complex from the start. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without using the detour via a 'Section+Section-name'.
 
-[xxx] todo: example query for subclasses
+% [MS] todo: example query for subclasses
 
 \subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
 
@@ -333,7 +339,8 @@ Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footn
 
 The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
 
-ToDo:
+% [MS] todo
+\begin{comment}
 - extension description
 - security
 - in house setup
@@ -345,15 +352,17 @@ ToDo:
   - free to use, free to add own datasets.
   - example queries
   - screenshots?
+\end{comment}
 
 \subsection{Suggested workflow} \label{sec:odml_rdf_workflow}
 
 The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
+% [MS] Is a suggested workflow something we want to add?
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.90\columnwidth]{figures/workflowSchema.pdf}
-\caption{[xxx] Should we add a suggested workflow?}
+\caption{The figure describes possible metadata workflows from an experiment to a graph database.}
 \label{fig:workflowSchema}
 \end{center}
 \end{figure}
@@ -363,7 +372,8 @@ The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 \subsection{The flexibility of an odML RDF graph and complexity of queries}
 
 One might argue, that a database would be better suited to host a database for metadata. This argument has something to it, since a dedicated database with fixed tables and named columns can provide more specific queries.
-A main problem that arises at this point is the diversity of metadata that is used to describe scientific experiments. Especially if various experiment are described in detail, the resulting metadata will most likely be heterogeneous. odML aims at providing a general, common data structure while providing the required flexibility to accommodate all of these heterogeneous metadata. The conversion to RDF is a logical extension of this approach: with converting odML data to RDF and merging the resulting documents into a single graph, heterogeneous metadata are combined into a single database. This database can be queried due to the underlying hierarchical odML structure when a comparable relational database could not accommodate the necessary different tables for every individual way experiments were described. [xxx] probably need to compare this to e.g. datajoint\footnote{\url{https://datajoint.io}}
+A main problem that arises at this point is the diversity of metadata that is used to describe scientific experiments. Especially if various experiment are described in detail, the resulting metadata will most likely be heterogeneous. odML aims at providing a general, common data structure while providing the required flexibility to accommodate all of these heterogeneous metadata. The conversion to RDF is a logical extension of this approach: with converting odML data to RDF and merging the resulting documents into a single graph, heterogeneous metadata are combined into a single database. This database can be queried due to the underlying hierarchical odML structure when a comparable relational database could not accommodate the necessary different tables for every individual way experiments were described.
+% [MS] probably need to compare this to e.g. datajoint\footnote{\url{https://datajoint.io}}?
 The necessary complex SPARQL queries are both an up and a downside: The search of such a complex graph necessarily will often require multiple steps to arrive at the required result. One first has to search for specifics e.g. Data sets that contain keywords, authors, specific hardware or is describing stimuli or was using specific scientific models. All of this can be documented and queried via odML RDF but will require a couple of query steps to arrive from the first search results with the links back to the original data sets.
 We are aware of this problem. A first step to simplify searches has already been done and described by providing a subclassing system reduce the complexity while keeping the underlying basic data model intact. Another step would be the introduction of an abstraction layer, that converts a simple keyword based search under the hood into useful SPARQL queries. The current python odML library contains a prototype of such an abstraction and is briefly described in the outlook section.
 
