@@ -289,7 +289,7 @@ There are various different libraries that allow creating local graph databases 
 
 Code listing ~\ref{lst:create_graph} shows how to create an in-memory RDF graph from two example odML RDF files.
 
-\begin{lstlisting}[label=lst:create_graph, caption=Create RDF graph]
+\begin{lstlisting}[label=lst:create_graph, caption=Create RDF graph, basicstyle=\small]
 from rdflib import Graph
 
 # Path to two example odML RDF files that will be loaded
@@ -308,65 +308,73 @@ local_graph.parse(odml_file_B)
 \subsubsection{How to query an odML RDF graph} \label{sec:rdf_graph_query}
 The following SPARQL query example shows how a graph containing multiple DataCite odML documents can be queried for DataCite "Subjects" (Keywords) and retrieve the DOI identifier linking back to these corresponding data sets.
 
-The following query uses the graph created in the above example.
+The following query uses the graph created in the previous example.
 
-\begin{lstlisting}[label=lst:query_graph, caption=Example query]
+\begin{lstlisting}[label=lst:query_graph, caption=Example query, basicstyle=\small]
 from rdflib import RDF, RDFS, Namespace
 from rdflib.plugins.sparql import prepareQuery
 
 # Providing the namespaces that will be used in the query
-ns_dict = {"odml": Namespace("https://g-node.org/odml-rdf#"), "rdf":RDF, "rdfs":RDFS}
+ns_dict = {"odml": Namespace("https://g-node.org/odml-rdf#"),
+           "rdf":RDF}
 
 # Preparing the query string
 query = """SELECT DISTINCT *
 WHERE {
   ?doc rdf:type odml:Document .
   ?doc odml:hasFileName ?file .
-  ?doc odml:hasSection ?s .
-  ?s odml:hasSection ?ids .
-  ?ids odml:hasProperty ?idp .
-  ?ids odml:hasName ?secidname .
-  ?idp odml:hasName "identifier" .
-  ?idp odml:hasValue ?doival .
-  ?ids odml:hasProperty ?pt .
-  ?pt odml:hasName "identifierType" .
-  ?pt odml:hasValue ?idtype .
-  ?idtype ?predA ?id_type_value .
-  ?doival ?predB ?doi_val .
-  ?s odml:hasSection ?subcont .
-  ?s odml:hasName ?sec_name .
-  ?subcont odml:hasSection ?subj .
-  ?subj odml:hasProperty ?p .
-  ?p odml:hasName ?prop_name .
-  ?p odml:hasValue ?v .
-  {?v ?predC "Neuroscience"} UNION {?v ?predC "Electrophysiology"} .
-  ?v ?predC ?keyword .
-  FILTER regex(str(?predA), '_')
-  FILTER regex(str(?predB), '_')
+  ?doc odml:hasSection* ?sec_id .
+  ?sec_id odml:hasProperty ?prp_id .
+  ?prp_id odml:hasName "identifier" .
+  ?prp_id odml:hasValue ?val_doi .
+  ?val_doi ?pred_doi ?doival .
+
+  ?doc odml:hasSection* ?sec_subj .
+  ?sec_subj odml:hasType "datacite/subject" .
+  ?sec_subj odml:hasProperty ?prp_subj .
+  ?prp_subj odml:hasValue ?val_subj .
+  ?val_subj ?pred_subj ?keyword .
+  {?val_subj ?pred_subj "Neuroscience"} UNION
+  {?val_subj ?pred_subj "Electrophysiology"} .
+
+  FILTER regex(str(?pred_doi), '_')
+  BIND(CONCAT("https://doi.org/", STR(?doival)) as ?doi_link)
 }"""
 prep_query = prepareQuery(query, initNs=ns_dict)
 
 # Printing the results
 for row in local_graph.query(prep_query):
-    print("%s %s %s %s" % (row.file, row.keyword, row.id_type_value, row.doi_val))
-
+    print("""
+    File: %s
+    DOI: %s
+    Keyword: %s\n""" % (row.file, row.doi_link, row.keyword))
 \end{lstlisting}
 
-This query will return DOI links to the data sets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadata file, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a data set.
+This query will return DOI links to the data sets with Keywords "Neuroscience" and "Electrophysiology". As additional information it also provides the filename of the original metadata file, the type of Identifier, and the matching keyword. Likewise a search could start from searching for specific authors of a data set. The results of the query in ~\ref{lst:query_graph} can be found in ~\ref{lst:query_result}.
+
+\begin{lstlisting}[label=lst:query_result, caption=Query result, basicstyle=\small]
+    File: example_A_odml.xml
+    DOI: https://doi.org/10.12751/g-node.no_doi_A
+    Keyword: Electrophysiology
+
+    File: example_B_odml.xml
+    DOI: https://doi.org/10.12751/g-node.no_doi_B
+    Keyword: Neuroscience
+\end{lstlisting}
 
 \subsubsection{How to use subclassing to reduce query overhead} \label{sec:rdf_subclass_usage}
 
-As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries less complex from the start. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without using the detour via a 'Section+Section-name'.
+As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries more intuitive. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without needing to know the odML type of a class. In the example one can directly query for \texttt{odml:Subject} and does not need to know that the corresponding Section is of type \texttt{datacite/subject}.
 
-\begin{lstlisting}[label=lst:query_graph_subclass, caption=Subclass query example]
+The following query requires the imports and uses the graph created in the previous example.
+
+\begin{lstlisting}[label=lst:query_graph_subclass, caption=Subclass query example, basicstyle=\small]
 query = """
 SELECT DISTINCT * WHERE {
   ?doc a odml:Document .
   ?doc odml:hasFileName ?file .
 
   ?doc odml:hasSection* ?sec_id .
-  ?sec_id odml:hasName ?sec_id_name .
-  ?sec_id a odml:Identifier .
   ?sec_id odml:hasProperty ?prp_id .
   ?prp_id odml:hasName "identifier" .
   ?prp_id odml:hasValue ?prp_doi_val .
@@ -392,17 +400,7 @@ for row in local_graph.query(prep_query):
     Keyword: %s\n""" % (row.file, row.doi_link, row.keyword))
 \end{lstlisting}
 
-This query will lead to the following results:
-
-\begin{lstlisting}[label=lst:query_graph_subclass_res, caption=Subclass query result]
-    File: example_A_odml.xml
-    DOI: https://doi.org/10.12751/g-node.no_doi_A
-    Keyword: Electrophysiology
-
-    File: example_B_odml.xml
-    DOI: https://doi.org/10.12751/g-node.no_doi_B
-    Keyword: Neuroscience
-\end{lstlisting}
+This query will lead to the same result as the original query in code listing ~\ref{lst:query_graph}.
 
 \subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
 
@@ -427,7 +425,7 @@ The SPARQL server including all example queries has been dockerized. Both source
 
 The following is the same query as shown above in the local query. The SPARQL queries work slightly different in the Java Apache Jena and the Python rdflib implementation.
 
-\begin{lstlisting}[label=lst:query_server, caption=Example query server]
+\begin{lstlisting}[label=lst:query_server, caption=Example query server, basicstyle=\small]
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix odml: <https://g-node.org/projects/odml-rdf#>
@@ -491,7 +489,7 @@ SPARQL has the potential to query multiple graphs that do not have to be part of
 
 As a non-functional example, a query across two graphs would look like this:
 
-\begin{lstlisting}[label=lst:multi_graph, caption=Abstract multiple graph query]
+\begin{lstlisting}[label=lst:multi_graph, caption=Abstract multiple graph query, basicstyle=\small]
 SELECT ?sec_name WHERE {{ GRAPH <https://CUSTOM_ODML_RDF_SOURCE_IRI> {
 ?section ?odml:hasType "Datacite" .
 ?section ?odml:hasName ?sec_name}}
