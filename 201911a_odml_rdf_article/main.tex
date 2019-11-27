@@ -358,7 +358,51 @@ This query will return DOI links to the data sets with Keywords "Neuroscience" a
 
 As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries less complex from the start. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without using the detour via a 'Section+Section-name'.
 
-% [MS] todo: example query for subclasses
+\begin{lstlisting}[label=lst:query_graph_subclass, caption=Subclass query example]
+query = """
+SELECT DISTINCT * WHERE {
+  ?doc a odml:Document .
+  ?doc odml:hasFileName ?file .
+
+  ?doc odml:hasSection* ?sec_id .
+  ?sec_id odml:hasName ?sec_id_name .
+  ?sec_id a odml:Identifier .
+  ?sec_id odml:hasProperty ?prp_id .
+  ?prp_id odml:hasName "identifier" .
+  ?prp_id odml:hasValue ?prp_doi_val .
+  ?prp_doi_val ?pred_doi ?doival .
+
+  ?doc odml:hasSection* ?sec_subj .
+  ?sec_subj a odml:Subject .
+  ?sec_subj odml:hasProperty ?prp_subj .
+  ?prp_subj odml:hasValue ?val_subj .
+  ?val_subj ?pred_subj ?keyword .
+  {?val_subj ?pred_subj "Neuroscience"} UNION
+  {?val_subj ?pred_subj "Electrophysiology"} .
+
+  FILTER regex(str(?pred_doi), '_')
+  BIND(CONCAT("https://doi.org/", STR(?doival)) as ?doi_link)
+}
+"""
+prep_query = prepareQuery(query, initNs=ns_dict)
+for row in local_graph.query(prep_query):
+    print("""
+    File: %s
+    DOI: %s
+    Keyword: %s\n""" % (row.file, row.doi_link, row.keyword))
+\end{lstlisting}
+
+This query will lead to the following results:
+
+\begin{lstlisting}[label=lst:query_graph_subclass_res, caption=Subclass query result]
+    File: example_A_odml.xml
+    DOI: https://doi.org/10.12751/g-node.no_doi_A
+    Keyword: Electrophysiology
+
+    File: example_B_odml.xml
+    DOI: https://doi.org/10.12751/g-node.no_doi_B
+    Keyword: Neuroscience
+\end{lstlisting}
 
 \subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
 
