@@ -406,20 +406,11 @@ This query will lead to the same result as the original query in code listing ~\
 
 Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footnote{Jena 2006, A semantic web framework for Java, \url{http://jena.apache.org}} Semantic Web tools suite that was adopted to support odML specific RDF. A publicly accessible instance is available at https://meta.g-node.org. The service provides a metadata graph searchable by SPARQL containing all scientific Datasets that have been published by \textit{CRCNS (Collaborative Research in Computational Neuroscience)}\footnote{\url{https://crcns.org}} and \textit{G-Node}\footnote{\url{https://doid.gin.g-node.org}}. The server provides example SPARQL queries how the available database can be used. The service is free to use and free to contribute, any additions to the database are welcome and encouraged.
 
-The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use.
+The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use. The repository contains information how to set up an in-house instance and upload odML rdf files to a common graph.
 
 % [MS] todo
 \begin{comment}
-- extension description
-- security
-- in house setup
-- upload to graph
-
 - meta.g-node.org
-  - where hosted
-  - graph-name ??, dataset explanation
-  - free to use, free to add own datasets.
-  - example queries
   - screenshots?
 \end{comment}
 
@@ -427,34 +418,30 @@ The following is the same query as shown above in the local query. The SPARQL qu
 
 \begin{lstlisting}[label=lst:query_server, caption=Example query server, basicstyle=\small]
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix odml: <https://g-node.org/projects/odml-rdf#>
 
-SELECT ?file ?keyword ?id_type_value ?doi_link
+SELECT SAMPLE(?keyword) ?file ?doi_link
 WHERE {
   ?doc rdf:type odml:Document .
   ?doc odml:hasFileName ?file .
-  ?doc odml:hasSection ?s .
-  ?s odml:hasSection ?ids .
-  ?ids odml:hasProperty ?idp .
-  ?ids odml:hasName ?secidname .
-  ?idp odml:hasName "identifier" .
-  ?idp odml:hasValue ?doival .
-  ?ids odml:hasProperty ?pt .
-  ?pt odml:hasName "identifierType" .
-  ?pt odml:hasValue ?idtype .
-  ?idtype rdfs:member ?id_type_value .
-  ?doival rdfs:member ?doi_val .
-  ?s odml:hasSection ?subcont .
-  ?s odml:hasName ?sec_name .
-  ?subcont odml:hasSection ?subj .
-  ?subj odml:hasProperty ?p .
-  ?p odml:hasName ?prop_name .
-  ?p odml:hasValue ?v .
-  {?v rdfs:member "Neuroscience"} UNION {?v rdfs:member "Electrophysiology"} .
-  ?v rdfs:member ?keyword .
-  BIND(CONCAT("https://doi.org/", ?doi_val) AS ?doi_link)
+  ?doc odml:hasSection* ?sec_id .
+  ?sec_id odml:hasProperty ?prp_id .
+  ?prp_id odml:hasName "identifier" .
+  ?prp_id odml:hasValue ?val_doi .
+  ?val_doi ?pred_doi ?doival .
+
+  ?doc odml:hasSection* ?sec_subj .
+  ?sec_subj odml:hasType "datacite/subject" .
+  ?sec_subj odml:hasProperty ?prp_subj .
+  ?prp_subj odml:hasValue ?val_subj .
+  ?val_subj ?pred_subj ?keyword .
+  {?val_subj ?pred_subj "Neuroscience"} UNION
+  {?val_subj ?pred_subj "Electrophysiology"} .
+
+  FILTER regex(str(?pred_doi), '_')
+  BIND(CONCAT("https://doi.org/", STR(?doival)) as ?doi_link)
 }
+GROUP BY ?file ?doi_link
 ORDER BY ?file
 LIMIT 50
 \end{lstlisting}
