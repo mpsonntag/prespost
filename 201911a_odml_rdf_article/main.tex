@@ -1,16 +1,16 @@
 \documentclass{article}
+
 \usepackage[utf8]{inputenc}
-\usepackage{booktabs,caption}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{caption}
 \usepackage[flushleft]{threeparttable}
 \usepackage{natbib}
-\usepackage{url}
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{listings}
-\usepackage[export]{adjustbox}
 \usepackage{subfig}
-
-\usepackage{comment}
+\usepackage[export]{adjustbox}
 
 \title{FAIR from metadata to the Semantic Web: open source tools and services for data annotation and findable data}
 
@@ -57,28 +57,27 @@ As a brief introduction to the odML concept is to store metadata in a generic bu
   \includegraphics[width=.99\linewidth]{figures/figFormatExampleA.pdf}
   \caption{XML}
   \label{fig:odmlFormatExampleXML}
-\end{subfigure}%
+\end{subfigure}
 \begin{subfigure}{.33\textwidth}
   \centering
   \includegraphics[width=.99\linewidth]{figures/figFormatExampleB.pdf}
   \caption{JSON}
   \label{fig:odmlFormatExampleJSON}
-\end{subfigure}%
+\end{subfigure}
 \begin{subfigure}{.33\textwidth}
   \centering
   \includegraphics[width=.99\linewidth]{figures/figFormatExampleC.pdf}
   \caption{YAML}
   \label{fig:odmlFormatExampleYAML}
 \end{subfigure}
-\caption{Metadata organized in odML and stored using the (~\ref{fig:odmlFormatExampleXML}) XML, (~\ref{fig:odmlFormatExampleJSON}) JSON and (~\ref{fig:odmlFormatExampleYAML}) YAML storage formats. We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}, \url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
-}
+\caption{Metadata organized in odML and stored using the (~\ref{fig:odmlFormatExampleXML}) XML, (~\ref{fig:odmlFormatExampleJSON}) JSON and (~\ref{fig:odmlFormatExampleYAML}) YAML storage formats. We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.}
 \label{fig:odmlFormatExample}
 \end{figure}
 
 Metadata organized using the odML data model can be stored in multiple different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples. While both XML and JSON are well used in data processing and automation, YAML provides an option for both human readability and machine consumption.
 
 
-\subsection{Development to open odML to graph database searches} \label{sec::why_rdf}
+\subsection{Opening odML to graph database searches} \label{sec::why_rdf}
 
 While odML has shown to document experiments even through diverse fields due to its flexibility, there is a growing need to search metadata across multiple experiments and even across multiple fields. As recently published \cite{Sprenger_2019}, the odML data format has been developed further to also address this growing demand.
 
@@ -161,7 +160,6 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \caption{odML Section}
 \begin{tablenotes}
 \item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section if it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain.
-%[MS] Move to another part or remove?
 (c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. ~\ref{sec:rdf_subclassing} for details.
 \end{tablenotes}
 \label{table:Section}
@@ -284,10 +282,7 @@ There are various different libraries that allow creating local graph databases 
 
 \subsubsection{Creating an odML RDF graph} \label{sec:rdf_graph_create}
 
-%[MS] Not sure if we need to show how to load RDF files into a local graph for completeness sake.
-%[MS] If required support minimal example files as well.
-
-Code listing ~\ref{lst:create_graph} shows how to create an in-memory RDF graph from two example odML RDF files.
+Code listing ~\ref{lst:create_graph} shows how to create an in-memory RDF graph from two example odML RDF files. The content of the example files can be found in the appendix.
 
 \begin{lstlisting}[label=lst:create_graph, caption=Create RDF graph, basicstyle=\small]
 from rdflib import Graph
@@ -408,11 +403,7 @@ Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footn
 
 The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use. The repository contains information how to set up an in-house instance and upload odML rdf files to a common graph.
 
-% [MS] todo
-\begin{comment}
-- meta.g-node.org
-  - screenshots?
-\end{comment}
+% [MS] meta.g-node.org screenshots?
 
 The following is the same query as shown above in the local query. The SPARQL queries work slightly different in the Java Apache Jena and the Python rdflib implementation.
 
@@ -450,7 +441,6 @@ LIMIT 50
 \subsection{Suggested workflow} \label{sec:odml_rdf_workflow}
 
 The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
-% [MS] Is a suggested workflow something we want to add?
 
 \begin{figure}
 \begin{center}
@@ -477,13 +467,19 @@ SPARQL has the potential to query multiple graphs that do not have to be part of
 As a non-functional example, a query across two graphs would look like this:
 
 \begin{lstlisting}[label=lst:multi_graph, caption=Abstract multiple graph query, basicstyle=\small]
-SELECT ?sec_name WHERE {{ GRAPH <https://CUSTOM_ODML_RDF_SOURCE_IRI> {
-?section ?odml:hasType "Datacite" .
-?section ?odml:hasName ?sec_name}}
-UNION
-{ GRAPH <https:/meta.g-node.org> {
-?section ?odml:hasType "Datacite" .
-?section ?odml:hasName ?sec_name}}}
+SELECT ?sec_name WHERE {
+  {
+  GRAPH <https://CUSTOM_ODML_RDF_SOURCE_IRI> {
+    ?section ?odml:hasType "Datacite" .
+    ?section ?odml:hasName ?sec_name }
+  }
+  UNION
+  {
+  GRAPH <https:/meta.g-node.org> {
+    ?section ?odml:hasType "Datacite" .
+    ?section ?odml:hasName ?sec_name }
+  }
+}
 \end{lstlisting}
 
 \subsection{Custom subclassing}\label{sec:outlook_subclassing}
@@ -513,5 +509,9 @@ Teeters J.L., Ježek P., Garbers C., Kellner C.J., Sonntag M., Koutsou A., Grewe
 \section{Appendix} \label{sec:appendix}
 
 \lstinputlisting[caption=The odML OWL ontology in Turtle notation, label=lst:ontology]{resources/odml-ontology.ttl}
+\lstinputlisting[caption=odML example file A, label=lst:exampleFileA.xml]{resources/example_A_odml.xml}
+\lstinputlisting[caption=odML example file B, label=lst:exampleFileB.xml]{resources/example_B_odml.xml}
+\lstinputlisting[caption=odML RDF example file A, label=lst:exampleFileA.rdf]{resources/example_A_odml.rdf}
+\lstinputlisting[caption=odML RDF example file B, label=lst:exampleFileB.rdf]{resources/example_B_odml.rdf}
 
 \end{document}
