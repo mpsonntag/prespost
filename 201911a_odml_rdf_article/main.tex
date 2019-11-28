@@ -470,13 +470,13 @@ As a non-functional example, a query across two graphs would look like this:
 SELECT ?sec_name WHERE {
   {
   GRAPH <https://CUSTOM_ODML_RDF_SOURCE_IRI> {
-    ?section ?odml:hasType "Datacite" .
+    ?section ?odml:hasType "datacite" .
     ?section ?odml:hasName ?sec_name }
   }
   UNION
   {
   GRAPH <https:/meta.g-node.org> {
-    ?section ?odml:hasType "Datacite" .
+    ?section ?odml:hasType "datacite" .
     ?section ?odml:hasName ?sec_name }
   }
 }
