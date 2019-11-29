@@ -102,8 +102,7 @@ The initial step in the odML to RDF export was mapping the odML entities \texttt
 \subsubsection{Mapping of odML entities to RDF classes} \label{sec:odml_rdf_mapping}
 
 A common concept in computing is the Namespace, which is used to uniquely identify an entity that might occur in a different context within the same dataset. In this context the namespace usually consists of a global identifier and a local name that might otherwise be ambiguous e.g. in the Python import statement \texttt{http.server}, \texttt{http} is the global identifier while \texttt{server} is the local name.
-In the Semantic Web the global identifier is called \texttt{namespace IRI}\footnote{\url{https://www.w3.org/TR/rdf-syntax-grammar#section-Namespace}} and is used to distinguish entities from different Datasets. The IRI of RDF for example is \texttt{http://www.w3.org/1999/02/22-rdf-syntax-ns#}.
-For odML RDF, the namespace \url{https://g-node.org/odml-rdf} was chosen to identify all RDF odML entities.
+In the Semantic Web the global identifier is called \texttt{namespace IRI}\footnote{\url{https://www.w3.org/TR/rdf-syntax-grammar\#section-Namespace}} and is used to distinguish entities from different Datasets. The IRI of RDF for example is \texttt{http://www.w3.org/1999/02/22-rdf-syntax-ns\#}. For odML RDF, the namespace \url{https://g-node.org/odml-rdf} was chosen to identify all RDF odML entities.
 
 For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} where mapped to RDF Classes, while all attributes of the individual odML entities, e.g. \texttt{id} or \texttt{reference} where mapped to RDF Literals. An exception is the \texttt{Property.values} that requires a container element, the \texttt{RDF.Seq}. This was necessary since an RDF graph does not retain any order between its contained triples. \texttt{RDF.Seq} is a class that allows to specify an order of the contained elements. Only this allows an exact export of odML values to RDF, where the order of values often is actually import e.g. in case of documenting a set of stimuli. The following tables describe the mapping in detail.
 
@@ -358,6 +357,7 @@ This query will return DOI links to the data sets with Keywords "Neuroscience" a
 
 \subsubsection{How to use subclassing to reduce query overhead} \label{sec:rdf_subclass_usage}
 
+% [MS] The OWL file still needs to be provided at the address https://g-node.org/odml-rdf
 As seen in the example above, queries with the basic odML structure can become quite extensive. Even tough SPARQL provides powerful tools for subqueries and filtering of results we were aiming at making such queries more intuitive. To this end you can find a list of Section subclasses in the odML OWL ontology\footnote{\url{https://g-node.org/odml-rdf}}. Subclasses can be queried directly without needing to know the odML type of a class. In the example one can directly query for \texttt{odml:Subject} and does not need to know that the corresponding Section is of type \texttt{datacite/subject}.
 
 The following query requires the imports and uses the graph created in the previous example.
