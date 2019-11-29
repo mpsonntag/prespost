@@ -69,11 +69,11 @@ As a brief introduction to the odML concept is to store metadata in a generic bu
      \subcaption{YAML}
      \label{fig:odmlFormatExampleYAML}
    \end{minipage}
-   \caption{Metadata organized in odML and stored using the (~\ref{fig:odmlFormatExampleXML}) XML, (~\ref{fig:odmlFormatExampleJSON}) JSON and (~\ref{fig:odmlFormatExampleYAML}) YAML storage formats. We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.}
+   \caption{Metadata organized in odML and stored using the (~\ref{fig:odmlFormatExampleXML}) XML, (~\ref{fig:odmlFormatExampleJSON}) JSON and (~\ref{fig:odmlFormatExampleYAML}) YAML storage formats. While both XML and JSON are well used in data processing and automation, YAML provides an option for both human readability and machine consumption.}
    \label{fig:odmlFormatExample}
 \end{figure}
 
-Metadata organized using the odML data model can be stored in multiple different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples. While both XML and JSON are well used in data processing and automation, YAML provides an option for both human readability and machine consumption.
+Metadata organized using the odML data model can be stored in multiple different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples.   We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
 
 
 \subsection{Opening odML to graph database searches} \label{sec::why_rdf}
