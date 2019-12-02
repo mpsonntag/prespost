@@ -11,6 +11,14 @@
 \usepackage{listings}
 \usepackage[export]{adjustbox}
 
+
+\newcommand{\findablility}{\textbf{F}indability}
+\newcommand{\findable}{\textbf{F}indable}
+\newcommand{\accessibility}{\textbf{A}ccessibility}
+\newcommand{\accessible}{\textbf{A}ccessible}
+\newcommand{\interoperability}{\textbf{I}nteroperability}
+\newcommand{\interoperable}{\textbf{I}nteroperable}
+
 \title{FAIR from metadata to the Semantic Web: open source tools and services for data annotation and findable data}
 
 \begin{document}
@@ -18,20 +26,25 @@
 \maketitle
 
 \begin{abstract}
-Annotation of research data with metadata is crucial to provide context for analysis and  re-use. The odML format offers a flexible and comprehensive solution for the scientist to collect and organize metadata in a structured form that is both human readable and machine actionable for documentation and automated analysis. To further support the FAIR principles, we present tools to export metadata from odML to \textit{RDF}\footnote{\url{https://www.w3.org/TR/rdf11-concepts}}, which opens any metadata to \textit{Semantic Web}\footnote{\url{https://www.w3.org/standards/semanticweb}} services. The open source G-Node SPARQL server is aimed at providing searchable whole metadata sets for meta analyses and also providing links to the actual published scientific data set. Scientists can upload their metadata to make their data find-able and accessible even if it was a data publication or if it is an unpublished data set.
+Annotation of research data with metadata is crucial to provide context for understanding, analysis, re-use, and to overcome the reproducibility crisis. The odML format offers a flexible and comprehensive solution for collecting and organizing metadata in a structured form that is both human readable and machine actionable for documentation and automated analysis. To further support the FAIR principles, we present tools to export metadata from odML to \textit{RDF}\footnote{\url{https://www.w3.org/TR/rdf11-concepts}}, which opens any metadata to \textit{Semantic Web}\footnote{\url{https://www.w3.org/standards/semanticweb}} services. The open source G-Node SPARQL server is aimed at providing searchable whole metadata sets for meta analyses and also providing links to the actual published scientific data set. Scientists can upload their metadata to make their data findable and accessible even if it was a data publication or if it is an unpublished data set.
 \end{abstract}
 
 \section{Introduction} \label{sec:introduction}
-According to the FAIR principles \cite{Wilkinson_2016}, (meta)data is supposed to be Findable, Accessible, Interoperable, Reusable. Metadata, data about experimental data, play a special role in this context. Not only do they accurately describe the experimental setup but ideally also the data set involved. If handled properly, a collection of metadata is the first step to solving the FAIR principles for a published data set. As previously shown \cite{Teeters_2017} Interoperability between even diverse metadata can be achieved by using the common and flexible Semantic Web RDF technology.
+According to the FAIR principles \cite{Wilkinson_2016}, (meta)data is supposed to be \findable{}, \accessible{}, \interoperable{}, and \textbf{R}eusable. Metadata, data about experimental data, play a special role in this context. Not only do they accurately describe the experimental setting and context but ideally also provide information about the data set involved. If handled properly, a collection of metadata is the first step to solving the FAIR principles for a published data set. As previously shown \cite{Teeters_2017} \interoperability{} between even diverse metadata can be achieved by using the common and flexible Semantic Web RDF technology.
 
-Expanding on this idea, we show how Findability and Accessibility of large collections of metadata can be achieved by the use of open source software. Interoperability between different types of metadata is achieved by a minimal set of common RDF terms. This way diverse sets of metadata can be easily converted and imported into a common searchable data graph. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata can be sub-classed to the benefit of maintaining the original structure without losing the common generic structure keeping Interoperability without sacrificing Findability.
+Expanding on this idea, we show how \findablility{} and \accessibility{} of large collections of metadata can be achieved by the use of open source software. \interoperability{} between different types of metadata is achieved by a minimal set of common RDF terms. This way diverse sets of metadata can be easily converted and imported into a common searchable data graph. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata can be sub-classed to the benefit of maintaining the original structure without losing the common generic structure keeping \interoperability{} without sacrificing \findablility{}.
 
-To make large collections of merged metadata in RDF format easily Accessible, we introduce an augmented version of the open source SPARQL server \textit{Apache Fuseki}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)}. This software provides access to the metadata by both custom, easy to use search terms as well as the powerful \textit{SPARQL}\footnote{\url{https://www.w3.org/TR/sparql11-query}} query language.
+To make large collections of merged metadata in RDF format easily accessible, we introduce an augmented version of the open source SPARQL server \textit{Apache Fuseki}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)}. This software provides access to the metadata by both custom, easy to use search terms as well as the powerful \emph{JG: but harder to master?} \textit{SPARQL}\footnote{\url{https://www.w3.org/TR/sparql11-query}} query language.
+% [MS] That SPARQL is hard to master is partially addressed in the usage section and it is mentioned in the outlook, that
+% we are aware of it and have a prototype to build a more easy to use query layer on top of SPARQL.
+
+\emph{JG: Do you want to provide a very brief intro to RDF? Similar to what you do for odml?}
+% [MS] There is a paragraph introducing RDF in section "sec:why_rdf"; this could be moved here if it makes more sense.
 
 \subsection{The odML data format} \label{sec:odml_intro}
 As previously reported \cite{Grewe_2011}, \textit{odML}\footnote{\url{https://github.com/G-Node/python-odml} (RRID:SCR\_001376)} is a data format designed to thoroughly document diverse metadata that comes with a freely available reference implementation in Python. Developed by the German Neuroinformatics Node, its design was oriented along the needs of neuroscientific metadata, but its generic approach makes it applicable to any scientific field and is able to store heterogeneous metadata to fully document even complex experimental setups and conditions \cite{Zehl_2016}.
 
-As a brief introduction to the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odML data model with all its available attributes while Fig ~\ref{fig:odmlModel}B shows an abstraction of how the model can be used to store metadata.
+In brief, the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odML data model with all its available attributes while Fig ~\ref{fig:odmlModel}B shows an abstraction of how the model can be used to store metadata.
 
 \begin{figure}
    \begin{minipage}[b]{.6\linewidth}
@@ -45,8 +58,8 @@ As a brief introduction to the odML concept is to store metadata in a generic bu
      \includegraphics[width=0.9\textwidth]{figures/figOdmlModelB.pdf}
      \subcaption{Second sub-figure}\label{fig:odmlModelStructure}
    \end{minipage}
-   \caption{
-(~\ref{fig:odmlModelData}) The odML data model. (~\ref{fig:odmlModelStructure}) The two main concept entities are nested \textbf{Sections} that provide a single \textbf{Document} with its general structure and make such a document navigate- and searchable. \textbf{Sections} can contain \textbf{Properties} that in turn contain metadata values.}
+   \caption{\textbf{The odML data model.}
+(~\ref{fig:odmlModelData}) Entity-relation diagram of the data model. (~\ref{fig:odmlModelStructure}) The two main concept entities are nested \textbf{Sections} that provide a single \textbf{Document} with its general structure and make such a document navigate- and searchable. \textbf{Sections} can contain \textbf{Properties} that in turn contain metadata values.}
    \label{fig:odmlModel}
 \end{figure}
 
@@ -73,10 +86,10 @@ As a brief introduction to the odML concept is to store metadata in a generic bu
    \label{fig:odmlFormatExample}
 \end{figure}
 
-Metadata organized using the odML data model can be stored in multiple different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples.   We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
+Metadata organized using the odML data model can be stored in different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples.   We used parts of the datacite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
 
 
-\subsection{Opening odML to graph database searches} \label{sec::why_rdf}
+\subsection{Opening odML to graph database searches} \label{sec:why_rdf}
 
 While odML has shown to document experiments even through diverse fields due to its flexibility, there is a growing need to search metadata across multiple experiments and even across multiple fields. As recently published \cite{Sprenger_2019}, the odML data format has been developed further to also address this growing demand.
 
@@ -90,7 +103,7 @@ The Semantic Web offers a large technology stack fit to meet the requirements: A
 
 The following describes how the versatile odML data format was mapped to its RDF equivalent and documents the specific OWL ontology that was devised for the underlying data model. It will also show how metadata can be exported from odML to its RDF equivalent, how different documents can be loaded into a single graph and how the graph can be searched via SPARQL. It will be shown how the basic structure can be furthered with individual sub-classes to make searches more specific. Finally it will present an open web service that enables metadata searches across multiple documents and present a suggestion based on the widely accepted \textit{DataCite}\footnote{\url{https://datacite.org}} publication standard to enable back-links from metadata sets to the original, published data.
 
-\subsection{Implementation of odML to RDF mapping} \label{sec::odml_rdf}
+\subsection{Implementation of odML to RDF mapping} \label{sec:odml_rdf}
 
 %[TW] address the implications of the odML hierarchical structure for the mapping between odml and rdf
 %[MS] not sure if I fully got the comment, but I went a bit more into detail with respect to the mapping in the following paragraph
