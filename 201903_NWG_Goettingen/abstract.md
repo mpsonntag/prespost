@@ -7,7 +7,7 @@ Keyword 3:  COMPUTER
 
 Achilleas Koutsou1, Michael Sonntag1, Christian Garbers1, Christian Johannes Kellner1, Jan Grewe2, Thomas Wachtler1
 
-1Ludwig-Maximilian-Universität München, Biologie II, Großhaderner Straße 2, 82152 Planegg-Martinsried, Germany 
+1Ludwig-Maximilians-Universität München, Biologie II, Großhaderner Straße 2, 82152 Planegg-Martinsried, Germany 
 2Institute for Neurobiology, University of Tuebingen, Auf der Morgenstelle 28; 72076 Tübingen, Germany
 
 Maintaining reproducible data workflows while keeping data in sync, backed up, and easily accessible from within and outside the lab is a key challenge in research. To minimize time and effort scientists have to spend on these tasks, we provide a suite of tools designed for comprehensive, reproducible and versioned management of scientific data. 

@@ -2,7 +2,7 @@
 
 Michael Sonntag1, Achilleas Koutsou1, Christian Garbers1, Jiří Vaněk1, Thomas Wachtler1
 
-1. Ludwig-Maximilian-Universität München, German Neuroinformatics Node, Martinsried, Germany 
+1. Ludwig-Maximilians-Universität München, German Neuroinformatics Node, Martinsried, Germany 
 
 
 Research requires data to continuously be processed, analyzed and visualized; data needs to be quality checked, verified and backed up. Data and metadata need to be made publicly available in an easy to find and use manner. Many of these tasks can be automated, which usually leads to fewer errors and a higher results quality. To facilitate these tasks, we introduce a suite of microservices for the G-Node data infrastructure (GIN), an open platform for collaboration and sharing of research data and code.
