@@ -75,7 +75,7 @@ References
 8 GitHub https://github.com
 9 GIN-Valid https://valid.gin.g-node.org
 
-Abstract MWG 2019
+Abstract NWG 2019
 Maintaining reproducible data workflows while keeping data in sync, backed up, and easily accessible from within and outside the lab is a key challenge in research. To minimize time and effort scientists have to spend on these tasks, we provide a suite of tools designed for comprehensive, reproducible and versioned management of scientific data. 
 Reproducibility and data re-usability require the presence of metadata also providing information about experimental conditions. The odML[1] metadata format is a simple and convenient format to flexibly collect and organize any kind of metadata. It enables comprehensive collection and automated processing of metadata[2], including conversion to other formats such as RDF to utilize semantic web technologies. 
 To keep data and metadata organized, the NIX[3] data format enables to effectively link data and corresponding analysis results as well as the associated metadata. It supports a wide range of data types, including electrophysiology and imaging data. NIX uses the odML metadata format and is integrated with the Neo[4] Python package for electrophysiology, enabling Neo users to store their data in a common open format. 
