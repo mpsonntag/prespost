@@ -1,3 +1,5 @@
-# 
+# Open tools and services for reproducible workflows and efficient data management, collaboration and data publication
 
-
+Maintaining reproducible analysis workflows while keeping data in sync, backed up, and easily accessible from within and outside the lab is a key challenge in research. The G-Node provides a suite of tools, services and open platforms designed for comprehensive and versioned management of scientific data, seamless integration into automated and reproducible workflows and ease of use collaboration and data publication.
+To address reproducibility and data re-usability the lightweight odML[1] metadata format provides users with a flexible option to collect and organize any kind of metadata enabling automated metadata collection and analytic pipelines[2] as well as conversion of diverse metadata to other formats such as RDF to utilize semantic web technologies.
+The equally flexible NIX[3] data format takes the concept a step further by combining data and metadata and effectively linking data and corresponding analysis results as well as the associated metadata keeping the whole analysis pipeline in a single file and attached to the relevant metadata. It supports a wide range of data types, including electrophysiology and imaging data. NIX uses the odML metadata format and is integrated with the Neo[4] Python package for electrophysiology, enabling Neo users to store their data in a common open format.
