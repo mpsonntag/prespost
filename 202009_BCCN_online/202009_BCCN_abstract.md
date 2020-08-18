@@ -1,4 +1,4 @@
-V1.0
+#-- v1
 
 # Open tools and services for reproducible workflows and efficient data management, collaboration and data publication
 
@@ -13,18 +13,18 @@ supports the FAIR principles[13].
 1. odML: http://www.g-node.org/odml 
 2. Handling Metadata in a Neurophysiology Laboratory: https://doi.org/10.3389/fninf.2016.00026 
 3. NIX: http://www.g-node.org/nix 
-4. Neo: http://neuralensemble.org/neo 
+4. Neo: https://neuralensemble.org/neo 
 5. GIN: https://gin.g-node.org 
 6. Git: https://git-scm.com 
 7. Git annex: https://git-annex.branchable.com
 8. GIN-DOI: https://doi.gin.g-node.org
 9. GIN-Valid: https://valid.gin.g-node.org
-11. Sumatra: http://neuralensemble.org/sumatra 
-10. BIDS: http://bids.neuroimaging.io 
-12. DataLad: http://datalad.org 
+11. Sumatra: https://neuralensemble.org/sumatra 
+10. BIDS: https://bids.neuroimaging.io 
+12. DataLad: https://datalad.org 
 13. The FAIR Guiding Principles for scientific data management and stewardship: https://doi.org/10.1038/sdata.2016.18 
 
-V2.0
+#-- v2
 
 # Open tools and services for reproducible workflows and efficient data management, collaboration and data publication
 
@@ -45,13 +45,13 @@ The tools presented are easy to use, interoperate with other approaches supporti
 1. Grewe J., Wachtler T., and Benda J. (2011). A bottom-up approach to data annotation in neurophysiology. Front. Neuroinform. 5:16, doi:10.3389/fninf.2011.00016
 2. Handling Metadata in a Neurophysiology Laboratory: https://doi.org/10.3389/fninf.2016.00026
 3. NIX: http://www.g-node.org/nix
-4. Neo: http://neuralensemble.org/neo
+4. Neo: https://neuralensemble.org/neo
 5. GIN: https://gin.g-node.org
 6. Git: https://git-scm.com
 7. Git annex: https://git-annex.branchable.com
 8. GIN-DOI: https://doi.gin.g-node.org
 9. GIN-Valid: https://valid.gin.g-node.org
-11. Sumatra: http://neuralensemble.org/sumatra
-10. BIDS: http://bids.neuroimaging.io
-12. DataLad: http://datalad.org
+11. Sumatra: https://neuralensemble.org/sumatra
+10. BIDS: https://bids.neuroimaging.io
+12. DataLad: https://datalad.org
 13. The FAIR Guiding Principles for scientific data management and stewardship: https://doi.org/10.1038/sdata.2016.18
