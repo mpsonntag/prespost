@@ -13,6 +13,9 @@
 \usepackage[export]{adjustbox}
 \usepackage[capitalize]{cleveref}
 
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{5}
 
 \newcommand{\findablility}{\textbf{F}indability}
 \newcommand{\findable}{\textbf{F}indable}
@@ -36,12 +39,11 @@ According to the FAIR principles \cite{Wilkinson_2016}, (meta)data should be \fi
 
 Expanding on this idea, we show how \findablility{} and \accessibility{} of large collections of metadata can be achieved by the use of open source software. \interoperability{} between different types of metadata is achieved by a minimal set of common RDF terms. This way diverse sets of metadata can be easily converted and imported into a common searchable data graph. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata can be sub-classed to the benefit of maintaining the original structure without losing the common generic structure, keeping \interoperability{} without sacrificing \findablility{}.
 
-To make large collections of merged metadata in RDF format easily accessible, we introduce an augmented version of the open source SPARQL server \textit{Apache Fuseki}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)}. This software provides access to the metadata by both custom, easy to use search terms as well as the powerful \emph{JG: but harder to master?} \textit{SPARQL}\footnote{\url{https://www.w3.org/TR/sparql11-query}} query language.
-% [MS] That SPARQL is hard to master is partially addressed in the usage section and it is mentioned in the outlook, that
-% we are aware of it and have a prototype to build a more easy to use query layer on top of SPARQL.
+To make large collections of merged metadata in RDF format easily accessible, we introduce an augmented version of the open source SPARQL server \textit{Apache Fuseki}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)}. This software provides access to the metadata by both custom, easy to use search terms as well as the powerful \emph{JG: but harder to master?} %[MS] That SPARQL is hard to master is partially addressed in the usage section and it is mentioned in the outlook that we are aware of it and have a prototype to build a more easy to use query layer on top of SPARQL.
+\textit{SPARQL}\footnote{\url{https://www.w3.org/TR/sparql11-query}} query language.
 
 \emph{JG: Do you want to provide a very brief intro to RDF? Similar to what you do for odml?}
-% [MS] There is a paragraph introducing RDF in section "sec:why_rdf"; this could be moved here if it makes more sense.
+%[MS] There is a paragraph introducing RDF in section "sec:why_rdf"; this could be moved here if it makes more sense.
 
 \subsection{The odML data format} \label{sec:odml_intro}
 \textit{odML}~\cite{Grewe_2011} is a data format designed to thoroughly document diverse metadata. The odML library~\footnote{\url{https://github.com/G-Node/python-odml} (RRID:SCR\_001376)} is a freely available reference implementation in Python. Developed by the German Neuroinformatics Node (G-Node), its design was oriented along the needs of neuroscientific metadata, but its generic approach makes it applicable to any scientific field and is able to store heterogeneous metadata to fully document even complex experimental setups and conditions \cite{Zehl_2016}.
@@ -88,7 +90,9 @@ In brief, the odML concept is to store metadata in a generic but hierarchical st
    \label{fig:odmlFormatExample}
 \end{figure}
 
-Metadata organized using the odML data model can be stored in different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples. The figures show parts of the DataCite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as a reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
+Metadata organized using the odML data model can be stored in different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples. The figures show parts of the DataCite schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology
+%[TW] odML terminologies should be introduced
+\footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as a reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
 
 
 \subsection{Opening odML to graph database searches} \label{sec:why_rdf}
@@ -110,6 +114,7 @@ This section describes how the versatile odML data format was mapped to its RDF 
 
 %[TW] address the implications of the odML hierarchical structure for the mapping between odml and rdf
 %[MS] not sure if I fully got the comment, but I went a bit more into detail with respect to the mapping in the following paragraph
+%[TW] You should describe the data model structures of RDF and odML to make it clear that a mapping is not trivial. When you describe the mapping you should address these differences and how they are accounted for.
 
 odML is by design a hierarchical data format meant to accommodate heterogeneous data. This provides a common, underlying structure which enables people that might not be familiar with the details of a documented experiment to navigate such a document. The same is true when odML is mapped to RDF. Since RDF is meant to enable searches over graph databases with heterogeneous data, a graph containing odML specific data already shows a common, underlying structure that should make useful searches easier even across unfamiliar sets of data.
 
@@ -412,7 +417,7 @@ for row in local_graph.query(prep_query):
 
 This query will lead to the same result as the original query in code listing ~\ref{lst:query_graph}.
 
-\subsection{Implementation of SPARQL server: meta.g-node.org} \label{sec:odml_query}
+\subsection{Implementation of a SPARQL server: meta.g-node.org} \label{sec:odml_query}
 
 Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)} Semantic Web tools suite that was adopted to support odML specific RDF. A publicly accessible instance is available at https://meta.g-node.org. The service provides a metadata graph searchable by SPARQL containing all scientific Datasets that have been published by \textit{CRCNS (Collaborative Research in Computational Neuroscience)}\footnote{\url{https://crcns.org}} and \textit{G-Node}\footnote{\url{https://doid.gin.g-node.org}}. The server provides example SPARQL queries how the available database can be used. The service is free to use and free to contribute, any additions to the database are welcome and encouraged.
 
@@ -471,15 +476,15 @@ The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 
 One might argue that a relational database would be better suited to metadata storage and indexing. This argument has merit, since a dedicated database with a predetermined schema (i.e., fixed tables and named columns) can provide more specific queries.
 A main problem that arises at this point is the diversity of metadata that is used to describe scientific experiments. If various experiments are described in detail, the resulting metadata will most likely be heterogeneous. odML aims at providing a general, common data structure while providing the required flexibility to accommodate all of these heterogeneous metadata. The conversion to RDF is a logical extension of this approach: with converting odML data to RDF and merging the resulting documents into a single graph, heterogeneous metadata are combined into a single database. This database can be queried due to the underlying hierarchical odML structure when a comparable relational database could not accommodate the necessary different tables for every individual way experiments were described.
-% [MS] probably need to compare this to e.g. datajoint\footnote{\url{https://datajoint.io}}?
-The necessary complex SPARQL queries are both an advantage and a disadvantage: Searching across such a complex graph will often necessitate multiple steps to arrive at the required result. One first has to search for specifics, e.g., data sets that contain keywords, authors, specific hardware or is describing stimuli or was using specific scientific models. All of this can be documented and queried via odML RDF but will require a couple of query steps to arrive from the first search results with the links back to the original data sets.
-We are aware of this problem. A first step to simplify searches has already been done and described by providing a subclassing system to reduce the complexity while keeping the underlying basic data model intact. Another step would be the introduction of an abstraction layer, that automatically converts a simple keyword based search into useful SPARQL queries. The current python odML library contains a prototype of such an abstraction and is briefly described in the outlook section.
+% [MS] probably need to compare this to e.g. datajoint\footnote{\url{https://datajoint.io}}? HBP knowledge graph
+The necessary complex SPARQL queries are both an advantage and a disadvantage: Searching across such a complex graph will often necessitate multiple steps to arrive at the required result. A user first has to search for specifics, e.g., data sets that contain keywords, authors, specific hardware or is describing stimuli or was using specific scientific models. All of this can be documented and queried via odML RDF but will require a set of query steps to arrive from the initial search results at a result with links back to the original data sets.
+We are aware of this issue. A first step to simplify searches has already been done and described by providing a subclassing system to reduce the query complexity while keeping the underlying basic data model intact. A step further could be the introduction of an abstraction layer that automatically converts a simple keyword based search into useful SPARQL queries. The current python odML library contains a prototype of such an abstraction and is briefly described in the outlook section.
 
 \section{Outlook} \label{sec:outlook}
 \subsection{Multiple Endpoint queries} \label{sec:outlook_endpoints}
-SPARQL is able to query multiple graphs that aren't necessarily part of the same resource. In theory every lab could run their own odML SPARQL server. All that is required to use such a resource is the URL where the graph is available as a SPARQL endpoint. A SPARQL query can then be devised which can run over multiple known metadata graphs end return a single result set from various sources.
+SPARQL is able to query multiple graphs that are not necessarily part of the same resource. In theory multiple labs can run their own odML SPARQL servers and all that is required to use such resources combined are the URLs where the graphs are available as SPARQL endpoints. A SPARQL query can then be devised which can run over multiple known metadata graphs end return a single result set from various sources.
 
-As an incomplete example, a query across two graphs would be constructed like the following code; a complete example requires an IRI to an available SPARQL endpoint.
+As an abstracted example, a query across two graphs would be constructed like the following code; a complete example requires an IRI to an available SPARQL endpoint.
 
 \begin{lstlisting}[label=lst:multi_graph, caption=Abstract multiple graph query, basicstyle=\small]
 SELECT ?sec_name WHERE {
@@ -530,3 +535,5 @@ Teeters J.L., Ježek P., Garbers C., Kellner C.J., Sonntag M., Koutsou A., Grewe
 \lstinputlisting[caption=odML RDF example file B, label=lst:exampleFileB.rdf]{resources/example_B_odml.rdf}
 
 \end{document}
+% AK note: Which requirements?
+
