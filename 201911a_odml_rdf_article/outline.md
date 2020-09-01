@@ -292,6 +292,8 @@ Compared to the HBP knowledge graph the odML RDF version is aimed at a smaller a
 
 Further its a low access point to publish metadata and link to already published datasets since its not hard to export to RDF, create a cross-platform and cross-lab database that can host even diverse metadata.
 
+A problemset in finding data in unfamiliar data structures is navigation. While JSON already provides strictness in creating a valid, parsable document, odML provides a simple, underlying structure. Groupings are done in sections that can be nested. Values and connected metadata like uncertainty as well as further links are constraint to properties that can only be contained by sections. Once one knows this underlying structure, searching through such a document is fairly easy once the section-property relationship is known while not sacrificing storing metadata fairly unrestricted and expand them if required.
+
 Ebrains/knowledge graph
 https://www.re3data.org/repository/r3d100013325
 https://nfdi-neuro.de/files/2020-02-10_Zehl_EBRAINS.pdf
