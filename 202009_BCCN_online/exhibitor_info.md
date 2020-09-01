@@ -14,6 +14,9 @@
     info@g-node.org
 
 - About text: short information about the company, we recommend less than 500 words
+    Neuroinformatics for efficient research data management in neuroscience
+    Scientific progress depends increasingly on collaborative efforts that involve exchange of data and reanalysis of previously recorded data. A major obstacle to fully exploit the scientific potential of research data is the effort it takes to access data and metadata for exchange with collaborators or for further analysis some time after the initial study was completed.
+    At the German Neuroinformatics Node, tools and infrastructure supporting data access, data analysis and data exchange are being developed to foster reproducible research collaboration and data sharing and publication. 
 
 - Moderators: names of booth staff to moderate the video session and live demonstrations
     Achilleas Koutsou
