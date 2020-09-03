@@ -25,8 +25,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="7318.7481"
-     inkscape:cy="967.98789"
+     inkscape:cx="7433.0338"
+     inkscape:cy="1425.1307"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -9413,7 +9413,7 @@
        xml:space="preserve"
        id="flowRoot31844"
        style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.04967046px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="matrix(1.0162093,0,0,1.0158947,4823.9906,-2513.8277)"><flowRegion
+       transform="matrix(1.0162093,0,0,1.0158947,4761.1335,-3019.542)"><flowRegion
          style="stroke-width:1.04967046px"
          id="flowRegion31846"><rect
            style="stroke-width:1.04967046px"
@@ -11749,16 +11749,18 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
-       transform="matrix(1.0666667,0,0,1.0666667,6345.9444,26.530218)"
+       transform="matrix(1.0666667,0,0,1.0666667,6540.2301,717.9588)"
        id="g3583-4">
       <text
-         style="font-size:34.74749934px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.9375;-inkscape-font-specification:'Helvetica, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.74749756px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.9375"
          x="1175.532"
          y="17.514801"
          id="text2682-4">
         <tspan
            sodipodi:role="line"
-           id="tspan9567">Repository template service</tspan>
+           id="tspan9567"
+           x="1175.532"
+           y="17.514801">Repository template service</tspan>
       </text>
       <rect
          id="rect2678-6"
@@ -11846,7 +11848,7 @@
     </g>
     <g
        id="g3647"
-       transform="matrix(1.0666667,0,0,1.0666667,6327.9609,38.887218)">
+       transform="matrix(1.0666667,0,0,1.0666667,6233.6752,450.31579)">
       <g
          id="g3554-2"
          transform="translate(16.85963,48.415269)">
@@ -11977,7 +11979,7 @@
     </g>
     <g
        id="g3710"
-       transform="matrix(1.0666667,0,0,1.0666667,6327.9609,78.887218)">
+       transform="matrix(1.0666667,0,0,1.0666667,6059.3895,507.45865)">
       <rect
          ry="9.375"
          rx="9.374999"
@@ -12002,7 +12004,7 @@
     </g>
     <g
        id="g3733"
-       transform="matrix(1.0600889,0,0,1.0666667,6328.774,-28.207582)"
+       transform="matrix(1.0600889,0,0,1.0666667,6368.774,-545.35045)"
        style="stroke-width:1.00309765">
       <rect
          ry="9.375"
@@ -12028,7 +12030,7 @@
     </g>
     <g
        id="g3867"
-       transform="matrix(1.0681084,0,0,1.0666667,6309.088,-63.112782)"
+       transform="matrix(1.0681084,0,0,1.0666667,6943.3737,159.74436)"
        style="stroke-width:0.99932492">
       <rect
          ry="9.375"
@@ -12054,7 +12056,7 @@
     </g>
     <g
        id="g3704"
-       transform="matrix(1.0666667,0,0,1.0666667,6318.661,-330.06479)">
+       transform="matrix(1.0666667,0,0,1.0666667,6358.661,-847.20765)">
       <rect
          ry="9.375"
          rx="9.375001"
@@ -12145,7 +12147,7 @@
          style="fill:#d5e8d4;stroke:#82b366;stroke-width:0.9375;stroke-miterlimit:10" />
     </g>
     <g
-       transform="matrix(1.0666667,0,0,1.0666667,6319.9444,-41.469782)"
+       transform="matrix(1.0666667,0,0,1.0666667,6642.8015,629.9588)"
        id="g3620-7">
       <text
          style="font-size:34.74737167px;font-family:Helvetica;text-anchor:middle;fill:#000000;stroke-width:0.9375"
@@ -12204,7 +12206,7 @@
     </g>
     <g
        id="g3772"
-       transform="matrix(1.0666667,0,0,1.0666667,2938.6185,525.99512)">
+       transform="matrix(1.0666667,0,0,1.0666667,2875.7614,20.280828)">
       <rect
          ry="9.375"
          rx="9.375"
@@ -12327,7 +12329,7 @@
          style="fill:#666666;stroke:#666666;stroke-width:1.46279263;stroke-miterlimit:10" />
     </g>
     <g
-       transform="matrix(1.0666667,0,0,1.0666667,6344.3809,159.20292)"
+       transform="matrix(1.0666667,0,0,1.0666667,6978.6666,382.06007)"
        id="g3996-7">
       <g
          id="g3966-3">
@@ -12529,7 +12531,7 @@
       </g>
     </g>
     <g
-       transform="matrix(1.0666667,0,0,1.0666667,6327.9609,-69.112782)"
+       transform="matrix(1.0666667,0,0,1.0666667,7039.3895,-146.25564)"
        id="g2190">
       <rect
          ry="9.375"
@@ -14692,7 +14694,7 @@
     </g>
     <g
        id="g4357-2-5"
-       transform="matrix(1.0666667,0,0,1.0666667,5270.9765,538.24708)">
+       transform="matrix(1.0666667,0,0,1.0666667,5279.5479,541.10422)">
       <rect
          id="rect2862-7-0"
          pointer-events="none"
@@ -14857,7 +14859,7 @@
       </g>
     </g>
     <flowRoot
-       transform="matrix(0.87184004,0,0,0.86122411,8645.2496,-2277.0357)"
+       transform="matrix(0.87184004,0,0,0.86122411,8376.6782,-1848.4643)"
        style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86502033"
        id="flowRoot6959-6-6-3"
        xml:space="preserve"><flowRegion
