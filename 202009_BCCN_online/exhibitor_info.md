@@ -14,6 +14,9 @@
     info@g-node.org
 
 - About text: short information about the company, we recommend less than 500 words
+
+    -> use the short text
+
     ------ Base variant (85 words) ---------
     Scientific progress depends increasingly on collaborative efforts that involve exchange of data and reanalysis of previously recorded data. A major obstacle to fully exploit the scientific potential of research data is the effort it takes to access data and metadata for exchange with collaborators or for further analysis some time after the initial study was completed.
     At the German Neuroinformatics Node, tools and infrastructure supporting data access, data analysis and data exchange are being developed to foster reproducible research collaboration and data sharing and publication. 
@@ -32,7 +35,7 @@
 
 - Register interest button text: customize the text of this button
 
-    "I want to know more"
+    Keep as "Register interest"
 
     -> Unsure how this is supposed to work - if people click this button, the hosting platform sends a generic email to the company email address with the user name and email of the logged in user and the company can then add them to some mailing lists? Or is the user forwarded to a form and the content of the form will be sent to the company email address? If the first option is the case, then it would probably better to forward to the g-node homepage instead. 
 
