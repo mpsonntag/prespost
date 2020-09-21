@@ -288,7 +288,7 @@ Fig [workFlowSchema]
 
 # Discussion / Comparison
 
-Compared to the HBP knowledge graph the odML RDF version is aimed at a smaller audience; it is meant for in house or across house use - everyone that is using odML can make their data searchable and while making use of the custom SPARQL server can even be shared across labs to make metadata searchable and datasets discoverable. The labs themselves are responsible to curate the metadata, convert it and make useful search queries available.
+Compared to the HBP knowledge graph the odML RDF version is designed for a different audience; it is meant for in house or across house use - everyone that is using odML can make their data searchable and while making use of the custom SPARQL server can even be shared across labs to make metadata searchable and datasets discoverable. The labs themselves are responsible to curate the metadata, convert it and make useful search queries available.
 
 Further its a low access point to publish metadata and link to already published datasets since its not hard to export to RDF, create a cross-platform and cross-lab database that can host even diverse metadata.
 
