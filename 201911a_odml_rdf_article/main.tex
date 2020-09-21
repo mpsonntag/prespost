@@ -60,7 +60,7 @@ In brief, the odML concept is to store metadata in a generic but hierarchical st
    \begin{minipage}[b]{.35\linewidth}
      \centering
      \includegraphics[width=0.9\textwidth]{figures/figOdmlModelB.pdf}
-     \subcaption{Second sub-figure}\label{fig:odmlModelStructure}
+     \subcaption{Abstracted usage example}\label{fig:odmlModelStructure}
    \end{minipage}
    \caption{\textbf{The odML data model.}
 (~\ref{fig:odmlModelData}) Entity-relation diagram of the data model. (~\ref{fig:odmlModelStructure}) The two main concept entities are nested \textbf{Sections} that provide a single \textbf{Document} with its general structure and make such a document navigate- and searchable. \textbf{Sections} can contain \textbf{Properties} that in turn contain metadata values.}
@@ -422,8 +422,6 @@ This query will lead to the same result as the original query in code listing ~\
 Fuseki is an open source SPARQL query server from the \textit{Apache Jena}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)} Semantic Web tools suite that was adopted to support odML specific RDF. A publicly accessible instance is available at https://meta.g-node.org. The service provides a metadata graph searchable by SPARQL containing all scientific Datasets that have been published by \textit{CRCNS (Collaborative Research in Computational Neuroscience)}\footnote{\url{https://crcns.org}} and \textit{G-Node}\footnote{\url{https://doid.gin.g-node.org}}. The server provides example SPARQL queries how the available database can be used. The service is free to use and free to contribute, any additions to the database are welcome and encouraged.
 
 The SPARQL server including all example queries has been dockerized. Both source code\footnote{\url{https://github.com/G-node/odml-query}} and docker container\footnote{\url{https://hub.docker.com/r/gnode/meta}} are freely available and free to use. The repository contains information how to set up an in-house instance and upload odML rdf files to a common graph.
-
-% [MS] meta.g-node.org screenshots?
 
 The following is the same query as the one shown above in the local query. The SPARQL queries work slightly differently in the Java Apache Jena and the Python rdflib implementation.
 
