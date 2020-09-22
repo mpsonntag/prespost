@@ -288,17 +288,23 @@ Fig [workFlowSchema]
 
 # Discussion / Comparison
 
-Compared to the HBP knowledge graph the odML RDF version is designed for a different audience; it is meant for in house or across house use - everyone that is using odML can make their data searchable and while making use of the custom SPARQL server can even be shared across labs to make metadata searchable and datasets discoverable. The labs themselves are responsible to curate the metadata, convert it and make useful search queries available.
-
-Further its a low access point to publish metadata and link to already published datasets since its not hard to export to RDF, create a cross-platform and cross-lab database that can host even diverse metadata.
-
-A problemset in finding data in unfamiliar data structures is navigation. While JSON already provides strictness in creating a valid, parsable document, odML provides a simple, underlying structure. Groupings are done in sections that can be nested. Values and connected metadata like uncertainty as well as further links are constraint to properties that can only be contained by sections. Once one knows this underlying structure, searching through such a document is fairly easy once the section-property relationship is known while not sacrificing storing metadata fairly unrestricted and expand them if required.
+A problemset in finding data in unfamiliar data structures is navigation. While JSON already provides strictness in creating a valid, parsable document, odML provides a simple, underlying structure. Groupings are done in sections that can be nested. Values and connected metadata like uncertainty as well as further links are constrained to properties that can only be contained by sections. Once one knows this underlying structure, searching through such a document is fairly easy once the section-property relationship is known while not sacrificing storing metadata fairly unrestricted and expand them if required.
 
 Ebrains/knowledge graph
 https://www.re3data.org/repository/r3d100013325
 https://nfdi-neuro.de/files/2020-02-10_Zehl_EBRAINS.pdf
 EBRAINS Knowledge Graph (https://kg.ebrains.eu)
 EBRAINS Knowledge Graph (RRID:SCR_017612)
+
+Compared to the HBP knowledge graph the odML RDF version is designed for a different audience; it is meant for in house or across house use - everyone that is using odML can make their data searchable and while making use of the custom SPARQL server can even be shared across labs to make metadata searchable and datasets discoverable. The labs themselves are responsible to curate the metadata, convert it and make useful search queries available.
+
+Further its a low access point to publish metadata and link to already published datasets since its not hard to export to RDF, create a cross-platform and cross-lab database that can host even diverse metadata.
+
+The option for multiple query endpoints make it easy to temporarily set up a large common dataset from multiple locations and take it down after its job is done.
+
+
+
+
 
 # Outlook
 
