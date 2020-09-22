@@ -105,8 +105,8 @@ Even though searches within extensive odML documents were always part of the imp
 
 RDF was designed by the World Wide Web Consortium (W3C)\footnote{\url{https://www.w3.org}} as a standard model for data representation and exchange on the web with the heterogeneity of data in mind. Even though the RDF file format might vary, the underlying concept features two key points. The first is that information is structured in subject-predicate-object triples e.g. \texttt{apple hasColor red}. The second key point is that multiple subjects and objects can be connected to form a graph e.g. \texttt{tree hasFruit apple} can be combined with the previous example to form a minimal graph. These graphs can contain very heterogeneous data, but can still be queried due to the semantic structure of the underlying data\footnote{\url{https://www.w3.org/TR/rdf11-concepts}}.
 
-% AK note: Which requirements?
-The Semantic Web offers a large technology stack fit to meet the requirements: A suite of various graph database tools to merge individual documents in the RDF format into a single graph even if the content of the documents are not uniform. SPARQL (SPARQL Protocol and RDF Query Language), a full fledged query language that can be used to extract information from such a graph. Another feature is \textit{OWL (Web Ontology Language)}\footnote{\url{https://www.w3.org/TR/owl-ref}} which enables the definition of a vocabulary extension of the basic RDF terminology to enable more elaborate and domain specific SPARQL searches. The broad range of freely available open source tools can be adapted to fit more specific use cases.
+% [AK] Which requirements? [MS] Did some rephrasing to specify the context in the introductory sentence, please check.
+The Semantic Web offers a large, freely available technology stack fit to adopt, query and publish custom metadata graphs: A suite of various graph database tools to merge individual documents in the RDF format into a single graph even if the content of the documents are not uniform. SPARQL (SPARQL Protocol and RDF Query Language), a full fledged query language that can be used to extract information from such a graph. Another feature is \textit{OWL (Web Ontology Language)}\footnote{\url{https://www.w3.org/TR/owl-ref}} which enables the definition of a vocabulary extension of the basic RDF terminology to enable more elaborate and domain specific SPARQL searches. The broad range of freely available open source tools can be adapted to fit more specific use cases.
 
 \section{Implementation} \label{sec:implementation}
 
@@ -535,5 +535,4 @@ Teeters J.L., Ježek P., Garbers C., Kellner C.J., Sonntag M., Koutsou A., Grewe
 \lstinputlisting[caption=odML RDF example file B, label=lst:exampleFileB.rdf]{resources/example_B_odml.rdf}
 
 \end{document}
-% AK note: Which requirements?
 
