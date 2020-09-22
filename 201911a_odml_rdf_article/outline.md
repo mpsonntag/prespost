@@ -304,6 +304,30 @@ In this case mapping entity attributes to RDF was pretty straightforward. Mappin
 Uniquely identifying an entity and its connections within a graph is essential to maintain and reconstruct an underlying hierarchical structure. RDF knows the feature of "blank nodes" to uniquely identify a graph node within an rdf graph and provides it out of the box, if no unique identifier for an entity has been provided. The downside of blank nodes in RDF are, that they are not persistent. Whenever the same RDF file is loaded into a different graph, the blank node IDs will differ keeping the underlying structure intact but potentially making identification of a specific node problematic. Furthermore, if the same document would be uploaded again into the same graph, the blank nodes would differ again, potentially leading to duplicate entries in the graph.
 odML already provides all its main entities, Documents, Sections, Properties, with its own unique IDs that uniquely identifies them within and even across different odML documents. These IDs where now used as identifiers for the nodes. With this approach, when loaded into different graphs or even loaded into the same graph twice, the odML entities are always uniquely identifiable and duplicate entries do not occur.
 
+The abstract example in Figure[TODO] shows the problemset and the solution. The unique IDs are actually UUID strings as specified in RFC 4122\footnote{\url{https://tools.ietf.org/html/rfc4122}} with an extremely low collision probability.
+
+    odML document
+    Document - uniqueID_01
+    - Section - name_A - uniqueID_02
+    - Section - name_B - uniqueID_03
+      - Section - name_A - uniqueID_04
+
+    Document converted to odML RDF in the nice to read turtle[todo link] notation:
+    @prefix odml: <https://g-node.org/odml-rdf#> .
+
+    odml:uniqueID_01 a odml:Document ;
+        odml:hasSection odml:uniqueID_02, odml:uniqueID_03 .
+
+    odml:uniqueID_02 a odml:Section ;
+        odml:hasName "name_A" .
+
+    odml:uniqueID_03 a odml:Section ;
+        odml:hasName "name_B" .
+        odml:hasSection odml:uniqueID_04 .
+
+    odml:uniqueID_04 a odml:Section ;
+        odml:hasName "name_A" .
+
 
     - connecting the documents at a common root to retain document separation - introduction of the Hub
     - why care has to be taken in the conversion
