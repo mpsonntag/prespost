@@ -288,7 +288,7 @@ Fig [workFlowSchema]
 
 # odml RDF mapping difficulties
 
-As a general concept, odML entities where considered as Graph nodes while odML entity attributes where considered graph leaves or end points.
+
 Another problemset was that there is no order within a graph which from our point of view was only an issue with the actual property values that have to be kept in order. For all other entities order of same-level entities like Sections or Properties in an odml document are by definition not relevant and do not have to be taken into consideration when converting to a graph representation, as long as the hierarchical structure is still observerved. To this end we had to ensure, that identical entities like Sections or Properties could be uniquely identfied to keep the hierarchical structure intact. To this end, we used the ID, that each odML entity already has to uniquely identify itself within and even across odML documents, to identify the entities in the graph as well. The following two examples describe the Problem and how it was solved:
 
     In the following document structure
@@ -299,12 +299,12 @@ Another problemset was that there is no order within a graph which from our poin
 
     In a graph without 
 
+## Challenges in converting hierarchical documents to a graph based representation
 
-In this case mapping entity attributes to RDF was pretty straightforward. Mapping the connection of entities amongst themselves was another issue. 
 Uniquely identifying an entity and its connections within a graph is essential to maintain and reconstruct an underlying hierarchical structure. RDF knows the feature of "blank nodes" to uniquely identify a graph node within an rdf graph and provides it out of the box, if no unique identifier for an entity has been provided. The downside of blank nodes in RDF are, that they are not persistent. Whenever the same RDF file is loaded into a different graph, the blank node IDs will differ keeping the underlying structure intact but potentially making identification of a specific node problematic. Furthermore, if the same document would be uploaded again into the same graph, the blank nodes would differ again, potentially leading to duplicate entries in the graph.
 odML already provides all its main entities, Documents, Sections, Properties, with its own unique IDs that uniquely identifies them within and even across different odML documents. These IDs where now used as identifiers for the nodes. With this approach, when loaded into different graphs or even loaded into the same graph twice, the odML entities are always uniquely identifiable and duplicate entries do not occur.
 
-The abstract example in Figure[TODO] shows the problemset and the solution. The unique IDs are actually UUID strings as specified in RFC 4122\footnote{\url{https://tools.ietf.org/html/rfc4122}} with an extremely low collision probability.
+The abstract example in Figure[TODO] shows the problemset and the chosen approach. The unique IDs are in detail UUID strings as specified in RFC 4122\footnote{\url{https://tools.ietf.org/html/rfc4122}} with an extremely low collision probability.
 
     odML document
     Document - uniqueID_01
