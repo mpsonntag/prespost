@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="202009-BCCN_draft_D.svg">
+   sodipodi:docname="202103_NWG_Online_DRAFT.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,17 +24,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.69999999"
-     inkscape:cx="1027.061"
-     inkscape:cy="2506.0428"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="1876.3713"
+     inkscape:cy="1224.7195"
      inkscape:document-units="cm"
-     inkscape:current-layer="g12219"
+     inkscape:current-layer="layer1"
      showgrid="true"
      showguides="true"
-     inkscape:window-width="2513"
-     inkscape:window-height="1385"
-     inkscape:window-x="2607"
-     inkscape:window-y="27"
+     inkscape:window-width="2560"
+     inkscape:window-height="1412"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      borderlayer="false"
      inkscape:guide-bbox="true"
@@ -107,6 +107,11 @@
        position="-4687.5,2468.75"
        orientation="1,0"
        id="guide8268"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="4980.0001,465.71429"
+       orientation="1,0"
+       id="guide4329"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
@@ -9000,7 +9005,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -9100,30 +9105,38 @@
        rx="10"
        ry="10" />
     <g
-       id="g12174"
-       transform="translate(0,-24)">
+       id="g4340"
+       transform="translate(0,34)">
       <rect
-         style="opacity:1;fill:#f3d42a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:6.52480221;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#f3d42a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect40652-3-5-8"
-         width="612.08069"
-         height="186.09251"
-         x="4706.9585"
-         y="1024.4209"
+         width="610.9538"
+         height="256.3942"
+         x="4707.522"
+         y="949.55579"
          rx="10"
          ry="10" />
       <flowRoot
-         transform="translate(-126.35307,-2394.805)"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="translate(-142.35307,-2464.805)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          id="flowRoot23053"
          xml:space="preserve"><flowRegion
            id="flowRegion23055"><rect
              y="3440.551"
              x="4917.4229"
-             height="153.5432"
-             width="448.50757"
+             height="207.82893"
+             width="488.50781"
              id="rect23057" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           id="flowPara23061">Contact us at</flowPara><flowPara
+           id="flowPara4325"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
-           id="flowPara23061">Visit us at the G-Node virtual booth for demonstrations.</flowPara></flowRoot>    </g>
+           id="flowPara4314">info@g-node.org</flowPara><flowPara
+           id="flowPara4327"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle" /><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+           id="flowPara4316">sonntag@bio.lmu.de</flowPara></flowRoot>    </g>
     <g
        id="g4009-2-6-4-0-6-7"
        style="fill:#568ebe;fill-opacity:1"
@@ -10501,18 +10514,7 @@
            x="4138.7842"
            y="3036.7427" /></flowRegion><flowPara
          id="flowPara8207"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1" /></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="5262.2183"
-       y="848.06635"
-       id="text30010"><tspan
-         sodipodi:role="line"
-         id="tspan30008"
-         x="5262.2183"
-         y="848.06635"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">Contact: info@g-node.org</tspan></text>
-    <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1" /></flowRoot>    <g
        id="g18746"
        transform="translate(134,-80)">
       <text
@@ -10689,9 +10691,9 @@
            y="624.01282"
            style="font-style:normal;font-weight:bold;font-size:70.86069489px;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';text-align:center;text-anchor:middle" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:75.58473969px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
-         id="flowPara7487">Open tools and services </flowPara><flowPara
+         id="flowPara4434">Efficient research data management for </flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:75.58473969px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
-         id="flowPara4434">for efficient data management, collaboration and data publication</flowPara></flowRoot>    <flowRoot
+         id="flowPara4312">reproducible research, collaboration and data publication</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4354"
        style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -11926,32 +11928,27 @@
          id="path2756-0-8" />
     </g>
     <g
-       id="g2190-0"
-       transform="matrix(1.0666667,0,0,1.0666667,3231.0736,1182.1099)">
-      <g
-         id="g18780"
-         transform="translate(-820.11758,-71.973368)">
-        <rect
-           ry="9.375"
-           rx="9.375"
-           y="-746.69476"
-           x="2553.6118"
-           height="70.691971"
-           width="140.49359"
-           id="rect40652-3-5-0"
-           style="opacity:1;fill:#f3d42a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.8125;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-        <text
-           id="text7492-2-3-6-8"
-           y="-699.09808"
-           x="2624.2881"
-           style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           xml:space="preserve"><tspan
-             id="tspan2392-1-8"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:1px"
-             y="-699.09808"
-             x="2624.2881"
-             sodipodi:role="line">New</tspan></text>
-      </g>
+       id="g4352">
+      <rect
+         style="opacity:1;fill:#f3d42a;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect40652-3-5-0"
+         width="149.85983"
+         height="75.40477"
+         x="5080.1343"
+         y="308.86386"
+         rx="10"
+         ry="10" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:12.80000019px;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="5155.522"
+         y="359.63367"
+         id="text7492-2-3-6-8"><tspan
+           sodipodi:role="line"
+           x="5155.522"
+           y="359.63367"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.66666794px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:1.06666672px"
+           id="tspan2392-1-8">Beta</tspan></text>
     </g>
     <path
        style="fill:none;stroke:#666666;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:none"
@@ -12515,7 +12512,7 @@
          id="flowPara4573"
          style="font-size:40px;line-height:1.25;font-family:sans-serif">   XML, JSON, YAML</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.99999237px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="flowPara9559"></flowPara><flowPara
+         id="flowPara9559" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.99999237px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="flowPara9565" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.99999237px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -14682,7 +14679,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
            id="flowPara5476-7">• importable definitions</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-           id="flowPara11624"></flowPara><flowPara
+           id="flowPara11624" /><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
            id="flowPara11628">• file creation automation</flowPara><flowPara
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
