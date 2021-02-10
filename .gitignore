@@ -4,3 +4,7 @@ resources_not/
 # exclude IDEA specifics
 .idea/
 *.iml
+
+# exclude any tmp files
+*.~*
+
