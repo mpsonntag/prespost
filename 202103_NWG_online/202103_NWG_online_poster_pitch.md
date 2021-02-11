@@ -1,4 +1,4 @@
-Hi everyone, I am Michael Sonntag and I am working at the German Neuroinformatics Node, or G-Node, to develop tools and provide services for handling scientific data from raw over metadata over automated workflows to data hosting collaboration and even data publication.
+Hi everyone, I am Michael Sonntag and I am working at the German Neuroinformatics Node, or G-Node. We develop tools and provide services for handling scientific data from raw and metadata over automated workflows to data hosting collaboration and even data publication.
 
 With this pitch I want to give you a brief but hopefully interesting introduction to the services and tools and services that the G-Node has developed and is maintaining and hosting for your benefit.
 
