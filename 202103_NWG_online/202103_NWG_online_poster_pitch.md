@@ -1,6 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [1 - Introduction slide / GIN intro]
 
-Hi everyone, I am Michael Sonntag and I am working at the G-Node. We develop tools and provide services for handling scientific data, metadata over automated workflows to data hosting, collaboration and data publication.
+Hi everyone, I am Michael Sonntag and I am working at the German Neuroinformatics Node. We develop tools and provide services for handling scientific data and metadata over automated workflows to data hosting, collaboration and data publication.
 
 Here I want to give you a brief introduction to the services and tools the G-Node has developed and is maintaining and hosting for your benefit.
 
@@ -28,8 +46,46 @@ Besides storage for scientific data in its various forms of interpretation, NIX 
 
 [4 - Contacts and links slide]
 
-With this I hope I gave you a concise but intriguing overview of the services and tools the G-Node has to offer. Please check our poster for more details and additional services I was not able to discuss in this brief presentation.
+With this I hope I gave you a concise but intriguing overview of the services and tools 
+the G-Node has to offer. Please check our poster for more details and additional services 
+I was not able to discuss in this brief presentation.
 
-If we have peaked your interest and you have any questions about our projects or want to get in touch, contact us at info@g-node.org. We'll be more than happy to get back to you and answer any questions you might have;
+If we have peaked your interest and you have any questions about our projects or want to 
+get in touch, contact us at info@g-node.org. We'll be more than happy to get back to you 
+and answer any questions you might have;
 
 take care and see you online!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
