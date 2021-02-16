@@ -26,3 +26,12 @@ The tools presented are easy to use, interoperate with other tools supporting re
 [11] BIDS, https://bids.neuroimaging.io/
 [12] DataLad, https://datalad.org/
 [13] Wilkinson et al (2016) The FAIR guiding principles for scientific data management and stewardship. Scientific Data 3:160018, https://doi.org/10.1038/sdata.2016.18
+
+
+Poster available at
+https://www.nwg-goettingen.de/2021/upload/Poster/742/Sonntag_Michael_NWG_Poster.pdf
+
+Video poster pitch available at
+https://www.nwg-goettingen.de/2021/upload/Poster/742/Sonntag_Michael_NWG_Poster_pitch_1280x720.mp4
+
+
