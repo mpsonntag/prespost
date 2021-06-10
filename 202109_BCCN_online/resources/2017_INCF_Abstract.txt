@@ -1,0 +1,23 @@
+The G-Node Infrastructure Services: Safe and efficient data management for neuroscience
+
+Achilleas Koutsou, Christian Garbers, Michael Sonntag, Christian J. Kellner, Thomas Wachtler
+German Neuroinformatics Node, Department of Biology II, Ludwig-Maximilians-Universität München, Germany
+
+Managing and accessing data from multiple workplaces while keeping it in sync, backed up, and easily accessible from within or outside the lab is a key challenge for scientists. To minimize the time and effort required for these tasks, we present the GIN [1] (G-Node Infrastructure) services, a free data management system designed for comprehensive and reproducible management of scientific data. At the heart of GIN is the well established and widely used git [2] versioning system and the git-annex [3] extension for handling large files. These two technologies are integrated into the GIN services, together with authentication and user management, making it convenient to use them for collaboration, sharing, and publication.
+
+The GIN workflow provides the power of a web based repository management service (inspired by GitHub [4]) combined with the ease of distributed file storage and sharing of established cloud-based services. The service spans from local workflows starting from your analysis scripts on the workstation to data publication and remote collaboration. It supports workflows compatible with the requirements of the FAIR principles [5] and is interoperable with other tools and services such as NIX [6],  DataLad [7] and DataCite [8].
+
+Thus, GIN provides a much needed solution for the demands of reliable and efficient data management inside the lab and seamless sharing with collaborators and the general scientific community.
+
+Support
+Supported by BMBF (Grant 01GQ1302)
+
+References
+[1] https://gin.g-node.org/ 
+[2] https://git-scm.com/ 
+[3] https://git-annex.branchable.com/
+[4] https://github.com 
+[5] https://www.force11.org/group/fairgroup/fairprinciples
+[6] http://www.g-node.org/nix 
+[7] http://datalad.org/
+[8] https://www.datacite.org/

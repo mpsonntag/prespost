@@ -1,0 +1,26 @@
+Data organization made easy: Safe and efficient data management for neuroscience
+
+Michael Sonntag1, Achilleas Koutsou1, Christian Garbers1, Christian J. Kellner1, Adrian Stoewer1 , Jan Grewe2, Thomas Wachtler1
+1German Neuroinformatics Node, Ludwig-Maximilians-Universität München, Germany
+2Institut für Neurobiologie, Universität Tübingen, Germany
+
+Management of scientific data, including consistent organization, annotation and storage of data, is a challenging task. Accessing and managing data from multiple workplaces while keeping it in sync, backed up, and easily accessible from within or outside the lab is even more demanding. To minimize the time and effort scientists have to spend on these tasks, 
+we here present the GIN (G-Node Infrastructure) services [1], a free data management system designed for comprehensive and reproducible management of scientific data. It keeps track of changes to the contents and organization of the files and provides secure remote access to the data. More specifically, once a directory has been put under GIN control, the contents will be synced to a dedicated GIN server. With proper authorization, data can be accessed and changed from remote clients, making it easy to work from multiple workplaces while keeping all data at hand and in sync. Data can be managed from web and file browsers as well as through a command line interface, which enables integrating data management and access into the data acquisition and analysis procedures. The system handles any kinds of directory structures and file types, and tracks all changes, using Git [2] tracking mechanisms. This supports reproducible data workflows and in particular keeps previous versions accessible when datasets are updated. The service furthermore makes it straightforward to share any data within a lab or with off-site collaborators and to work on it in parallel.
+
+A special feature of the GIN services is support for the NIX (Neuroscience information exchange) data format [3]. This file format is specifically designed to store recorded data, analysis results and annotations (metadata) in a single file, supporting the concept that all information about an experiment is kept in one place. The contents of NIX files managed by a GIN repository are indexed, providing fast search for specific datasets or data analysis.
+NIX files can be created and accessed by a variety of programming languages, including Python [4], Matlab [5] and Java [6], and through the Neo package [7] to specifically support working with electrophysiological data.
+
+Comprehensive organization and reproducible management of scientific data is challenging, in particular with complex experiments and heterogeneous data. The GIN services in combination with the NIX format enable to streamline the lab data workflows and reduce the efforts involved in sharing data with collaborators or the community.
+
+Support
+Supported by BMBF (Grant 01GQ1302)
+
+References
+[1] https://gin.g-node.org/
+[2] https://git-scm.com/
+[3] https://github.com/G-Node/nix
+[4] https://github.com/G-Node/nixpy
+[5] https://github.com/G-Node/nix-mx
+[6] https://github.com/G-Node/nix-java
+[7] https://github.com/G-Node/python-neo-nixio
+
