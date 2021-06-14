@@ -23,7 +23,7 @@ The tools presented are easy to use, interoperate with other tools supporting re
 8 GitHub https://github.com
 9 GIN-DOI https://doi.gin.g-node.org
 10 GIN-Valid https://valid.gin.g-node.org
-11 GIN-tonic https://github.com/G-Node/gin-tonic
+11 GIN-tonic https://github.com/G-Node/tonic
 12 Wilkinson et al (2016) The FAIR guiding principles for scientific data management and stewardship. Scientific Data 3:160018, https://doi.org/10.1038/sdata.2016.18
 
 
@@ -35,5 +35,4 @@ Supported by BMBF (Grants 01GQ1302 and 01GQ1509)
 - koutsou@biologie.uni-muenchen.de
 - jan.grewe@uni-tuebingen.de
 - wachtler@biologie.uni-muenchen.de
-
 
