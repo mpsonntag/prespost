@@ -20,3 +20,11 @@
   - will need breakout rooms for 10 people groups -> 
   - do we record the presentations? if yes students need to be aware of it and might need to consent up front
   - if we record - will we put the videos up onto the gin / github repo as well?
+
+## Organizer preparations
+
+- list of local package installations
+- test jupyter notebook installing all dependencies
+- instructions how to use binder with jupyter notebooks
+- gin/git repository with jupyter notebooks and resource files
+
