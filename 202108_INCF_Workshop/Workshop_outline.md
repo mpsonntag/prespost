@@ -28,3 +28,15 @@
 - instructions how to use binder with jupyter notebooks
 - gin/git repository with jupyter notebooks and resource files
 
+## Student preparations
+
+- for those that are using the local option since they are using Linux / MacOS
+
+  git clone https://github.com/WHEREVER/reponame.git
+  or
+  git clone https://gin.g-node.org/WHEREVER/reponame.git
+
+  pip install --upgrade pip jupyter odml nixio
+
+- for those that will use binder
+
