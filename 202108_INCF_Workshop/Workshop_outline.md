@@ -1,0 +1,2 @@
+# INCF NIX workshop outline
+
