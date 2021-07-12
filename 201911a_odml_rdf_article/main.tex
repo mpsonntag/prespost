@@ -50,7 +50,7 @@ To make large collections of merged metadata in RDF format easily accessible, we
 
 In brief, the odML concept is to store metadata in a generic but hierarchical structure. Figure ~\ref{fig:odmlModel}A provides an overview of the general odML data model with all its available attributes while Fig ~\ref{fig:odmlModel}B shows an abstraction of how the model can be used to store metadata.
 
-To ease usage, odML features the concepts of terminologies and templates. odML terminologies~\footnote{\url{https://terminologies.g-node.org}} are predefined odML building blocks that can be imported to construct larger but standardized odML documents and further give the option to provide consistent definitions for the defined building blocks. odML templates~\footnote{\url{https://templates.g-node.org}} are fully structured odML documents without actual metadata values meant for re-use in reoccurring experimental settings. Both terminologies and templates can be imported either from local documents or from off-site platforms. The templates~\footnote{\url{https://github.com/G-Node/odml-templates}} and terminologies~\footnote{\url{https://github.com/G-Node/odml-terminologies}} currently published by the G-Node are not meant to be complete and actively encourage community contributions via Github to provide an even larger set of re-useable terminologies and templates available to the general public.
+To ease usage, odML features the concepts of terminologies and templates. odML terminologies~\footnote{\url{https://terminologies.g-node.org}} are predefined odML building blocks that can be imported to construct larger but standardized odML documents and further provide the option to give consistent definitions for the defined building blocks. odML templates~\footnote{\url{https://templates.g-node.org}} are fully structured odML documents without actual metadata values meant for re-use in reoccurring experimental settings. Both terminologies and templates can be imported either from local documents or from off-site platforms. The templates~\footnote{\url{https://github.com/G-Node/odml-templates}} and terminologies~\footnote{\url{https://github.com/G-Node/odml-terminologies}} currently published by the G-Node are not meant to be complete and actively encourage community contributions via Github to provide an even larger set of re-useable terminologies and templates available to the general public.
 
 \begin{figure}
    \begin{minipage}[b]{.6\linewidth}
@@ -93,7 +93,7 @@ To ease usage, odML features the concepts of terminologies and templates. odML t
 \end{figure}
 
 Metadata organized using the odML data model can be stored in different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples. The figures show parts of the DataCite\footnote{\url{https://datacite.org}} schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology
-%[TW] odML terminologies should be introduced %[MS] added a paragraph in before the file format description to not break the reading flow at this point. Can be changed if it works better at another location.
+%[TW] odML terminologies should be introduced %[MS] added a paragraph before the file format description paragraph above to not break the reading flow at this point. Can be changed if it works better at another location.
 \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as a reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
 
 
@@ -105,7 +105,6 @@ Even though searches within extensive odML documents were always part of the imp
 
 RDF was designed by the World Wide Web Consortium (W3C)\footnote{\url{https://www.w3.org}} as a standard model for data representation and exchange on the web with the heterogeneity of data in mind. Even though the RDF file format might vary, the underlying concept features two key points. The first is that information is structured in subject-predicate-object triples e.g. \texttt{apple hasColor red}. The second key point is that multiple subjects and objects can be connected to form a graph e.g. \texttt{tree hasFruit apple} can be combined with the previous example to form a minimal graph. These graphs can contain very heterogeneous data, but can still be queried due to the semantic structure of the underlying data\footnote{\url{https://www.w3.org/TR/rdf11-concepts}}.
 
-% [AK] Which requirements? [MS] Did some rephrasing to specify the context in the introductory sentence, please check.
 The Semantic Web offers a large, freely available technology stack fit to adopt, query and publish custom metadata graphs: A suite of various graph database tools to merge individual documents in the RDF format into a single graph even if the content of the documents are not uniform. SPARQL (SPARQL Protocol and RDF Query Language), a full fledged query language that can be used to extract information from such a graph. Another feature is \textit{OWL (Web Ontology Language)}\footnote{\url{https://www.w3.org/TR/owl-ref}} which enables the definition of a vocabulary extension of the basic RDF terminology to enable more elaborate and domain specific SPARQL searches. The broad range of freely available open source tools can be adapted to fit more specific use cases.
 
 \section{Implementation} \label{sec:implementation}
@@ -152,8 +151,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \begin{tablenotes}
 \small
 \item Mapping of odML \texttt{Document} to RDF. (a) The document root is mapped to an RDFS class of type \texttt{odml:Document}. (b) The UUID of the odML \texttt{Document} is used as Name of the created \texttt{odml:Document} RDF node to uniquely identify the document if it is merged with a graph database. (c) RDF export of repositories: linked terminologies are downloaded on conversion and exported additional RDF document connected via the \texttt{odml:Hub} RDF node. This additional document is linked via \texttt{odml:hasTerminology} to the original document. If the terminology cannot be imported, its URL will be kept as is and its value is provided as an RDF leaf via the predicate \texttt{odml:hasExternalTerminology} in the original document. See ~\ref{table:Hub} and ~\ref{table:Terminology} for more detailed descriptions.
-%[MS] check if this actually works as described
-(d) As provenance from where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML predicate \texttt{odml:hasFilename}.
+(d) As provenance from where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML format predicate \texttt{odml:hasFilename}.
 \end{tablenotes}
 \label{table:Document}
 \end{threeparttable}
@@ -181,7 +179,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \caption{odML Section}
 \begin{tablenotes}
 \item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section if it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain.
-(c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. ~\ref{sec:rdf_subclassing} for details.
+(c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. ~\ref{sec:rdf_subclassing} for details.
 \end{tablenotes}
 \label{table:Section}
 \end{threeparttable}
@@ -210,7 +208,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \end{tabular}
 \caption{odML Property}
 \begin{tablenotes}
-\item mapping of odML \texttt{Property} to RDF. (a) Any odML \texttt{Property} entity is mapped to an RDFS class of type \texttt{odml:Property}. (b) The UUID of an odML \texttt{Property} entity is used as Name of the created \texttt{odml:Property} RDF node to uniquely identify the section if it is merged with a graph database. (c) cf. \texttt{reference} description in Table ~\ref{table:Section}. (d) odML supports multiple values. On the export to RDF the order of these values need to be respected as well. Values are connected to the RDF document via the \texttt{odml:hasValue} predicate to an \texttt{rdf:Seq} node. This \texttt{rdf:Seq} node in turn contains numbered \texttt{rdf:li} items which in turn contain the individual \texttt{odml.Value entries}. This construct enables RDF searches for individual values rather then searching for lists of values.
+\item mapping of odML \texttt{Property} to RDF. (a) Any odML \texttt{Property} entity is mapped to an RDFS class of type \texttt{odml:Property}. (b) The UUID of an odML \texttt{Property} entity is used as Name of the created \texttt{odml:Property} RDF node to uniquely identify the section if it is merged with a graph database. (c) cf. \texttt{reference} description in Table ~\ref{table:Section}. (d) odML supports multiple values. Upon export to RDF the order of these values need to be respected as well. Values are connected to the RDF document via the \texttt{odml:hasValue} predicate to an \texttt{rdf:Seq} node. This \texttt{rdf:Seq} node in turn contains numbered \texttt{rdf:li} items which in turn contain the individual \texttt{odml.Value entries}. This construct enables RDF searches for individual values rather then searching for lists of values.
 \end{tablenotes}
 \label{table:Property}
 \end{threeparttable}
