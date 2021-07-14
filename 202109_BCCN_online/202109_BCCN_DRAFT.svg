@@ -27,7 +27,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.36"
      inkscape:cx="1177.9173"
-     inkscape:cy="2157.2946"
+     inkscape:cy="1935.0724"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2353,7 +2353,7 @@
          x="1051.6938"
          y="941.63336"
          style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.8125px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Oblique';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1;stroke-width:1"
-         id="tspan4539"> </tspan></text>
+         id="tspan4539">Datalad (RRID:SRC_003931):</tspan></text>
     <g
        id="g3853"
        transform="matrix(0.96930954,0,0,0.96930954,51.091617,752.77208)"
@@ -3582,7 +3582,17 @@
          x="1590.6688"
          y="940.30798"
          style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.8125px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Oblique';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1;stroke-width:1"
-         id="tspan4539-4"> </tspan></text>
+         id="tspan2072">https://datalad.org</tspan><tspan
+         sodipodi:role="line"
+         x="1590.6688"
+         y="951.30786"
+         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.8125px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Oblique';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1;stroke-width:1"
+         id="tspan2070" /><tspan
+         sodipodi:role="line"
+         x="1590.6688"
+         y="951.30786"
+         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.8125px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Oblique';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00009f;fill-opacity:1;stroke-width:1"
+         id="tspan4539-4" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.6875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
