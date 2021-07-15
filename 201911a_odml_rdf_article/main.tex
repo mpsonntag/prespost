@@ -425,10 +425,10 @@ The SPARQL server including all example queries has been dockerized. Both source
 The following is the same query as the one shown above in the local query. The SPARQL queries work slightly differently in the Java Apache Jena and the Python rdflib implementation.
 
 \begin{lstlisting}[label=lst:query_server, caption=Example query server, basicstyle=\small]
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix odml: <https://g-node.org/projects/odml-rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX odml: <https://g-node.org/odml-rdf#>
 
-SELECT SAMPLE(?keyword) ?file ?doi_link
+SELECT (SAMPLE(?kwd) as ?keyword) ?file ?doi_link
 WHERE {
   ?doc rdf:type odml:Document .
   ?doc odml:hasFileName ?file .
@@ -442,12 +442,12 @@ WHERE {
   ?sec_subj odml:hasType "datacite/subject" .
   ?sec_subj odml:hasProperty ?prp_subj .
   ?prp_subj odml:hasValue ?val_subj .
-  ?val_subj ?pred_subj ?keyword .
+  ?val_subj ?pred_subj ?kwd .
   {?val_subj ?pred_subj "Neuroscience"} UNION
   {?val_subj ?pred_subj "Electrophysiology"} .
 
   FILTER regex(str(?pred_doi), '_')
-  BIND(CONCAT("https://doi.org/", STR(?doival)) as ?doi_link)
+  BIND(URI(CONCAT("https://doi.org/", STR(?doival))) as ?doi_link)
 }
 GROUP BY ?file ?doi_link
 ORDER BY ?file
@@ -467,14 +467,14 @@ The suggested workflow can be seen in Figure ~\ref{fig:workflowSchema}
 \end{center}
 \end{figure}
 
-\section{(Sort of) Discussion}
+\section{Discussion}
 
 \subsection{The flexibility of an odML RDF graph and complexity of queries}
 
 One might argue that a relational database would be better suited to metadata storage and indexing. This argument has its merits, since a dedicated database with a predetermined schema (i.e., fixed tables and named columns) allows for more specific queries.
 A main problem that arises at this point is the diversity of metadata that is used to describe scientific experiments. If various experiments are described in detail, the resulting metadata will most likely be heterogeneous. odML aims at using a general, common data structure while providing the required flexibility to accommodate and store all sorts of heterogeneous metadata. The conversion to RDF is a logical extension of this approach: by converting odML data to RDF and merging the resulting documents into a single graph, even heterogeneous metadata are combined into a single database. This database can be queried due to the underlying hierarchical odML structure when a comparable relational database could not accommodate the necessary different tables for every individual way experiments were described.
 The necessary complex SPARQL queries are both an advantage and a disadvantage: Searching across such a complex graph will often necessitate multiple steps in query building to arrive at the required result. A user first has to search for specifics - hooks into the data -, e.g., data sets that contain keywords, authors, specific hardware, are describing stimuli or were using specific scientific models. All of these diverse metadata can be documented and queried via odML RDF but will require a set of query steps to arrive from the initial exploratory queries at a result which links back to the original data sets.
-We are aware of this issue. A first step to simplify searches has already been done and described by providing a subclassing system to reduce the query complexity while keeping the underlying basic data model intact. A step further could be the introduction of an abstraction layer that automatically converts a simple keyword based search into useful SPARQL queries. The current Python odML library\footnote{\url{https://github.com/G-Node/python-odml}} contains a prototype of such an abstraction and is briefly described in the outlook section.
+We are aware of this issue. A first step to simplify searches has already been done and described by providing a subclassing system to reduce the query complexity while keeping the underlying basic data model intact. A step further could be the introduction of an abstraction layer that automatically converts a simple keyword based search into useful SPARQL queries. The current Python odML library\footnote{\url{https://github.com/G-Node/python-odml} (RRID:SCR\_001376)} contains a prototype of such an abstraction and is briefly described in the outlook section.
 
 \section{Outlook} \label{sec:outlook}
 \subsection{Multiple Endpoint queries} \label{sec:outlook_endpoints}
