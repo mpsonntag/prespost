@@ -39,10 +39,12 @@ According to the FAIR principles \cite{Wilkinson_2016}, (meta)data should be \fi
 
 Expanding on this idea, we show how \findablility{} and \accessibility{} of large collections of metadata can be achieved by the use of open source software. \interoperability{} between different types of metadata is achieved by a minimal set of common RDF terms. This way diverse sets of metadata can be easily converted and imported into a common searchable data graph. Taking advantage of the powerful OWL feature of RDF, each distinct set of metadata can be sub-classed to the benefit of maintaining the original structure without losing the common generic structure, keeping \interoperability{} without sacrificing \findablility{}.
 
-To make large collections of merged metadata in RDF format easily accessible, we introduce an augmented version of the open source SPARQL server \textit{Apache Fuseki}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)}. This software provides access to the metadata by both custom, easy to use search terms as well as the powerful \emph{JG: but harder to master?} %[MS] That SPARQL is hard to master is partially addressed in the usage section and it is mentioned in the outlook that we are aware of it and have a prototype to build a more easy to use query layer on top of SPARQL.
+To make large collections of merged metadata in RDF format easily accessible, we introduce an augmented version of the open source SPARQL server \textit{Apache Fuseki}\footnote{\url{https://jena.apache.org} (Jena 2006, A semantic web framework for Java)}. This software provides access to the metadata by both custom, easy to use search terms as well as the powerful
+%[JG] but harder to master?
+%[MS] That SPARQL is hard to master is partially addressed in the usage section and it is mentioned in the outlook that we are aware of the aspect and have a prototype to build a more easy to use query layer on top of SPARQL.
 \textit{SPARQL}\footnote{\url{https://www.w3.org/TR/sparql11-query}} query language.
 
-\emph{JG: Do you want to provide a very brief intro to RDF? Similar to what you do for odml?}
+%[JG] Do you want to provide a very brief intro to RDF? Similar to what you do for odml?
 %[MS] There is a paragraph introducing RDF in section "sec:why_rdf"; this could be moved here if it makes more sense.
 
 \subsection{The odML data format} \label{sec:odml_intro}
@@ -93,7 +95,8 @@ To ease usage, odML features the concepts of terminologies and templates. odML t
 \end{figure}
 
 Metadata organized using the odML data model can be stored in different file formats: XML, JSON and YAML. See Fig~\ref{fig:odmlFormatExample} for examples. The figures show parts of the DataCite\footnote{\url{https://datacite.org}} schema as an example since it will serve later on as one of the main search criteria to find and link back to published or otherwise available datasets. We provide a full DataCite odML terminology
-%[TW] odML terminologies should be introduced %[MS] added a paragraph before the file format description paragraph above to not break the reading flow at this point. Can be changed if it works better at another location.
+%[TW] odML terminologies should be introduced
+%[MS] added a paragraph before the file format description paragraph above to not break the reading flow at this point. Can be changed if it works better at another location.
 \footnote{\url{https://terminologies.g-node.org/v1.1/datareference/datacite.xml}}, two specific odML templates \footnote{\url{https://templates.g-node.org/datacite/datacite.crcns.xml}}\footnote{\url{https://templates.g-node.org/datacite/datacite.gnode.xml}} as a reference usage implementation and a Python conversion script from XML Datacite files to odML \footnote{\url{https://github.com/G-Node/odmltools}}.
 
 
