@@ -431,7 +431,7 @@ The following is the same query as the one shown above in the local query. The S
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX odml: <https://g-node.org/odml-rdf#>
 
-SELECT (SAMPLE(?kwd) as ?keyword) ?file ?doi_link
+SELECT ?file (SAMPLE(?kwd) as ?keyword) ?doi_link
 WHERE {
   ?doc rdf:type odml:Document .
   ?doc odml:hasFileName ?file .
