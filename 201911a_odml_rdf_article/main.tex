@@ -140,11 +140,11 @@ odML Properties can store multiple values and keep the order of these values int
 odML Property values should be searchable individually and should not be exported as e.g. a single string concatenation of these values. Further the order of these values should still be available after the export to RDF. Connecting each individual value to its property by using e.g. "odml:hasValue" predicates would not respect the value order; each value would be saved as an equal triple.
 RDF does provide a Sequence class (rdf:Seq) featuring all child nodes connected by numbered predicates to its parent node, allowing to retrieve the child nodes order if necessary. To this end, we export odML Property values as numbered rdf:Seq children and connect the rdf:Seq object via an "odml:hasValue" predicate to the odml:Property object to retain the order.
 
-\subsubsection{Mapping of odML entities to RDF classes} \label{sec:odml_rdf_mapping}
+\subsubsection{Mapping odML entities to RDF classes} \label{sec:odml_rdf_mapping}
 
 The initial step in the odML to RDF export was to map the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} to RDF classes and provide the respective RDF predicates and XSD\footnote{\url{https://www.w3.org/TR/xmlschema11-2}} types.
 
-For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} where mapped to RDF Classes, while all attributes of the individual odML entities, e.g. \texttt{id} or \texttt{reference} where mapped to RDF Literals. An exception is the \texttt{Property.values} that requires a container element, the \texttt{RDF.Seq}. This was necessary since an RDF graph does not retain any order between its contained triples. \texttt{RDF.Seq} is a class that allows to specify an order of the contained elements. Only this allows an exact export of odML values to RDF, where the order of values often is actually important, for example in the case of documenting a set of stimuli. \cref{table:Document,table:Section,table:Property,table:Hub,table:Terminology} describe the mapping in detail.
+For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} and \texttt{Property} where mapped to RDF classes, while all attributes of the individual odML entities, e.g. \texttt{name} or \texttt{reference} where mapped to RDF Literals. An exception are the \texttt{Property.values} that require a container element, the \texttt{RDF.Seq}. As previously discussed this is necessary since an RDF graph does not retain any order between its contained triples. \texttt{RDF.Seq} is a class that allows to specify an order of the contained elements. Only this allows an exact export of odML values to RDF, where the order of values often is of import, for example in the case of documenting a set of stimuli. \cref{table:Document,table:Section,table:Property,table:Hub,table:Terminology} describe the mapping in detail.
 
 \begin{table}
 \begin{threeparttable}
@@ -168,8 +168,8 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \caption{odML Document}
 \begin{tablenotes}
 \small
-\item Mapping of odML \texttt{Document} to RDF. (a) The document root is mapped to an RDFS class of type \texttt{odml:Document}. (b) The UUID of the odML \texttt{Document} is used as Name of the created \texttt{odml:Document} RDF node to uniquely identify the document if it is merged with a graph database. (c) RDF export of repositories: linked terminologies are downloaded on conversion and exported additional RDF document connected via the \texttt{odml:Hub} RDF node. This additional document is linked via \texttt{odml:hasTerminology} to the original document. If the terminology cannot be imported, its URL will be kept as is and its value is provided as an RDF leaf via the predicate \texttt{odml:hasExternalTerminology} in the original document. See ~\ref{table:Hub} and ~\ref{table:Terminology} for more detailed descriptions.
-(d) As provenance from where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML format predicate \texttt{odml:hasFilename}.
+\item Mapping of odML \texttt{Document} to RDF. (a) The document root is mapped to an RDFS class of type \texttt{odml:Document}. (b) The UUID of the odML \texttt{Document} is used as Name of the created \texttt{odml:Document} RDF node to uniquely identify the document when it is merged with a graph database. (c) RDF export of repositories: linked terminologies are downloaded on conversion and exported additional RDF document connected via the \texttt{odml:Hub} RDF node. This additional document is linked via \texttt{odml:hasTerminology} to the original document. If the terminology cannot be imported, its URL will be kept as is and its value is provided as an RDF leaf via the predicate \texttt{odml:hasExternalTerminology} in the original document. See ~\ref{table:Hub} and ~\ref{table:Terminology} for more detailed descriptions.
+(d) As provenance of where the RDF odml:Document was created from, the filename of the original odML file is documented via the non-odML format predicate \texttt{odml:hasFilename}.
 \end{tablenotes}
 \label{table:Document}
 \end{threeparttable}
@@ -196,7 +196,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \end{tabular}
 \caption{odML Section}
 \begin{tablenotes}
-\item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section if it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain.
+\item Mapping of odML \texttt{Section} to RDF. (a) Any odML \texttt{Section} entity is mapped to an RDFS class of type \texttt{odml:Section}. (b) The UUID of an odML \texttt{Section} entity is used as Name of the created \texttt{odml:Section} RDF node to uniquely identify the section when it is merged with a graph database. If this node already exists in the graph, it will not add a duplicate entry, but will add only any predicates that the graph with respect to this Section node does not already contain.
 (c) cf. \texttt{repository} description in Table ~\ref{table:Document}. (d) A \texttt{reference} can either be a URL to an external reference or a string pointing to an id in a Database. (e) Unspecific Sections are exported using the \texttt{odml:Section} class and the \texttt{odml:hasSection} predicate. We also provide a set of "specialized" RDF classes that are sub-classes of Section. cf. ~\ref{sec:rdf_subclassing} for details.
 \end{tablenotes}
 \label{table:Section}
@@ -226,7 +226,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \end{tabular}
 \caption{odML Property}
 \begin{tablenotes}
-\item mapping of odML \texttt{Property} to RDF. (a) Any odML \texttt{Property} entity is mapped to an RDFS class of type \texttt{odml:Property}. (b) The UUID of an odML \texttt{Property} entity is used as Name of the created \texttt{odml:Property} RDF node to uniquely identify the section if it is merged with a graph database. (c) cf. \texttt{reference} description in Table ~\ref{table:Section}. (d) odML supports multiple values. Upon export to RDF the order of these values need to be respected as well. Values are connected to the RDF document via the \texttt{odml:hasValue} predicate to an \texttt{rdf:Seq} node. This \texttt{rdf:Seq} node in turn contains numbered \texttt{rdf:li} items which in turn contain the individual \texttt{odml.Value entries}. This construct enables RDF searches for individual values rather then searching for lists of values.
+\item Mapping of odML \texttt{Property} to RDF. (a) Any odML \texttt{Property} entity is mapped to an RDFS class of type \texttt{odml:Property}. (b) The UUID of an odML \texttt{Property} entity is used as Name of the created \texttt{odml:Property} RDF node to uniquely identify the section when it is merged with a graph database. (c) cf. \texttt{reference} description in Table ~\ref{table:Section}. (d) odML supports multiple values. Upon export to RDF the order of these values need to be respected as well. Values are connected to the RDF document via the \texttt{odml:hasValue} predicate to an \texttt{rdf:Seq} node. This \texttt{rdf:Seq} node contains numbered \texttt{rdf:li} items which in turn contain the individual \texttt{odml.Value entries}. This construct enables RDF searches for individual values rather then searching for lists of values.
 \end{tablenotes}
 \label{table:Property}
 \end{threeparttable}
@@ -245,7 +245,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \end{tabular}
 \caption{Hub}
 \begin{tablenotes}
-\item The custom RDF type of class \texttt{odml:Hub} has no odML entity equivalent. It is introduced to merge Documents and Terminologies into a single RDF graph: the "Hub" is used to root a graph that might contain multiple documents to enable searches across unrelated and in-homogeneous metadata content.
+\item The custom RDF type of class \texttt{odml:Hub} has no odML entity equivalent. It is introduced to merge Documents and Terminologies into a single RDF graph: the "Hub" (also using "Hub" as the RDF node instance Name) is used to root a graph that might contain multiple documents enabling searches across unrelated and heterogeneous metadata content.
 \end{tablenotes}
 \label{table:Hub}
 \end{threeparttable}
@@ -263,7 +263,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 \end{tabular}
 \caption{Terminology}
 \begin{tablenotes}
-\item odML documents can link to external Terminology documents. To make these available for searches within a connected RDF graph besides the odML documents they are referenced by, linked terminologies are imported and converted into RDF documents. They are connected via the \texttt{odml:hasSection} predicate to their referencing documents. Conversely the \texttt{odml:Section} in an \texttt{odml:Document} references the Terminology via the \texttt{odml:hasTerminology} predicate.
+\item odML documents can link to external Terminology documents. To make these available for searches within a connected RDF graph besides the odML documents they are referenced by, linked terminologies are imported and converted into RDF documents. They are connected via the \texttt{odml:hasSection} predicate to their referencing documents. Conversely the \texttt{odml:Section} in an \texttt{odml:Document} references the terminology via the \texttt{odml:hasTerminology} predicate.
 \end{tablenotes}
 \label{table:Terminology}
 \end{threeparttable}
