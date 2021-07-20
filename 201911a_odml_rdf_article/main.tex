@@ -10,6 +10,13 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
 \usepackage[export]{adjustbox}
 \usepackage[capitalize]{cleveref}
 
@@ -281,7 +288,7 @@ For the actual mapping, the odML entities \texttt{Document}, \texttt{Section} an
 All of the odml RDFS classes can be fine grained into subclasses to give more semantic meaning to the connection between nodes. For example \texttt{section rdf:type odml:Section} becomes \texttt{section rdf:type odml:Experimenter}. Here \texttt{odml:Experimenter} is a subclass of \texttt{odml:Section}. Using our current example, a search for \texttt{odml:Experimenter} returns only sections of this specific class, while a search for \texttt{odml:Section UNION rdfs:subClassOf odml:Section} returns all pure and subclassed sections including odml:Experimenter.
 
 \subsubsection{odML RDF ontology} \label{sec:odml_ontology}
-To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDFS terms and included all currently supported odml:Section subclasses. The complete file can be found in the Appendix under Listing ~\ref{lst:ontology}. This list of subclasses should not be seen as permanent and is expected to increase in the future.
+To make use of the RDF feature of validating individual RDF files, we created an odML RDF ontology which includes the basic set of odML RDFS terms and included all currently supported odml:Section subclasses. The complete file can be found in the Appendix under Listing ~\ref{lst:ontology}. This list of subclasses should not be seen as permanent and is expected to expand in the future.
 
 \subsection{Creating odML and converting to RDF} \label{sec:odml_to_rdf}
 
