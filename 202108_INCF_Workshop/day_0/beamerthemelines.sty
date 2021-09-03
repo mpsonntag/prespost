@@ -1,0 +1,1122 @@
+% Copyright 2021 by Jan Benda
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\ProvidesPackage{beamerthemelines}[2021/02/28 beamer theme with horizontal lines]
+
+\RequirePackage{tikz}
+\RequirePackage{pifont}
+
+\newif\if@beamer@footline@author
+\newif\if@beamer@footline@institute
+\newif\if@beamer@footline@date
+\newif\if@beamer@footline@title
+\newif\if@beamer@footline@page
+\newif\if@beamer@footline@logoleft
+\newif\if@beamer@footline@logoright
+\newif\if@beamer@frametitle@logoleft
+\newif\if@beamer@frametitle@logoright
+
+\DeclareOptionBeamer{author}{\@beamer@footline@authortrue}
+\DeclareOptionBeamer{hideauthor}{\@beamer@footline@authorfalse}
+\DeclareOptionBeamer{institute}{\@beamer@footline@institutetrue}
+\DeclareOptionBeamer{hideinstitute}{\@beamer@footline@institutefalse}
+\DeclareOptionBeamer{date}{\@beamer@footline@datetrue}
+\DeclareOptionBeamer{hidedate}{\@beamer@footline@datefalse}
+\DeclareOptionBeamer{title}{\@beamer@footline@titletrue}
+\DeclareOptionBeamer{hidetitle}{\@beamer@footline@titlefalse}
+\DeclareOptionBeamer{page}{\@beamer@footline@pagetrue}
+\DeclareOptionBeamer{hidepage}{\@beamer@footline@pagefalse}
+\DeclareOptionBeamer{logofootleft}{\@beamer@footline@logolefttrue\@beamer@footline@logorightfalse}
+\DeclareOptionBeamer{logofootright}{\@beamer@footline@logorighttrue\@beamer@footline@logoleftfalse}
+\DeclareOptionBeamer{logotitleleft}{\@beamer@frametitle@logolefttrue\@beamer@frametitle@logorightfalse}
+\DeclareOptionBeamer{logotitleright}{\@beamer@frametitle@logorighttrue\@beamer@frametitle@logoleftfalse}
+\DeclareOptionBeamer{hidelogo}{\@beamer@footline@logoleftfalse\@beamer@footline@logorightfalse\@beamer@frametitle@logoleftfalse\@beamer@frametitle@logorightfalse}
+
+\ExecuteOptionsBeamer{author}
+\ExecuteOptionsBeamer{hideinstitute}
+\ExecuteOptionsBeamer{hidedate}
+\ExecuteOptionsBeamer{hidetitle}
+\ExecuteOptionsBeamer{page}
+\ExecuteOptionsBeamer{hidelogo}
+
+\ProcessOptionsBeamer
+
+%%%%% \titlelogo command:
+
+\mode<all>{
+  \newcommand\titlelogo[1]{\def\inserttitlelogo{#1}}
+  \titlelogo{}
+}
+
+%%%%% \sectiongraphic command:
+
+\mode<all>{
+  \newcommand\sectiongraphic[1]{\def\insertsectiongraphic{#1}}
+  \sectiongraphic{}
+}
+
+%%%%% \subsectiongraphic command:
+
+\mode<all>{
+  \newcommand\subsectiongraphic[1]{\def\insertsubsectiongraphic{#1}}
+  \subsectiongraphic{}
+}
+
+
+\mode<presentation>
+
+% margins:
+\setbeamersize{text margin left=1.5ex,text margin right=1.5ex}
+
+% no navigation symbols:
+\defbeamertemplate{navigation symbols}{empty}{}
+\setbeamertemplate{navigation symbols}[empty]
+
+% no side bars:
+\setbeamertemplate{sidebar left}[default]
+
+\defbeamertemplate{sidebar right}{empty}{}
+\setbeamertemplate{sidebar right}[empty]
+
+% no headline:
+\setbeamertemplate{headline}[default]
+
+%%%%% horizontal line %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% a horizontal line on top of a box over the whole linewidth
+% arguments: name of color theme, width of line
+\newcommand{\beamer@horizontal@line@top}[2]{%
+  \ifbeamercolorempty[fg]{#1}{}{%
+    \begin{beamercolorbox}[vmode,wd=\linewidth]{#1}
+      \rule{\linewidth}{#2}
+    \end{beamercolorbox}%
+    \par\nointerlineskip}%
+}
+
+% a horizontal line below a box over the whole linewidth
+% arguments: name of color theme, width of line
+\newcommand{\beamer@horizontal@line@bottom}[2]{%
+  \ifbeamercolorempty[fg]{#1}{}{%
+    \par\nointerlineskip%
+    \begin{beamercolorbox}[vmode,wd=\linewidth]{#1}
+      \rule{\linewidth}{#2}
+    \end{beamercolorbox}}%
+}
+
+%%%%% page numbers %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbeamertemplate{page number in head/foot}{frames}{%
+  {\usebeamerfont{page number in head/foot}%
+    \makebox[2.5ex][r]{\insertframenumber{}}}}
+\defbeamertemplate{page number in head/foot}{framestotal}{%
+  {\usebeamerfont{page number in head/foot}%
+    \makebox[7ex][r]{\insertframenumber{} / \inserttotalframenumber{}}}}
+\defbeamertemplate{page number in head/foot}{slides}{%
+  {\usebeamerfont{page number in head/foot}%
+    \makebox[2.5ex][r]{\insertframenumber{} } %
+    \newcount{\c@tmp@numslides}%
+    \c@tmp@numslides=\numexpr\beamer@endpageofframe-\beamer@startpageofframe\relax%
+    \makebox[2.5ex][r]{\ifnum\c@tmp@numslides>0 -- \insertslidenumber{}\fi}}}
+
+\setbeamertemplate{page number in head/foot}[frames]
+
+
+%%%%% footline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% footline line:
+
+\defbeamertemplate{footline line}{text}[1][1pt]%
+{
+  \ifbeamercolorempty[fg]{footline line}{}{%
+    \begin{beamercolorbox}[wd=\paperwidth,dp=0pt,ht=#1,sep=0pt,%
+      leftskip=\beamer@leftmargin,rightskip=\beamer@rightmargin]{footline line}%
+      \rule{\columnwidth}{#1}%
+    \end{beamercolorbox}%
+    \nointerlineskip%
+  }%
+}
+\defbeamertemplate{footline line}{page}[1][1pt]%
+{
+  \ifbeamercolorempty[fg]{footline line}{}{%
+    \begin{beamercolorbox}[wd=\paperwidth,dp=0pt,ht=#1,sep=0pt,%
+      leftskip=0pt,rightskip=0pt]{footline line}%
+      \rule{\paperwidth}{#1}%
+    \end{beamercolorbox}%
+    \nointerlineskip%
+  }%
+}
+
+\setbeamertemplate{footline line}[text][0.5pt]
+
+
+%%%%% footline separator:
+
+\defbeamertemplate{footline separator}{text}[1][1pt]{%
+  {\usebeamercolor[fg]{footline separator}\enspace\rule[-0.55ex]{#1}{2.3ex}\thickspace}}
+\defbeamertemplate{footline separator}{full}[1][1pt]{%
+  {\usebeamercolor[fg]{footline separator}\enspace\rule[-1.2ex]{#1}{4ex}\thickspace}}
+\defbeamertemplate{footline separator}{dash}{%
+  {\usebeamercolor[fg]{footline separator}\thickspace{} ---\thickspace}}
+\defbeamertemplate{footline separator}{space}{%
+  {\usebeamercolor[fg]{footline separator}\enspace\thickspace}}
+
+\setbeamertemplate{footline separator}[text][0.5pt]
+
+\setbeamercolor{footline separator}{parent=footline}
+
+
+%%%%% footline: pageright
+
+\defbeamertemplate{footline}{pageright}{%
+  \usebeamerfont{footline}%
+  \usebeamertemplate{footline line}%
+  \begin{beamercolorbox}[wd=1\paperwidth,dp=1.2ex,ht=2.8ex,%
+    leftskip=1\beamer@leftmargin,rightskip=1\beamer@rightmargin]{footline}
+    \hypersetup{linkcolor=}%
+    \newif\if@tempsep%
+    \@tempsepfalse%
+    % logo left:
+    \if@beamer@footline@logoleft%
+      \ifx\insertlogo\@empty\else\raisebox{-1ex}{\insertlogo}\quad\fi%
+    \fi
+    % author:
+    \if@beamer@footline@author
+      {\usebeamerfont{author in head/foot}%
+        \insertshortauthor}%
+      \@tempseptrue
+    \fi
+    % institute:
+    \if@beamer@footline@institute
+      \if@tempsep\usebeamertemplate{footline separator}\hskip0.6ex\fi
+      {\usebeamerfont{institute in head/foot}%
+        \insertshortinstitute}%
+      \@tempseptrue
+    \fi
+    % date:
+    \if@beamer@footline@date
+      \if@tempsep\usebeamertemplate{footline separator}\hskip0.6ex\fi
+      {\usebeamerfont{date in head/foot}%
+        \insertshortdate}%
+      \@tempseptrue
+    \fi
+    % title:
+    \if@beamer@footline@title
+      \if@tempsep\usebeamertemplate{footline separator}\hskip0.6ex\fi
+      {\usebeamerfont{title in head/foot}%
+        \insertshorttitle}%
+      \@tempseptrue
+    \fi
+    \hfill
+    % page:
+    \if@beamer@footline@page
+      \usebeamertemplate{footline separator}
+      \usebeamertemplate{page number in head/foot}%
+    \fi
+    % logo right:
+    \if@beamer@footline@logoright%
+      \ifx\insertlogo\@empty\else\quad \raisebox{-1ex}{\insertlogo}\fi%
+    \fi
+  \end{beamercolorbox}
+}
+
+
+%%%%% footline: pageleft
+
+\defbeamertemplate{footline}{pageleft}{%
+  \usebeamerfont{footline}%
+  \usebeamertemplate{footline line}%
+  \begin{beamercolorbox}[wd=1\paperwidth,dp=1.2ex,ht=2.8ex,%
+    leftskip=1\beamer@leftmargin,rightskip=1\beamer@rightmargin]{footline}
+    \hypersetup{linkcolor=}%
+    % logo left:
+    \if@beamer@footline@logoleft%
+      \ifx\insertlogo\@empty\else\raisebox{-1ex}{\insertlogo}\quad\fi%
+    \fi
+    % page:
+    \if@beamer@footline@page
+      \usebeamertemplate{page number in head/foot}%
+    \fi
+    \hfill
+    \newif\if@tempsep%
+    \@tempsepfalse%
+    % author:
+    \if@beamer@footline@author
+      {\usebeamerfont{author in head/foot}%
+        \insertshortauthor}%
+      \@tempseptrue
+    \fi
+    % institute:
+    \if@beamer@footline@institute
+      \if@tempsep\usebeamertemplate{footline separator}\hskip0.6ex\fi
+      {\usebeamerfont{institute in head/foot}%
+        \insertshortinstitute}%
+      \@tempseptrue
+    \fi
+    % date:
+    \if@beamer@footline@date
+      \if@tempsep\usebeamertemplate{footline separator}\hskip0.6ex\fi
+      {\usebeamerfont{date in head/foot}%
+        \insertshortdate}%
+      \@tempseptrue
+    \fi
+    % title:
+    \if@beamer@footline@title
+      \if@tempsep\usebeamertemplate{footline separator}\hskip0.6ex\fi
+      {\usebeamerfont{title in head/foot}%
+        \insertshorttitle}%
+      \@tempseptrue
+    \fi
+    % logo right:
+    \if@beamer@footline@logoright%
+      \ifx\insertlogo\@empty\else\quad \raisebox{-1ex}{\insertlogo}\fi%
+    \fi
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}[pageright]
+
+\setbeamercolor{footline line}{parent=footline}
+
+
+%%%%% frametitle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% frametitle line:
+
+\defbeamertemplate{frametitle line}{text}[1][1pt]%
+  {\beamer@horizontal@line@bottom{frametitle line}{#1}}
+\defbeamertemplate{frametitle line}{page}[1][1pt]%
+{
+  \ifbeamercolorempty[fg]{frametitle line}{}{%
+    \nointerlineskip%
+    \begin{beamercolorbox}[wd=\paperwidth,dp=0pt,ht=#1,sep=0pt,%
+      leftskip=0pt,rightskip=0pt]{frametitle line}%
+      \rule{\paperwidth}{#1}%
+    \end{beamercolorbox}%
+  }%
+}
+
+\setbeamertemplate{frametitle line}[text][0.5pt]
+
+
+%%%%% frametitle: boxline
+
+\defbeamertemplate{frametitle}{boxline}%
+{
+  \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+  \usebeamerfont{frametitle}%
+  \begin{beamercolorbox}[wd=1\paperwidth,dp=1.2ex,ht=3.2ex,sep=0pt,%
+    leftskip=1\beamer@leftmargin,rightskip=1\beamer@rightmargin]{frametitle}
+    % logo left:
+    \if@beamer@frametitle@logoleft%
+      \ifx\insertlogo\@empty\else\raisebox{-0.7ex}{\insertlogo}\quad\fi%
+    \fi
+    % title:
+    \insertframetitle\strut%
+    % logo right:
+    \if@beamer@frametitle@logoright%
+      \ifx\insertlogo\@empty\else\hfill \raisebox{-0.7ex}{\insertlogo}\fi%
+    \fi
+  \end{beamercolorbox}%
+  \usebeamertemplate{frametitle line}%
+  % subtitle:
+  \ifx\insertframesubtitle\@empty\else%
+    \vspace{-0.5ex}
+    \begin{beamercolorbox}[wd=1\paperwidth,sep=0pt,%
+      leftskip=1\beamer@leftmargin,rightskip=1\beamer@rightmargin]{framesubtitle}
+      \usebeamerfont{framesubtitle}\insertframesubtitle\strut
+    \end{beamercolorbox}%
+  \fi%
+  \vspace{-1ex}
+}
+
+\setbeamertemplate{frametitle}[boxline]
+
+
+%%%%% itemize and enumerate %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% itemize symbols:
+
+\newcommand{\itemarrow}{\tikz[baseline]{%
+    \draw[line width=0.2ex] (0ex, 0.2ex) -- (0.45ex,0.7ex) -- (0ex, 1.2ex);}}
+\newcommand{\itemfilledarrow}{\tikz[baseline]{%
+    \filldraw[line width=0.2ex] (0ex, 0.2ex) -- (0.5ex,0.7ex) -- (0ex, 1.2ex) -- cycle;}}
+\newcommand{\itemdash}{\tikz[baseline]{%
+    \draw[line width=0.2ex] (0ex, 0.7ex) -- (0.9ex,0.7ex);}}
+\newcommand{\checkit}{{\usebeamercolor[fg]{itemize item check}\ding{51}}} % or \checkmark
+\newcommand{\uncheckit}{{\usebeamercolor[fg]{itemize item uncheck}\ding{55}}}
+
+\defbeamertemplate{itemize item}{arrow}{\itemarrow}
+\defbeamertemplate{itemize item}{filledarrow}{\itemfilledarrow}
+\defbeamertemplate{itemize item}{dash}{\itemdash}
+\defbeamertemplate{itemize item}{check}{\checkit}
+\defbeamertemplate{itemize item}{uncheck}{\uncheckit}
+\defbeamertemplatealias{itemize item}{emph}{filledarrow}
+\defbeamertemplatealias{itemize item}{message}{arrow}
+
+\defbeamertemplate{itemize subitem}{arrow}{\itemarrow}
+\defbeamertemplate{itemize subitem}{dash}{\itemdash}
+\defbeamertemplate{itemize subitem}{check}{\checkmark}
+
+% default, triangle, circle, square, ball, arrow, dash, check, uncheck:
+\setbeamertemplate{itemize item}[arrow]
+\setbeamertemplate{itemize subitem}[dash]
+
+%%%%% emph item:
+
+\newenvironment{emphenv}{\only{\setbeamertemplate{itemize item}[emph]}}{}
+
+%%%%% check item:
+
+\newenvironment{checkenv}{\only{\setbeamertemplate{itemize item}[check]}}{}
+
+%%%%% uncheck item:
+
+\newenvironment{uncheckenv}{\only{\setbeamertemplate{itemize item}[uncheck]}}{}
+
+%%%%% message like item:
+
+\newenvironment{messageenv}{\only{\setbeamertemplate{itemize item}[message]\setbeamercolor{itemize item}{use={message item symbol},fg=message item symbol.fg}\usebeamerfont{message item}\usebeamercolor[fg]{message item}}}{}
+
+
+%%%%% enumerate style:
+
+\defbeamertemplate{enumerate item}{alph}{\alph{enumi})}
+\defbeamertemplate{enumerate item}{Alph}{\Alph{enumi})}
+\defbeamertemplate{enumerate item}{arabic}{\arabic{enumi}.}
+\defbeamertemplate{enumerate item}{roman}{\roman{enumi}.}
+\defbeamertemplate{enumerate item}{Roman}{\Roman{enumi}.}
+
+\defbeamertemplate{enumerate subitem}{alph}{\alph{enumii})}
+\defbeamertemplate{enumerate subitem}{arabic}{\arabic{enumii})}
+\defbeamertemplate{enumerate subitem}{roman}{\roman{enumii})}
+
+\setbeamertemplate{enumerate item}[arabic]  % default, circle, square, ball, alph, Alph, arabic, roman, Roman
+\setbeamertemplate{enumerate subitem}[alph] % default, circle, square, ball, alph, arabic, roman
+
+
+%%%%% block environments:
+
+\newcommand{\block@lines@begin}[4]{%
+  \par\vskip\medskipamount%
+  \usebeamerfont{#1 title#2}%
+  \setbox0=\hbox{\insertblocktitle\unskip}%
+  \ifdim\wd0=0pt\else%
+    \beamer@horizontal@line@top{#1 line#2 top}{#3}
+    \begin{beamercolorbox}[wd=\linewidth,ht=2.4ex,dp=0.9ex,leftskip=2mm,rightskip=2mm]{#1 title#2}
+      \strut\insertblocktitle
+    \end{beamercolorbox}
+  \fi
+  \nointerlineskip
+  \beamer@horizontal@line@top{#1 line#2 middle}{#4}
+  \usebeamerfont{#1 body#2}%
+  \begin{beamercolorbox}[wd=\linewidth,sep=2mm]{#1 body#2}
+ }
+
+\newcommand{\block@lines@end}[3]{%
+    \vspace{-0.4ex}%
+  \end{beamercolorbox}%
+  \beamer@horizontal@line@bottom{#1 line#2 bottom}{#3}
+}
+
+%%%%% block environment:
+
+\defbeamertemplate{block begin}{lines}[2]{\block@lines@begin{block}{}{#1}{#2}}
+\defbeamertemplate{block end}{lines}[1]{\block@lines@end{block}{}{#1}}
+
+\setbeamertemplate{block begin}[lines]{0.5pt}{0.5pt}
+\setbeamertemplate{block end}[lines]{0.5pt}
+
+\setbeamercolor{block line top}{fg=}
+\setbeamercolor{block line middle}{fg=}
+\setbeamercolor{block line bottom}{fg=}
+
+
+%%%%% block alerted environment:
+
+\defbeamertemplate{block alerted begin}{lines}[2]{\block@lines@begin{block}{ alerted}{#1}{#2}}
+\defbeamertemplate{block alerted end}{lines}[1]{\block@lines@end{block}{ alerted}{#1}}
+
+\setbeamertemplate{block alerted begin}[lines]{0.5pt}{0.5pt}
+\setbeamertemplate{block alerted end}[lines]{0.5pt}
+
+\setbeamercolor{block line alerted top}{fg=}
+\setbeamercolor{block line alerted middle}{fg=}
+\setbeamercolor{block line alerted bottom}{fg=}
+
+
+%%%%% block example environment:
+
+\defbeamertemplate{block example begin}{lines}[2]{\block@lines@begin{block}{ example}{#1}{#2}}
+\defbeamertemplate{block example end}{lines}[1]{\block@lines@end{block}{ example}{#1}}
+
+\setbeamertemplate{block example begin}[lines]{0.5pt}{0.5pt}
+\setbeamertemplate{block example end}[lines]{0.5pt}
+
+\setbeamercolor{block line example top}{fg=}
+\setbeamercolor{block line example middle}{fg=}
+\setbeamercolor{block line example bottom}{fg=}
+
+
+%%%%% theorem environments (theorem, corollary, fact, lemma, definition, example):
+
+\newenvironment<>{theoremblock}[1]{%
+  \begin{actionenv}#2%
+    \def\insertblocktitle{#1}%
+    \par%
+    \usebeamertemplate{block theorem begin}}
+  {\par%
+    \usebeamertemplate{block theorem end}%
+  \end{actionenv}}
+
+\renewcommand{\inserttheoremblockenv}{theoremblock}
+\renewcommand{\inserttheoremheadfont}{}
+
+\defbeamertemplate{block theorem begin}{lines}[2]{\block@lines@begin{theorem}{}{#1}{#2}}
+\defbeamertemplate{block theorem end}{lines}[1]{\block@lines@end{theorem}{}{#1}}
+
+\setbeamertemplate{block theorem begin}[lines]{0.5pt}{0.5pt}
+\setbeamertemplate{block theorem end}[lines]{0.5pt}
+
+\setbeamercolor{theorem line top}{fg=}
+\setbeamercolor{theorem line middle}{fg=}
+\setbeamercolor{theorem line bottom}{fg=}
+
+
+%%%%% new message box command:
+
+\defbeamertemplate{message symbol}{default}{}
+\defbeamertemplate{message symbol}{circle}{\raisebox{0.1ex}{$\bullet$}}
+\defbeamertemplate{message symbol}{arrow}{\itemarrow}
+
+\setbeamertemplate{message symbol}[circle]
+
+\newcommand{\message@box@body}{
+  \begin{beamercolorbox}[vmode,wd=\linewidth,sep=1mm,leftskip=1mm,rightskip=1mm]{message}
+    \setbox0=\hbox{\usebeamertemplate{message symbol}\unskip}%
+    \ifdim\wd0=0pt%
+      \strut\insertmessage
+    \else
+      \begin{list}
+        {\usebeamercolor[fg]{message symbol}
+          \usebeamertemplate{message symbol}}
+        {\itemindent  0pt
+          \labelwidth  1ex
+          \labelsep    0.6ex
+          \leftmargin  2.5ex
+          \rightmargin 1mm}
+      \item\relax\usebeamercolor[fg]{message}\relax
+        \insertmessage
+      \end{list}
+      \vspace{-0.6ex}
+    \fi
+  \end{beamercolorbox}
+}
+
+\defbeamertemplate{message}{default}{%
+  \par\vskip\medskipamount%
+  \usebeamerfont{message}%
+  \message@box@body
+}
+
+\defbeamertemplate{message}{lines}[2]{%
+  \par\vskip\medskipamount%
+  \usebeamerfont{message}%
+  \beamer@horizontal@line@top{message line top}{#1}
+  \message@box@body
+  \beamer@horizontal@line@bottom{message line bottom}{#2}
+}
+
+\setbeamertemplate{message}[lines]{1pt}{1pt}
+
+\newcommand<>{\messagebox}[1]{%
+  \only#2{\def\insertmessage{#1}%
+    \usebeamertemplate*{message}}
+}
+
+\setbeamercolor{message}{parent=block title alerted}
+\setbeamercolor{message line top}{fg=}
+\setbeamercolor{message line bottom}{fg=}
+\setbeamercolor{message symbol}{fg=}
+\setbeamercolor{message item}{use=alerted text, fg=alerted text.fg}
+\setbeamercolor{message item symbol}{use=alerted text, fg=alerted text.fg}
+
+
+% verse environment:
+
+\expandafter\let\csname beamer@@tmpop@verse begin@default\endcsname\relax % remove old template
+\defbeamertemplate{verse begin}{default}{}
+\defbeamertemplate{verse begin}{lines}[1][1pt]{\beamer@horizontal@line@top{verse line top}{#1}\vskip1ex}
+\setbeamertemplate{verse begin}[lines][0.5pt]  % default, lines
+
+\expandafter\let\csname beamer@@tmpop@verse end@default\endcsname\relax % remove old template
+\defbeamertemplate{verse end}{default}{}
+\defbeamertemplate{verse end}{lines}[1][1pt]{\beamer@horizontal@line@bottom{verse line bottom}{#1}}
+\setbeamertemplate{verse end}[lines][0.5pt]   % default, lines
+
+\renewenvironment<>{verse}
+{ \actionenv#1%
+  \setlength{\beamer@quotation@tmp}{\linewidth}
+  \beamercolorbox[vmode,wd=\linewidth]{verse}
+  \usebeamertemplate{verse begin}
+  \usebeamerfont*{verse}%
+  \list{}{
+    \leftmargin    2.5em
+    \rightmargin   2.5em
+    \parsep        1ex
+  }%
+  \item\relax
+}
+{%
+  \endlist
+  \setlength{\linewidth}{\beamer@quotation@tmp}
+  \usebeamertemplate{verse end}
+  \endbeamercolorbox
+  \endactionenv%
+}
+
+\setbeamercolor{verse line top}{fg=}
+\setbeamercolor{verse line bottom}{fg=}
+
+
+%%%%% quotation, quote:
+
+% font selection
+% https://tex.stackexchange.com/questions/25249/how-do-i-use-a-particular-font-for-a-small-section-of-text-in-my-document
+% pbk , phv, pnc, qcs
+\newcommand{\openquote}[2]{\tikz[baseline]{%
+    \useasboundingbox (0, 0) rectangle (1ex, 1.7ex);
+    \node[scale=#2, xshift=-0.28ex, yshift=-0.75ex] at (current bounding box.north east) {\usebeamerfont*{#1 symbol}\textquoteleft};
+}}
+\newcommand{\closequote}[2]{\tikz[baseline]{%
+    \useasboundingbox (0, 0) rectangle (1ex, 1.7ex);
+    \node[scale=#2, xshift=-0.28ex, yshift=-0.75ex] at (current bounding box.north east) {\usebeamerfont*{#1 symbol}\textquoteright};
+}}
+\newcommand{\opendblquote}[2]{\tikz[baseline]{%
+    \useasboundingbox (0, 0) rectangle (1ex, 1.7ex);
+    \node[scale=#2, xshift=-0.45ex, yshift=-0.75ex] at (current bounding box.north east) {\usebeamerfont*{#1 symbol}\textquotedblleft};
+}}
+\newcommand{\closedblquote}[2]{\tikz[baseline]{%
+    \useasboundingbox (0, 0) rectangle (1ex, 1.7ex);
+    \node[scale=#2, xshift=-0.45ex, yshift=-0.75ex] at (current bounding box.north east) {\usebeamerfont*{#1 symbol}\textquotedblright};
+}}
+
+\def\insertquotesource{}
+% #1: template base name
+% #2: symbol to the left of the source
+% #3: symbol to the right of the source
+\newcommand{\quote@source@left}[3]{%
+  \ifx\insertquotesource\@empty\else%
+    \item[%
+      \usebeamerfont{#1 source}%
+      \usebeamercolor{#1 source}%
+      #2\insertquotesource#3]%
+  \fi}
+\newcommand{\quote@source@right}[3]{%
+  \ifx\insertquotesource\@empty\else%
+    \par{}\hfill%
+    \usebeamerfont{#1 source}%
+    \usebeamercolor{#1 source}%
+    #2\insertquotesource#3%
+  \fi}
+% linebreaking from 
+% https://tex.stackexchange.com/questions/13756/quote-environment-with-reference-at-the-end-right :
+\newcommand{\quote@source@rightline}[3]{%
+  \ifx\insertquotesource\@empty\else%
+    \leavevmode\unskip\nobreak\hfil\penalty50\hskip2em\hbox{}\nobreak\hfil%
+    \usebeamerfont{#1 source}%
+    \usebeamercolor{#1 source}%
+    \makebox{#2\insertquotesource#3}%
+    \parfillskip=0pt \finalhyphendemerits=0 \endgraf%
+  \fi}
+
+% quotation environment
+
+\defbeamertemplate{quotation symbol}{default}{}
+\defbeamertemplate{quotation symbol}{openquote}[1][4]{\usebeamercolor[fg]{quotation symbol}\openquote{quotation}{#1}}
+\defbeamertemplate{quotation symbol}{closequote}[1][4]{\usebeamercolor[fg]{quotation symbol}\closequote{quotation}{#1}}
+\defbeamertemplate{quotation symbol}{opendblquote}[1][4]{\usebeamercolor[fg]{quotation symbol}\opendblquote{quotation}{#1}}
+\defbeamertemplate{quotation symbol}{closedblquote}[1][4]{\usebeamercolor[fg]{quotation symbol}\closedblquote{quotation}{#1}}
+
+\setbeamertemplate{quotation symbol}[opendblquote][4] % default, openquote, closequote, opendblquote, closedblquote
+
+\defbeamertemplate{quotation source}{default}{}
+\defbeamertemplate{quotation source}{left}{\quote@source@left{quotation}{}{}}
+\defbeamertemplate{quotation source}{leftbrackets}{\quote@source@left{quotation}{(}{)}}
+\defbeamertemplate{quotation source}{right}{\quote@source@right{quotation}{}{}}
+\defbeamertemplate{quotation source}{rightbrackets}{\quote@source@right{quotation}{(}{)}}
+\defbeamertemplate{quotation source}{dashright}{\quote@source@right{quotation}{ --- }{}}
+\defbeamertemplate{quotation source}{tilderight}{\quote@source@right{quotation}{ $\sim$ }{}}
+\defbeamertemplate{quotation source}{rightline}{\quote@source@rightline{quotation}{}{}}
+\defbeamertemplate{quotation source}{rightlinebrackets}{\quote@source@rightline{quotation}{(}{)}}
+\defbeamertemplate{quotation source}{dashrightline}{\quote@source@rightline{quotation}{ --- }{}}
+\defbeamertemplate{quotation source}{tilderightline}{\quote@source@rightline{quotation}{ $\sim$ }{}}
+
+% default, left, leftbrackets, right, rightbrackets, dashright, tilderight, 
+% rightline, rightlinebrackets, dashrightline, tilderightline:
+\setbeamertemplate{quotation source}[dashrightline]
+
+\expandafter\let\csname beamer@@tmpop@quotation begin@default\endcsname\relax % remove old template
+\defbeamertemplate{quotation begin}{default}{}
+\defbeamertemplate{quotation begin}{lines}[1][1pt]{\beamer@horizontal@line@top{quotation line top}{#1}\vskip1ex}
+\setbeamertemplate{quotation begin}[lines][0.5pt] % default, lines
+
+\expandafter\let\csname beamer@@tmpop@quotation end@default\endcsname\relax % remove old template
+\defbeamertemplate{quotation end}{default}{}
+\defbeamertemplate{quotation end}{lines}[1][1pt]{\beamer@horizontal@line@bottom{quotation line bottom}{#1}}
+\setbeamertemplate{quotation end}[lines][0.5pt] % default, lines
+
+\newlength{\beamer@quotation@tmp}
+
+% see definition in /usr/share/texmf/tex/latex/beamer/base/beamerbaselocalstructure.sty 
+\renewenvironment<>{quotation}[1][]
+{ \def\insertquotesource{#1}
+  \actionenv#2%
+  \setlength{\beamer@quotation@tmp}{\linewidth}
+  \beamercolorbox[vmode,wd=\linewidth]{quotation}
+  \usebeamertemplate{quotation begin}
+  \usebeamerfont*{quotation}%
+  \setbox0=\hbox{\usebeamertemplate{quotation symbol}\unskip}%
+  \ifdim\wd0=0pt
+    \list{}{
+      \leftmargin    1em
+      \rightmargin   1em
+      \listparindent 1.5em
+      \itemindent    \listparindent
+      \parsep        \z@ \@plus\p@
+    }%
+    \item\relax
+  \else
+    \list{}{
+      \leftmargin    2.5em
+      \rightmargin   2em
+      \listparindent 1.5em
+      \itemindent    \listparindent
+      \labelsep      \listparindent
+      \advance\labelsep by 0.5ex\relax
+      \parsep        \z@ \@plus\p@
+    }%
+    \item[\usebeamertemplate{quotation symbol}]\relax
+  \fi
+}
+{%
+  \usebeamercolor[fg]{quotation source}\usebeamertemplate{quotation source}
+  \endlist
+  \setlength{\linewidth}{\beamer@quotation@tmp}
+  \usebeamertemplate{quotation end}
+  \endbeamercolorbox
+  \endactionenv%
+}
+
+\setbeamercolor{quotation symbol}{parent=structure}
+\setbeamercolor{quotation source}{}
+\setbeamercolor{quotation line top}{fg=}
+\setbeamercolor{quotation line bottom}{fg=}
+
+
+% quote environment:
+
+\defbeamertemplate{quote symbol}{default}{}
+\defbeamertemplate{quote symbol}{openquote}[1][4]{{\usebeamercolor[fg]{quote symbol}\openquote{quote}{#1}}}
+\defbeamertemplate{quote symbol}{closequote}[1][4]{{\usebeamercolor[fg]{quote symbol}\closequote{quote}{#1}}}
+\defbeamertemplate{quote symbol}{opendblquote}[1][4]{{\usebeamercolor[fg]{quote symbol}\opendblquote{quote}{#1}}}
+\defbeamertemplate{quote symbol}{closedblquote}[1][4]{{\usebeamercolor[fg]{quote symbol}\closedblquote{quote}{#1}}}
+
+\setbeamertemplate{quote symbol}[opendblquote][4] % default, openquote, closequote, opendblquote, closedblquote
+
+\defbeamertemplate{quote source}{default}{}
+\defbeamertemplate{quote source}{left}{\quote@source@left{quote}{}{}}
+\defbeamertemplate{quote source}{leftbrackets}{\quote@source@left{quote}{(}{)}}
+\defbeamertemplate{quote source}{right}{\quote@source@right{quote}{}{}}
+\defbeamertemplate{quote source}{rightbrackets}{\quote@source@right{quote}{(}{)}}
+\defbeamertemplate{quote source}{dashright}{\quote@source@right{quote}{ --- }{}}
+\defbeamertemplate{quote source}{tilderight}{\quote@source@right{quote}{ $\sim$ }{}}
+\defbeamertemplate{quote source}{rightline}{\quote@source@rightline{quote}{}{}}
+\defbeamertemplate{quote source}{rightlinebrackets}{\quote@source@rightline{quote}{(}{)}}
+\defbeamertemplate{quote source}{dashrightline}{\quote@source@rightline{quote}{ --- }{}}
+\defbeamertemplate{quote source}{tilderightline}{\quote@source@rightline{quote}{ $\sim$ }{}}
+
+% default, left, leftbrackets, right, rightbrackets, dashright, tilderight, 
+% rightline, rightlinebrackets, dashrightline, tilderightline:
+\setbeamertemplate{quote source}[dashrightline]
+
+\expandafter\let\csname beamer@@tmpop@quote begin@default\endcsname\relax % remove old template
+\defbeamertemplate{quote begin}{default}{}
+\defbeamertemplate{quote begin}{lines}[1][1pt]{\beamer@horizontal@line@top{quote line top}{#1}\vskip1ex}
+\setbeamertemplate{quote begin}[lines][0.5pt] % default, lines
+
+\expandafter\let\csname beamer@@tmpop@quote end@default\endcsname\relax % remove old template
+\defbeamertemplate{quote end}{default}{}
+\defbeamertemplate{quote end}{lines}[1][1pt]{\beamer@horizontal@line@bottom{quote line bottom}{#1}}
+\setbeamertemplate{quote end}[lines][0.5pt]  % default, lines
+
+\renewenvironment<>{quote}[1][]
+{ \def\insertquotesource{#1}
+  \actionenv#2%
+  \setlength{\beamer@quotation@tmp}{\linewidth}
+  \beamercolorbox[vmode,wd=\linewidth]{quote}%
+  \usebeamertemplate{quote begin}%
+  \usebeamerfont*{quote}%
+  \setbox0=\hbox{\usebeamertemplate{quote symbol}\unskip}%
+  \ifdim\wd0=0pt
+    \list{}{
+      \leftmargin    2.5em
+      \rightmargin   2.5em
+      \parsep        1ex
+    }%
+    \item\relax%
+  \else
+    \list{}{
+      \leftmargin    2.5em
+      \rightmargin   2.5em
+      \labelsep      0.5ex
+      \parsep        1ex
+    }%
+    \item[\usebeamertemplate{quote symbol}]\relax%
+  \fi%
+}
+{%
+  \usebeamercolor[fg]{quote source}\usebeamertemplate{quote source}
+  \endlist
+  \setlength{\linewidth}{\beamer@quotation@tmp}
+  \usebeamertemplate{quote end}
+  \endbeamercolorbox%
+  \endactionenv%
+}
+
+\setbeamercolor{quote symbol}{parent=structure}
+\setbeamercolor{quote source}{}
+\setbeamercolor{quote line top}{fg=}
+\setbeamercolor{quote line bottom}{fg=}
+
+
+%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% title page logo line:
+
+\defbeamertemplate{title page logo line}{text}[1][1pt]%
+  {\beamer@horizontal@line@bottom{title page logo line}{#1}}
+\defbeamertemplate{title page logo line}{page}[1][1pt]%
+{
+  \ifbeamercolorempty[fg]{title page logo line}{}{%
+    \nointerlineskip%
+    \begin{beamercolorbox}[wd=\paperwidth,dp=0pt,ht=#1,sep=0pt,%
+      leftskip=0pt,rightskip=0pt]{title page logo line}%
+      \rule{\paperwidth}{#1}%
+    \end{beamercolorbox}%
+  }%
+}
+
+\setbeamertemplate{title page logo line}[text][0.5pt]
+
+
+%%%%% title page graphic line:
+
+\defbeamertemplate{title page graphic line}{default}[1][1ex]%
+  {\beamer@horizontal@line@bottom{title page graphic line}{#1}}
+
+\setbeamertemplate{title page graphic line}[default][1.5ex]
+
+
+%%%%% title page title line:
+
+\defbeamertemplate{title page title line}{default}[1][1ex]%
+  {\beamer@horizontal@line@bottom{title page title line}{#1}}
+
+\setbeamertemplate{title page title line}[default][0.2ex]
+
+
+%%%%% title page author \and command:
+
+\defbeamertemplate{title page author and}{space}{\def\beamer@andtitle{\quad}}
+\defbeamertemplate{title page author and}{comma}{\def\beamer@andtitle{,\quad}}
+\defbeamertemplate{title page author and}{line}{\def\beamer@andtitle{\enspace$\vert$\enspace\thickspace}}
+\defbeamertemplate{title page author and}{and}{\def\beamer@andtitle{\thickspace\&\enspace}}
+
+\setbeamertemplate{title page author and}[line]
+
+
+%%%%% title page institute \and command:
+
+\defbeamertemplate{title page institute and}{default}{}
+\defbeamertemplate{title page institute and}{space}{\def\beamer@andinst{\quad}}
+\defbeamertemplate{title page institute and}{comma}{\def\beamer@andinst{,\quad}}
+\defbeamertemplate{title page institute and}{line}{\def\beamer@andinst{\enspace$\vert$\enspace\thickspace}}
+
+\setbeamertemplate{title page institute and}[line]
+
+
+%%%%% title page: leftlines
+
+\defbeamertemplate*{title page}{leftlines}
+{
+  \vbox{}
+  % title logo with line:
+  \ifx\inserttitlelogo\@empty\else%
+    \begin{beamercolorbox}[wd=\linewidth]{titlelogo}
+      \inserttitlelogo%
+    \end{beamercolorbox}%
+    \vspace{1.2ex}
+    \ifbeamercolorempty[fg]{title page logo line}{}{%
+      \usebeamertemplate{title page logo line}%
+      \vspace{1ex}}
+  \fi
+  % title graphic:
+  \ifx\inserttitlegraphic\@empty\else%
+    \begin{beamercolorbox}[wd=\linewidth]{titlegraphic}
+      \inserttitlegraphic%
+    \end{beamercolorbox}%
+    \usebeamertemplate{title page graphic line}%
+  \fi%
+  \vfill\vfill\vfill
+  % title:
+  \begin{beamercolorbox}[wd=\linewidth]{title}
+    \usebeamerfont{title}\inserttitle\par%
+  \end{beamercolorbox}%
+  % subtitle:
+  \ifx\insertsubtitle\@empty\else%
+    \vspace{1ex}
+    \begin{beamercolorbox}[wd=\linewidth]{subtitle}
+      \usebeamerfont{subtitle}\insertsubtitle\par%
+    \end{beamercolorbox}%
+  \fi%
+  \vfill
+  \usebeamertemplate{title page title line}%
+  \vfill
+  % author:
+  \begin{beamercolorbox}[wd=\linewidth]{author}
+    \usebeamertemplate{title page author and}%
+    \usebeamerfont{author}\insertauthor
+  \end{beamercolorbox}
+  \vfill
+  % institute and date:
+  \begin{beamercolorbox}[wd=\linewidth]{institute}
+    \usebeamertemplate{title page institute and}%
+    \usebeamerfont{institute}\insertinstitute
+    \hfill
+    \usebeamerfont{date}\insertdate
+  \end{beamercolorbox}
+}
+
+
+%%%%% title page: centerlines
+
+\defbeamertemplate*{title page}{centerlines}
+{
+  \vbox{}
+  % title logo with line:
+  \ifx\inserttitlelogo\@empty\else%
+    \begin{beamercolorbox}[wd=\linewidth,center]{titlelogo}
+      \inserttitlelogo%
+    \end{beamercolorbox}%
+    \vspace{1.2ex}
+    \usebeamertemplate{title page logo line}%
+    \vspace{1ex}
+  \fi
+  % title graphic:
+  \ifx\inserttitlegraphic\@empty\else%
+    \begin{beamercolorbox}[wd=\linewidth,center]{titlegraphic}
+      \inserttitlegraphic%
+    \end{beamercolorbox}%
+    \usebeamertemplate{title page graphic line}%
+  \fi%
+  \vfill\vfill\vfill
+  % title:
+  \begin{beamercolorbox}[wd=\linewidth,center]{title}
+    \usebeamerfont{title}\inserttitle\par%
+  \end{beamercolorbox}%
+  % subtitle:
+  \ifx\insertsubtitle\@empty\else%
+    \vspace{1ex}
+    \begin{beamercolorbox}[wd=\linewidth,center]{subtitle}
+      \usebeamerfont{subtitle}\insertsubtitle\par%
+    \end{beamercolorbox}%
+  \fi%
+  \vfill
+  \usebeamertemplate{title page title line}%
+  \vfill
+  % author:
+  \begin{beamercolorbox}[wd=\linewidth,center]{author}
+    \usebeamertemplate{title page author and}%
+    \usebeamerfont{author}\insertauthor
+  \end{beamercolorbox}
+  \vfill
+  % institute and date:
+  \begin{beamercolorbox}[wd=\linewidth,center]{institute}
+    \usebeamertemplate{title page institute and}%
+    \usebeamerfont{institute}\insertinstitute
+    \hfill
+    \usebeamerfont{date}\insertdate
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{title page}[leftlines]
+
+
+%%%%% section page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% section name separator: space
+
+\defbeamertemplate{section name separator}{space}{}
+
+% section name separator: text
+
+\defbeamertemplate{section name separator}{text}[1][1pt]%
+{{\usebeamercolor[fg]{section name separator}\rule[-0.5ex]{#1}{2.4ex}}}
+
+\setbeamertemplate{section name separator}[text][1pt]
+
+
+%%%%% section page: left
+
+\defbeamertemplate{section page}{left}[1][0.3\textheight]
+{
+  \vspace{#1}%
+  \begin{columns}[t,onlytextwidth]
+    \begin{column}{0.1\textwidth}
+      \usebeamerfont{section name}%
+      \raggedleft{\usebeamercolor[fg]{section name}%
+        \makebox[0.5\linewidth][r]{\insertsectionnumber}%
+        \makebox[0.5\linewidth][c]{\usebeamertemplate{section name separator}}}%
+    \end{column}
+    \begin{column}{0.9\textwidth}
+      \usebeamerfont{section title}%
+      {\usebeamercolor[fg]{section title}\hypersetup{linkcolor=}\insertsection}%
+      \ifx\insertsectiongraphic\@empty\else%
+        \vspace{1.5ex}
+        \begin{beamercolorbox}[wd=\linewidth]{sectiongraphic}
+          \usebeamerfont{normal text}%
+          \insertsectiongraphic%
+        \end{beamercolorbox}%
+      \fi
+    \end{column}
+  \end{columns}
+}
+
+\setbeamertemplate{section page}[left][0.3\textheight]
+
+
+%%%%% start each section with a special slide:
+
+\AtBeginSection{
+  \frame[plain]{\sectionpage}
+}
+
+
+%%%%% subsection page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% subsection page separator: space
+
+\defbeamertemplate{subsection name separator}{space}{}
+
+% subsection page separator: text
+
+\defbeamertemplate{subsection name separator}{text}[1][1pt]%
+{{\usebeamercolor[fg]{subsection name separator}\rule[-0.5ex]{#1}{2.4ex}}}
+
+\setbeamertemplate{subsection name separator}[text][1pt]
+
+
+%%%%% subsection page: left
+
+\defbeamertemplate{subsection page}{left}[1][0.3\textheight]%
+{
+  \vspace{#1}%
+  \begin{columns}[t,onlytextwidth]
+    \begin{column}{0.1\textwidth}
+      \usebeamerfont{section name}%
+      \raggedleft{\usebeamercolor[fg]{section name}%
+        \makebox[0.5\linewidth][r]{\insertsectionnumber}%
+        \makebox[0.5\linewidth][c]{\usebeamertemplate{section name separator}}}%
+    \end{column}
+    \begin{column}{0.9\textwidth}
+      \usebeamerfont{section title}%
+      {\usebeamercolor[fg]{section title}\hypersetup{linkcolor=}\insertsection}%
+    \end{column}
+  \end{columns}
+  \vspace{2ex}
+  \begin{columns}[t,onlytextwidth]
+    \begin{column}{0.1\textwidth}
+      \raggedleft%
+      \usebeamerfont{subsection name}%
+      {\usebeamercolor[fg]{subsection name}%
+        \makebox[0.5\linewidth][r]{\insertsubsectionnumber}%
+        \makebox[0.5\linewidth][c]{\usebeamertemplate{subsection name separator}}}%
+    \end{column}
+    \begin{column}{0.9\textwidth}
+      \usebeamerfont{subsection title}%
+      {\usebeamercolor[fg]{subsection title}\hypersetup{linkcolor=}\insertsubsection}%
+      \ifx\insertsectiongraphic\@empty\else%
+        \vspace{1.5ex}
+        \begin{beamercolorbox}[wd=\linewidth]{subsectiongraphic}
+          \usebeamerfont{normal text}%
+          \insertsubsectiongraphic%
+        \end{beamercolorbox}%
+      \fi
+    \end{column}
+  \end{columns}
+}
+
+\setbeamertemplate{subsection page}[left][0.3\textheight]
+
+
+%%%%% table of contents %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% default, (sub)sections numbered, circle, square, ball, ball unnumbered:
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[sections numbered]
+
+%%%%% fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\setbeamerfont{normal text}{size=\normalsize}
+
+\setbeamerfont{frametitle}{size=\LARGE}
+\setbeamerfont{framesubtitle}{size=\large}
+
+\setbeamerfont{title}{size=\Large, shape=\bfseries}
+\setbeamerfont{subtitle}{size=\large, shape=\bfseries}
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamerfont{date}{size=\tiny}
+
+\setbeamerfont{block title}{parent={normal text}}
+\setbeamerfont{block body}{parent={normal text}}
+\setbeamerfont{block title alerted}{parent={block title}}
+\setbeamerfont{block body alerted}{parent={block body}}
+\setbeamerfont{block title example}{parent={block title}}
+\setbeamerfont{block body example}{parent={block body}}
+
+\setbeamerfont{theorem title}{parent={block title}}
+\setbeamerfont{theorem body}{parent={block body}}
+
+\setbeamerfont{message}{parent={normal text}, size=\large}
+\setbeamerfont{message item}{parent={normal text}, size=\large}
+
+\setbeamerfont{quotation}{shape=\slshape}
+\setbeamerfont{quotation symbol}{family*=pbk} % pbk , phv, pnc, qcs
+\setbeamerfont{quotation source}{parent={normal text}, size=\small, shape=\upshape}
+
+\setbeamerfont{quote}{shape=\slshape}
+\setbeamerfont{quote symbol}{family*=pbk} % pbk , phv, pnc, qcs
+\setbeamerfont{quote source}{parent={normal text}, size=\small, shape=\upshape}
+
+\setbeamerfont{verse}{shape=\itshape}
+
+\setbeamerfont*{section title}{size=\huge}
+\setbeamerfont*{section name}{size=\huge}
+\setbeamerfont*{subsection title}{size=\Large}
+\setbeamerfont*{subsection name}{size=\Large}
+
+\setbeamerfont{footline}{size=\footnotesize}
+\setbeamerfont{author in head/foot}{}
+\setbeamerfont{date in head/foot}{}
+\setbeamerfont{institute in head/foot}{}
+\setbeamerfont{title in head/foot}{}
+\setbeamerfont{page number in head/foot}{}
+
+\mode<all>
