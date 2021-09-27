@@ -8,6 +8,7 @@
 - to which extent should we participate
 - what can I contribute that is of interest
 - where will the workshop take place, how to get there, accommodation
+- where will organizer resources be shared
 
 ## Potential presentation topics
 - jupyter
@@ -26,3 +27,18 @@
 - containerization
 - formats (BIDS, NIX, odML I can do)
 - metadata handling
+
+## Meeting notes, 24.09.2021
+- Lenggries
+- 12 students will take part
+- Tiziano/Pamela: git and python packaging workshop; Tu full day
+  - partial topics: https://github.com/ASPP/2021-bordeaux-ODD
+- We morning: Tu wrap up; G-Node workshop We morning and afternoon
+- potential workshop content
+  - pylint & debugging / how to use the debugger
+  - how to structure projects
+  - should contain resources for both python and matlab users
+
+- the general aim should be: introduce people to workflows that help them
+- have a 3-4 hours presentation + examples testing/modularisation/debugging/increase quality
+- meet again next week w tiziano to check that there is no overlap
