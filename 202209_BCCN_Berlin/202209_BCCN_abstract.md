@@ -24,7 +24,7 @@ The tools presented are easy to use, interoperate with other tools supporting re
 8 GitHub https://github.com
 9 GIN-DOI https://doi.gin.g-node.org
 10 GIN-Valid https://valid.gin.g-node.org
-11 in-house GIN https://gin.g-node.org/G-Node/in-house-gin/
+11 in-house GIN https://gin.g-node.org/G-Node/in-house-gin
 12 Wilkinson et al (2016) The FAIR guiding principles for scientific data management and stewardship. Scientific Data 3:160018, https://doi.org/10.1038/sdata.2016.18
 
 
